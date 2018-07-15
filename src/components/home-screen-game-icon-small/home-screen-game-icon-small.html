@@ -1,0 +1,62 @@
+<div class='slot small' game-icon [ngClass]='{"red" : _color == "red", "blue" : _color == "blue", "yellow" : _color == "yellow", "darker" : _game.subbar == "INSTANTCHALLANGE"}'>
+	<table>
+		<tr #background class='frame-background' [ngClass]="{'disabled':_game.disabled}">
+			<td text-center colspan="2" class='t-l-big-r t-r-big-r b-r-small-r b-l-small-r' [ngClass]='{"border-inset-red" : _color == "red", "border-inset-blue" : _color == "blue", "border-inset-yellow" : _color == "yellow", "background-overlay" : ( _game.disabled == true || _game.reward == true ) }' >
+				<img class='pad-lock big' src="assets/images/home/lock.png" *ngIf='_game.disabled == true' />
+				<div class='reward' text-center *ngIf='_game.disabled == false && _game.reward == true && _game.rewardType == "MONEY"' font-h3 font-w-black>
+					&pound;{{_game.rewardValue}}
+				</div>
+				<div class='reward' text-center *ngIf='_game.disabled == false && _game.reward == true && _game.rewardType == "TOKEN"' font-h3 font-w-black>
+					<img src='assets/images/arcade/token-red.png' />&nbsp;{{_game.rewardValue}}
+				</div>
+			</td>
+		</tr>
+		<tr class='p-t-2'>
+			<td shrink>
+				<img class='game-mode-icon' src='./assets/images/arcade/dart-icon.png' *ngIf='_game.mode == "ARCADE"'/>
+				<img class='game-mode-icon' src='./assets/images/game-mode-icons/head2head.png' *ngIf='_game.mode == "HEAD2HEAD"'/>
+				<img class='game-mode-icon' src='./assets/images/game-mode-icons/instant_win.png' *ngIf='_game.mode == "INSTANTWIN" && _game.subbar != "INSTANTCHALLANGE" '/>
+				<div class='instant-challange' *ngIf="_game.subbar == 'INSTANTCHALLANGE'">
+					<div font-6 font-w-black>Instant</div>
+					<div font-6 font-w-black>Challenge</div>
+				</div>
+			</td>
+			<td>
+				<div class='text-holder small' *ngIf='_game.mode == "ARCADE"'>
+					<span class='f-left'>Lv</span>
+					<span class='highlight f-left'>&nbsp;{{_game.level}}</span>
+					<span class='f-right'>&nbsp;{{_game.blueToken}}</span>
+					<img class='f-right' src='./assets/images/arcade/token-blue.png' />
+					<div class='clear'></div>
+				</div>
+				<div class='text-holder medium' *ngIf='_game.mode == "HEAD2HEAD"'>
+					<span font-w-medium font-7 class='f-left p-b-1'>{{_game.difficulty}}</span>
+					<div class='clear'></div>
+				</div>
+				<div *ngIf='_game.mode == "INSTANTWIN" && _game.subbar != "INSTANTCHALLANGE" '>
+					<div class='text-holder small progress-bar' *ngIf="_game.subbar == 'PROGRESSBAR' " >
+						<div #progress></div>
+					</div>
+					<div class='text-holder small' *ngIf="_game.subbar == 'REWARD' ">
+						<span class='f-right'>&nbsp;&nbsp;&nbsp;{{_game.yellowToken}}&nbsp;</span>
+						<img class='f-right' src='./assets/images/arcade/token-yellow.png' />
+						<div class='clear'></div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div *ngIf='_game.badge == true'>
+		<div class='badge lock' *ngIf='_game.badgeType == "LOCK"'>
+			<img class='pad-lock small' src='assets/images/home/lock.png' />
+		</div>
+		<div class='badge value' *ngIf='_game.badgeType == "VALUE"'>
+			<span>
+				{{_game.badgeValue}}
+			</span>
+		</div>
+	</div>
+</div>
+<div class='game-name'>
+	{{_game.name}}
+</div>

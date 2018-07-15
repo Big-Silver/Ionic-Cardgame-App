@@ -1,0 +1,36 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col text-center align-self-center col-auto>
+			<home-screen-game-icon-small class='medium' color='red' [data]='data'>
+			</home-screen-game-icon-small>
+		</ion-col>
+		<ion-col align-self-center>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col></ion-col>
+					<ion-col class='avatar-icon-wrapper' col-auto text-center align-self-center>
+						<div *ngIf='firstPositionSet == false' font-h3 font-w-bold class='icon-text'>
+							<label font-h1 font-w-bold >1</label>st
+						</div>
+						<player-avatar-icon #firstPosition [playerInformation]="firstPlayerInformation" [unknown]='firstPositionSet == false'  unknownImage='assets/images/winning-animation/gold.png' class='golden'></player-avatar-icon>	
+					</ion-col>
+					<ion-col></ion-col>
+					<ion-col class='avatar-icon-wrapper' col-auto text-center align-self-center>
+						<div *ngIf='secondPositionSet == false' font-h3 font-w-bold class='icon-text'>
+							<label font-h1 font-w-bold >2</label>nd
+						</div>
+						<player-avatar-icon #secondPosition [playerInformation]="secondPlayerInformation" [unknown]='secondPositionSet == false' unknownImage='assets/images/winning-animation/silver.png' class='silver'></player-avatar-icon>
+					</ion-col>
+					<ion-col></ion-col>
+					<ion-col class='avatar-icon-wrapper' col-auto text-center align-self-center>
+						<div *ngIf='thirdPositionSet == false' font-h3 font-w-bold class='icon-text'>
+							<label font-h1 font-w-bold >3</label>rd
+						</div>
+						<player-avatar-icon #thirdPosition [playerInformation]="thirdPlayerInformation" [unknown]='thirdPositionSet == false'  unknownImage='assets/images/winning-animation/bronze.png' class='bronze'></player-avatar-icon>
+					</ion-col>
+					<ion-col></ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+	</ion-row>
+</ion-grid>

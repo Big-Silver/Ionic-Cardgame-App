@@ -1,0 +1,15 @@
+page-player-profile {
+
+	ion-content{
+		background-color: transparent !important;
+	}
+
+	table{
+		height: 100%;
+		width: 100vw;
+	}
+
+	.scroll-content{
+		overflow-y: hidden;
+	}
+}

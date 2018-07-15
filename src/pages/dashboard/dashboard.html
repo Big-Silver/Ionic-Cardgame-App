@@ -1,0 +1,27 @@
+<ion-menu #menu type="overlay" [content]="dashboard">
+	<ion-header>
+		<ion-toolbar>
+			<ion-title font-h2 font-w-heavy>
+				MENU
+			</ion-title>
+			<ion-buttons start>
+				<button ion-button icon-only menuClose>
+					<ion-icon color='light' class='tapicon-back'></ion-icon>
+				</button>
+			</ion-buttons>
+		</ion-toolbar>
+		<div>
+			<ion-grid no-padding>
+				<ion-row class='toolbar-bottom'>
+					<ion-col class='right-border'></ion-col>
+					<ion-col class='right-border'></ion-col>
+					<ion-col></ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</ion-header>
+	<ion-content #menuContent>
+		<sidemenu (openPlayerProfile)='openPlayerProfile()'></sidemenu>
+	</ion-content>
+</ion-menu>
+<ion-nav #dashboard [root]="rootPage"></ion-nav>

@@ -1,0 +1,53 @@
+<ion-header [disableButtons]='disableBackButton' gamemode-header (openStoreScreen)='openStoreScreen()'>
+    <button gamemode-header-button clear ion-button icon-only menuToggle>
+        <label class='tapicon-menu'></label>
+    </button>
+    <img gamemode-header-title-icon src='./assets/images/arcade/dart-icon.png' />
+    <div gamemode-header-title font-h3 font-w-black>
+        arcade
+	</div>
+	<img gamemode-header-store-icon end src='./assets/images/arcade/store-icon.png' />
+	<gamemode-balance arcade-content-header [balance1]='balance.balance1' [balance2]='balance.balance2' [balance3]='balance.balance3'>
+    </gamemode-balance>
+</ion-header>
+<ion-content no-bounce>
+    <table arcade-content>
+		<gamemode-game-information 
+			gameMode='arcade'
+			[game]='game.information' 
+			[playerRank]='game.playerRank'
+			[disablePlayButton]='disablePlayButton'
+			[disableBackButton]='disableBackButton'
+			(onPlayGame)='startPlayingGame()'
+			(onGoToBackScreen)='goToGameHomePage()'
+            >
+		</gamemode-game-information>
+        <gamemode-game-details [game]='gameRewardDetails' gameMode='arcade' *ngIf='state == "NORMAL" '  (onHowToPlay)='openHowToPlay()'>
+		</gamemode-game-details>
+		<arcade-content-game-details-won 
+			(slideTransitionStarted)='doDisablePlayButton(true)' 
+			(slideTransitionFinished)='doDisablePlayButton(false)' 
+			*ngIf='state == "WON"'
+		>
+		</arcade-content-game-details-won>
+		<arcade-content-game-details-lose *ngIf='state == "LOSE"'>
+		</arcade-content-game-details-lose>
+        <arcade-content-score-information *ngIf='state == "NORMAL"' [animateButtons]='true'>
+		</arcade-content-score-information>
+		<arcade-content-score-information-won
+			(animationOver)='disableBackButton = false'
+			(disablePlayButton)='disablePlayButton = true' 
+			(enablePlayButton)='disablePlayButton = false' 
+			*ngIf='state == "WON"'
+		>
+		</arcade-content-score-information-won>
+		<arcade-content-score-information-lose
+			(animationOver)='disableBackButton = false'
+			(disablePlayButton)='disablePlayButton = true' 
+			(enablePlayButton)='disablePlayButton = false' 
+			*ngIf='state == "LOSE"'
+		>
+		</arcade-content-score-information-lose>
+
+    </table>
+</ion-content>

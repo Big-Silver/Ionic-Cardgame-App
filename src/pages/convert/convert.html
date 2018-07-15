@@ -1,0 +1,9 @@
+<ion-header convert-header (closeModal)='closeModal()'></ion-header>
+<ion-content  fullscreen='true'>
+	<table convert-content (closeModal)='closeModal()'>
+		<convert-user-coins [totalAvailableCoins]='remainingCoins'></convert-user-coins>
+		<convert-helper (changedRemainingTokens)='handleRemainingCoinChange($event)' [totalAvailableCoins]='totalAvailableCoins'></convert-helper>
+		<convert-range-slider [totalAvailableCoins]='totalAvailableCoins' (changedRemainingTokens)='handleRemainingCoinChangeSlider($event)'></convert-range-slider>
+		<convert-footer></convert-footer>
+	</table>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons left>
+			<button ion-button icon-only (click)="gotoHome()">
+				<ion-icon class='tapicon-back'></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title>ACCOUNTS</ion-title>
+	</ion-toolbar>
+	<div class='gamemode-balance-wrapper'>
+		<gamemode-balance arcade-content-header [balance1]='balance.balance1' [balance2]='balance.balance2' [balance3]='balance.balance3'>
+		</gamemode-balance>
+	</div>
+</ion-header>
+
+<ion-content no-bounce>
+	<table>
+		<tr shrink>
+			<td>
+				<arcade-cash-balance (openVerificationPage)='openVerificationPageWithCashout()' (openCashoutPage)="openCashoutPage()" [isVerified]='isVerified'></arcade-cash-balance>
+			</td>
+		</tr>
+		<tr shrink>
+			<td>
+				<arcade-user-detail (openVerificationPage)='openVerificationPage()' [isVerified]='isVerified' ></arcade-user-detail>
+			</td>
+		</tr>
+		<tr shrink>
+			<td>
+				<div class='setting-header'>
+					&bull; SETTINGS &bull;
+				</div>
+			</td>
+		</tr>
+		<tr grow>
+			<td class='p-relative'>
+				<div class='expand-abs'>
+					<arcade-setting></arcade-setting>
+				</div>
+			</td>
+		</tr>
+	</table>
+</ion-content>

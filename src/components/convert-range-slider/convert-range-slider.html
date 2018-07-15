@@ -1,0 +1,35 @@
+<ion-grid no-padding>
+	<ion-row class='header'>
+		<ion-col align-self-center font-w-heavy text-center>
+			<img src='assets/images/store/running-fast.png' /> EXPRESS <span class='font-dark-red'>RED</span> TOKENS&nbsp;&nbsp;&nbsp;
+		</ion-col>
+	</ion-row>
+	<ion-row flex-grow>
+		<ion-col align-self-end class='range-container'>
+			<ion-range [(ngModel)]="convertAmount" (ionChange)='tokensChanged($event)' pin='true' min="0" [max]='convertableTokens' step="1">
+			</ion-range>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col>
+			<button ion-button block class='convert-button'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col col-auto></ion-col>
+						<ion-col text-center font-h3 align-self-center>
+							{{totalConvertAmount}}
+						</ion-col>
+						<ion-col col-auto>
+						</ion-col>
+						<ion-col col-auto align-self-center>
+							<ion-icon class='tapicon-exchange'></ion-icon>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</button>
+			<div font-6 text-center>
+				Converting
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

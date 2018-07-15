@@ -1,0 +1,88 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col>
+			<ion-grid no-padding class='grid-tab'>
+				<ion-row>
+					<ion-col [ngClass]='{"selectedTab" : activeTab == "RESULTS"}' (tap)='changeActiveTab("RESULTS")' font-5 font-w-medium col-auto>
+						RESULTS
+					</ion-col>
+					<ion-col [ngClass]='{"selectedTab" : activeTab == "PROMOTIONS"}' (tap)='changeActiveTab("PROMOTIONS")' font-5 font-w-medium col-auto>
+						PROMOTIONS
+					</ion-col>
+					<ion-col [ngClass]='{"selectedTab" : activeTab == "REQUESTS"}' (tap)='changeActiveTab("REQUESTS")' font-5 font-w-medium col-auto>
+						REQUESTS
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col *ngIf='activeTab == "RESULTS"'>
+			<ion-grid no-padding class='description-results-tab'>
+				<ion-row>
+					
+					<ion-col col-auto>
+						<button [ngClass]="{'activatedGameMode' : activeGameMode == 'HEAD2HEAD'}" class='button-head2head' (tap)='changeActiveGameMode("HEAD2HEAD")' icon-only clear ion-button>
+							<img src='assets/images/game-mode-icons/head2head.png' *ngIf='activeGameMode == "HEAD2HEAD"' /><img src='assets/images/game-mode-icons/head2head_dark.png' *ngIf='activeGameMode != "HEAD2HEAD"' />
+						</button>
+					</ion-col>
+					<ion-col col-auto>
+						<button [ngClass]="{'activatedGameMode' : activeGameMode == 'REPLAY'}" class='button-replay' (tap)='changeActiveGameMode("REPLAY")' icon-only clear ion-button>
+							<img src='assets/images/game-mode-icons/replay.png' *ngIf='activeGameMode == "REPLAY"' /><img src='assets/images/game-mode-icons/replay_dark.png' *ngIf='activeGameMode != "REPLAY"' />
+						</button>
+					</ion-col>
+					<ion-col col-auto>
+						<button [ngClass]="{'activatedGameMode' : activeGameMode == 'CONTEST'}" class='button-contest' (tap)='changeActiveGameMode("CONTEST")' icon-only clear ion-button>
+							<img src='assets/images/game-mode-icons/contest.png' *ngIf='activeGameMode == "CONTEST"' /><img src='assets/images/game-mode-icons/contest_dark.png' *ngIf='activeGameMode != "CONTEST"' />
+						</button>
+					</ion-col>
+					<ion-col align-self-center text-center col-auto>
+						<ion-toggle [(ngModel)]='recentsGame' (ionChange)='changeActiveGameMode(recentsGame ? "RECENT" : "ALL")' mode='md'></ion-toggle>
+						<div class='recent-lbl' font-5 font-w-medium *ngIf='recentsGame'>
+							RECENT
+						</div>
+						<div class='all-lbl' font-5 font-w-medium *ngIf='!recentsGame'>
+							ALL
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+		<ion-col text-center *ngIf='activeTab == "REQUESTS"'>
+			<div font-5 text-center font-w-medium class='description-request-tab'>
+				All squad up invites and battle request can be found below.
+			</div>
+		</ion-col>
+		<ion-col text-center *ngIf='activeTab == "PROMOTIONS"'>
+			<div class='description-contest-tab'>
+				<div font-w-medium class='heading-contest-tab' text-center>
+					Check out sponsorship and rewards
+				</div>
+				<div font-6 font-w-normal text-center class='subheading-contest-tab'>
+					Click to See
+				</div>
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row class='header-results-tab' *ngIf='activeTab == "RESULTS"'>
+		<ion-col font-8 font-w-bold text-left>
+			Activity
+		</ion-col>
+		<ion-col font-8 font-w-bold text-center text-right>
+			Result
+		</ion-col>
+	</ion-row>
+	<ion-row class='header-requests-tab' *ngIf='activeTab == "REQUESTS"'>
+		<ion-col font-8 font-w-bold text-center>
+			Activity
+		</ion-col>
+	</ion-row>
+	<ion-row class='header-promotions-tab' *ngIf='activeTab == "PROMOTIONS"'>
+		<ion-col font-8 font-w-bold text-center>
+			Promo Offer
+		</ion-col>
+		<ion-col font-8 font-w-bold text-center col-auto>
+			Reward
+		</ion-col>
+	</ion-row>
+</ion-grid>

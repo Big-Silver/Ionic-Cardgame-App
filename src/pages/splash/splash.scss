@@ -1,0 +1,71 @@
+page-splash {
+	canvas{
+		border: 1px solid black;
+	}
+
+	.scroll-content{
+		overflow: hidden !important;
+		background-image: url('../assets/images/home/background.png');
+		background-size: cover;
+	}
+
+	.loading-screen{
+		position: absolute;
+		width: 100%;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
+	.loading_layer_2,
+	.loading_layer_1{
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		top: 20;
+	}
+
+	.loading_layer_2{
+		z-index: 1;
+	}
+
+	canvas{
+		z-index: 2;
+		position: relative;
+	}
+
+	.loading_layer_1{
+		z-index: 3;
+	}
+
+	.loader-wrapper{
+		position: absolute;
+		z-index: 4;
+		bottom: 20px;
+		right: 10px;
+		left: 10px;
+		height: 16px;
+		padding: 3px;
+		border-radius: 3px;
+		background: black;
+		overflow: hidden;
+		& > div{
+			height: 100%;
+			width: 100%;
+			border-radius: inherit;
+		}
+		.loading-bar{
+			height: 100%;
+			width: 100%;
+			box-shadow: 0 0 10px #bfff00;
+			background: linear-gradient(#bfff00, #99ff00);
+			border-radius: inherit;
+			transform: scaleX(0);
+			transform-origin: top left;
+		}
+	}
+
+}

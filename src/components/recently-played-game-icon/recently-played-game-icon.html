@@ -1,0 +1,13 @@
+<img [src]='game.icon' class='game-icon' />
+<div class='rank-wrapper'>
+	<div text-center font-6 class='game-name'>
+		{{game.name}}
+	</div>
+	<player-game-rank-table 
+		[level]='game.level'
+		[stars]='game.stars'
+		[badges]='game.badges'
+		b-blue
+	>
+	</player-game-rank-table>
+</div>

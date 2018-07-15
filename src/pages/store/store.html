@@ -1,0 +1,9 @@
+<ion-header store-header (closeModal)='closeModal()' (convertCoins)='convertCoins()'>
+</ion-header>
+<ion-content fullscreen='true'>
+	<table store-content>
+		<store-earn-buy (modeChanged)='modeChanged($event)'></store-earn-buy>
+		<store-offers></store-offers>
+		<store-balance></store-balance>
+	</table>
+</ion-content>

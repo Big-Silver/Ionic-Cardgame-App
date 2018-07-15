@@ -1,0 +1,98 @@
+head2head-score-information-awaiting {
+
+	display: block;
+
+	.title{
+		letter-spacing: 1.88px;
+		padding : 5px 12px 0px 12px !important;
+	}
+
+	.sub-title{
+		letter-spacing: 1.98px;
+		font-size: 6px !important;
+		padding-top: 2px;
+	}
+
+	img{
+		height: 13px !important;
+		width: 13px !important;
+		vertical-align: middle;
+	}
+
+	.amount{
+		// margin-top: 3px;
+		// margin-bottom: 1px;
+		max-height: 22px !important;
+		span{
+			display: inline-block !important;
+			vertical-align: middle;
+		}
+	}
+
+	.amount-status{
+		letter-spacing: 2.41px;
+	}
+
+	.table-border{
+		height: 2px;
+		background-image: linear-gradient(90deg, #005585 0%, #2ad1f5 50%, #005585);
+	}
+
+	.player-name{
+		ion-col{
+			letter-spacing: 0.54px;
+			font-family: "Avenir Next" !important;
+		}	
+		ion-col:nth-child(1){
+			padding-left: 10px !important;
+		}
+		ion-col:nth-last-child(1){
+			padding-right: 10px !important;
+		}
+	}
+
+	.amount-labels{
+		background-color: #003685;
+		ion-col{
+			letter-spacing: 0.54px;
+			font-family: "Avenir Next" !important;
+			line-height: 26px;
+		}
+		&.colored-win{
+			ion-col:nth-child(1){
+				color: #3abf04 !important; 
+			}
+			ion-col:nth-child(2){
+				color: #f6434a !important;
+			}
+		}
+		&.colored-lose{
+			ion-col:nth-child(2){
+				color: #3abf04 !important; 
+			}
+			ion-col:nth-child(1){
+				color: #f6434a !important;
+			}
+		}
+	}
+
+	.amount-information{
+		height: 50px;
+		background-color: #6e6e6e;
+		label, span, img{
+			display: inline-block;
+			line-height: 50px;
+			vertical-align: middle;
+		}
+		img{
+			height: 18px !important;
+			width: 18px !important;
+			position: relative;
+			bottom: 2px;
+		}
+		ion-col.active{
+			background-color: #43c600 !important;
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+shining-text, [shining-text] {
+	display: block;
+	span{
+		font-size: inherit;
+		color: inherit;
+		letter-spacing: inherit;
+		font-weight: 900;
+	}
+
+	$animationSteps: 20;
+	$animationDuration: 25;
+	$animationElement: span;
+	$animationElementsCount: 100;
+	$delayBetweenLetters: 0.2;
+
+	#{$animationElement} {
+		animation-name: anim-text-flow-keys;
+		animation-duration: #{$animationDuration}s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes anim-text-flow-keys {
+		@for $i from 0 through $animationSteps {
+			#{percentage($i * (1 / $animationSteps))} {
+				color: hsla(random(365), 60, 60, 1);
+			}
+		}
+	}
+
+	$totalDelayTime: $animationElementsCount * $delayBetweenLetters;
+	
+	@for $i from 1 through $animationElementsCount {
+		#{$animationElement}:nth-of-type(#{$i}) {
+			animation-delay: #{($i * $delayBetweenLetters) - $totalDelayTime}s;
+		}
+	}
+}

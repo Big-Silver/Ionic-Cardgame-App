@@ -1,0 +1,40 @@
+[game-request-header] {
+	ion-toolbar{
+		height: 35px;
+		min-height: unset !important;
+		
+		&.battle-a-friend-mode{
+			.toolbar-background{
+				background-color: #be1311 !important;
+			}
+		}
+
+		&.squadup-mode{
+			.toolbar-background{
+				background-color: #009eff !important;
+			}
+		}
+
+		.toolbar-background{	
+			background-image: none !important;
+			border: 0px !important;
+		}
+		ion-buttons{
+			margin: 0px !important;
+			margin-left: 2px !important;
+		}
+		button{
+			padding: 0px;
+			ion-icon{
+				color: white;
+				font-size: 2.4em !important;
+			}
+		}
+		.toolbar-title{
+			text-transform: none !important;
+			font-family: "Helvetica Neue" !important;
+			font-size: 14px !important;
+			font-weight: 500 !important;
+		}
+	}
+}

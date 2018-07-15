@@ -1,0 +1,37 @@
+convert-content,
+[convert-content]{
+
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	tr[expand]{
+		height: 100%;
+	}
+
+	.p-relative{
+		position: relative;
+	}
+
+	.wrapper-button-close{
+		button{
+			width: 73px;
+			height: 26px;
+			padding: 0px !important;
+			box-shadow: 0 3px 0 #4d0202;
+			border-radius: 6px;
+			background-color: #e71e1a;
+			font-family: "Avenir Next";
+			color: white;
+			margin: 9px !important;
+
+			&:active{
+				transform: translate3d(2px, 2px, 2px);
+				filter: brightness(0.4);
+			}
+
+		}
+	}
+
+}

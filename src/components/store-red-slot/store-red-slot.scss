@@ -1,0 +1,235 @@
+store-red-slot {
+	
+	display: block;
+	color: white;
+	height: 51px;
+	position: relative;
+	background-color: #ed4040;
+	border-radius: 26px;
+	overflow: hidden;
+	
+	.content-wrapper{
+		// display: block;
+		top : 1px;
+		bottom: 1px;
+		right: 1px;
+		left: 1px;
+		border-radius: inherit;
+		position: absolute;
+	}
+
+	.amount-holder{
+		position: absolute;
+		top: 1px;
+		bottom: 0px;
+		display: block;
+		height: 100%;
+		right: 40px;
+		background-size: cover;
+		letter-spacing: 0.21px;
+	}
+
+	& > ion-grid{
+		width: unset !important;
+		position: relative;
+		overflow: hidden;
+		background-image: linear-gradient(-90deg, #7f1414 0%, #ed4040 100%);
+		& > ion-row{
+			height: 100%;
+			z-index: 10;
+		}
+		&:after{
+			height: 19px;
+			bottom: 0px;
+			content : '';
+			background-image: linear-gradient(90deg, rgba(101, 13, 13, 0.34) 0%, rgba(164, 35, 35, 0.34) 50%, rgba(101, 13, 13, 0.34) 100%);
+			right: 0px;
+			left: 0px;
+			display: block;
+			position: absolute;
+		}
+	}
+
+	& > ion-grid > ion-row > ion-col:nth-child(1){
+
+		width: 56px;
+		margin-left: 8px;
+
+
+		img{
+			display: block;
+		}
+
+		.coin-small{
+			width: 36px;
+			height: 38px;
+		}
+
+		.coin-medium{
+			width: 43px;
+			height: 46px;
+		}
+
+		.coin-large{
+			width: 44px;
+			height: 46px;
+		}
+
+		.coin-extra-large{
+			width: 50px;
+			vertical-align: bottom;
+		}
+
+		.coin-medium,
+		.coin-large,
+		.coin-extra-large{
+			margin-bottom: 1px;
+		}
+
+	}
+
+	& > ion-grid > ion-row > ion-col:nth-child(2){
+
+		padding-left: 10px;
+		position: relative;
+
+		
+
+		// .gradient-text{
+		// 	font-size: 28px;
+		// 	line-height: 25px;
+		// 	font-weight: bold;
+		// 	color: transparent;
+		// 	margin-bottom: 2px;
+		// 	letter-spacing: 0.58px;
+		// }
+
+		// .subtitle-text{
+		// 	padding-left: 5px;
+		// }
+
+		ion-grid{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+			ion-row:nth-child(1){
+				flex-grow: 1;
+			}
+			ion-row:nth-child(2){
+				height: 20px;
+			}
+
+			.wrapper-button-amount{
+				padding: 0px 4px !important;
+			}
+
+			.button-amount{
+				width: 60px;
+				height: 23px;
+				border-radius: 12px;
+				background-image: linear-gradient(180deg, rgba(20, 183, 21,0.8) 0%, rgba(0, 77, 9,0.8) 100%);
+				margin: 0px;
+				display: block;
+				border: 0.5px solid rgba(0, 83, 4, 0.8);
+				background-color: transparent !important;
+				padding: 0px !important;
+				// opacity: 0.8;
+				&:active{
+					filter: brightness(0.4);
+				}
+				.button-inner{
+					color: #ffffff;
+					font-family: Lato;
+					font-size: 14px;
+					font-weight: 700;
+					letter-spacing: 0.17px;
+				}
+			}
+
+			.svg-wrapper{
+				padding-right: 18px !important;
+				min-width: 137px !important;
+			}
+
+		}
+
+		.fake-svg-wrapper{
+			opacity: 0 !important;
+			font-size: 28px !important;
+			height: 29px;
+		}
+
+		svg{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+			height: 29px;
+		}
+
+		.wrapper-img-include{
+			img{
+				width: 16px;
+				height: 12px;
+				display: block;
+				position: relative;
+				top: 1px;
+			}
+		}
+
+		.wrapper-img-token{
+			img{
+				margin-left: 10px;
+				height: 10px;
+				width: 9px;
+				display: block;
+				position: relative;
+				top: 1px;
+			}
+		}
+		
+		.wrapper-label-include{
+			text-align: left;
+			width: 67px;
+			margin-left: 10px;
+			color: #fffa12 !important; 
+		}
+
+		.wrapper-amount-include{
+			color: white;
+			margin-left: 4px;
+		}
+
+
+	}
+
+	& > ion-grid > ion-row > ion-col:nth-last-child(1){
+		width: 34px;
+		background-color: #650d0d;
+		border-radius: 0 100px 100px 0;
+
+		ion-icon{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+			margin: auto;
+			line-height: 51px;
+			text-align: center;
+			font-size: 2.2em !important;
+		}
+
+	}
+
+	// & > ion-grid > ion-row > ion-col:nth-last-child(2){
+	// 	width: 75px;
+	// }
+
+
+}
+	

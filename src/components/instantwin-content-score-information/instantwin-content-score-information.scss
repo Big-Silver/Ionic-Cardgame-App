@@ -1,0 +1,74 @@
+instantwin-content-score-information {
+
+	color: white;
+	display: block;
+	padding: 6px 0px 0px 0px;
+
+	.banner{
+		padding: 0px 44px;
+		[font-4]{
+			white-space: nowrap;
+		}
+		[font-6]{
+			letter-spacing: 0.6px;
+		}
+	}
+
+	.score-container{
+		border: 1px solid white;
+		border-radius: 5px;
+		margin: 15px 6px;
+		background-color: rgba(0, 0, 0, 0.53);
+		table{
+			table-layout: fixed;
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		img{
+			display: block;
+			margin: auto;
+			max-height: 36px !important;
+		}
+
+		.coin{
+			width: 11px;
+			display: inline;
+			vertical-align: bottom;
+			margin-bottom: 2px;
+		}
+
+		tr:nth-child(2n+1){
+			td{
+				height: 40px;
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+		}
+
+		tr:nth-child(2n+2){
+			td{
+				border-top: 1px solid rgba(118, 118, 118, 0.11);
+				border-bottom: 1px solid rgba(118, 118, 118, 0.11);
+				font-size: 12px;
+				font-weight: 800;
+				letter-spacing: 0.12px !important;
+				padding: 0px 3px;
+				white-space: nowrap;
+			}
+		}
+		
+		tr{
+			td:not(:nth-last-child(1)){
+				border-right: 1px solid white;
+			}
+		}
+
+		td{
+			text-align: center;
+		}
+
+
+	}
+
+}

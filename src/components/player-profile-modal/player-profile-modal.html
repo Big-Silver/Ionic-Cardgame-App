@@ -1,0 +1,42 @@
+<thead #upperSection class='slideInDown animated'>
+	<tr shrink>
+		<td>
+			<ng-content select='player-profile-header'></ng-content>
+		</td>
+	</tr>
+</thead>
+<tbody #lowerSection class='slideInUp animated'>
+	<tr  shrink>
+		<td>
+			<ng-content select='player-profile-recently-played-games'></ng-content>
+		</td>
+	</tr>
+	<tr expand>
+		<td align-content-top>
+			<ng-content select='player-profile-statistics'></ng-content>
+		</td>
+	</tr>
+	<tr shrink>
+		<td align-content-bottom>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col>
+						<button class='btn-close' ion-button (tap)='prepareBeforeClose()'>	
+							<ion-icon name='ios-close-circle-outline'></ion-icon>&nbsp;&nbsp;Close
+						</button>
+					</ion-col>
+					<ion-col>
+						<button (click)='isFollowed = !isFollowed' ion-button class='btn-action' [ngClass]='{"follow" : isFollowed == false, "unfollow" : isFollowed == true}'>
+							<ng-container *ngIf='isFollowed == true'>
+									<ion-icon name='ios-add-circle-outline'></ion-icon>&nbsp;&nbsp;Follow
+							</ng-container>
+							<ng-container *ngIf='isFollowed == false'>
+									<ion-icon name='ios-remove-circle-outline'></ion-icon>&nbsp;&nbsp;Unfollow
+								</ng-container>
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</td>
+	</tr>
+</tbody>

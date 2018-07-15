@@ -1,0 +1,12 @@
+<ion-header leaderboard-header (goBack)='dismissView()'>
+</ion-header>
+<ion-content>
+	<table leaderboard-content>
+		<leaderboard-tabs></leaderboard-tabs>
+		<player-result (playerProfileTapped)='openPlayerProfile()' [data]='ownResult' color='dark' [ownSlot]='true'></player-result>
+		<div player-result-group>
+			<player-result (playerProfileTapped)='openPlayerProfile()' [color]='i%2 == 0 ? "dark" : "light"' [data]='player' *ngFor='let player of players;let i = index;'>
+			</player-result>
+		</div>
+	</table>
+</ion-content>

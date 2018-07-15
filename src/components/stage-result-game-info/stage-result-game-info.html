@@ -1,0 +1,56 @@
+<ion-grid no-padding [ngClass]="{'win':mode == 'WIN', 'lose':mode == 'LOSE'}">
+	<ion-row grow>
+		<ion-col align-self-center>
+			<div *ngIf='mode == "LOSE"'>
+				<div class='animated pulse infinite' text-center font-w-heavy font-h1>
+					SO CLOSE
+				</div>
+				<div font-w-medium text-center font-h3>
+					You was Eliminated
+				</div>
+				<div font-w-medium text-center font-h3>
+					from stage {{data.stage}}
+				</div>
+			</div>
+			<div *ngIf='mode == "WIN"'>
+				<div class='animated pulse infinite' text-center font-w-heavy font-h1>
+					CONGRATULATIONS
+				</div>
+				<div font-w-medium text-center font-h3>
+					You passed Stage {{data.stage}}
+				</div>
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row class='row-game-information'>
+		<ion-col col-auto>
+			<home-screen-game-icon-small color='red' class='small' [data]='data.game'></home-screen-game-icon-small>
+		</ion-col>
+		<ion-col class='col-player-name'>
+			<div font-w-heavy>
+				{{data.playerName}}
+			</div>
+			<div font-6 font-w-normal *ngIf='mode == "WIN"'>
+				You was in the qualifing number 
+				of players. 
+			</div>
+			<div font-6 font-w-normal *ngIf='mode == "LOSE"'>
+				Unfortunately you didnt make the
+				qualifying bracket.
+			</div>
+		</ion-col>
+		<ion-col class='col-shares-left' col-auto>
+			<img src='assets/images/home/share.png'  />
+			<table>
+				<tr>
+					<td font-8 font-w-bold text-right>
+						Shares<br>Left:
+					</td>
+					<td font-w-bold font-h3>
+						&nbsp;2
+					</td>
+				</tr>
+			</table>
+		</ion-col>
+	</ion-row>
+</ion-grid>

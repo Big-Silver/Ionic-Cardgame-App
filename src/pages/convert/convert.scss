@@ -1,0 +1,22 @@
+page-convert {
+
+	color: white;
+	table{
+		height: 100%;
+		width: 100%;
+	}
+
+	ion-toolbar{
+		min-height: 50px !important;
+	}
+
+	.scroll-content{
+		overflow: hidden;
+	}
+
+	ion-content{
+		background-image: linear-gradient(38deg, #30084e 0%, #16108f 100%, #151090 100%);
+	}
+	
+
+}

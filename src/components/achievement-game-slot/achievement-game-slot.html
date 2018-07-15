@@ -1,0 +1,38 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col align-self-center>
+			<img [src]='data.image' />
+		</ion-col>
+		<ion-col col-auto>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col font-w-medium font-5 align-self-center>
+						{{data.name}}
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col font-w-medium font-6 align-self-center>
+						{{data.date}}
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+		<ion-col col-auto></ion-col>
+		<ion-col font-w-medium col-auto align-self-center text-center>
+			<ng-container *ngIf='mode == "REPLAY" || mode == "CONTEST"'>
+				{{data.position}}
+			</ng-container>
+			<ng-container *ngIf='mode == "ARCADE"'>
+				{{data.level}}
+			</ng-container>
+			<ng-container *ngIf='mode == "HEAD2HEAD"'>
+				{{data.wins}}
+			</ng-container>
+		</ion-col>
+		<ion-col col-auto></ion-col>
+		<ion-col font-w-medium align-self-center text-center col-auto>
+			{{data.score}}
+		</ion-col>
+	</ion-row>
+</ion-grid>
+

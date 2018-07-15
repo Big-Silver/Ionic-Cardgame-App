@@ -1,0 +1,133 @@
+<ion-slides pager='true' [centeredSlides]='true' #slides [ngClass]="{'contestMode' : gameMode=='contest', 'replayMode' : gameMode == 'replay' }">
+	<ion-slide class='firstSlide'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col class='pyramid-container fadeInLeft animated' align-self-center>
+					<div #pyramidSlotContainer>
+						<div class='pyramid-slot' text-center>
+						</div>
+						<label font-h3 font-w-heavy>
+							1<sup>ST</sup>
+						</label>
+					</div>
+					<div #pyramidSlotContainer>
+						<div class='pyramid-slot' text-center>
+						</div>
+						<label font-w-heavy>
+							2<sup>ND</sup>
+						</label>
+					</div>
+					<div #pyramidSlotContainer>
+						<div class='pyramid-slot' text-center>
+						</div>
+						<label font-w-heavy>
+							3<sup>RD</sup>
+						</label>
+					</div>
+					<div #pyramidSlotContainer>
+						<div class='pyramid-slot' text-center>
+						</div>
+						<label font-5 font-w-heavy >
+							4<sup>TH</sup>
+						</label>
+					</div>
+					<div #pyramidSlotContainer>
+						<div class='pyramid-slot' text-center>	
+						</div>
+						<label font-6 font-w-heavy>
+							5<sup>TH</sup>
+						</label>
+					</div>
+				</ion-col>
+				<ion-col #shiningTextContainer align-self-center class='shining-text-container'>
+					<div shining-text [textProperty]='shiningTextProperty' [text]='shiningText'>
+					</div>
+					<div font-h3 font-w-heavy>
+						You came {{placeText}} 
+					</div>
+					<div font-w-heavy font-4>
+						Added {{rewardText}} <img *ngIf="gameMode == 'replay'" src='assets/images/game-mode-icons/replay.png' /><img *ngIf="gameMode == 'contest'" src='assets/images/game-mode-icons/contest.png' />
+					</div>
+					<div text-left font-w-bold font-7>
+						Out of 4 other players. swipe below to see players. Click on avatar to see profile.
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<button class='circle-button'>
+			<div font-8 font-w-medium>
+				How
+			</div>
+			<div font-8 font-w-medium>
+				To
+			</div>
+			<div font-8 font-w-medium>
+				Play
+			</div>
+		</button>
+	</ion-slide>
+	<ion-slide class='secondSlide'>
+		<div class='header'>
+			<div font-w-bold class='highlight'>
+				&bull; Trending&nbsp;&nbsp;<button font-w-black class='button-info' (click)='openRankPopup.emit()'>i</button>
+			</div>
+		</div>
+		<div class='header-border'></div>
+		<div class='player-list-header'>
+			<table>
+				<tr>
+					<td>
+						Player
+					</td>
+					<td font-6 font-w-bold text-wrap>
+						&nbsp;
+					</td>
+					<td class='cell-border'>
+					</td>
+					<td font-w-bold>
+						Attempt
+					</td>
+					<td class='cell-border'>
+					</td>
+					<td font-w-bold>
+						Top
+					</td>
+					<td class='cell-border'>
+					</td>
+					<td font-w-bold>
+						Score
+					</td>
+					<td class='cell-border'>
+					</td>
+					<td font-w-bold>
+						&nbsp;
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class='player-list'>
+			<player-position-slot (click)='viewPlayerProfile()' *ngFor='let player of players' [player]='player' [inverted]='gameMode == "contest"'></player-position-slot>
+		</div>
+	</ion-slide>
+	<ion-slide class='thirdSlide'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col text-left align-self-center>
+					<img class='img-squadup' src='assets/images/replay/squadup.png' />
+				</ion-col>
+				<ion-col text-center>
+					<div text-center class='title' >
+						<label font-4 font-w-medium>Play&nbsp;</label> <label font-4 font-w-bold>TOGETHER,</label>
+						<label font-4 font-w-medium>Win&nbsp;</label> <label font-4 font-w-bold>TOGETHER.</label>
+					</div>
+					<div text-center class='sub-title' font-w-bold font-7>
+						Why not team up with friends to increase your chances of winning.  
+					</div>
+					<button (click)='openSquadupModal.emit()'>
+						<img src='assets/images/replay/squadup_outline.png' />
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-slide>
+</ion-slides>

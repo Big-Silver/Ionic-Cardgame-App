@@ -1,0 +1,68 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col col-auto>
+			<div>
+				<player-avatar-icon (click)='playerProfileClicked.emit()' [playerInformation]='data.playerInformation' class="small"></player-avatar-icon>
+			</div>
+		</ion-col>
+		<ion-col col-auto class='border-column'></ion-col>
+		<ion-col align-self-center col-auto>
+			<div>
+				<img class='img-head2head' *ngIf='data.gameType == "HEAD2HEAD"' src='assets/images/game-mode-icons/head2head.png' />
+				<img class='img-replay' *ngIf='data.gameType == "REPLAY"' src='assets/images/game-mode-icons/replay.png' />
+				<img class='img-contest' *ngIf='data.gameType == "CONTEST"' src='assets/images/game-mode-icons/contest.png' />
+			</div>
+			<div font-8 font-w-medium text-center>
+				ID: {{data.id}}
+			</div>
+		</ion-col>
+		<ion-col col-auto class='border-column'></ion-col>
+		<ion-col>
+			<ion-grid no-padding>
+				<ion-row justify-content-around>
+					<ion-col col-auto align-self-center>
+						<img [src]='data.gameIcon' />
+					</ion-col>
+					<ion-col col-auto>
+						<ion-grid class='timer-grid' no-padding>
+							<ion-row>
+								<ion-col text-center font-8>
+									{{data.date}}
+								</ion-col>
+							</ion-row>
+							<ion-row>
+								<ion-col text-center font-8>
+									{{data.time}}
+									<!-- <timer font-8 [minimal]='true' [time]='data.timer' ></timer> -->
+								</ion-col>
+							</ion-row>
+							<ion-row>
+								<ion-col text-center>
+									<button round text-center ion-button small>
+										View
+									</button>
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+		<ion-col col-auto class='border-column'></ion-col>
+		<ion-col align-self-end col-auto>
+			<div>
+				<img class='img-won' *ngIf='data.result == "WON"' src='assets/images/inbox/won.png' />
+				<img class='img-lost' *ngIf='data.result == "LOST"' src='assets/images/inbox/lost.png' />
+				<img class='img-up' *ngIf='data.result == "UP"' src='assets/images/inbox/up.png' />
+			</div>
+			<div class='button-wrapper' text-center>
+				<button class='button-rematch' *ngIf='data.rematch == true' round text-center ion-button small>
+					Rematch
+				</button>
+				<button class='button-next' *ngIf='data.next == true' round text-center ion-button small>
+					Next
+				</button>
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

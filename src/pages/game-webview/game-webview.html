@@ -1,0 +1,13 @@
+<ion-content tappable>
+	<iframe #iframe *ngIf='gameUrl' width="320" height="568" allowfullscreen></iframe>
+	<ion-grid *ngIf='!gameUrl' (click)='gameOver()' no-padding justify-content-center>
+		<ion-row>
+			<ion-col  padding text-center>
+				<h3>Game View</h3>
+				<div>Tap to go next screen.</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
+
+<!-- http://ec2-54-77-150-68.eu-west-1.compute.amazonaws.com/ -->

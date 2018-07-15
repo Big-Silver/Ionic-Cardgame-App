@@ -1,0 +1,198 @@
+player-avatar-icon {
+
+	display: inline-block;
+	width: 67px;
+	height: 66px;
+	position: relative;
+
+	.gradientBackground{
+		background-image: linear-gradient(to bottom, #2ac9f5 0%, #1249b0 100%);
+		text-align: center;
+		border-top-right-radius: 50%;
+		border-top-left-radius: 50%;
+		border-bottom-right-radius: 7px;
+		border-bottom-left-radius: 7px;
+		padding-top: 3px;
+		padding-bottom: 5px;
+	}
+
+	.avatar{
+		height: 60px;
+		width: 60px;
+		border-radius: 100%;
+		display: block;
+		margin : auto;
+		background-size: cover;
+		background-color: white;
+		overflow: hidden;
+		padding: 1px;
+		box-shadow: inset 0px 0px 0px 1px black;
+	}
+
+	.avatar-name{
+		letter-spacing: 0.38px;
+		height: 14px;
+		line-height: 13px;
+		background-color: black;
+		color: white;
+		border-radius: 7px;
+		position: absolute;
+		// width: calc(100% - 6px);
+		max-width: calc(100% - 6px);
+		margin: auto;
+		right: 0px;
+		left: 0px;
+		bottom: 1px;
+		border-top: 1px solid #1b78c7;
+		text-overflow: ellipsis !important;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	.avatar-country{
+		height: 20px;
+		width: 20px;
+		background-size: cover !important;
+		border-radius: 100%;
+		position: absolute;
+		bottom: 14px;
+		z-index: 10;
+		right: 1px;
+		padding: 1px;
+		box-shadow: inset 0px 0px 0px 1px black;
+		background-color: black;
+		border: 1px solid #1b78c7;
+	}
+
+	.unknown-country{
+		height: 20px;
+		width: 20px;
+		border-radius: 100%;
+		position: absolute;
+		bottom: 14px;
+		z-index: 7;
+		right: 1px;
+		line-height: 19px;
+		color: white !important;
+		text-align: center;
+		background-color: black;
+		border: 1px solid #1b78c7;
+	}
+
+	.unknown-avatar{
+		background-color: black !important;
+	}
+
+	.avatar-wrapper{
+		position: relative;
+	}
+
+	.invert .avatar-country,
+	.invert .unknown-country{
+		right: unset !important;
+		left: 1px !important;
+	}
+
+	.unknown .avatar-country{
+		background-color: white !important;
+		border: 1px solid black !important;
+		background-image: unset !important;
+	}
+
+	.unknown .big-unknown{
+		position: absolute;
+		display: inline-block;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+player-avatar-icon.small{
+	width: 51px;
+	height: 51px;
+
+	.avatar{
+		height: 46px;
+		width: 46px;
+	}
+
+	.gradientBackground{
+		padding-bottom: 2px !important;
+	}
+
+	.avatar-name{
+		font-size: 8px !important;
+		font-weight: 500 !important;
+		line-height: 11px !important;
+		height: unset !important;
+		letter-spacing: 0.31px;
+		max-width: calc(100% - 4px) !important;
+	}
+
+	.avatar-country{
+		height: 16px;
+		width: 16px;
+		bottom: 12px;
+	}
+
+}
+
+player-avatar-icon.golden{
+	.gradientBackground{
+		background-image: linear-gradient(to bottom, #ffc700 0%, #ff9600 100%) !important;
+	}
+	.avatar-country,
+	.unknown-country{
+		border: 1px solid #ffa200 !important;
+	}
+	.avatar-name{
+		border-top: 1px solid #ffa200 !important;
+	}
+	
+}
+player-avatar-icon.silver{
+	.gradientBackground{
+		background-image: linear-gradient(to bottom, #c2c2c2 0%, #656565 100%);
+	}
+	.avatar-country,
+	.unknown-country{
+		border: 1px solid #7e7e7e !important;
+	}
+	.avatar-name{
+		border: 1px solid #7e7e7e !important;
+	}
+}
+player-avatar-icon.bronze{
+	.gradientBackground{
+		background-image: linear-gradient(to bottom, #ffb227 0%, #892000 100%);
+	}
+	.avatar-country,
+	.unknown-country{
+		border: 1px solid #ac4c0c !important;
+	}
+	.avatar-name{
+		border: 1px solid #ac4c0c !important;
+	}
+}
+
+player-avatar-icon.golden,
+player-avatar-icon.silver,
+player-avatar-icon.bronze{
+	.unknown-avatar{
+		box-shadow: none !important;
+		border: none !important;
+		padding: 0px !important;
+	}
+	// .unknown-country{
+	// 	color: transparent !important;
+	// }
+	.avatar-name{
+		// color: transparent !important;
+		z-index: 2;
+		bottom: 0px !important;
+		line-height: 11px !important;
+	}
+}

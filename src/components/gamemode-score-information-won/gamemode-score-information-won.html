@@ -1,0 +1,19 @@
+<ion-slides #slides [pager]='true'>
+	<ion-slide class='firstSlide'>
+		<gamemode-score-information
+			[gameMode]='gameMode'
+			[playerInformation]='playerInformation' 
+			[scoreRows]='scoreRows' 
+			[replayInformation]='replayInformation'
+			(openPlayerProfile)='openPlayerProfile.emit()'
+		>	
+		</gamemode-score-information>
+	</ion-slide>
+	<ion-slide>
+		<gamemode-game-player-chart
+			[playerPosition]='playerPosition'
+			(openPlayerProfile)='openPlayerProfile.emit()'
+		>
+		</gamemode-game-player-chart>
+	</ion-slide>
+</ion-slides>

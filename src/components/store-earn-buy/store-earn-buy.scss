@@ -1,0 +1,166 @@
+store-earn-buy {
+
+	display: block;
+	height: inherit;
+	color: white;
+	padding: 3px 0px 2px 0px !important;
+
+	ion-grid{
+		height: 100%;
+		justify-content: space-around;
+	}
+
+	.segmented-control{
+		margin-top: 10px;
+		ion-col.active{
+			background-image: radial-gradient(50% 50%, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0) 100%);
+			position: relative;
+		}
+		ion-col.active:after{
+			content:  "";
+			position: absolute;
+			display: block;
+			right: 0px;
+			left: 0px;
+			margin: auto;
+			bottom: -9px;
+			height: 9px;
+			width: 11px;
+			border-right: 5px solid transparent;
+			border-left: 5px solid transparent;
+			border-bottom: 9px solid white;
+			box-sizing: border-box;
+		}
+
+		.fake-svg-wrapper{
+			display: inline-block;
+			position: relative;
+			color: transparent !important;
+			letter-spacing: 1.75px;
+			font-size: 18px !important;
+			svg{
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				height: 100%;
+				width: 100%;
+				text{
+					font-size: 18px;
+					letter-spacing: 1.75px;
+				}
+			}
+		}
+	}
+
+	.text-main-label{
+		background-image: linear-gradient(180deg, #f7d505 0%, #ffffff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transform: translate3d(0px, 0px, 0px) !important;
+		letter-spacing: 1.75px;
+		line-height: 16px;
+	}
+
+	.text-sub-label{
+		letter-spacing: 1.25px !important;
+		margin-bottom: 7px;
+	}
+
+	.main-label-container{
+		position: relative;
+		.slide-zoom{
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			justify-content: space-between;
+		}
+
+	}
+
+	.text-description{
+		margin-top: 5px;
+		letter-spacing: 1.13px;
+	}
+
+	ion-icon{
+		margin: 0px 4px;
+		font-size: 1.6em !important;
+	}
+
+
+	&.buyMode{
+		.hint-button{
+			background-color: #e63d3d !important;
+			&:before{
+				background-color: #891818 !important;
+			}
+		}
+	}
+
+	.hint-container{
+		margin-bottom: 2px;
+		margin-top: 6px;
+	}
+
+	.hint-button{
+
+		width: 80px;
+		height: 28px;
+		border-radius: 18px;
+		border: 1px solid #ffffff;
+		background-color: #048aff;
+		display: inline-block;
+		position: relative;
+		box-sizing: border-box;
+
+		&:before{
+			width: 26px;
+			height: 26px;
+			top: -1px;
+			left: -1px;
+			border-radius: inherit;
+			position: absolute;
+			background-color: #002f57;
+			content : '';
+			border: 1px solid white;
+		}
+
+		ion-row{
+			height: 100%;
+		}
+
+		[col-auto]{
+			width: 26px;
+			position: relative;
+		}
+
+		.silver-coin{
+			height: 20px;
+			width: 20px;
+			display: block;
+			margin: auto;
+		}
+
+		.multiple-coins{
+			width: 20px;
+			height: 22px;
+			display: block;
+			margin: auto;
+		}
+
+		ion-col:nth-child(2){
+			padding-left: 6px !important;
+			padding-bottom: 2px !important;
+		}
+
+
+	}
+
+	ion-slides{
+		max-width: 100vw;
+	}
+
+}

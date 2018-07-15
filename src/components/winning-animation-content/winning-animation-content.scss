@@ -1,0 +1,100 @@
+[winning-animation-content] {
+
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	height: 100%;
+
+	td{
+		position: relative;
+	}
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	tr[grow]{
+		height: 100%;
+	}
+
+	.player-big-image{
+		border-radius: 100%;
+		height: 100%;
+		width: 100%;
+		background-color: white;
+		transition: all 1s;
+		transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+
+	.wrapper-player-big-image{
+		transition: all 1s;
+	}
+	.wrapper-player-flag-big-image{
+		transition: all 1s;
+	}
+
+	.player-flag-big-image{
+		background-color: white;
+		height: 100%;
+		width: 100%;
+		border-radius: 100%;
+		padding: 1px;
+		box-shadow: inset 0px 0px 0px 1px;
+	}
+
+	.name-wrapper{
+		color: white;
+		opacity: 0;
+		position: absolute;
+		display: block;
+		top: 0px;
+		left: 0px;
+
+		ion-grid{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left:  0px;
+			bottom: 0px;
+			justify-content: center;
+		}
+
+		.player-name{
+			font-size: 18px;
+			letter-spacing: 1.69px;
+			font-weight: 500;
+		}
+
+		.prize{
+			font-size: 28px;
+			font-weight: 700;
+			letter-spacing: 2.63px;
+		}
+
+	}
+
+	.fast-animated{
+		animation-duration: 0.3s !important;
+		animation-fill-mode: forwards !important;
+	}
+
+}
+
+
+@keyframes winning-big-pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 1.15, 1.15);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.winning-big-pulse {
+	animation-name: winning-big-pulse;
+}

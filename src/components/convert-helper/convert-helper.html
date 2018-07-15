@@ -1,0 +1,61 @@
+<ion-grid no-padding>
+	<ion-row class='header'>
+		<ion-col align-self-center font-w-heavy text-center>
+			MULTIPLE CONVERT
+		</ion-col>
+	</ion-row>
+	<ion-row flex-grow class='dropdown-row'>
+		<ion-col col-auto align-self-center>
+			<img src='assets/images/arcade/token-red.png' />
+		</ion-col>
+		<ion-col align-self-center (click)='selectionClicked(redTokenInfo, $event)'>
+			<ion-select (ionChange)='redTokenSelected()' [(ngModel)]='redTokenInfo.numberOfSelectedTokens' class='selection'>
+				<ion-option *ngFor='let option of redTokenInfo.options' [value]='option?.value'>
+					{{option.string}}
+				</ion-option>
+			</ion-select>
+		</ion-col>
+		<ion-col col-auto align-self-center>
+			<img src='assets/images/arcade/token-blue.png' />
+		</ion-col>
+		<ion-col align-self-center (click)='selectionClicked(blueTokenInfo, $event)'>
+			<ion-select (ionChange)='blueTokenSelected()' [(ngModel)]='blueTokenInfo.numberOfSelectedTokens' class='selection'>
+				<ion-option *ngFor='let option of blueTokenInfo.options' [value]='option?.value'>
+					{{option.string}}
+				</ion-option>
+			</ion-select>
+		</ion-col>
+		<ion-col col-auto align-self-center>	
+			<img src='assets/images/store/helper.png' />
+		</ion-col>
+		<ion-col align-self-center (click)='selectionClicked(helperTokenInfo, $event)'>
+			<ion-select (ionChange)='helperTokenSelected()'  [(ngModel)]='helperTokenInfo.numberOfSelectedTokens' class='selection'>
+				<ion-option *ngFor='let option of helperTokenInfo.options' [value]='option?.value'>
+					{{option.string}}
+				</ion-option>
+			</ion-select>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col>
+			<button ion-button block class='convert-button'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col col-auto></ion-col>
+						<ion-col text-center font-h3 align-self-center>
+							{{_availableTokens - remainingTokens}}
+						</ion-col>
+						<ion-col col-auto>
+						</ion-col>
+						<ion-col col-auto align-self-center>
+							<ion-icon class='tapicon-exchange'></ion-icon>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</button>
+			<div  font-6 text-center>
+				Converting
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

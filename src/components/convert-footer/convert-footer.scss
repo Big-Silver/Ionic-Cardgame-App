@@ -1,0 +1,22 @@
+convert-footer {
+	display: block;
+	padding: 0px 20px 0px 20px;
+	color: white;
+
+	img{
+		height: 11px;
+		width: 11px;
+		vertical-align: middle;
+		position: relative;
+	}
+
+	.coin-silver{
+		bottom: 1px;
+		left: 1px;
+	}
+
+	.coin-red{
+		top: 1px;
+	}
+
+}

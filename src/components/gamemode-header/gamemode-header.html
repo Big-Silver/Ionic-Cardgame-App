@@ -1,0 +1,29 @@
+<ion-toolbar no-padding 
+	[ngClass]='
+		{"replayMode" : _gamemode == "replay",
+		"instantwinMode" : _gamemode == "instantwin", 
+		"head2headMode" : _gamemode == "head2head",
+		"arcadeMode" : _gamemode == "arcade", 
+		"contestMode" : _gamemode == "contest"}'
+	>
+	<ion-buttons class='btn-menu' [ngClass]='{"disabled" : disableButtons == true}' start>
+		<ng-content select='[gamemode-header-button]'>
+		</ng-content>
+	</ion-buttons>
+	<ion-title text-center>
+		<ng-content select='[gamemode-header-title-icon]'></ng-content><ng-content select='[gamemode-header-title]'></ng-content>
+	</ion-title>
+	<ion-buttons  (tap)='doOpenStoreScreen()' class='btn-store' end [ngClass]='{"swing animated" : animationBeat == true, "disabled" : disableButtons == true}'>
+		<ng-content select='[gamemode-header-store-icon]'></ng-content>
+	</ion-buttons>
+</ion-toolbar>
+<ion-toolbar wrap-only 
+	[ngClass]='
+		{"replayMode" : _gamemode == "replay",
+		"instantwinMode" : _gamemode == "instantwin", 
+		"head2headMode" : _gamemode == "head2head",
+		"arcadeMode" : _gamemode == "arcade", 
+		"contestMode" : _gamemode == "contest"}'
+	>
+	<ng-content select='gamemode-balance'></ng-content>
+</ion-toolbar>

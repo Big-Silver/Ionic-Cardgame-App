@@ -1,0 +1,10 @@
+<ion-header daily-mission-header (goBack)='dismissView()'>
+</ion-header>
+<ion-content>
+	<daily-mission-footer [numberOfDays]='5' [completedDays]='1'>
+
+	</daily-mission-footer>
+	<table daily-mission-content>
+		<daily-mission-offer class='fast-animated fadeInRight' [ngStyle]='{"animation-delay" : 200*i/1000+"s"}' [data]='offer' *ngFor='let offer of offers;let i = index;'></daily-mission-offer>
+	</table>
+</ion-content>

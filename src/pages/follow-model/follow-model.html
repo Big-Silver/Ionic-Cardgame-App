@@ -1,0 +1,125 @@
+<ion-header follow-header (goBack)='dismissView()' (tabChanged)='handleTabChange($event)'>
+</ion-header>
+<ion-content>
+
+	<div *ngIf='activeTab == "follow" '>
+		<div>
+			<div font-7 font-w-bold class='type-label pink'>
+				The Hits
+			</div>
+		</div>
+		<div class='player-wrapper'>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col *ngFor='let player of followPlayerHits'>
+						<squadup-player-icon [withFollowButton]='true' (imageTapped)='imageTapped()' [playerDetail]='player'></squadup-player-icon>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+		<div>
+			<div font-7 font-w-bold class='type-label blue'>
+				Rising Stars
+			</div>
+		</div>
+		<div class='player-wrapper'>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col *ngFor='let player of followPlayerRising'>
+						<squadup-player-icon [withFollowButton]='true' (imageTapped)='imageTapped()' [playerDetail]='player'></squadup-player-icon>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+		<div>
+			<div font-7 font-w-bold class='type-label yellow'>
+				Todays Top
+			</div>
+		</div>
+		<div class='player-wrapper'>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col *ngFor='let player of followPlayerTop'>
+						<squadup-player-icon [isFamous]='true' (imageTapped)='imageTapped()' [withFollowButton]='true' [playerDetail]='player'></squadup-player-icon>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</div>
+
+	<div *ngIf='activeTab == "following" '>
+		<div>
+			<div font-7 font-w-bold class='type-label pink'>
+				Newest
+			</div>
+		</div>
+		<div class='player-wrapper'>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col *ngFor='let player of followingPlayerHits'>
+						<squadup-player-icon [withFollowButton]='true' (imageTapped)='imageTapped()' [playerDetail]='player'></squadup-player-icon>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+		<div>
+			<div font-7 font-w-bold class='type-label blue'>
+				All
+			</div>
+		</div>
+		<div class='player-wrapper'>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col *ngFor='let player of followingPlayerAll'>
+						<squadup-player-icon [withFollowButton]='true' (imageTapped)='imageTapped()' [playerDetail]='player'></squadup-player-icon>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</div>
+
+	<table class='followers-table' *ngIf='activeTab == "followers" '>
+		<tr shrink>
+			<td>
+				<div font-7 font-w-bold class='type-label pink'>
+					Newest
+				</div>
+			</td>
+		</tr>
+		<tr shrink>
+			<td>
+				<div class='player-wrapper'>
+					<ion-grid no-padding>
+						<ion-row>
+							<ion-col *ngFor='let player of followersPlayerHits'>
+								<squadup-player-icon [withNewLabel]='true' (imageTapped)='imageTapped()' [playerDetail]='player'></squadup-player-icon>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+				</div>
+			</td>
+		</tr>
+		<tr shrink>
+			<td>
+				<div font-7 font-w-bold class='type-label blue'>
+					All
+				</div>
+			</td>
+		</tr>
+		<tr grow>
+			<td class='p-relative'>
+				<div class='cell-wrapper'>
+					<div class='player-wrapper'>
+						<ion-grid no-padding>
+							<ion-row>
+								<ion-col small-v-padding *ngFor='let player of followersPlayerAll'>
+									<squadup-player-icon [playerDetail]='player'></squadup-player-icon>
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</ion-content>

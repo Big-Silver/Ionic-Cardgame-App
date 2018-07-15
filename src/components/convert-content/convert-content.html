@@ -1,0 +1,25 @@
+<tr shrink>
+	<td>
+		<ng-content select='> convert-user-coins'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<ng-content select='> convert-helper'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<ng-content select='> convert-range-slider'></ng-content>
+	</td>
+</tr>
+<tr expand>
+	<td>
+		<ng-content select='> convert-footer'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td class='wrapper-button-close' text-center>
+		<button (click)='closeModal.emit()' font-w-bold font-5>Not Now</button>
+	</td>	
+</tr>

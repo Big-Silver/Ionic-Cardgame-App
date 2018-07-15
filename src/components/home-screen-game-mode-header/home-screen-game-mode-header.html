@@ -1,0 +1,19 @@
+<table [ngStyle]='{ "background-color" : _primaryColor }'>
+	<tr>
+		<td rowspan="2" class='image-cell'>
+			<div>
+				<img #image src="./assets/images/game-mode-icons/{{_icon}}" (load)='resizeImageToProperSize()' />
+			</div>
+		</td>
+		<td class='title' font-4 font-w-bold>
+			{{_title}}
+		</td>
+	</tr>
+	<tr>
+		<td class='sub-title'>
+			<div [ngStyle]='{ "background-color" : _secondaryColor }' font-6>
+				{{_subTitle}}
+			</div>
+		</td>
+	</tr>
+</table>

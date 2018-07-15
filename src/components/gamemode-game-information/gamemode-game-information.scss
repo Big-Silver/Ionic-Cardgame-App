@@ -1,0 +1,370 @@
+gamemode-game-information {
+
+    padding: 0px;
+    position: relative;
+    width: 100%;
+
+    * { color: white; font-family: "Lato"; }
+    td.shrink { width: 1px; }
+    .table-main { width: 100%; }
+
+    .information-row{
+        & > td{
+            vertical-align: top;
+        }
+    }
+    
+    .background-cover{
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0
+    }
+
+    .background-cover:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+	}
+	
+	.replayMode .return-button,
+	.contestMode .return-button,
+	.head2headMode .return-button,
+	.instantwinMode .return-button{
+		ion-grid{
+			background-image: linear-gradient(to right, #ff0e0e 0%, #7f0303 100%);
+		}
+	}
+
+	.arcadeMode .return-button{
+		ion-grid{
+			background-color:rgba(6, 35, 164,0.54);
+		}
+	}
+
+    .return-button{
+        position: relative;
+		font-size: 2.2rem;
+		line-height: 0 !important;
+		padding: 5px !important;
+		width: 47px !important;
+		ion-grid{
+			width:  auto !important;
+			position: absolute;
+			justify-content: center;
+			top: 3px;
+			right: 5px;
+			left: 5px;
+			bottom: 3px;
+			border-radius: 9px;
+		}
+	}
+
+	.arcadeMode .player-rank,
+	.contestMode .player-rank,
+	.head2headMode .player-rank{
+        // padding : 15px 10px 12px 16px;
+        font-weight: 500 !important;
+	}
+	
+	.replayMode .player-rank{
+		padding : 1px 0px 11px 16px;
+		// min-width: 76px !important;
+	}
+
+	.player-rank {
+
+		.player-rank-wrapper{
+			display: inline-block;
+			min-width: 73px;
+		}
+		
+		.title{
+			$deg:38deg;
+			position: relative;
+			// border-top: 1px solid #979797;
+			// border-bottom: 1px solid #979797;
+			line-height: 13px;
+			margin-bottom: 1px !important;
+			letter-spacing: 2px;
+			width: calc(100% - 10px);
+			margin: auto;
+			white-space: nowrap;
+			ion-grid{
+				position: absolute;
+				top: -1px;
+				bottom: -1px;
+				right: 0px;
+				left: 0px;
+				ion-row{
+					flex-grow:  1;
+					position: relative;
+					&:after, &:before{
+						content: '';
+						position: absolute;
+						top: 0px;
+						right: 0px;
+						left: 0px;
+						bottom: 0px;
+					}
+				}
+
+				
+
+				ion-row:before{
+					border-left: 1px solid #979797;
+				}
+				ion-row:after{
+					border-right: 1px solid #979797;
+				}
+				
+				ion-row:nth-child(1){
+
+					&:after, &:before{
+						border-top: 1px solid #979797;
+					}
+
+
+					&:before{
+						transform: skewX(-$deg);
+						transform-origin: top right;
+					}
+					&:after{
+						transform: skewX($deg) translate3d(0px,0px,0px);
+						transform-origin: top left;
+					}
+				}
+
+				ion-row:nth-child(2){
+
+					&:after, &:before{
+						border-bottom: 1px solid #979797;
+					}
+					&:before{
+						transform: skewX($deg);
+						transform-origin: bottom right;
+					}
+					&:after{
+						transform: skewX(-$deg) translate3d(0px,0px,0px);
+						transform-origin: bottom left;
+					}
+				}
+			}
+		}
+
+	}
+
+
+	.contestMode .player-rank{
+		
+		& > div{
+			position: relative;
+		}
+	}
+	
+	.replayMode .player-rank{
+
+		& > div{
+			position: relative;
+		}
+
+		.replay-image-holder{
+			white-space: nowrap;
+		}
+		.replay-image-holder img{
+			max-width: unset !important;
+			display: inline;
+			vertical-align: bottom;
+		}
+		.up-arrow{
+			width: 17px;
+		}
+		.money{
+			width: 39px;
+			height: 23.5px;
+			margin-bottom : -0.5px;
+		}
+	}
+
+	.contestMode .info-button{
+		right: -16px !important;
+	}
+
+	.info-button{
+		height: 12px;
+		width: 12px;
+		box-shadow: 0 2px 0 #417505;
+		background-image: linear-gradient(180deg, #7ed321 0%, #62a815 100%);
+		margin: 0px;
+		padding: 0px;
+		border-radius: 100%;
+		position: absolute;
+		top: -7px;
+		right: -14px; 
+		.button-inner{
+			font-family: "Lobster" !important;
+			font-size: 8px;
+		}
+		&:active{
+			box-shadow: none !important;
+			filter: brightness(0.4);
+		}
+	}
+
+    .player-badge{
+        ion-icon{
+            vertical-align: middle;
+            font-size: 12px !important;
+        }
+        td{
+            padding: 3px !important;
+            white-space: nowrap;
+            width: 50%;
+		}
+		
+		img{
+			max-width: none !important;
+		}
+        td:nth-child(1) img{
+			color: #FFFF00;
+			width: 14px;	
+        }
+        td:nth-child(2) img{
+			color: #f17862;
+			height: 14px;
+			width: 9px;
+			padding-top: 1px;
+			margin-right: 1px;
+        }
+    }
+
+    .entry-fee{
+		
+		background-size: cover;
+        float: right;
+        color: white;
+        box-shadow: 0 0 0 1px white !important;
+		border-radius: 8px !important;
+		overflow: hidden;
+		min-width: 53px;
+	
+        thead{
+            background-color: #851616;
+            td{
+                border-top-left-radius: 8px !important;
+                border-top-right-radius: 8px !important;
+                border-bottom: 1px solid white;
+                padding: 2px;
+            }
+        }
+        tbody{
+			
+            td{
+				background-color: rgba(0,0,0,0.75);
+				&:nth-child(1){
+					width: 54px;
+					padding: 13px 0px 14px 0px !important;
+					border-bottom-left-radius: 8px;
+				}
+
+			}
+			img{
+				height: 13px;
+				display: inline-block;
+				vertical-align: bottom;
+			}
+			div{
+				height: 13px;
+				line-height: 14px;
+				
+			}
+			span{
+				height: 13px;
+				line-height: 11px;
+				
+				font-size: 14px;
+			}
+		}
+	}
+	
+	.instantwinMode .entry-fee{
+		margin-bottom: 12px;
+	}
+
+	.head2headMode .player-level{
+		background-color: #000b8b !important;
+	}
+
+    .button-playgame{
+		padding: 0px 8px;
+
+        button{
+			position: relative;
+			margin: 0px;
+            margin-bottom: 3px;
+            background-image: linear-gradient(180deg, #7ed321 0%, #62a815 100%);
+            padding: 20px 0px 21px 0px;
+            border-radius: 6px;
+			box-shadow: 0px 3px 0px 0px #417505;
+			color: transparent !important;
+			animation-duration: 1.5s !important;
+			width: 71px;
+		}
+
+		&.blue{
+			button{
+				background-image: linear-gradient(180deg, #009eff 0%, #0080cf 100%) !important;
+				box-shadow: 0 3px 0 #1249b0 !important;
+			}
+		}
+
+		button[disabled]{
+			opacity: 1 !important;
+			filter: grayscale(100%);
+			-webkit-filter: grayscale(100%);
+		}
+
+		.wrapper-div{
+			position: relative;
+		}
+
+		.overlay-text{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 3px;
+			left: 0;
+			display: table;
+			margin: auto 0px;
+			text-align: center;
+			width: 100%;
+			pointer-events: none;
+		}
+
+		.wrapper-div:active{
+			&:not(.disable-deboss){
+				filter: brightness(0.4);
+				transform: translate(2px, 2px) !important;
+			}
+			button{
+				animation: unset !important;
+			}
+		}
+
+    }
+
+    .game-name{
+        padding: 2px 10px 6px 0px;
+	}
+
+	player-game-rank-table{
+		margin-bottom: 16px;
+	}
+
+}

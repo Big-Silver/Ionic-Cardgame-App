@@ -1,0 +1,38 @@
+<ion-toolbar wrap-only>
+	<ng-content select='[header-top-bar]'>
+	</ng-content>
+</ion-toolbar>
+<ion-navbar no-padding>
+	<ion-buttons class='btn-menu' start>
+		<ng-content select='[header-menu-button]'>
+		</ng-content>
+	</ion-buttons>
+	<ion-buttons end>
+		<!-- <div></div>
+		
+		<div></div>
+		<ng-content select='[header-follow-button]'>
+		</ng-content>
+		<div></div>
+		
+		<div></div>
+		<ng-content select='[header-share-button]'>
+		</ng-content> -->
+		<div col></div>
+		<ng-content select='[header-msg-button]'>
+		</ng-content>
+		<div col></div>
+		<ng-content select='[header-missions-button]'>
+		</ng-content>
+		<div col></div>
+	</ion-buttons>
+	<ion-buttons class='store-button-wrapper' end>
+		<button ion-button class='btn-store' tappable [ngClass]='{"swing animated" : animationHeartBeat == true}' (tap)='doOpenStoreScreen()'>
+			<ng-content select='[store-icon]'></ng-content>
+		</button>
+	</ion-buttons>
+</ion-navbar>
+<ion-toolbar balance-bar wrap-only>
+	<ng-content select='gamemode-balance'>
+	</ng-content>
+</ion-toolbar>

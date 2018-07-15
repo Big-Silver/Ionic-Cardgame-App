@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <div class="header-logo">
+                <img src="assets/images/logo.png" width="102" height="50"/>
+            </div>
+            <div class="header-bottom-line"></div> 
+            <div class="slogan">
+                <span class="play">Play</span>
+                <span class="other">For Free,</span>
+                <span class="win">Win</span>
+                <span class="other">For Real</span>
+            </div>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+	<div class="profile-form-main">
+	<form>
+		<ion-grid>
+			<ion-row>
+				<ion-col col-12>
+					<label>Upload <br>Your own avatar</label>
+				</ion-col>
+
+				<ion-col col-12>
+					<div class="camera-img-wrap" [style.visibility]="(Iscamcapt) ? 'hidden' : 'visible' " >
+						<img class="capture-img" src="{{captureDataUrl}}" (click)="presentActionSheet()">
+						<span [style.visibility]="(isImageFromCam) ? 'visible' : 'hidden' "
+						 ><ion-icon ios="ios-camera" md="md-camera"></ion-icon></span>
+					</div>
+					
+					<p class="or-choose-from">Or choose from <br>ours</p>
+				</ion-col>
+
+				<ion-col col-12>
+					<img id="avatarChoose" src="{{assetBaseUrl}}/avatar.png" (click)="selectFromLibs()" [style.visibility]="(isAvatarFromLib) ? 'hidden' : 'visible' ">
+					<!--Slider for the avatars-->
+					<ion-slides id="chooseFromLib" slidesPerView="5" centeredSlides spaceBetween="10px"  parallax="true" [style.visibility]="(isAvatarFromLib ) ? 'visible' : 'hidden' ">
+						<ion-slide *ngFor ="let avatar of avatarStore" (click)="avatarSelected(avatar.index)">
+						<img  [class] = "(avatar.status) ? 'active': '' " src="{{avatar.image}}"/>
+						</ion-slide>
+
+					</ion-slides>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+
+		<div class="form-submit {{(Isformactive) ? 'active': ''}}">
+			<button class="submit-custom-form" ion-button block  type="submit" (click)="doRegister()">Done</button>
+		</div>
+	</form>
+	</div>
+	<div class="app-footer">
+		<img src="assets/images/profile/ad-banner.png">
+	</div>
+</ion-content>
+

@@ -1,0 +1,13 @@
+<ion-header stage-result-header (closeModal)='dismissView()' [hideCloseButton]='curtainActive == true'>
+</ion-header>
+<ion-content>
+	<table stage-result-content>
+		<stage-result-game-info [mode]='mode'></stage-result-game-info>
+		<stage-result-leaderboard
+			[highRankedPlayers]='rankingPlayers.upperPlayers'
+			[lowRankedPlayers]='rankingPlayers.lowerPlayers'>
+		</stage-result-leaderboard>
+		<stage-result-footer [mode]='mode'></stage-result-footer>
+	</table>
+	<curtain *ngIf='curtainActive == true' (curtainRemoved)='disableCurtain()'></curtain>
+</ion-content>

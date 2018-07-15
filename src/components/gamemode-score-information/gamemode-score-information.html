@@ -1,0 +1,68 @@
+<table>
+	<tr>
+		<td grow>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col text-left>
+						<player-avatar-icon (click)='viewPlayerProfile()' [playerInformation]='playerInformation'></player-avatar-icon>
+					</ion-col>
+					<ion-col align-self-center *ngIf="gameMode == 'contest'">
+						<player-game-rank-table b-blue level='PRO' stars='2' badges='4'></player-game-rank-table>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</td>
+		<td shrink>
+			<ion-icon class='tapicon-more-vert'></ion-icon>
+		</td>
+		<td grow font-w-medium text-left font-5 class='label-prize-pool'>
+			The higher your <img *ngIf="gameMode == 'replay'" src='assets/images/game-mode-icons/replay.png' /><img *ngIf="gameMode == 'contest'" src='assets/images/game-mode-icons/contest.png' /> the 
+			better your chance of 
+			winning your slice of 
+			the prize pool. 
+		</td>
+	</tr>
+	<tr>
+		<td font-w-heavy text-left font-4>
+			YOUR SCORE
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr class='score-border'>
+		<td colspan="3"><div></div></td>
+	</tr>
+	<tr class='score-table-container-row'>
+		<td>
+			<table class='score-table' [ngClass]='{"fadeIn animated" : fadingContent == true}'>
+				<tr *ngFor='let row of scoreRows'>
+					<td font-9 font-w-bold text-left>{{row.label}}:</td>
+					<td font-9 class="highlight" text-right font-w-bold #wordShufflers>{{row.value}}</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<ion-icon class='tapicon-more-vert'></ion-icon>
+		</td>
+		<td class='p-relative'>
+			<table class='replay-information-table'>
+				<tr>
+					<td font-w-bold font-5 text-center>TOTAL</td>
+				</tr>
+				<tr>
+					<td font-w-bold class='replay-count' text-center>
+						<span number-counter [counts]='replayInformation.count' ></span>
+						<img *ngIf="gameMode == 'replay'" src='assets/images/game-mode-icons/replay.png' />
+						<img *ngIf="gameMode == 'contest'" src='assets/images/game-mode-icons/contest.png' />
+					</td>
+				</tr>
+			</table>
+			<label class='top-position' font-6 font-w-bold>
+				Top <ng-container *ngIf='!replayInformation.topPercentage'>--</ng-container><ng-container *ngIf='replayInformation.topPercentage'>{{replayInformation.topPercentage}}</ng-container> %
+			</label>
+		</td>
+	</tr>
+	<tr class='score-border'>
+		<td colspan="3"><div></div></td>
+	</tr>
+</table>

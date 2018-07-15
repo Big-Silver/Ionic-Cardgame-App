@@ -1,0 +1,113 @@
+<div class='description'>
+	<table>
+		<tr>
+			<td>
+				<img class='image-prize' src='assets/images/player-profile/present-box.png' />
+			</td>
+			<td >
+				<div *ngIf='mode == "FAMOUS"'>
+					<div class='gradient-text' font-h3 font-w-bold text-center>
+						Are you the most Famous?
+					</div>
+					<div text-center font-5 font-w-normal>
+						We give mystery gifts to Top Weekly <br/> <img class='image-famous' src='assets/images/player-profile/fame.png' />       
+						Earner.
+					</div>
+				</div>
+				<div *ngIf='mode == "FIGHTER"'>
+					<div class='gradient-text' font-h3 font-w-bold text-center>
+						Be the BEST Fighter!
+					</div>
+					<div text-center font-5 font-w-normal>
+						We give special gifts to Top Weekly <br/> <img class='image-fighter' src='assets/images/player-profile/fighter.png' />       
+						Earner.
+					</div>
+				</div>
+			</td>
+			<td>
+				<img class='image-mystry-box' src='assets/images/player-profile/mystry-box.png' />
+				<img class='image-calendar' src='assets/images/player-profile/calendar.png' />
+			</td>
+		</tr>
+	</table>
+</div>
+<div class='background-container'>
+	<div class='segment'>
+		<ion-segment [(ngModel)]='time'>
+	
+			<ion-segment-button value='lastWeek'>
+				<div class='main-label' font-5 font-w-bold>
+					LAST WEEK
+				</div>
+			</ion-segment-button>
+	
+			<ion-segment-button value='thisWeek'>
+				<div class='main-label' font-5 font-w-bold>
+					THIS WEEK
+				</div>
+				<div class='timer-wrapper'>
+					Ends in:&nbsp;&nbsp;<timer time='432000' [withDay]='true'></timer>
+				</div>
+			</ion-segment-button>
+	
+			<ion-segment-button value='allTime'>
+				<div class='main-label' font-5 font-w-bold>
+					ALL TIME
+				</div>	
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+	<div class='big-switch'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col col-auto>
+					<div class='famous-button' (click)='changeMode()' [ngClass]='{"active": mode == "FAMOUS"}'>
+						<img src='assets/images/player-profile/fame.png' />
+					</div>
+					<div class='fighter-button' (click)='changeMode()' [ngClass]='{"active":mode == "FIGHTER"}'>
+						<img  src='assets/images/player-profile/fighter.png' />
+					</div>
+				</ion-col>
+				<ion-col align-self-center font-w-normal>
+					Gifts are given based on weekly performances not
+					your total 
+					<img *ngIf='mode == "FIGHTER"' class='img-small-fighter' src='assets/images/player-profile/fighter.png' />
+					<img *ngIf='mode == "FAMOUS"' class='img-small-famous' src='assets/images/player-profile/fame.png' /> 
+					points.
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div class='header'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col font-8 font-w-medium col-auto align-self-end>
+					RANK
+				</ion-col>
+				<ion-col col-auto>
+				</ion-col>
+				<ion-col font-8 font-w-medium col-auto align-self-end>
+					NAME
+				</ion-col>
+				<ion-col>
+				</ion-col>
+				<ion-col col-auto>
+				</ion-col>
+				<ion-col text-center font-8 font-w-medium col-auto align-self-end>
+					TOTAL
+					<img *ngIf='mode == "FIGHTER"' class='img-small-fighter' src='assets/images/player-profile/fighter.png' />
+					<img *ngIf='mode == "FAMOUS"' class='img-small-famous' src='assets/images/player-profile/fame.png' /> 
+				</ion-col>
+				<!-- <ion-col col-auto></ion-col>
+				<ion-col font-6 font-w-bold col-auto align-self-end>
+					<label class='top-subtitle'>
+						THIS
+					</label>
+					WEEK
+					<img *ngIf='mode == "FIGHTER"' class='img-small-fighter' src='assets/images/player-profile/fighter.png' />
+					<img *ngIf='mode == "FAMOUS"' class='img-small-famous' src='assets/images/player-profile/fame.png' /> 
+				</ion-col> -->
+			</ion-row>
+		</ion-grid>
+	</div>
+</div>

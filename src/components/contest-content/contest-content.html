@@ -1,0 +1,41 @@
+<tr shrink>
+	<td>
+		<ng-content select='gamemode-game-information'>
+		</ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td class='highlighted-border'>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<ng-content select=' > gamemode-game-details'>
+		</ng-content>
+		<ng-content select=' > gamemode-game-details-won'>
+		</ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td class='highlighted-border inverse'></td>
+</tr>
+<tr expand>
+	<td class='td-gamemode-score-background' [ngClass]='{"vertical-align-top" : doVerticalAlignTop == true}'>
+		<table>
+			<tr expand>
+				<td>
+					<ng-content select=' > gamemode-score-information'>
+					</ng-content>
+					<ng-content select=' > gamemode-score-information-won'>
+					</ng-content>
+				</td>
+			</tr>
+			<tr shrink>
+				<td>
+					<ng-content select=' > timer'>
+					</ng-content>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>

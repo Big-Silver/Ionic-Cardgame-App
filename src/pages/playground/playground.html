@@ -1,0 +1,26 @@
+<ion-header stage-result-header>
+</ion-header>
+<ion-content>
+	<!-- <curtain></curtain> -->
+	<table >
+		<tr shrink>
+			<td>
+				<stage-result-game-info></stage-result-game-info>
+			</td>
+		</tr>
+		<tr grow>
+			<td class='leaderboard-wrapper'>
+				<stage-result-leaderboard
+					[highRankedPlayers]='rankingPlayers.upperPlayers'
+					[lowRankedPlayers]='rankingPlayers.lowerPlayers' 
+				></stage-result-leaderboard>
+			</td>
+		</tr>
+		<tr shrink class='footer-wrapper'>
+			<td>
+				<stage-result-footer></stage-result-footer>
+			</td>
+		</tr>
+	</table>
+
+</ion-content>

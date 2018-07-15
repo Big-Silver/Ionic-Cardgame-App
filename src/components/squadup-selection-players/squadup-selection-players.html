@@ -1,0 +1,42 @@
+<div class='searchbar-wrapper'>
+	<ion-searchbar [placeholder]="''" [animated]='true'>
+	</ion-searchbar>
+</div>
+<ion-grid no-padding>
+	<ion-row class='label-selected-players'>
+		<ion-col font-6>
+			<label font-6 font-w-bold>{{alreadySelectedPlayers}}</label>/<label font-w-bold font-6>{{maxSelection}}</label>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col>
+			<div class='scroll-div'>
+				<ion-grid *ngIf='numberOfPlayers == 0'>
+					<ion-row *ngIf='mode == "SQUADUP"'>
+						<ion-col text-center>N/A</ion-col>
+					</ion-row>
+					<ion-row *ngIf='mode == "CHALLANGE"'>
+						<ion-col text-center>You dont follow anyone</ion-col>
+					</ion-row>
+				</ion-grid>
+				<ion-grid 
+					[@listAnimation]='animationState'
+					(@listAnimation.start)='animationStarted($event)' 
+					*ngIf='numberOfPlayers > 0' no-padding >
+					<ion-row *ngFor='let slot of playersList;trackBy:tracker'>
+						<ion-col enter *ngFor='let player of slot;trackBy:tracker' text-center>
+							<squadup-player-icon [withProfileViewButton]='true' (profileViewTapped)='profileViewTapped.emit($event)' [playerDetail]='player' (imageTapped)='followPlayer(player)'></squadup-player-icon>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col text-right>
+			<button [disabled]='numberOfPlayers == 0 || alreadySelectedPlayers == 0' class='button-request'>
+				Request
+			</button>
+		</ion-col>
+	</ion-row>
+</ion-grid>

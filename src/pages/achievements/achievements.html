@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons left>
+			<button ion-button icon-only (click)="goBack()">
+				<ion-icon class='tapicon-back'></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title>ACHIEVEMENTS</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content >
+	<table achievement-content>
+		<achievement-tabs (tabChanged)='changeActiveGameMode($event)'>
+		</achievement-tabs>
+		<achievement-game-slot [data]='game' [mode]='activeGameMode' *ngFor='let game of gamesList'>
+		</achievement-game-slot>
+		<achievement-footer></achievement-footer>
+	</table>
+	
+	
+</ion-content>

@@ -1,0 +1,41 @@
+@keyframes positive-pulse {
+	from {
+	  transform: scale3d(1, 1, 1);
+	}
+  
+	50% {
+	  transform: scale3d(1.5, 1.5, 1.5);
+	  color: green;
+	}
+  
+	to {
+	  transform: scale3d(1, 1, 1);
+	}
+}
+  
+.positive-pulse {
+	animation-name: positive-pulse;
+	animation-duration: 800ms;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes negative-pulse {
+	from {
+	  transform: scale3d(1, 1, 1);
+	}
+  
+	50% {
+	  transform: scale3d(1.5, 1.5, 1.5);
+	  color: green;
+	}
+  
+	to {
+	  transform: scale3d(1, 1, 1);
+	}
+}
+  
+.negative-pulse {
+	animation-name: negative-pulse;
+	animation-duration: 800ms;
+	animation-timing-function: ease-in-out;
+}

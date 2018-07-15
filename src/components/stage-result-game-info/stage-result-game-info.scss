@@ -1,0 +1,78 @@
+stage-result-game-info {
+	display: block;
+
+	height: 164px !important;
+	position: relative;
+	color: white;
+
+
+	ion-grid{
+		background-size: cover;
+		
+		background-position: center;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+	}
+	
+	ion-grid.win{
+		background-image: url('../assets/images/stage-result/pass.png');
+		background-size: 100% 100%;
+	}
+
+	ion-grid.lose{
+		background-image: url('../assets/images/stage-result/elimination.png');
+		background-size: auto 100%;
+	}
+
+	ion-row[grow]{
+		flex: 1;
+	}
+
+	
+
+	.row-game-information{
+		padding: 3px 5px !important;
+		background-color: rgba(0,0,0,0.38);
+	}
+
+	.col-player-name{
+		padding: 0px 8px !important;
+		[font-w-heavy]{
+			font-size: 13px !important;
+			margin-bottom: 3px;
+		}
+		[font-6]{
+			width: 75% !important;
+		}
+	}
+
+	.col-shares-left{
+		padding-right: 10px !important;
+		img{
+			height: 30px !important;
+			width: 30px !important;
+			display: block;
+			margin: auto;
+		}
+		[font-8]{
+			line-height: 8px !important;
+		}
+		[font-h3]{
+			line-height: 18px !important;
+			color: #f7df3c;
+		}
+		table{
+			margin-top: 7px;
+			position: relative;
+			bottom: -1px;
+		}
+	}
+
+	
+
+
+
+}

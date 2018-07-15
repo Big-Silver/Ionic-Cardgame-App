@@ -1,0 +1,15 @@
+<ion-slides #slides>
+	<ion-slide class='blue-slide'>
+		<div class='scroll-div'>
+			<store-blue-slot [mode]='slot' *ngFor="let slot of blueSlotsData"></store-blue-slot>
+		</div>
+		<div class='footer-text' font-13 font-w-medium>
+			Earned coins can take from afew minutes to 10 days depending on offer provider to be credited to your account.
+		</div>
+	</ion-slide>
+	<ion-slide>
+		<div class='scroll-div'>
+			<store-red-slot [mode]='slot.mode' [data]='slot' *ngFor='let slot of redSlotsData'></store-red-slot>
+		</div>
+	</ion-slide>
+</ion-slides>

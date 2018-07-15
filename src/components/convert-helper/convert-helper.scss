@@ -1,0 +1,151 @@
+convert-helper {
+
+	display: block;
+	color: white;
+	height: inherit;
+
+
+	& > ion-grid{
+		border-top: 2px solid #0a2ab7;
+		height: 143px;
+		padding-top: 5px !important;
+		padding-bottom: 3px !important;
+		justify-content: space-between;
+		background-color: rgba(0,0,0,0.5);
+	}
+
+	.header{
+		ion-col{
+			font-style: italic;
+			letter-spacing: 2.23px;
+		}
+	}
+
+	.dropdown-row{
+		align-self: center;
+		img{
+			height: 20px;
+			width: 20px;
+			display: block;
+		}
+		ion-col{
+			margin-right: 6px;
+		}
+	}
+
+	.convert-button{
+		width: 220px;
+		height: 41px;
+		padding: 0px !important;
+		margin: auto;
+		margin-bottom: 3px !important;
+		background-image: linear-gradient(180deg, #7ed321 0%, #62a816 100%);
+		box-shadow: 0 3px 0 #0e7403;
+		border-radius: 100px !important;
+		position: relative;
+
+		&:active{
+			transform: translate(2px, 2px);
+			filter: brightness(0.4);
+		}
+
+		ion-grid{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			ion-row{
+				flex-grow: 1;
+			}
+		}
+
+		ion-col{
+			font-family: "Avenir Next" !important;
+			font-weight: 500;
+		}
+
+		ion-col:nth-child(1){
+			width: 21.818181% !important;
+		}
+
+		ion-col:nth-child(3){
+			border-right: 2px solid #5cab00;	
+		}
+		ion-col:nth-child(4){
+			ion-icon{
+				font-size: 1.6em !important;
+				margin: 0px 12px;				
+			}
+		}
+
+	}
+
+	// .content-holder{
+	// 	position: absolute;
+	// 	top: 0px;
+	// 	bottom: 0px;
+	// 	right: 0px;
+	// 	left: 0px;
+	// 	display: block;
+	// 	height: 100%;
+	// 	.convert-icon{
+	// 		width: 52px;
+	// 		height: 41px;
+	// 		margin: 10px !important;
+	// 		box-shadow: 0 3px 0 #0e7403;
+	// 		background-color: #5cc129;
+	// 		border-radius: 6px;
+	// 		color: white;
+	// 		ion-icon{
+	// 			margin-top: 4px !important;
+	// 			font-size: 24px !important;
+	// 		}
+	// 		&:active{
+	// 			transform: translate(2px, 2px);
+	// 			filter: brightness(0.4);
+	// 		}
+	// 	}
+	// }
+
+	ion-select{
+		pointer-events: none !important;
+		transform: translate3d(0px, 0px, 0px) !important;
+	}
+
+	.selection{
+
+		max-width: 100% !important;
+		padding: 0px !important;
+		height: 30px;
+		width: 45px !important;
+		border: 1px solid white;
+		border-radius: 6px;
+
+		.select-icon{
+			background-color: white !important;
+			height: 30px;
+			width: 18px !important;
+		}
+
+		.select-text{
+			align-self: center;
+			text-align: center;
+			line-height: 20px !important;
+		}
+
+		.select-icon-inner{
+			left: 1px !important;
+			right: 1px;
+			color: black !important;
+			border-radius: 0 5px 5px 0;
+			margin-right: auto !important;
+			margin-left: auto !important;
+		}
+
+		*{
+			color: white !important;
+		}
+	}
+
+}	

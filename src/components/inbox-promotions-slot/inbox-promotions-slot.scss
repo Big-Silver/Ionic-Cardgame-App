@@ -1,0 +1,76 @@
+inbox-promotions-slot {
+
+	display: block;
+	height: 100%;
+	color: white;
+	border: 1px solid white;
+	border-radius: 19px 0 0 19px;
+	background-color: silver;
+	overflow: hidden;
+
+
+
+	& > ion-grid > ion-row > ion-col{
+
+		&:nth-child(1){
+			background-image: url('../assets/images/arcade/game-background.jpg');
+			background-size: cover;
+		}
+
+		&:nth-child(2){
+			display: flex;
+			border-left: 1px solid white;
+			width: 19.5364% !important;
+			flex-direction: column !important;
+			background-color: white;
+			.first-row,
+			.second-row{
+				align-items: center !important;
+				display: flex;
+				flex-direction: 'row';
+				justify-content: stretch !important;
+				flex-wrap: wrap;
+			}
+			.first-row{
+				flex: 0 0 59.74025% !important;
+				background-color: black;
+			}
+			.second-row{
+				color: black;
+				flex: 1;
+				padding-left: 3px;
+			}
+		}
+
+		.first-row{
+			& > div{
+				flex:  0 0 100%;
+			}
+			img{
+				height: 17px;
+				width: 17px;
+				display: block;
+				margin: auto;
+				margin-bottom: 1px !important;
+			}
+		}
+
+		timer{
+			transform: translate3d(0px, 0px, 0px) !important;
+			background-color: transparent !important;
+			height: unset !important;
+			color: black !important;
+			line-height: 14px !important;
+			font-size: unset !important;
+			span{
+				font-size : 12px !important;
+				color: black !important;
+			}
+			span:nth-last-child(1){
+				color: #fb0007 !important;
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,29 @@
+<ion-grid no-padding>
+	<ion-row *ngIf='mode == "WIN"'>
+		<ion-col font-11 font-w-medium>
+			Are you ready for the next stage?
+		</ion-col>
+		<ion-col align-self-center col-auto>
+			<button class='button-ready'>
+				Ready
+			</button>
+		</ion-col>
+	</ion-row>
+	<ion-row *ngIf='mode == "LOSE"'>
+		<ion-col font-11 font-w-medium>
+			Good effort why not try another one?
+		</ion-col>
+		<ion-col align-self-center col-auto>
+			<button class='button-home'>
+				Home
+			</button>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+<div class='corner-image'>
+	<img class='background' src='assets/images/squadup/corner.png' />
+	<img class='gamemode-icon' src='assets/images/game-mode-icons/contest.png' />
+</div>
+<div font-w-medium font-6 class='date-wrapper'>
+	10/03/17
+</div>

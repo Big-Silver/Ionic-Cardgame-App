@@ -1,0 +1,60 @@
+<div class='main-wrapper'>
+	<ion-grid no-padding>
+		<ion-row>
+			<ion-col class='wrapper-progress' col-auto>
+				<daily-mission-progress [data]='data.progress'></daily-mission-progress>
+			</ion-col>
+			<ion-col class='wrapper-content'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col>
+							<div font-h3 font-w-bold class='heading'>
+								{{data.heading}}
+							</div>
+							<div [innerHTML]="data.title" font-6 font-w-normal class='title'>
+							</div>
+							<div [innerHTML]='data.subtitle' font-6 font-w-normal class='subtitle'>
+							</div>	
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<div font-5 font-w-medium class='reward'>
+								<label font-5 font-w-medium class='span-reward'>
+									Reward:&nbsp;
+								</label>
+								<ng-container *ngIf='data.currencyType == "TOKEN_RED"'>
+									<img src='assets/images/arcade/token-red.png' />
+								</ng-container>
+								<ng-container *ngIf='data.currencyType == "TOKEN_SILVER"'>
+									<img src='assets/images/dashboard/coin.png' />
+								</ng-container>
+								<ng-container *ngIf='data.currencyType == "POUND"'>&pound;</ng-container>
+								<label font-5 font-w-medium>
+									{{data.reward}}
+								</label>
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<div (tap)='changeOfferStatus()' font-6 font-w-bold text-center class='button-footer'
+		[ngClass]='{
+			"applied" : data.offerStatus == "APPLY",
+			"ongoing" : data.offerStatus == "ONGOING",
+			"completed" : data.offerStatus == "COMPLETED"
+		}'
+	>
+		<ng-container *ngIf='data.offerStatus=="APPLY"'>
+			APPLY
+		</ng-container>
+		<ng-container *ngIf='data.offerStatus=="ONGOING"'>
+			ON GOING
+		</ng-container>
+		<ng-container *ngIf='data.offerStatus=="COMPLETED"'>
+			COMPLETED
+		</ng-container>
+	</div>
+</div>

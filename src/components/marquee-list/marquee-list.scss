@@ -1,0 +1,82 @@
+marquee-list {
+
+	font-family: "Lato";
+
+	table{
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.label-col-wrapper{
+		position: relative;
+	}
+
+	.label-col{
+		text-transform: uppercase;
+		font-weight: 900;
+		background-color: #075903;
+		font-size: 10px;
+		padding: 0px 0px 0px 7px !important;
+		line-height: 21px;
+		text-align: right;
+		z-index: 10;
+		border-left: 1px solid #075903;
+		top: -1px;
+		bottom : -1px;
+		position: absolute;
+	}
+
+	.label-col:after{
+		content: "";
+		top: 1px;
+		bottom: 0;
+		width: 20px;
+		right: -7px;
+		background-color: inherit;
+		position: absolute;
+		transform: rotate(45deg);
+		border-top: 20px solid #075903;
+		z-index: -1;
+	}
+
+	.marquee-col{
+		background-color: rgba(22, 162, 6, 0.8);
+		overflow: hidden;
+		position: relative;
+		white-space: nowrap !important;
+		display: block;
+	}
+
+	td{
+		height: 20px;
+		color: white;
+	}
+
+	span, label{
+		font-size: 12px;
+	}
+
+	.marquee-col > div > div {
+		height: 20px;
+		&:nth-last-child(1){
+			position: relative;
+			bottom: 20px;
+		}
+	}
+
+	.marquee-col > div{
+		white-space: nowrap;
+		// display: inline-block;
+		// float: left;
+	}
+
+	.asterisk{
+		padding-left: 10px;
+		font-weight: bold !important;
+	}
+
+	.winner-amount, .winner-max-amount{
+		font-weight: 900;
+		color: #f6e518;
+	}
+}

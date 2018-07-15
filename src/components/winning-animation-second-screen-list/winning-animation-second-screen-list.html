@@ -1,0 +1,63 @@
+<table>
+	<tr shrink>
+		<td>
+			<div class='header-wrapper'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col font-8 font-w-medium col-auto text-center>
+							POSITION
+						</ion-col>
+
+						<ion-col col-auto text-center></ion-col>
+
+						<ion-col text-center font-8 font-w-medium>
+							PLAYER
+						</ion-col>
+
+						<ion-col col-auto></ion-col>
+
+						<ion-col col-auto></ion-col>
+
+						<ion-col font-8 font-w-medium col-auto text-center>
+							SCORE
+						</ion-col>
+
+						<ion-col col-auto></ion-col>
+
+						<ion-col font-8 font-w-medium col-auto text-center>
+							PRIZE
+						</ion-col>
+						
+					</ion-row>
+				</ion-grid>
+			</div>
+		</td>
+	</tr>
+	<tr shrink>
+		<td>
+			<player-result-winning
+				(playerProfileTapped)='openPlayerProfile()'
+				[data]='ownResult' 
+				color='dark' 
+				[ownSlot]='true'>
+			</player-result-winning>
+		</td>
+	</tr>
+	<tr shrink>
+		<td>
+			<div class='section-divider'></div>
+		</td>
+	</tr>
+	<tr grow>
+		<td>
+			<div class='player-positions-holder'>
+				<player-result-winning
+					(playerProfileTapped)='openPlayerProfile()'
+					[ngClass]='{"ranked" : i < 3, "gold" : i == 0, "silver" : i == 1, "bronze" : i == 2 }' 
+					[data]='player' 
+					*ngFor='let player of players;let i = index'>
+				</player-result-winning>
+			</div>
+		</td>
+	</tr>
+</table>

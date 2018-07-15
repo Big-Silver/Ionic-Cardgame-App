@@ -1,0 +1,74 @@
+winning-animation-second-screen-header {
+
+	display: block;
+	min-height: 106px;
+	position: relative;
+	background-image: url('../assets/images/winning-animation/theatre.png');
+	background-size: 100% 100%;
+	color: white;
+
+	& > ion-grid{
+		height: 100%;
+		justify-content: flex-end;
+	}
+
+	home-screen-game-icon-small{
+		margin: 5px 3px 3px 7px !important;
+	}
+
+	.highlight{
+		color: #ffd000;
+	}
+
+
+	.winner-list-date-header{
+		background-image: linear-gradient(to right, #e80707 0%, rgba(180, 3, 3, 0) 100%);
+
+		ion-col{
+			letter-spacing: 0.16px;
+		}
+
+
+		.title{
+			padding: 3px 12px !important;
+			line-height: 10px;
+			border-right: 3px solid rgba(0,0,0,0.12);
+			margin-right: 3px;
+		}
+		
+	}
+
+	.img-share{
+		display: block;
+		height: 30px;
+		width: 30px;
+		margin-right: 8px;
+		margin-bottom: 6px;
+
+		&:active{
+			filter: brightness(0.4);
+		}
+
+	}
+
+	.red-background{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 43px;
+		height: 49px;
+		border-right: 21px solid #d12424;
+		border-top: 24px solid #d12424;
+		border-left: 21px solid transparent;
+		border-bottom: 24px solid transparent;
+	}
+
+	.red-icon{
+		position: absolute;
+		top: 0px;
+		right: 1px;
+		font-size: 29px;
+		color: white;
+	}
+
+}

@@ -1,0 +1,214 @@
+gamemode-game-details{
+
+    width: 100%;
+	background-position-y: -1px;
+    background-size: cover;
+	$lightBorder : #fff719;
+	padding: 0px !important;
+
+	ion-col{
+		padding: 0px;
+	}
+
+	.footer{
+		background-image: -webkit-gradient(linear, 0 0, 968 0, color-stop(0.012, #0f0d36), color-stop(0.318, #0d114f), to(#0f0d32));
+		background-image: -webkit-linear-gradient(360deg, #0f0d36 1.2%, #0d114f 31.8%, #0f0d32);
+		background-image: -moz-linear-gradient(360deg, #0f0d36 1.2%, #0d114f 31.8%, #0f0d32);
+		background-image: -o-linear-gradient(360deg, #0f0d36 1.2%, #0d114f 31.8%, #0f0d32);
+		background-image: linear-gradient(90deg, #0f0d36 1.2%, #0d114f 31.8%, #0f0d32);
+		color: white;
+	}
+
+	.circle-button-wrapper{
+		position: relative;
+		overflow: hidden;
+	}
+
+	.circle-button-wrapper:after{
+		content: "";
+		position: absolute;
+		top: 0px;
+		height: 90%;
+		left: 0px;
+		right: 0px;
+		background-color: #000033;
+		z-index: -1;
+		transform: rotate(-53deg);
+		transform-origin: 50% 55%;
+	}
+
+	.stage-and-price{
+		background-color: #000033;
+		color: white;
+	}
+	
+	.stage-and-price{
+		float: right;
+		margin-top: 8px !important;
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+		border : 1px solid $lightBorder;
+		border-right: 0px !important;
+		[font-8]{
+			line-height: 8px !important;
+		}
+	}
+
+	.highlighted{
+		color: #f5e518 !important;
+	}
+
+	.amount{
+		font-size: 20px;
+		line-height: 20px;   
+	}
+
+	.footer{
+		position: relative;
+		padding-bottom: 2px;
+		border-top: 1px solid $lightBorder;
+	}
+	
+	.circle-button-animation-wrapper{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+	.circle-button-wrapper{
+		height: 46px;
+		width: 46px;
+		border: 1px solid $lightBorder;
+		border-radius: 100%;
+		position: absolute;
+		left: -2px;
+		bottom: -5px;
+		border-bottom-color: transparent;
+		border-right-color: transparent;
+	}
+
+	.circle-button{
+		animation-delay: 2s;
+		height: 40px;
+		position: absolute;
+		width: 40px;
+		top: 2px;
+		left: 2px;
+		bottom: 0px;
+		display: block;
+		background-color: transparent;
+		color: white;
+		border: 1px solid yellow;
+		border-radius: 100%;
+		transform: rotate(-53deg);
+		animation-duration : 1.5s !important;
+		background-color: #000033;
+	}
+
+	.circle-button:active{
+		filter: brightness(0.4);
+		animation: none !important;
+	}
+	
+	.circle-button div{
+		white-space: nowrap;
+	}
+
+	@keyframes custom-pulse {
+		from {
+			transform: scale3d(1, 1, 1) rotate(-53deg);
+		}
+		
+		50% {
+			transform: scale3d(1.22, 1.22, 1.22) rotate(-53deg);
+		}
+		
+		to {
+			transform: scale3d(1, 1, 1) rotate(-53deg);
+		}
+	}
+
+	@keyframes custom-pulse-less-rotate {
+		from {
+			transform: scale3d(1, 1, 1) rotate(-41deg);
+		}
+		
+		50% {
+			transform: scale3d(1.22, 1.22, 1.22) rotate(-41deg);
+		}
+		
+		to {
+			transform: scale3d(1, 1, 1) rotate(-41deg);
+		}
+	}
+
+	.arcadeMode{
+		min-height: 23.9726027vh;	
+	}
+
+	.arcadeMode .stage-and-price{
+		padding: 2px 20px 2px 30px;
+	}
+
+	.arcadeMode{
+		.custom-pulse {
+			animation-name: custom-pulse;
+		}
+	}
+
+	.arcadeMode{
+		.circle-button-wrapper{
+			transform: rotate(53deg);
+		}
+		.circle-button{
+			transform: rotate(-53deg);
+		}
+	}
+
+	.replayMode,
+	.contestMode,
+	.instantwinMode,
+	.head2headMode{
+		min-height: 24.471830985915vh;
+		.footer{
+			label{
+				line-height: 20px;
+			}
+		}
+	}
+
+	.replayMode .stage-and-price,
+	.contestMode .stage-and-price,
+	.head2headMode .stage-and-price{
+		padding: 2px 12px 3px 23px;
+	}
+
+	.instantwinMode .stage-and-price{
+		padding: 2px 12px 3px 23px;
+		[font-6]{
+			line-height: 11px !important;
+		}
+	}
+	
+	.replayMode,
+	.contestMode,
+	.instantwinMode,
+	.head2headMode{
+		.custom-pulse{
+			animation-name : custom-pulse-less-rotate;
+		}
+	}
+
+	.replayMode,
+	.contestMode,
+	.instantwinMode,
+	.head2headMode{
+		.circle-button-wrapper{
+			transform: rotate(41deg);
+		}
+		.circle-button{
+			transform: rotate(-41deg);
+		}
+	}
+
+}

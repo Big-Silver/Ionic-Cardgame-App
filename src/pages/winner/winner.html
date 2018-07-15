@@ -1,0 +1,11 @@
+<ion-header winner-header title='WINNERS'>
+	<button (click)='dismissView()' ion-button icon-only clear winner-back-button>
+		<ion-icon name='ios-arrow-back-outline'></ion-icon>
+	</button>
+	<!-- <img src='assets/images/arcade/store-icon.png' winner-store-image  /> -->
+</ion-header>
+
+<ion-content>
+	<winner-player (playerProfileTapped)='openPlayerProfile()' [playerData]='player' [color]="i%3 == 0 ? 'light' : 'dark'" *ngFor='let player of players;let i=index;'>
+	</winner-player>
+</ion-content>

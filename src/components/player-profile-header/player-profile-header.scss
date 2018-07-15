@@ -1,0 +1,178 @@
+player-profile-header {
+	color: white;
+	display: block;
+	position: relative;
+	
+	height: 106px !important;
+
+	& > ion-grid{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.main-content-wrapper{
+		flex-grow: 1;
+		background-image: url('../assets/images/player-profile/blue-circles.png');
+		background-size: cover;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			background-color: rgba(6, 5, 53, 0.64);
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+		}
+	}
+
+	
+
+	.main-content-wrapper > ion-col{
+		position: relative;
+		& > ion-grid{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+			ion-row{
+				flex-grow: 1;
+			}
+		}
+	}
+
+	.gradient-text-light{
+		background-image: linear-gradient(180deg, #fbc000 0%, #d8d8d8 100%);
+		transform: translate3d(0px, 0px, 0px);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	[font-10]{
+		line-height: 20px;
+	}
+
+	.img-fighter,
+	.img-fame{
+		width: 14px;
+		display: block;
+		margin: auto;
+	}
+
+
+
+	// td[align-items-top]{
+	// 	vertical-align: top;
+	// }
+	// td[align-items-bottom]{
+	// 	vertical-align: bottom;
+	// }
+	// td[align-items-middle]{
+	// 	vertical-align: middle;
+	// }
+	// td[shrink]{
+	// 	width: 1px;
+	// }
+
+	.player-icon{
+
+		div{
+			display: inline-block;
+			margin: auto;
+			position: relative;
+			margin-bottom: 2px;
+		}
+
+		.player-image{
+			height: 59px;
+			width: 59px;
+			border: 1px solid #009eff;
+			box-shadow: inset 0px 0px 0px 1px black !important;
+			padding: 1px;
+			background-color: white;
+			border-radius: 100%;
+			display: block;
+		}
+
+		.player-country-image{
+			height: 29px;
+			width: 29px;
+			border: 1px solid #009eff;
+			box-shadow: inset 0px 0px 0px 1px black !important;
+			padding: 1px;
+			background-color: white;
+			border-radius: 100%;
+			position: absolute;
+			bottom: -1px;
+			right: -1px;
+		}
+
+	}
+
+	.player-gender-image{
+		width: 8px;
+		height: 16px;
+		display: block;
+	}
+
+	.text-total-wins span{
+		font-size: 17px !important;
+	}
+
+	.highlight{
+		color: #f9ce09;
+	}
+
+	.highlight-blue{
+		color: #009eff !important; 
+	}
+
+	// .label-follows-me{
+	// 	flex-wrap: nowrap;
+	// 	ion-col{
+	// 		white-space: nowrap;
+	// 		line-height: 15px;
+	// 	}
+	// 	color: #b4b4b4;
+
+	// 	.indicator{
+	// 		display: block;
+	// 		height: 15px;
+	// 		width: 15px;
+	// 		border: 1px solid #979797;
+	// 		border-radius: 100%;
+	// 		position: relative;
+	// 	}
+
+	// 	.indicator.active{
+	// 		margin-top: 1px;
+	// 		height: 13px;
+	// 		width: 13px;
+	// 		background-color: #7ed321;
+	// 		ion-icon{
+	// 			color: white;
+	// 			font-size: 0.4em;
+	// 			height: 13px;
+	// 			width: 13px;
+	// 			text-align: center;
+	// 			position: absolute;
+	// 			top: 0;
+	// 			right: 0;
+	// 			left: -1px;
+	// 			bottom: 0;
+	// 			margin: auto;
+	// 			&:before{
+	// 				line-height: 13px;
+	// 				font-weight: 900;
+	// 			}
+	// 		}
+	// 	}
+
+	// }
+}

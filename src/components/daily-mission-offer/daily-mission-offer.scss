@@ -1,0 +1,85 @@
+daily-mission-offer {
+
+	display: block;
+	overflow: hidden;
+
+	&:active{
+		filter: brightness(0.4);
+	}
+
+	.main-wrapper{
+		border: 1px solid #0068ff;
+		border-radius: 15px;
+		background-image: linear-gradient(180deg, rgba(43, 101, 187,0.81) 0%, rgba(34, 56, 84,0.81) 100%);
+	}
+
+	.wrapper-progress{
+		width: 80px;
+	}
+
+	.wrapper-content{
+		position: relative;
+		color: white;
+		& > ion-grid{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			justify-content: space-between;
+		}
+		.heading{
+			transform: translate3d(0px, 0px, 0px) !important;
+			background-image: linear-gradient(180deg, #ffe500 0%, #ffb200 100%);
+			transform: translate3d(0px, 0px, 0px);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		.title, .subtitle{
+			line-height: 11px;
+			span{
+				vertical-align: baseline;
+				font-size: 10px;
+				font-weight: 700;
+				color: #ffe100 !important;
+			}
+		}
+		.reward{
+			margin-bottom: 2px;
+			height: 15px;
+			line-height: 0px;
+			.span-reward{
+				color: #a2cdcc;
+			}
+			img{
+				height: 13px;
+				width: 13px;
+				position: relative;
+    			top: 2px;
+				// vertical-align: middle;
+			}
+			label{
+				// vertical-align: middle;
+				// line-height: 10px;
+			}
+		}
+	}
+
+	.button-footer{
+		height: 14px;
+		line-height: 14px;
+		border-radius: 0 0 100px 100px;
+		transform: translate3d(0px, 0px, 0px ) !important;
+		color: white;
+		&.applied{
+			background-color: #7ccf20;
+		}
+		&.ongoing{
+			background-color: #ffb700;
+		}
+		&.completed{
+			background-color: #2068cf;
+		}
+	}
+
+}

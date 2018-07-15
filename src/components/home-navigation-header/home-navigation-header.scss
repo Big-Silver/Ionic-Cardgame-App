@@ -1,0 +1,57 @@
+[home-navigation-header]{
+	display: block;
+	min-height: unset !important;
+	.toolbar-background{
+		background-image: url('../assets/images/home/header_background.png');
+		background-size: cover !important;
+		border: 0px !important;
+	}
+	button{
+		padding: 0px !important;
+		background-color: transparent !important;
+	}
+	ion-title{
+		padding-right: 7px !important;
+	}
+
+	.logo-button{
+		margin-bottom: 1px;
+		display: block;
+	}
+
+	.game-logo{
+		height: 42px;
+		display: block;
+		// margin-top: 3px !important;
+		margin-left: 5px !important;
+	}
+
+	ion-toolbar:nth-child(2){
+		padding: 0px !important;
+		height: 2px !important;
+		min-height: 2px !important;
+		.toolbar-background{
+			background-image: linear-gradient(180deg, #ffb500 0%, #f9e852 100%) !important; 
+		}		
+	}
+
+	
+
+	.label-play-win{
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1.13px;
+		label:nth-child(1){
+			color: #2e91e4;
+			font-weight: 900;
+			font-size: 12px;
+			letter-spacing: 1.13px;
+		}
+		label:nth-last-child(1){
+			color: #fdb310;
+			font-weight: 900;
+			font-size: 12px;
+			letter-spacing: 1.13px;
+		}
+	}
+}

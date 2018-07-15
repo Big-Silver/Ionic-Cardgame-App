@@ -1,0 +1,45 @@
+<div #buttons class='button-holder' *ngFor='let button of buttonsToRender; let i = index;' (tap)='button.buttonType != "COMPLETED" ? goToLevel((stageIndex-1)*5 + ( 5 - i ), $event) : ""'>
+	<div *ngIf='button.floatType == "AVATAR"' class='avatar-holder'>
+		<img [src]='button.img || "assets/images/profile/avatar_pin.png"'/>
+		<div class='arrow'></div>
+	</div>
+	<img class='gift blue' *ngIf='button.floatType == "GIFT_BLUE"' src='assets/images/home/gift_blue.png' />
+	<img class='gift quest' *ngIf='button.floatType == "GIFT_QUEST"' src='assets/images/home/gift_quest.png' />
+	<img class='gift red' *ngIf='button.floatType == "GIFT_RED"' src='assets/images/home/gift_red.png' />
+	<img class='gift yellow' *ngIf='button.floatType == "GIFT_YELLOW"' src='assets/images/home/gift_yellow.png' />
+	<img class='img-button' *ngIf='button.buttonType == "YELLOW"' src='assets/images/home/yellow_button.png' />
+	<img class='img-button' *ngIf='button.buttonType == "SILVER"' src='assets/images/home/silver_button.png' />
+	<img class='img-button' *ngIf='button.buttonType == "ACTIVE"' src='assets/images/home/green_button.png' />
+	<img class='img-button' *ngIf='button.buttonType == "COMPLETED"' src='assets/images/home/red_button.png' />
+	<div class='stage-counter' *ngIf='button.buttonType != "COMPLETED"'>
+		<svg height="100%" xmlns="http://www.w3.org/2000/svg">
+			<g>
+				<text y="30" x='50%' 
+					text-anchor='middle' 
+					font-size="26" 
+					stroke-width="6" 
+					[attr.stroke]="
+						(button.buttonType == 'YELLOW') ? 'rgb(254,150,20)' :
+							(button.buttonType == 'SILVER') ? 'rgb(125,125,125)' :
+								(button.buttonType == 'ACTIVE') ? 'rgb(41,170,20)' : 'rgb(176,38,13)'			
+					" 
+					fill="white"
+				>
+					{{(stageIndex-1)*5 + (5 - i)}}
+				</text>
+				<text y="30" x='50%' 
+					text-anchor='middle' 
+					font-size="26" 
+					stroke-width="1" 
+					stroke="white" 
+					fill="white"
+				>
+					{{(stageIndex-1)*5 + (5 - i)}}
+				</text>
+			</g>
+		</svg>
+	</div>
+</div>
+<div font-h3 font-w-bold class='small-stage-index'>
+	Stage {{stageIndex}}
+</div>

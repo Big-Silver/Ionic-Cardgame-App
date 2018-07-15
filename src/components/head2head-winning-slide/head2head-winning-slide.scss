@@ -1,0 +1,249 @@
+head2head-winning-slide {
+	color: white;
+	
+	ion-slides{
+		max-width: 100vw;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+	}
+
+	ion-slides .slide-zoom{
+		height:  100%;
+	}
+
+	ion-slide{
+		align-self: center;
+	}
+
+	[highlight]{
+		color : #fbe10a !important;
+	}
+
+	.firstSlide{
+
+		.image-win{
+			max-width: calc(40vw + 8px);
+		}
+		
+		.image-win img{
+			width: 40vw;
+			padding-top: 4px;
+		}
+	
+		.title-win{
+			text-align: center;
+			font-family: "Titan one" !important;
+			font-size: 32px;
+			margin : 0px;
+			color : white;
+		}
+	
+		// from animation file
+	
+		.title-win {
+			cursor: default;
+			position: absolute;
+			top: 30px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 100px;
+			margin: auto;
+			display: block;
+	
+			-webkit-animation: tBounce .3s ease infinite alternate;
+			animation : tBounce .3s ease infinite alternate;
+	
+			font-family: 'Titan one';
+			font-size: 34px;
+			color: #FFF;
+			text-align: center;
+			line-height: 100px;
+			text-shadow: 0 1px 0 #CCC,
+						0 2px 0 #CCC,
+						0 3px 0 #CCC,
+						0 4px 0 #CCC,
+						0 5px 0 #CCC,
+						0 6px 0 transparent,
+						0 7px 0 transparent,
+						0 8px 0 transparent,
+						0 9px 0 transparent,
+						0 10px 10px rgba(0, 0, 0, .6);
+		}
+	
+		@keyframes tBounce {
+			100% {
+				top: -30px;
+	
+				text-shadow: 0 1px 0 #CCC,
+					0 2px 0 #CCC,
+					0 3px 0 #CCC,
+					0 4px 0 #CCC,
+					0 5px 0 #CCC,
+					0 6px 0 #CCC,
+					0 7px 0 #CCC,
+					0 8px 0 #CCC,
+					0 9px 0 #CCC,
+					0 30px 30px rgba(0, 0, 0, .3);
+			}
+		}
+
+	}
+
+	.secondSlide{
+
+
+		.header{
+			color: #43c600;
+			letter-spacing: 2.25px !important;
+			font-weight: 800;
+			font-size: 36px;
+		}
+
+		ion-icon{
+			font-size: 36px !important;
+			-webkit-animation: fade_move_down 2s ease-in-out infinite;
+			-moz-animation: fade_move_down 2s ease-in-out infinite;
+			animation: fade_move_down 2s ease-in-out infinite;
+		}
+
+		[font-5]{
+			letter-spacing: 0.75px !important;
+		}
+
+		.firstScreen, .secondScreen{
+			height: 139px;
+			background-color: #1c1c1c;
+		}
+
+		.firstScreen, .secondScreen{
+			justify-content: space-around;
+		}
+
+		.question{
+			font-size: 11px;
+			letter-spacing: 2.06px;
+		}
+
+		.button-topup-option{
+			height: 98px;
+			width: 86px;
+			border-radius: 11px;
+			border: 1px solid #6e6e6e;
+			background-color: rgb(52,52,52);
+			color: white;
+			position: relative;
+			padding: 0px !important;
+			overflow: hidden;
+			img{
+				width: 48px;
+				margin-bottom: -21px;
+				margin-top: 11px;
+			}
+		}
+
+		.button-topup-option.optionSelected{
+			background-color: #43c600;
+			border: none !important;
+		}
+
+		.button-topup-option:not(.optionSelected){
+			.selection-mark{
+				display: none;
+			}
+		}
+
+		.t-top{
+			letter-spacing: 1.69px;
+			padding-bottom: 2px;
+		}
+
+		.t-middle{
+			letter-spacing: 1.22px;
+		}
+
+		.t-bottom{
+			padding-top: 2px;
+			letter-spacing: 1.03px;
+		}
+
+		.p-left{
+			padding-left: 9px !important;
+		}
+
+		.p-right{
+			padding-right: 9px !important;
+		}
+
+		.selection-mark{
+			position: absolute;
+			bottom: 28px;
+			height: 13px;
+			width: 13px;
+			border-radius: 100%;
+			border: 1px solid white;
+		}
+
+		.selection-mark.right{
+			right: 3px;
+		}
+
+		.selection-mark.left{
+			left: 3px;
+		}
+
+		.selection-fill{
+			position: absolute;
+			height: 7px;
+			width: 7px;
+			border-radius: 100%;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			background-color: white;
+		}
+
+		.button-collect, .button-collect-small{
+			width: 190px;
+			height: 33px;
+			box-shadow: 0 3px 0 #1249b0;
+			border-radius: 60px;
+			background-image: linear-gradient(180deg, #009eff 0%, #066dad 100%);
+			color: white;
+			margin-bottom: 8px;
+			&:active{
+				transform: translate(2px, 2px);
+				filter: brightness(0.4);
+			}
+		}
+
+		.secondScreen{
+			background-color: black;
+			img{
+				width: 47px;
+				height: 47px;
+				vertical-align: bottom;
+				position: relative;
+				top: 1px;
+			}
+			[font-h1]{
+				font-size: 40px !important;
+				margin-bottom: 30px !important;
+			}
+			.question{
+				padding-top: 5px !important;
+			}
+		}
+
+		.button-collect-small{
+			width: 84px !important;
+			margin-top: 8px;
+		}
+
+
+	}
+
+}

@@ -1,0 +1,100 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Advertise</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-grid>
+		
+
+		<ion-row *ngIf='winWithPosition == true'>
+			
+			<ion-col col-12 text-center>
+				<button ion-button tappable (click)='wonOnPosition(1)'>
+					Position 1
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center>
+				<button ion-button tappable (click)='wonOnPosition(2)'>
+					Position 2
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center>
+				<button ion-button tappable (click)='wonOnPosition(3)'>
+					Position 3
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center>
+				<button ion-button tappable (click)='wonOnPosition(4)'>
+					Position 4
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center>
+				<button ion-button tappable (click)='wonOnPosition(5)'>
+					Position 5
+				</button>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-12 text-center>
+				<button ion-button tappable (click)='goToWinningAnimationScreen()'>
+					Win with animate
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center *ngIf='winWithPosition == false'>
+				<button ion-button tappable (click)='gameWon()'>
+					Win
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center *ngIf='showLose == true'>
+				<button ion-button tappable (click)='gameLose()'>
+					Lose
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center *ngIf='showAwait == true'>
+				<button ion-button tappable (click)='gameAwait()'>
+					Wait
+				</button>
+			</ion-col>
+
+			<ion-col col-12 text-center>
+				<button ion-button tappable (click)='goToResultWinScreen()'>
+					Result Win
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center>
+				<button ion-button tappable (click)='goToResultLoseScreen()'>
+					Result Lose
+				</button>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col text-center>
+				<button ion-button (tap)='gameWonWithOutcome("STAR")'>
+					Win-star
+				</button>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button (tap)='gameWonWithOutcome("RIBBON")'>
+					Win-ribbon
+				</button>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button (tap)='gameLoseWithOutcome("STAR")'>
+					Lose-star
+				</button>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button (tap)='gameLoseWithOutcome("RIBBON")'>
+					Lose-ribbon
+				</button>
+			</ion-col>
+			<ion-col col-12 text-center>
+				<button ion-button (tap)='gameWonWithOutcome("RANK")'>
+					Won-rank
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

@@ -1,0 +1,28 @@
+[ranking-content] {
+
+	padding: 0px !important;
+	min-height: 100%;
+	width: 100%;
+	max-width: 100%;
+
+	tr[expand]{
+		height: 100%;
+	}
+
+	tr[shrink]{
+		background-color: #020c30;
+	}
+
+	ranking-prize,
+	ranking-trending,
+	ranking-live,
+	ranking-squadup{
+		height: 60.3873239436vh !important;
+	}
+
+	.border-div{
+		height: 1px;
+		background-image: linear-gradient(180deg, #fae54d 0%, #febb0a 100%);
+	}
+	
+}

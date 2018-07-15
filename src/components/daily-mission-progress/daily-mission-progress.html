@@ -1,0 +1,11 @@
+<div [ngClass]='{"red" : this._progress <= 25, "orange" : this._progress <= 75 && this._progress > 25, "green" : this._progress <= 100 && this._progress > 75 }' class="green">
+	<div class="progress">
+		<div class="inner">
+			<div class="percent">
+				{{_progress}}%
+			</div>
+			<div class="water" [ngStyle]="{'top' : topClass}"></div>
+			<div class="glare"></div>
+		</div>
+	</div>
+</div>

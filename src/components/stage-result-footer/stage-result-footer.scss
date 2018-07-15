@@ -1,0 +1,94 @@
+stage-result-footer {
+	display: block;
+	color: white;
+	
+
+	ion-grid{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		background-image: url('../assets/images/winning-animation/theatre.png');
+
+		[col-auto]{
+			width: 36.148648% !important;
+		}
+
+	}
+
+	[font-11]{
+		font-family: "Helvetica Neue" !important;
+	}
+
+	.corner-image{
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		width: 55px;
+		height: 55px;
+		.background{
+			height: 100%;
+			width: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -1px;
+			left: 0;
+			bottom: -1px;
+		}
+		.gamemode-icon{
+			position: absolute;
+			width: 25px;
+			display: block;
+			bottom: 3px;
+			right: 3px;
+		}
+	}
+
+	ion-grid{
+		padding: 12px !important;
+		ion-row{
+			flex: 1;
+		}
+	}
+
+	.date-wrapper{
+		position: absolute;
+		bottom: 0px !important;
+		background-image: linear-gradient(to right, #e80707 0%, rgba(180, 3, 3, 0) 100%);
+		padding: 7px 12px !important;
+		width: 60.625% !important;
+		letter-spacing: 0.16px;
+	}
+	
+	button{
+		display: block;
+		width: 67px;
+		height: 50px;
+		border-radius: 6px;
+		font-family: "Avenir Next";
+		font-size: 13px;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 3px !important;
+	}
+
+	button.button-ready{
+		box-shadow: 0 3px 0 #417505;
+		background-image: linear-gradient(180deg, #7ed321 0%, #62a815 100%);
+		transform: translate3d(0px, 0px, 0px) !important;
+	}
+
+	button.button-home{
+		box-shadow: 0 3px 0 #051a75;
+		background-image: linear-gradient(to top, #0f4593 0%, #02b5ee 100%);
+		transform: translate3d(0px, 0px, 0px) !important;
+	}
+
+	button:active{
+		filter: brightness(0.4);
+		transform: translate3d(2px, 2px, 0px) !important;
+	}
+
+}

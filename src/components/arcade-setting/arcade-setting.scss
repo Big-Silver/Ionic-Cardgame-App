@@ -1,0 +1,128 @@
+arcade-setting {
+	.account-settings{
+		span.white-round {
+		    background: #fff;
+		    width: 10px;
+		    height: 10px;
+		    display: inline-block;
+		    border-radius: 50%;
+		    margin: 3px 10px;
+		}
+		ion-grid{
+			margin: 0;
+			padding: 5px 15px!important;
+			p{
+				margin: 0;
+				padding: 0;
+				color: #fff;
+			}
+			.account-detail{
+				font-size: 0.857em;
+				font-weight: 700;
+				letter-spacing: 0.030em;
+				color: #fff;
+				letter-spacing: 0.030em;
+			}
+			.verify-detail{
+				font-size: 0.857em;
+				font-weight: 700;
+				letter-spacing: 0.030em;
+				color: #fbc10c;
+				letter-spacing: 0.030em;
+				text-align: right;
+				margin: -2px;
+
+			}
+		}
+
+		ion-list{
+			ion-item{
+				background-color: transparent;
+				color: #fff;
+				font-size: 14px;
+				font-weight: 700;
+				border-top: 0!important;
+				border-bottom: none !important;
+				min-height: 3.4rem;
+				ion-label{
+					font-family: Lato;
+					font-size: 0.857em;
+					font-weight: 700;
+					letter-spacing: 0.42px;
+					margin: 0;
+					padding: 0 15px;
+				}
+				.item-inner{
+					border-bottom:0!important;
+				}
+
+				.toggle-light.toggle-checked .toggle-icon{
+			        background-image: linear-gradient(180deg, #4cd764 0%, #4dd965 100%);
+			    }
+			    a.select-language{
+			    	font-size: 25px;
+					color: #fff;
+					margin-left: 12px;
+					margin-right: 16px;
+					cursor: pointer;
+					ion-icon{
+						position: relative;
+						top: 3px
+					}
+			    }
+			}
+			ion-item.item-block:first-child{
+				border-top: 0!important;
+			}	
+			ion-toggle{
+			    width: 34px!important;
+    			height: 20px!important;
+    			.toggle-inner {
+				    left: -3px!important;
+				    top: 0px!important;
+				    width: 20px!important;
+				    height: 20px!important;
+				}
+			}	
+			.price-show {
+			    color: #fff;
+			    margin-right: 20px;
+			    color: #ffffff;
+				font-family: Lato;
+				font-size: 1.286em;
+				font-weight: 700;
+				letter-spacing: 0.54px;
+			}
+			.flag{
+				border-radius: 100%;
+				width: 21px;
+				height: 21px;
+			    margin: 0 auto;
+		        margin-right: 6px;
+
+			}
+			ion-select.Countryflag {
+			    margin-right: 16px;
+			    color: #fff;
+			    .select-text{
+			    	display: none;
+			    }
+			    .select-icon .select-icon-inner {
+				    border-top: 6px solid;
+				    border-right: 6px solid transparent;
+				    border-left: 6px solid transparent;
+				    color: #fff;
+				}
+			}
+		}
+	}
+
+	
+
+	ion-list{
+		ion-item{
+			padding-left: 0!important;
+		}
+	}
+
+}

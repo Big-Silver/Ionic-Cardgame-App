@@ -1,0 +1,49 @@
+
+	<!--<button ion-button icon-start block round color="fbcolor" clear class="back-button-icon" (click)="backToHome()">
+	<ion-icon name="arrow-back"></ion-icon>
+</button>--><!-- -->
+<div class="bgshadow" (swiperight)="swipeRightEvent($event)"  >
+	<div class="login-wrapper">
+		<form [formGroup]="loginform">
+			<ion-row>
+				<ion-col col-12>
+					<ion-input type="text" placeholder="Username" formControlName="username"></ion-input>
+					<p class="invaild app-error" *ngIf="(!loginform.controls.username.valid)  && (loginform.controls.username.dirty || !isSubmit) ">
+						Username is required
+					</p>
+				</ion-col>
+
+				<ion-col col-12>
+					<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+					<p class="invaild app-error" *ngIf="(!loginform.controls.password.valid)  && (loginform.controls.password.dirty || !isSubmit)">
+						Password is required.
+					</p>
+				</ion-col>
+
+				<ion-col col-12>
+					<p class="forgot-password-option">
+						<span (click)="goToPage('reset-password')">Forgot Password</span>
+					</p>
+				</ion-col>
+
+				<ion-col col-6 class="form-submit"> 
+					<button ion-button block color="signupcolor" round class="app-auth-btn" type="submit" (click)="doLogin()">Log In</button>
+				</ion-col>
+
+				<ion-col col-6 class="app-fb-container" >
+					<button ion-button icon-start block color="fbcolor" round class="app-auth-btn">
+						<ion-icon name="logo-facebook"></ion-icon>
+						Facebook
+					</button>
+				</ion-col>
+
+				<ion-col col-12 >
+					<p class="slogan-txt">
+						<span class="dont-have-account-text"> DON’T HAVE AN ACCOUNT?</span>
+						<span (click)="goToPage('register')" class="signup">SIGN UP</span>
+					</p>
+				</ion-col>
+			</ion-row>
+		</form>
+	</div>
+</div>

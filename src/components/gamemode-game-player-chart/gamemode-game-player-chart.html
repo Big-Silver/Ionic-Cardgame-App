@@ -1,0 +1,155 @@
+<table>
+	<tr>
+		<td font-5 font-w-bold colspan='2' class='ranking-label'>Ranking</td>
+
+		<td rowspan="6" class='first-position td-position' (click)='openPlayerProfile.emit()' [ngClass]='{"active": playerPosition == 1}'>
+			<div>
+				<img class='player-image' src='assets/images/profile/avatar1.svg' />
+				<img class='country-image' src='assets/images/contest/in.png' />
+			</div>
+			<div text-center>
+				<label font-w-bold font-4>1<span font-w-bold font-5>st</span></label>
+			</div>
+		</td>
+
+		<td rowspan="6" class='dot-holder'></td>
+
+		<td rowspan="6" class='second-position td-position' (click)='openPlayerProfile.emit()' [ngClass]='{"active": playerPosition == 2}'>
+			<div>
+				<img class='player-image' src='assets/images/profile/avatar2.svg' />
+				<img class='country-image' src='assets/images/contest/uk.png' />
+			</div>
+			<div text-center>
+				<label font-w-bold font-4>2<span font-w-bold font-5>nd</span></label>
+			</div>
+		</td>
+
+		<td rowspan="6" class='dot-holder'></td>
+
+		<td rowspan="6" class='third-position td-position' (click)='openPlayerProfile.emit()' [ngClass]='{"active": playerPosition == 3}'>
+			<div>
+				<img class='player-image' src='assets/images/profile/avatar3.svg' />
+				<img class='country-image' src='assets/images/contest/in.png' />
+			</div>
+			<div text-center>
+				<label font-w-bold font-4>3<span font-w-bold font-5>rd</span></label>
+			</div>
+		</td>
+
+		<td rowspan="6" class='dot-holder'></td>
+
+		<td rowspan="6" class='fourth-position td-position' (click)='openPlayerProfile.emit()' [ngClass]='{"active": playerPosition == 4}'>
+			<div>
+				<img class='player-image' src='assets/images/profile/avatar4.svg' />
+				<img class='country-image' src='assets/images/contest/uk.png' />
+			</div>
+			<div text-center>
+				<label font-w-bold font-4>4<span font-w-bold font-5>th</span></label>
+			</div>
+		</td>
+		
+		<td rowspan="6" class='dot-holder'></td>
+
+		<td rowspan="6" class='fifth-position td-position' (click)='openPlayerProfile.emit()' [ngClass]='{"active": playerPosition == 5}'>
+			<div>
+				<img class='player-image' src='assets/images/profile/avatar5.svg' />
+				<img class='country-image' src='assets/images/contest/in.png' />
+			</div>
+			<div text-center>
+				<label font-w-bold font-4>5<span font-w-bold font-5>th</span></label>
+			</div>
+		</td>
+	</tr>
+
+	<tr class='rank-labels'>
+		<td class='first-position'>
+			<label font-w-bold font-6>1<span font-w-bold font-7>st</span></label>
+		</td>
+		<td>
+			<label font-6>
+				Amari Jade
+			</label>
+		</td>
+	</tr>
+	<tr class='rank-labels'>
+		<td class='second-position'>
+			<label font-w-bold font-6>2<span font-w-bold font-7>nd</span></label>
+		</td>
+		<td>
+			<label font-6>
+				Natty
+			</label>
+		</td>
+	</tr>
+	<tr class='rank-labels'>
+		<td class='third-position'>
+			<label font-w-bold font-6>3<span font-w-bold font-7>rd</span></label>
+		</td>
+		<td>
+			<label font-6>
+				maxium Killer
+			</label>
+		</td>
+	</tr>
+	<tr class='rank-labels'>
+		<td class='fourth-position'>
+			<label font-w-bold font-6>4<span font-w-bold font-7>th</span></label>
+		</td>
+		<td>
+			<label font-6>
+				Undertaker
+			</label>
+		</td>
+	</tr>
+	<tr class='rank-labels'>
+		<td class='fifth-position'>
+			<label font-w-bold font-6>5<span font-w-bold font-7>th</span></label>
+		</td>
+		<td>
+			<label font-6>
+				Obama
+			</label>
+		</td>
+	</tr>
+
+	<tr class='border-row'>
+		<td colspan="11">
+			<div></div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="11">
+			<div class='background-opacity'>
+				<table class='score-table'>
+					<tr *ngFor='let score of scores; let i = index;'>
+						<td class='score-label' font-w-bold font-9>
+							{{score.label}}:
+						</td>
+						<td class='score-holder first-position' [ngClass]='{"active": playerPosition == 1}' font-6 font-w-bold>{{score.first}}</td>
+						<td [attr.rowspan]='scores.length' *ngIf='i == 0' class='dot-holder'>
+							<ion-icon class="tapicon-more-vert"></ion-icon>
+						</td>
+						<td class='score-holder second-position' [ngClass]='{"active": playerPosition == 2}' font-6 font-w-bold>{{score.second}}</td>
+						<td [attr.rowspan]='scores.length' *ngIf='i == 0' class='dot-holder'>
+							<ion-icon class="tapicon-more-vert"></ion-icon>
+						</td>
+						<td class='score-holder third-position' [ngClass]='{"active": playerPosition == 3}' font-6 font-w-bold>{{score.third}}</td>
+						<td [attr.rowspan]='scores.length' *ngIf='i == 0' class='dot-holder'>
+							<ion-icon class="tapicon-more-vert"></ion-icon>
+						</td>
+						<td class='score-holder fourth-position' [ngClass]='{"active": playerPosition == 4}' font-6 font-w-bold>{{score.fourth}}</td>
+						<td [attr.rowspan]='scores.length' *ngIf='i == 0' class='dot-holder'>
+							<ion-icon class="tapicon-more-vert"></ion-icon>
+						</td>
+						<td class='score-holder fifth-position' [ngClass]='{"active": playerPosition == 5}' font-6 font-w-bold>{{score.fifth}}</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+	<tr class='border-row'>
+		<td colspan="11">
+			<div></div>
+		</td>
+	</tr>
+</table>

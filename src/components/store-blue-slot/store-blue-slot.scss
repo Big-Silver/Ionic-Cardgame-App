@@ -1,0 +1,177 @@
+store-blue-slot {
+
+	display: block;
+	color: white;
+	height: 51px;
+	position: relative;
+	background-image: linear-gradient(180deg, #0ABEFF 0%, #DCDCDC 100%);
+	border-radius: 26px;
+	overflow: hidden;
+	
+	.content-wrapper{
+		// display: block;
+		top : 1px;
+		bottom: 1px;
+		right: 1px;
+		left: 1px;
+		border-radius: inherit;
+		position: absolute;
+	}
+
+	.image-holder{
+		// background-color: black;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		display: block;
+		height: 100%;
+		right: 37px;
+		width: 70px;
+		background-size: cover;
+
+		&.image-ad{
+			background-image: url('../assets/images/store/adplay.png');
+			width: 64px;
+		}
+
+		&.image-offerwall{
+			background-image: url('../assets/images/store/offerwall.png');
+			background-size: 88px;
+			background-position: top;
+			background-position-x: -12px;
+			background-position-y: 3px;
+			background-repeat: no-repeat;
+		}
+
+		&.image-survey{
+			background-image: url('../assets/images/store/survey.png');
+			background-size: 92px;
+			background-position: top;
+			background-position-x: -16px;
+		}
+
+	}
+
+	.gradient-holder{
+		position: absolute;
+		top: 1px;
+		bottom: 1px;
+		width: 24.92012%;
+		background-image: linear-gradient(90deg, #00427b 0%, rgba(0, 66, 123, 0) 100%);
+		border-top-left-radius: 100px;
+		border-bottom-left-radius: 100px;
+		left: 1px;
+	}
+
+	& > ion-grid{
+		width: unset !important;
+		background-image: linear-gradient(180deg, #048aff 0%, #045ba8 100%);
+		& > ion-row{
+			height: 100%;
+		}
+	}
+
+	& > ion-grid > ion-row > ion-col:nth-child(1){
+		width: 46px;
+		padding-left: 14px !important;
+		z-index: 10;
+		ion-grid{
+			height: 100%;
+			justify-content: center;
+
+			ion-col:nth-child(1){
+				line-height: 8px;
+				letter-spacing: 0.94px;
+			}
+
+			ion-col:nth-last-child(1){
+				line-height: 0px;
+			}
+
+			.icon-running-fast{
+				max-height: 21px !important;
+				margin-top: 3px !important;
+			}
+
+			.icon-timer,
+			.icon-express{
+				max-height: 24px !important;
+			}
+
+			img{
+				display : inline-block;
+				margin-top: 2px;
+			}
+
+		}
+
+	}
+
+	& > ion-grid > ion-row > ion-col:nth-child(2){
+		ion-grid{
+			justify-content: center;
+
+			ion-col:nth-child(1){
+				line-height: 9px;
+				letter-spacing: 1.13px;
+			}
+
+			ion-col:nth-child(2){
+				letter-spacing: 1.69px;
+				transform: translate3d(0px, 0px, 0px);
+				line-height: 18px;
+				background-image: linear-gradient(180deg, #ffd537 0%, #ffffff 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-bottom: 3px;
+				
+			}
+
+			ion-col:nth-child(3){
+				letter-spacing: 1.13px;
+			}
+
+		}
+
+		.token-blue{
+			width: 11px;
+			height: 11px;
+			display: inline-block;
+			vertical-align: sub;
+		}
+
+		.token-coin{
+			width: 7px !important;
+			height: 7px !important;
+			position: relative;
+			top: 1px;
+			margin-right: -1px;
+			margin-left: -1px;
+		}
+	}
+
+	& > ion-grid > ion-row > ion-col:nth-last-child(1){
+		width: 34px;
+		background-color: #00427b;
+		border-radius: 0 100px 100px 0;
+
+		ion-icon{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+			margin: auto;
+			line-height: 51px;
+			text-align: center;
+			font-size: 2.2em !important;
+		}
+
+	}
+
+	& > ion-grid > ion-row > ion-col:nth-last-child(2){
+		width: 75px;
+	}
+
+
+}

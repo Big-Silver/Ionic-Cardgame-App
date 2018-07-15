@@ -1,0 +1,36 @@
+page-inbox {
+
+
+
+	.fixed-content{
+		background-image: url('../assets/images/player-profile/background.png');
+		background-size: cover;
+	}
+
+	inbox-results-slot{
+		background-color:#000921;
+		border-top: 0.5px solid white;
+		border-bottom: 0.5px solid white;
+		margin: 3px 0px !important;
+		opacity: 0;
+	}
+
+	.wrapper-inbox-requests-slot{
+		opacity: 0;
+		height: 68px;
+		margin: 4px;
+	}
+
+	.wrapper-inbox-promotions-slot{
+		opacity: 0;
+		margin: 8px;
+		height: 82px;
+	}
+
+	.fast-animated{
+		animation-duration: 500ms !important;
+		animation-fill-mode: forwards !important;
+	}
+
+
+}

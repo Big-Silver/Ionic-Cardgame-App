@@ -1,0 +1,230 @@
+gamemode-game-player-chart {
+
+	color: white;
+	text-align: left;
+
+	$firstBorder : #fbd500;
+	$firstText : #f9ce09;
+
+	$secondBorder : #1b78c7;
+	$secondText : #1089ff;
+
+	$thirdBorder : #7ed321;
+	$thirdText : #6ece1a;
+
+	$fourthBorder : #b655d5;
+	$fourthText : #a537cb;
+
+	$fifthBorder : #fa5c5c;
+	$fifthText : #f6434a;
+
+	& > table{
+		position: relative;
+		width: 100%;
+	}
+
+	.dot-holder{
+		width: 7px;
+		min-width: 7px;
+		max-width: 7px;
+		ion-icon{
+			font-size: 2.2em !important;
+			position: relative;
+			right: 165%;
+			top: 2px;
+			color: rgb(93, 120, 154);
+		}
+	}
+
+	.ranking-label{
+		letter-spacing: 0.46px;
+		padding-top: 2px;
+		padding-left: 6px;
+	}
+
+	.player-image{
+		height: 33px;
+		width: 33px;
+		box-shadow: inset 0px 0px 0px 1px black;
+		background-color: white !important;
+		border-radius: 100%;
+		padding: 1px;
+	}
+
+	.country-image{
+		width: 19px;
+		height: 19px;
+		box-shadow: inset 0px 0px 0px 1px black;
+		border-radius: 100%;
+		padding: 1px;
+		position: absolute;
+		bottom: 0px;
+		right: 2px;
+	}
+
+	.rank-labels{
+		line-height: 12px;
+		label, span{
+			letter-spacing: 0.38px;
+		}
+		td:nth-child(1){
+			padding-left: 6px;
+		}
+		td:nth-child(2){
+			padding-left: 3px;
+			padding-right: 2px;
+			overflow: hidden;
+			white-space: nowrap;
+			max-width: 60px;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.rank-labels:nth-child(2){
+		td{
+			padding-top: 3px;
+		}
+	}
+	.rank-labels:nth-child(6){
+		td{
+			padding-bottom: 5px;
+		}
+	}
+
+
+	.score-holder{
+		width: 39px;
+		text-align: right;
+		padding-right: 3px;
+		label{
+			letter-spacing: 0.38px !important;
+			line-height: 16px;
+		}
+		&:nth-last-child(1){
+			padding-right: 6px !important;
+		}
+	}
+
+	.score-holder.active{
+		width: 42px !important;
+		font-size: 13px !important;
+		line-height: 16px;
+	}
+
+	.td-position{
+		width: 39px;
+		text-align: center;
+		& > div{
+			position: relative;
+		}
+		label, span{
+			letter-spacing: 0.54px;
+		}
+		& > div:nth-child(2){
+			padding-top: 7px;
+		}
+	}
+
+	.td-position.active{
+		width: 42px !important;
+		&:before{
+			content: '';
+			height: 100%;
+			top: 0px;
+			bottom: 0px;
+			width: 42px;
+			background-color: rgba(255,255,255,0.2);
+			position: absolute;
+			display: block;
+			animation: activated-pulses 1.6s infinite;
+		}
+		.player-image{
+			height: 37px !important;
+			width: 37px !important;
+			position: relative;
+			left: -1px;
+		}
+	}
+
+	.first-position{
+		color: $firstText;
+		.player-image, .country-image{
+			border : 1px solid $firstBorder;
+		}
+	}
+
+	.second-position{
+		color: $secondText;
+		.player-image, .country-image{
+			border : 1px solid $secondBorder;
+		}
+	}
+
+	.third-position{
+		color: $thirdText;
+		.player-image, .country-image{
+			border : 1px solid $thirdBorder;
+		}
+	}
+
+	.fourth-position{
+		color: $fourthText;
+		.player-image, .country-image{
+			border : 1px solid $fourthBorder;
+		}
+	}
+
+	.fifth-position{
+		color: $fifthText;
+		.player-image, .country-image{
+			border : 1px solid $fifthBorder;
+		}
+	}
+
+	
+
+	.border-row{
+		div{
+			height: 2px;
+			background-image: linear-gradient(90deg, #005585 0%, #2ad1f5 50%, #005585);
+		}
+	}
+
+	.score-table{
+		width: 100%;
+		z-index: 10;
+	}
+
+	.score-label{
+		letter-spacing: 0.5px !important;
+		line-height: 15px !important;
+		padding-left: 6px;
+	}
+
+	.background-opacity{
+		position: relative;
+		z-index: 1;
+		&:after{
+			position: absolute;
+			content: "";
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			background-color: rgba(44, 172, 244, 0.25);
+			z-index: -1;
+		}
+	}
+
+
+	@keyframes activated-pulses {
+		0%, 100%{
+			background-color : rgba(255,255,255,0.2);
+		}
+		50%{
+			background-color: rgba(255,255,255,0);
+		}
+	}
+
+
+}

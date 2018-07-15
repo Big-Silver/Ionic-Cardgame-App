@@ -1,0 +1,58 @@
+<ion-grid no-padding 
+	[ngClass]='
+		{"arcadeMode":gameMode=="arcade", 
+		"replayMode":gameMode=="replay", 
+		"contestMode":gameMode=="contest",
+		"head2headMode":gameMode=="head2head",
+		"instantwinMode": gameMode == "instantwin"}' >
+	
+	<ion-row flex-grow>
+		<ion-col col-12 no-padding>
+			<div text-center class='stage-and-price' *ngIf='gameMode=="arcade"'>
+				<div font-8 font-w-bold>STAGE {{_game.stageNumber}}</div>
+				<div font-10 font-w-bold class='amount highlighted'>&pound;{{_game.grandPrize}}</div>
+				<div font-8 font-w-bold>PRIZE</div>
+			</div>
+			<div text-center class='stage-and-price' *ngIf='gameMode=="replay" || gameMode == "contest"'>
+				<div font-7 font-w-bold>PRIZE POOL</div>
+				<div font-h1 font-w-bold class='amount highlighted'>&pound;{{_game.grandPrize}}</div>
+			</div>
+			<div text-center class='stage-and-price' *ngIf='gameMode=="instantwin"'>
+				<div font-6 font-w-bold>TOP PRIZE</div>
+				<div font-10 font-w-bold class='amount highlighted'>&pound;{{_game.grandPrize}}</div>
+			</div>
+		</ion-col>
+		<div class='clear'></div>
+	</ion-row>
+	<ion-row class='footer'>
+		<ion-col col-12 text-center font-5 font-w-medium no-padding>
+			<div class='circle-button-animation-wrapper'>
+				<div class='circle-button-wrapper'>
+					<button class='circle-button custom-pulse' [ngClass]='{"animated" : startAnimation == true}'  (click)="_howToPlay()">
+						<div font-8 font-w-medium>
+							How
+						</div>
+						<div font-8 font-w-medium>
+							To
+						</div>
+						<div font-8 font-w-medium>
+							Play
+						</div>
+					</button>
+				</div>
+			</div>
+			<ng-container *ngIf='gameMode=="arcade"'>
+				Special prize on each stage &bull; <label class='highlighted' font-5 font-w-bold>{{_game.prizePerStage}}</label> Stages
+			</ng-container>
+			<ng-container *ngIf='gameMode=="replay" || gameMode=="contest"'>
+				<label class='highlighted' font-5 font-w-bold>{{_game.contestStages}}</label> Stage contest &bull; Top <label class='highlighted' font-5 font-w-bold>{{_game.winPercentage}}%</label> wins  
+			</ng-container>
+			<ng-container *ngIf='gameMode=="instantwin"'>
+				<label>Pass Instant Challenge Game</label>
+			</ng-container>
+			<ng-container *ngIf='gameMode=="head2head"'>
+				<label font-5 font-w-medium>Set your maximum entry fee</label>
+			</ng-container>
+		</ion-col>
+	</ion-row>
+</ion-grid>

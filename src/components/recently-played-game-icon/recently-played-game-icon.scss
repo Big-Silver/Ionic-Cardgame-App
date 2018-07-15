@@ -1,0 +1,41 @@
+recently-played-game-icon {
+
+	display: block;
+	max-width: 100%;
+	color: white;
+
+	.game-icon{
+		width: 54px;
+		height: 56px;
+		border-radius: 11px;
+		margin-top: 7px !important;
+		display: block;
+		margin: auto;
+		padding: 1px;
+	}
+
+	.game-name{
+		max-width: 100%;
+		overflow: hidden;
+		white-space: nowrap !important;
+		text-overflow: ellipsis;
+		margin-bottom: 2px;
+		margin-top: 4px;
+		border-radius: 10px;
+		height: 14px;
+		line-height: 10px;
+	}
+	
+	.rank-wrapper{
+		min-width: 74px;
+		display: inline-block !important;
+		margin-bottom: 8px !important;
+	}
+
+	.game-icon, .game-name{
+		background-color: #060036;
+		border: 1px solid #0c006f;
+		border-bottom-color: #010b8a;
+	}
+
+}

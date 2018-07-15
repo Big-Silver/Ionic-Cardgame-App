@@ -1,0 +1,62 @@
+game-request-game-info {
+
+	color: white;
+
+	& > ion-grid{
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+		background-color: rgba(17, 17, 17, 0.47);
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		justify-content: space-between;
+		& > ion-row:nth-child(2){
+			margin-bottom: 16px;
+			align-self: center;
+		}
+	}
+
+	.label-info{
+		padding-top: 2px;
+		padding-left: 10px;
+	}
+
+	.description-game-info{
+		margin-top: 5px;
+		.img-game-icon{
+			height: 46px !important;
+			width: 46px !important;
+			display: block;
+			margin: 0px 10px;
+			border-radius: 8px;
+		}
+		.title-game-name{
+			line-height: 10px;
+			padding-bottom: 3px;
+		}
+		.description-game{
+			span{
+				color: #fb0007;
+			}
+		}
+	}
+
+	.table-reward{
+		width: auto !important;
+		margin: auto;
+		margin-top: 4px;
+		img{
+			width: 16px;
+			display: block;
+			margin: 4px 4px 4px 4px;
+			max-width: unset !important;
+			max-height: unset !important;
+		}
+		.img-wrapper{
+			width: 1px;
+		}
+	}
+	
+}

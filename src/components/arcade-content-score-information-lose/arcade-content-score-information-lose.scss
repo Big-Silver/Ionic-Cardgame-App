@@ -1,0 +1,163 @@
+arcade-content-score-information-lose {
+
+	color: white;
+	
+	ion-slides{
+		max-width: 100vw !important;
+	}
+
+	.swiper-container{
+		overflow: unset !important;
+	}
+
+	.swiper-pagination-bullets{
+		top: -10px;
+	}
+
+	.swiper-pagination-bullet{
+		margin: 0px 2px !important;
+		background-color: #d8d8d8 !important;
+		opacity: 1 !important;
+	}
+
+	.swiper-pagination-bullet-active{
+		background-color: #e9ba20 !important;
+	}
+
+	.slide1{
+
+		.header-table, .main-table{
+			width: 100%;
+		}
+
+		.header-container{
+			height: 82px;
+		}
+
+		.score-table-container-row{
+			background-color: rgba(66, 134, 244, 0.25);
+			height: 74px;
+		}
+
+		.score-border td{
+			height: 2px;
+			background-color: #1247ac;
+			// background-image: linear-gradient(90deg, #005585 0%, #2ad1f5 50%, #005585);
+		}
+	
+		
+		[firstscreen]{
+			h5{
+				letter-spacing: 2.44px;
+				font-size: 20px !important;
+				padding-bottom: 39px;
+				padding-top: 19px;
+			}
+			h1{
+				font-size: 36px;
+				font-family: Lato !important;
+				font-weight: 900;
+				margin: -2px 0px 1px 0px !important;
+			}
+			.title-level{
+				font-size: 26px;
+				font-weight: 700;
+				letter-spacing: 2.44px;
+			}
+			
+		}
+
+		.share-button{
+			width: 28px;
+			height: 28px;
+			border-radius: 100%;
+			position: absolute;
+			right: 10px;
+			top: -4px;
+			background-image: url('../assets/images/home/share.png');
+			background-size: cover;
+		}
+
+		[secondScreen]{
+
+			display: none;
+
+			.highlight{
+				color: #fff30a !important;
+				position: relative;
+				.label-wrapper{
+					display: none;
+					height: 12px;
+					width: 12px;
+					border-radius: 100%;
+					position: absolute;
+					top: 0px;
+					bottom: 0px;
+					margin: auto;
+					overflow: hidden;
+					right: -15px;
+					ion-icon{
+						line-height: 12px;
+						color: white !important;
+						font-weight: bolder !important;
+						font-size: 1em !important;
+					}
+					.label-icon-achieved,
+					.label-icon-not-achieved{
+						display: none;
+					}
+				}
+				&.achieved .label-wrapper{
+					display: block;
+					background-color: #43c600;
+					.label-icon-achieved{
+						display: block;
+					}
+				}
+				&.not-achieved .label-wrapper{
+					display: block;
+					background-color: #cc0303;
+					.label-icon-not-achieved{
+						display: block;
+					}
+				}
+			}
+		
+			.heading-text{
+				vertical-align: top;
+				padding-top: 5px;
+				height: 63px;
+			}
+		
+			table td{
+				padding: 0px !important;
+			}
+		
+			.subtitle{
+				padding-bottom: 6px !important;
+			}
+			.score-table{
+				width: 63.75vw;
+				margin: 1px auto 3px auto;
+			}
+		
+			.score-table td{
+				color: white;
+				text-transform: uppercase;
+				line-height: 14px;
+				letter-spacing: 0.5px !important;
+			}
+		
+			.score-table > tr:nth-last-child(1) > td{
+				padding-bottom: 3px !important;
+			}
+		
+			.score-table > tr:nth-first-child(2) > td{
+				padding-top: 1px !important;
+			}
+
+		}
+
+	}
+
+}

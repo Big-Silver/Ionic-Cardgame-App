@@ -1,0 +1,46 @@
+<ion-slides #mainSlider>
+	<ion-slide>
+		<div>
+			<div class='label-header' font-6 font-w-bold padding-right padding-left text-center>
+				We need to verify your mobile, we will send you a text please enter in box below to complete
+			</div>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col class='wrapper-item-mobile-input' col-auto>
+						<ion-item class='item-mobile-input' no-lines round-input with-focus-border>
+							<ion-input [(ngModel)]='newMobileNumber' type='tel' (focus)='checkForMobileNumber()' (blur)='checkForMobileNumber()' (keyup)='checkForMobileNumber()' [placeholder]="_mobileNumber"></ion-input>
+							<ion-icon name="md-create" item-right></ion-icon>
+						</ion-item>
+					</ion-col>
+					<ion-col text-center align-self-center>
+						<ng-container *ngIf='messageSent == true'>
+							<div font-w-heavy class='label-text-sent'>
+								Text Sent
+							</div>
+						</ng-container>
+						<ng-container *ngIf='messageSent == false'>
+							<button [disabled]='!(newMobileNumber+"") && !mobileNumber' class='button-send-text' (tap)='sendMessage()' block small round ion-button>
+								Send Text
+							</button>
+						</ng-container>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col class='wrapper-item-enter-code'>
+						<ion-item class='item-enter-code' no-lines round-input with-focus-border>
+							<ion-input type='tel' [(ngModel)]='verificationCode' (keyup)='verificationCodeChanged.emit(verificationCode)' placeholder="Enter code"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</ion-slide>
+	<ion-slide>
+		<ion-slide padding-top>
+			<ion-icon class='big-checkmark tapicon-checked'>
+			</ion-icon>
+			<div font-10 font-w-bold class='label-send'>Sign Up Completed</div>
+		</ion-slide>
+	</ion-slide>
+</ion-slides>
+

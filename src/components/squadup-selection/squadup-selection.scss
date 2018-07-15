@@ -1,0 +1,65 @@
+squadup-selection, [squadup-selection] {
+
+	tr[shrink]{
+		height: 1px;
+	}
+	tr[expand]{
+		height: 100%;
+	}
+	td[align-item-top]{
+		vertical-align: top;
+	}
+
+	.border-highlight{
+		height: 1px;
+		background-image: linear-gradient(180deg, #fae54d 0%, #febb0a 100%);
+	}
+
+	squadup-selection-header{
+		min-height: 109px !important;
+		background-color: rgba(6, 5, 53, 0.66);
+	}
+
+	
+	squadup-selection-players{
+		min-height: 152px !important;
+		background-color: rgba(0, 0, 0, 0.63);
+	}
+
+	.close-button{
+		margin: 6px 6px 9px 6px;
+		box-shadow: 0 3px 0 #4d0202;
+		width: 59px;
+		height: 22px;
+		background-color: #d12424;
+		border-radius: 6px;
+		font-size: 12px;
+		font-weight: 700;
+		color: white;
+		&:active{
+			transform: translate(2px, 2px);
+			filter: brightness(0.4);
+		}
+	}
+
+	.red-background{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 43px;
+		height: 49px;
+		border-right: 21px solid #d12424;
+		border-top: 24px solid #d12424;
+		border-left: 21px solid transparent;
+		border-bottom: 24px solid transparent;
+	}
+
+	.red-icon{
+		position: absolute;
+		top: 0px;
+		right: 1px;
+		font-size: 29px;
+		color: white;
+	}
+
+}

@@ -1,0 +1,13 @@
+<ion-content>
+	<table player-profile-modal (close)='dismissModal()'>
+		<player-profile-header [playerInformation]="personalInformation"></player-profile-header>
+		<player-profile-recently-played-games [games]='playedGames'></player-profile-recently-played-games>
+		<player-profile-statistics
+			[highestPosition]='highestPosition'
+			[popularity]='popularity'
+			[mostPlayed]='mostPlayed'
+			(onPopularitySlideTapped)='onPopularitySlideTapped()'
+		>
+		</player-profile-statistics>
+	</table>
+</ion-content>

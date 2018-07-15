@@ -1,0 +1,17 @@
+<label font-w-bold font-5>
+	{{label}}
+</label>
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col>
+			<ion-item no-lines round-input with-focus-border>
+				<ion-input [(ngModel)]='model.model' [type]='type' (ionFocus)='focus.emit($event)' (ionBlur)='blur.emit(model)' (keyup)='keyup.emit(model)' [placeholder]="placeHolder"></ion-input>
+				<ion-icon name="md-create" item-right></ion-icon>
+			</ion-item>
+		</ion-col>
+		<ion-col align-self-center col-auto>
+			<img *ngIf='model.isValid == true' class='img-won' src='assets/images/inbox/won.png' />
+			<img *ngIf='model.isValid == false' class="img-lost" src='assets/images/inbox/lost.png' />
+		</ion-col>
+	</ion-row>
+</ion-grid>

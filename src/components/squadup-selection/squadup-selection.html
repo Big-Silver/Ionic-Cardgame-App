@@ -1,0 +1,28 @@
+<tr>
+	<td>
+		<ng-content select=' > squadup-selection-header'></ng-content>
+		<div class='red-background' (click)='closeModal.emit()'>
+		</div>
+		<ion-icon class='red-icon' name='ios-close-circle-outline' (click)='closeModal.emit()'></ion-icon>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<div class='border-highlight'></div>
+	</td>
+</tr>
+<tr>
+	<td>
+		<ng-content select=' > squadup-selection-players'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<div class='border-highlight'></div>
+	</td>
+</tr>
+<tr expand>
+	<td>
+		<ng-content select=' > squadup-selection-footer'></ng-content>
+	</td>
+</tr>

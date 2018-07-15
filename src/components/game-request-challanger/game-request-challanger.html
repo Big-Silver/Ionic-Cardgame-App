@@ -1,0 +1,49 @@
+<ion-grid no-padding [ngClass]='{"battle-a-friend-mode" : mode == "BATTLE_A_FRIEND", "squadup-mode" : mode == "SQUADUP"}'>
+	<ion-row>
+		<ion-col text-center>
+			<div *ngIf='mode == "BATTLE_A_FRIEND"' class='wrapper-img-battle-a-friend'>
+				<img class='img-battle-a-friend' src='assets/images/squadup/battle-a-friend.png'/>
+				<div text-center class='top-label' font-w-bold>
+					Battle a
+				</div>
+				<div text-center font-w-bold class='bottom-label'>
+					friend
+				</div>
+			</div>
+			<div *ngIf='mode == "SQUADUP"' class='wrapper-img-battle-a-friend'>
+				<img class='img-squadup' src='assets/images/replay/squadup.png'/>
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col class='wrapper-player-name'>
+			<div text-center font-h3 font-w-heavy >
+				{{data.challangerName}}
+			</div>
+			<div *ngIf='mode == "BATTLE_A_FRIEND"' text-center>
+				Has Challanged You
+			</div>
+			<div *ngIf='mode == "SQUADUP"' text-center>
+				Has Asked You To Join Their Team
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row *ngIf='mode == "BATTLE_A_FRIEND"'>
+		<ion-col text-center>
+			<player-avatar-icon class='left-player' [playerInformation]='data.playerInformation'></player-avatar-icon>
+		</ion-col>
+		<ion-col align-self-center col-auto>
+			<div class='wrapper-head2head-icon'>
+				<img src='assets/images/game-mode-icons/head2head.png' />
+			</div>
+		</ion-col>
+		<ion-col text-center>
+			<player-avatar-icon class='right-player' [invertFlag]='true' [playerInformation]='data.challangerInformation'></player-avatar-icon>
+		</ion-col>
+	</ion-row>
+	<ion-row *ngIf='mode == "SQUADUP"'>
+		<ion-col text-center>
+			<player-avatar-icon [playerInformation]='data.playerInformation'></player-avatar-icon>
+		</ion-col>
+	</ion-row>
+</ion-grid>

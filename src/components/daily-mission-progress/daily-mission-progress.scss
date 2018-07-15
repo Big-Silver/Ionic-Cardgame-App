@@ -1,0 +1,180 @@
+daily-mission-progress {
+	display: block;
+
+
+	.wrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: box;
+		display: flex;
+		-webkit-box-align: center;
+		-o-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-o-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-orient: vertical;
+		-o-box-orient: vertical;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		height: 100%;
+	}
+  
+	.green .progress,
+	.red .progress,
+	.orange .progress {
+		position: relative;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+		margin: 2px auto;
+		background-color: #1a1a1a;
+	}
+
+	.green .progress .inner,
+	.red .progress .inner,
+	.orange .progress .inner {
+		position: absolute;
+		overflow: hidden;
+		z-index: 2;
+		border-radius: 50%;
+		width: calc(100% - 4px);
+		height: calc(100% - 4px);
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		margin: auto;
+		// border: 5px solid #1a1a1a;
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+
+	.green .progress .inner .water,
+	.red .progress .inner .water,
+	.orange .progress .inner .water {
+		position: absolute;
+		z-index: 1;
+		width: 200%;
+		height: 200%;
+		left: -50%;
+		border-radius: 40%;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+		-webkit-animation-name: spin;
+		animation-name: spin;
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+		-webkit-animation-duration: 10s;
+		animation-duration: 10s;
+	}
+
+
+	.green .progress .inner .glare,
+	.red .progress .inner .glare,
+	.orange .progress .inner .glare {
+		position: absolute;
+		top: -120%;
+		left: -120%;
+		z-index: 5;
+		width: 200%;
+		height: 200%;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		border-radius: 50%;
+		background-color: rgba(255,255,255,0.15);
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+
+	.green .progress .inner .percent,
+	.red .progress .inner .percent,
+	.orange .progress .inner .percent {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-weight: bold;
+		text-align: center;
+		line-height: 52px;
+		font-size: 20px;
+		font-weight: 900;
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+
+	.green .progress {
+		border: 2px solid #53fc53;
+		-webkit-box-shadow: 0 0 20px #029502;
+		box-shadow: 0 0 10px #029502;
+	}
+	.green .progress .inner .water {
+		background: rgba(83,252,83,0.5);
+		-webkit-box-shadow: 0 0 20px #03bc03;
+		box-shadow: 0 0 10px #03bc03;
+	}
+	.green .progress .inner .percent {
+		color: #03c603;
+		text-shadow: 0 0 10px #029502;
+	}
+
+
+	.red .progress {
+		border: 2px solid #ed3b3b;
+		-webkit-box-shadow: 0 0 20px #7a0b0b;
+		box-shadow: 0 0 10px #7a0b0b;
+	}
+	.red .progress .inner .water {
+		background: rgba(237,59,59,0.5);
+		-webkit-box-shadow: 0 0 20px #9b0e0e;
+		box-shadow: 0 0 10px #9b0e0e;
+	}
+	.red .progress .inner .percent {
+		color: #a30f0f;
+		text-shadow: 0 0 10px #7a0b0b;
+	}
+
+
+	.orange .progress {
+		border: 2px solid #f07c3e;
+		-webkit-box-shadow: 0 0 20px #7e320a;
+		box-shadow: 0 0 10px #7e320a;
+	}
+	.orange .progress .inner .water {
+		background: rgba(240,124,62,0.5);
+		-webkit-box-shadow: 0 0 20px #a0400c;
+		box-shadow: 0 0 10px #a0400c;
+	}
+	.orange .progress .inner .percent {
+		color: #a8430d;
+		text-shadow: 0 0 10px #7e320a;
+	}
+	@-webkit-keyframes spin {
+		from {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes spin {
+		from {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+}

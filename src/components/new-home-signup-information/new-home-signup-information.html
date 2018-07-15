@@ -1,0 +1,61 @@
+<ion-slides #slider>
+	<ion-slide>
+		<ion-grid class='grid-facebook-signup'>
+			<ion-row>
+				<ion-col col-12>
+					<div text-center font-6 class='label-facebook-description'>
+						Quick sign up with facebook or skip to sign up with<br/>
+						mobile.
+					</div>
+				</ion-col>
+				<ion-col padding-top></ion-col>
+				<ion-col col-12 text-center class='wrapper-button-fb-signup'>
+					<button (tap)='signUpWithFacebook.emit()' class='button-fb-signup' no-padding ion-button block round>
+						<ion-grid no-padding>	
+							<ion-row>
+								<ion-col margin-left col-auto>
+									<img class='logo-fb' src='assets/images/signup/facebook.png' />
+								</ion-col>
+								<ion-col align-self-center font-w-normal>
+									Sign up with Facebook			
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</button>
+				</ion-col>
+				<ion-col padding>
+					&nbsp;
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-slide>
+
+	
+
+
+	<ion-slide class='form-mobile-and-password'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col col-12 align-self-end>
+					<ion-item no-lines round-input>
+						<ion-input [(ngModel)]='mobileNumber' type='tel' (keyup)='mobileChanged();onMobileChange.emit(mobileNumber);checkForValidityOfNumberAndMobile()'  placeholder='Mobile'></ion-input>
+					</ion-item>
+					<div class='lbl-mobile-warning' [ngClass]='{"fading" : isMobileFading == true}' font-w-bold font-7>
+						Error minimum 9 characters
+					</div>
+				</ion-col>
+				<ion-col no-lines col-12 align-self-end text-center>
+					<ion-item no-lines round-input>
+						<ion-input [(ngModel)]='password' type='password' (keyup)='passwordChanged();onPasswordChange.emit(password);checkForValidityOfNumberAndMobile()' placeholder='Password'></ion-input>
+					</ion-item>
+					<div class='lbl-password-warning' [ngClass]='{"fading" : isFading == true}' font-w-bold font-7>
+						Error minimum 5 characters
+					</div>
+				</ion-col>			
+			</ion-row>
+		</ion-grid>
+	</ion-slide>
+	<ion-slide class='slide-custom-avatar'>
+		<new-home-avatar-options (avatarSelected)='avatarSelected.emit()' (openDefaultAvatarListPage)='openDefaultAvatarListPage.emit()'></new-home-avatar-options>
+	</ion-slide>
+</ion-slides>

@@ -1,0 +1,45 @@
+<ion-grid no-padding>
+	<ion-row grow>
+		<ion-col col-4 align-self-end class='fadeInLeft animated' text-center>
+			Amari26784
+		</ion-col>
+		<ion-col col-4></ion-col>
+		<ion-col col-4 text-center align-self-end >
+		</ion-col>
+	</ion-row>
+	<ion-row shrink>
+		<ion-col col-4>
+			<img class='playerProfile fadeInLeft animated' src='assets/images/head2head/avatar1.png' />
+		</ion-col>
+		<ion-col align-self-center col-4>
+			<img class='head2headLogo' src='assets/images/game-mode-icons/head2head.png' />
+		</ion-col>
+		<ion-col col-4>
+			<img #opponentImage class='playerProfile fadeInRight animated' src='assets/images/head2head/avatar2.svg'  />
+		</ion-col>
+	</ion-row>
+	<ion-row grow>
+		<ion-col col-4 align-self-start text-center >
+		</ion-col>
+		<ion-col col-4></ion-col>
+		<ion-col col-4 align-self-start class='fadeInRight animated' text-center>
+			Searching for <br/>
+			opponent
+		</ion-col>
+	</ion-row>
+</ion-grid>
+<ion-grid no-padding class='oval-background'>
+	<ion-row>
+		<ion-col></ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col></ion-col>
+	</ion-row>
+</ion-grid>
+<div class='oval oval-pulse'>
+
+</div>
+
+<div class='close-button-wrapper'>
+</div>
+<ion-icon name='ios-close-circle-outline' (click)='openExitModal()'></ion-icon>

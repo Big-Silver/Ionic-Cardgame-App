@@ -1,0 +1,38 @@
+page-leaderboard {
+
+	table{
+		height: 100% !important;
+		max-height: 100% !important;
+	}
+
+	.scroll-content{
+		overflow-y: hidden !important;
+	}
+
+	.fixed-content{
+		background-image: url('../assets/images/player-profile/background.png');
+		background-size: cover !important;
+	}
+
+	player-result{
+		.absolute-container{
+			ion-row{
+				ion-col:nth-child(6){
+					padding-left: 0px !important;
+					text-align: center;
+					width: 23.717948% !important;
+					div{
+						background-image: linear-gradient(180deg, #fbc000 0%, #d8d8d8 100%) !important;
+						font-size: 14px !important;
+						font-weight: 700 !important;
+					}
+				}
+				ion-col:nth-last-child(1),
+				ion-col:nth-last-child(2){
+					display: none !important;
+				}
+			}
+		}
+	}
+
+}

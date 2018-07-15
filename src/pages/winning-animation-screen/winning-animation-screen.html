@@ -1,0 +1,22 @@
+<ion-content padding>
+	<div #wrapperScreen class='main-wrapper'>
+		<div class='screen-one'>
+			
+			<table winning-animation-content (animationAborted)='scrollToBottom()'>
+				<ion-header title='winner?' subTitle='Are you a' stage-result-header  [hideCloseButton]='true'>
+				</ion-header>
+				<winning-animation-stage>
+				</winning-animation-stage>
+				<winning-animation-footer>
+				</winning-animation-footer>
+			</table>
+		</div>
+		<div class='screen-two'>
+			<table winning-animation-second-screen-content>
+				<winning-animation-second-screen-header [showCloseButton]='showCloseButton' (closeModal)='dismissView()'></winning-animation-second-screen-header>
+				<winning-animation-second-screen-list></winning-animation-second-screen-list>
+			</table>
+		</div>
+	</div>
+	<curtain *ngIf='curtainActive == true' (curtainRemoved)='curtainActive = false;initChildComponents()'></curtain>
+</ion-content>

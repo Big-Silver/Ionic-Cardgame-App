@@ -1,0 +1,169 @@
+page-home {
+    .logo {
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        top: 30px;
+        text-align: center;
+        label.screen-slogan{
+            position: relative;
+            top: -18px;
+            text-transform: map-get($vars,sloganTextTransform);
+            font-size: map-get($vars,sloganFontSize);
+            font-weight: map-get($vars,sloganFontWeight);
+            color: map-get($colors,white);
+            left: 5px;
+            span.play{
+                color: map-get($colors,playcolor);
+            }
+            span.win{
+                color: map-get($colors,wincolor);
+            }
+        }
+    }
+    
+    .button-mute{
+        position: absolute;
+        left: 5px;
+        top: 40px;
+        z-index: 9;
+        background: transparent;
+    }
+    .slide-zoom{
+    position:absolute;
+    left:0;
+    width:100%;
+    height:100%;    
+        ion-grid{
+            padding: 0;
+        }
+    }
+    .swiper-slide {
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .slider-row-text {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        z-index: 99;
+        min-height: 130px;
+
+        .text-heading-1{
+            height: auto;
+            color: map-get($colors,white);
+            font-size: 1.285em;
+            font-weight: 700;
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding-top: 0;
+        }
+        .text-heading-2{
+            width: auto;
+            height: 30px;
+            color: map-get($colors,white);
+            font-size: 0.857em;
+            font-weight: 400;
+            display: block;
+            width: 100%
+        }
+    }
+    
+    .slider-row{ 
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        .app-slider-video-main-wrap{
+            width: 100%;
+        }
+        video{
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            background: #000;
+            position: absolute;
+            height: 100%;
+            left: 0;
+        }
+    }
+    
+    .swiper-pagination-fraction, .swiper-pagination-custom, 
+    .swiper-container-horizontal > .swiper-pagination-bullets{
+        bottom: 67px;
+    }
+    
+    .swiper-pagination-bullet {
+        margin: 0 8px;
+        padding: 0px;
+        background: map-get($colors,white);
+        opacity: 0.5;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background: map-get($colors,white);
+        opacity: 1;
+    }
+    
+    .app-login-footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 9999;
+        ion-grid{
+            padding: 0;
+        }
+        button.app-auth-btn{
+            padding: 0px;
+            border-radius: 50px;
+            width: 85%;
+            color: map-get($colors,white);
+            
+            font-weight:700;
+            .button-inner{
+               font-size:0.857em; 
+            }
+        }
+        ion-col{
+            text-align:center;
+        }
+        ion-col:first-child{
+            padding-right: 10px;
+            button{
+                float: right;
+            }
+        }
+        ion-col:last-child{
+            padding-left: 10px;
+            button{
+                float: left;
+            }
+        }
+
+    }
+    .overlay-footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        height: 145px;
+        z-index: 1;  
+        left:0; 
+    }
+    video::-webkit-media-controls-start-playback-button 
+    {  
+		display: none !important;
+    }
+    video::-webkit-media-controls{
+    	opacity: 0;
+    }
+}

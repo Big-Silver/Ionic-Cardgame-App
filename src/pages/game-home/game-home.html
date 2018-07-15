@@ -1,0 +1,96 @@
+<ion-header home-screen-header (openStoreScreen)='openStoreScreen()'>
+	<marquee-list header-top-bar label='winners' [list]='winnerList'></marquee-list>
+	<button header-menu-button clear ion-button icon-only menuToggle>
+		<label class='tapicon-menu'></label>
+	</button>
+	<button (tap)='openInboxScreen()' header-msg-button clear ion-button>
+		<div class='red-dot'></div>
+		<ion-icon name='ios-mail'></ion-icon>
+		<div font-6 font-w-normal>
+			Inbox
+		</div>
+	</button>
+	<!-- <button (tap)='openFollowerScreen()' header-follow-button clear ion-button icon-only>
+		<img src='assets/images/home/follow.png' />
+		<div font-6 font-w-normal>
+			Follow
+		</div>
+	</button> -->
+	<button (tap)='openDailyMissionScreen()' header-missions-button clear ion-button icon-only>
+		<img src='assets/images/home/mission.png' />
+		<div font-6 font-w-normal>
+			Missions
+		</div>
+	</button>
+	<!-- <button header-share-button clear ion-button icon-only>
+		<img src='assets/images/home/share.png' />
+		<div font-6 font-w-normal>
+			Share
+		</div>
+	</button> -->
+	<img title-icon src='./assets/images/logo.png' />
+	<img store-icon end src='./assets/images/arcade/store-icon.png' />
+	<gamemode-balance balance1='10' balance2='20' balance3='30'>
+	</gamemode-balance>
+</ion-header>
+
+<ion-content #content no-padding no-bounce >
+
+	
+	<ion-slides #slides effect='coverflow' pager="true">
+		<ion-slide>
+			<img src='./assets/images/home/slider_image_1.png' />
+		</ion-slide>
+		<ion-slide>
+			<img src='./assets/images/home/slider_image_2.png' />
+		</ion-slide>
+		<ion-slide>
+			<img src='./assets/images/home/slider_image_3.png' />
+		</ion-slide>
+		<ion-slide>
+			<img src='./assets/images/home/slider_image_4.png' />
+		</ion-slide>
+	</ion-slides>
+
+	<div>
+
+		<home-screen-game-mode-header icon='arcade.png' title='ARCADE' subTitle='Level game with cash prize' primaryColor='rgba(50,102,204,0.6)' secondaryColor='rgba(0,0,0,0.5)' ></home-screen-game-mode-header>
+		<ion-scroll #arcadeScroll class='small-horizontal-scroll' scrollX=true scrollY=false>
+			<div class='horizontal-content-holder'>
+				<home-screen-game-icon-small *ngFor='let game of arcadeGames' color='blue' [data]='game' (click)='openGame(game, $event)'></home-screen-game-icon-small>
+			</div>
+		</ion-scroll>
+		
+		<home-screen-game-mode-header  icon='replay.png' title='REPLAY' subTitle='24 hour prize contest' primaryColor='rgba(204,28,0,0.6)' secondaryColor='rgba(0,0,0,0.5)' ></home-screen-game-mode-header>
+		<ion-scroll #replayScroll class='big-horizontal-scroll' scrollX=true scrollY=false>
+			<div class='horizontal-content-holder'>
+				<home-screen-game-icon-red-big *ngFor='let game of replayGames' [data]='game' (click)='openGame(game)'></home-screen-game-icon-red-big>
+			</div>
+		</ion-scroll>
+
+		<home-screen-game-mode-header icon='head2head.png' title='HEAD 2 HEAD' subTitle='A competition between two players' primaryColor='rgba(204,28,0,0.6)' secondaryColor='rgba(0,0,0,0.5)' ></home-screen-game-mode-header>
+		<ion-scroll #head2headScroll class='small-horizontal-scroll' scrollX=true scrollY=false>
+			<div class='horizontal-content-holder'>
+				<home-screen-game-icon-small *ngFor='let game of head2headGames' color='red' [data]='game' (click)='openGame(game)'></home-screen-game-icon-small>
+			</div>
+		</ion-scroll>
+
+		<home-screen-game-mode-header icon='contest.png' title='CONTEST' subTitle='4 stage elimination cash prize contest' primaryColor='rgba(204,28,0,0.6)' secondaryColor='rgba(0,0,0,0.5)' ></home-screen-game-mode-header>
+		<ion-scroll #contestScroll class='big-horizontal-scroll' scrollX=true scrollY=false>
+			<div class='horizontal-content-holder'>
+				<home-screen-game-icon-red-big *ngFor='let game of contestGames' [data]='game' (click)='openGame(game)'></home-screen-game-icon-red-big>
+			</div>
+		</ion-scroll>
+
+		<home-screen-game-mode-header icon='instant_win.png' title='INSTANT WIN' subTitle='Spin to see the prize you are playing for.' primaryColor='rgba(255,190,11,0.6)' secondaryColor='rgba(0,0,0,0.5)' ></home-screen-game-mode-header>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col class='slot-container' col-4 *ngFor='let game of instantWinGames'>
+					<home-screen-game-icon-small color='yellow' [data]='game' (click)='openGame(game)'></home-screen-game-icon-small>			
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+
+	</div>
+
+</ion-content>

@@ -1,0 +1,25 @@
+<tr shrink>
+	<td>
+		<ng-content select=' > leaderboard-tabs'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<div class='gradient-border'></div>
+	</td>
+</tr>
+<tr shrink>
+	<td class='own-result-slot'>
+		<ng-content select=' > player-result'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<div class='section-divider'></div>
+	</td>
+</tr>
+<tr grow>
+	<td class='list-holder'>
+		<ng-content select=' > [player-result-group]'></ng-content>
+	</td>
+</tr>

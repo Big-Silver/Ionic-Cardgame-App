@@ -1,0 +1,45 @@
+store-offers {
+	ion-slides{
+		max-width: 100vw;
+	}
+
+	.slide-zoom{
+		max-height: 100%;
+		height: 100%;
+		overflow-y: hidden;
+		align-self: flex-start;
+		position: relative;
+		.scroll-div{
+			position: absolute;
+			top : 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: unset !important;
+		}
+	}
+
+	store-blue-slot,
+	store-red-slot{
+		margin: 12px 3px;
+	}
+
+	.footer-text{
+		position: absolute;
+		bottom: -1px;
+		right: 0px;
+		left: 0px;
+		top: unset !important;
+		font-size: 9px;
+		font-weight: 500 !important;
+		text-align: center;
+		display: block;
+		letter-spacing: 1.13px;
+		background-color: rgba(0,0,0,.83);
+		color: white;
+		padding: 4px 10px;
+		z-index: 10000000;
+	}
+
+}	

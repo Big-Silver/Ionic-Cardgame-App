@@ -1,0 +1,39 @@
+achievement-footer {
+	display: block;
+	padding: 8px 0px !important;
+
+	background-image: url('../assets/images/home/header_background.png');
+	background-size: cover;
+
+	.total-wins-grid{
+		color: white;
+		border: 1px solid #186ec1 !important;
+		height: 34px;
+		width: 116px;
+		ion-row[grow]{
+			flex-grow: 1;
+			ion-col{
+				transform: translate3d(0px, 0px, 0px) !important;
+				background-image: linear-gradient(180deg, #ffe700 0%, #ff9b00 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		ion-row:not([grow]){
+			ion-col{
+				font-family: "Open Sans" !important;
+				letter-spacing: 1.95px;
+				line-height: 10px;
+				height: 11px;
+				border-bottom: 1px solid #186ec1 !important;
+			}
+		}
+	}
+
+	.img-share{
+		height: 30px;
+		width: 30px;
+		display: block;
+	}
+
+}

@@ -1,0 +1,344 @@
+page-signup {
+	page-signup-sucess{
+		.success-match{
+			.content.reset{
+				display:none;
+			}
+		}
+	}
+	.mobile-banner-head{
+		//background-image: url(../assets/images/registration/bg.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 0;
+		height: 10.36em;
+		background-position: 0 -3.21em;
+	}
+
+	.registration-wrapper{
+		//background-image: url("../assets/images/registration/gradient.png");
+		//background-repeat:no-repeat;
+		background-size:100%;
+		padding: 1em;
+		position: absolute;
+		top: 0;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		width:100%;
+		height:100%;
+		background-position:0 -4.643em;
+		display:table;
+
+		.formWrap {			    
+			width: 100%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	button.back-button-icon {
+		position: absolute;
+		left: 10px;
+		z-index: 9;
+		font-size: 27px;
+		width: 13px;
+		padding: 15px;
+		color: #000;
+		margin: 0;
+		height: 22px;
+		top: 20px;
+	}
+
+	/*-----KKKKK RAN---------*/
+	.registration-wrapper form .togglebox .toggle button::before {
+		position: absolute;
+		background: #FFF;
+		content: "\f271";
+		left: 0;
+		width: 50%;
+		border-radius: 100px;
+		height: 39px;
+		z-index:1;
+		top:0px;
+		font-family: "Ionicons";
+		font-size: 2.5em;
+		color: #5F5A54;
+		padding-top:1px;
+	}
+
+	.registration-wrapper form .togglebox .toggle button::after {
+		right: 0;
+		left: auto;
+		background: #ddd;
+		position: absolute;
+		width: 50%;
+		height: 39px;
+		content: "\f1bb";
+		top: 0px;
+		border-radius: 100px;
+		z-index:1;
+		font-family: "Ionicons";
+		font-size: 2.5em;
+		color: #37A4EA;
+		padding-top: 1px;
+	}
+
+
+	.registration-wrapper form .togglebox .toggle.toggle-checked button::before {
+		position: absolute;
+		background: #ddd;
+		content: "\f271";
+		left: 0;
+		width: 50%;
+		border-radius: 100px;
+		height: 39px;
+		z-index:1;
+		top:0px;
+		font-family: "Ionicons";
+		font-size: 2.5em;
+		color: #37A4EA;
+		padding-top:1px;
+	}
+
+	.registration-wrapper form .togglebox .toggle.toggle-checked button::after {
+		right: 0;
+		left: auto;
+		background: #FFF;
+		position: absolute;
+		width: 50%;
+		height: 39px;
+		content: "\f1bb";
+		top: 0px;
+		padding-top: 1px;
+		border-radius: 100px;
+		z-index:1;
+		font-family: "Ionicons";
+		font-size: 2.5em;
+		color: #5F5A54;
+	}
+
+
+	/*-----KKKKK RAN---------*/
+
+	//background-image: url("../assets/images/registration/bg.png");
+	//background-repeat:no-repeat;
+	//background-size:100%;
+	  	/*.scroll-content{
+		  	 background-image: url("../assets/images/registration/gradient.png");
+		  	 background-repeat:no-repeat;
+		  	 background-size:100%;
+	  	     background-position: 0 -45px;
+	  	     }*/
+
+	  	     p.invaild.app-error {
+	  	     	margin: 0;
+	  	     	padding: 0 5px;
+	  	     	font-size: 0.7142857142857143em;
+	  	     	font-weight: 200;
+	  	     	position: absolute;
+	  	     	color: #ff0000;
+	  	     	bottom: -0.21428571428571427em;
+	  	     }
+	  	     p.invaild.app-error.invaild-age{
+	  	     	bottom: -12px;
+	  	     }
+
+	  	     .registration-wrapper{
+	  	     	.app-fb-container{
+	  	     		margin-top:0;
+	  	     		padding:0;
+	  	     		.button-inner{
+	  	     			font-size: 1.4rem;
+	  	     			font-weight: 400;
+	  	     		}
+	  	     	}
+
+	  	     	.instructions {
+	  	     		padding: 0;
+	  	     		margin: 0;
+	  	     		text-align: center;
+	  	     		color: map-get($colors,placeholder);
+	  	     		font-size: 14px;
+	  	     		font-weight: 400;
+	  	     	}
+
+	  	     	form{
+	  	     		ion-list{
+	  	     			margin: 0!important;
+	  	     			ion-item{
+	  	     				background: transparent;
+	  	     			}
+	  	     		}
+	  	     		ion-input .text-input {
+	  	     			background: #dcdcdc;
+	  	     			height: 30px;
+	  	     			border-radius: 100px;
+	  	     			text-align: center;
+	  	     			font-size: 1.4rem;
+	  	     			margin: 5px 0 5px 0;
+	  	     			width:100%;
+	  	     			letter-spacing:1.4px;
+	  	     		}
+	  	     		.agebox {
+	  	     			float:left;width: 48%;
+	  	     			position: relative;
+	  	     			margin: 0px 2% 0 0;
+	  	     			input{
+	  	     				background: #fff;
+	  	     				height:42px;
+	  	     				border:2px solid #e1e1e1;
+	  	     				padding: 0 18px;
+	  	     				text-align:left;
+	  	     			}
+	  	     			ion-select {
+	  	     				width: 100%;
+	  	     				max-width: 100%;
+	  	     				position:relative;
+	  	     				overflow:inherit;
+	  	     				.select-text{
+	  	     					font-size: 1.4rem;
+	  	     					font-weight: 400;
+	  	     					letter-spacing: 1.4px;
+	  	     					line-height: 20px;
+	  	     					color: #636363;
+	  	     					z-index: 9;
+	  	     					overflow: inherit;
+	  	     					/*width: 30%;*/
+	  	     					display: block;
+	  	     					position: absolute;
+	  	     					text-align: center;
+	  	     					margin: 0 auto;
+	  	     					left: 0;
+	  	     					right: 0;
+	  	     				}
+	  	     				button{
+	  	     					background: #fff;
+	  	     					height:42px;
+	  	     					border:2px solid #e1e1e1;
+	  	     					padding: 0 18px;
+	  	     					text-align:left;
+	  	     					width:100%;
+	  	     					border-radius: 100px;
+	  	     				}
+	  	     				.select-icon{
+	  	     					position: absolute;
+	  	     					width: 12px;
+	  	     					height: 18px;
+	  	     					float: right;
+	  	     					z-index: 1;
+	  	     					right: 20px;
+	  	     				}
+	  	     			}
+	  	     		}
+	  	     		.togglebox{
+	  	     			float:left;
+	  	     			width:50%;
+	  	     			position:relative;
+	  	     			//margin: 0px 0 0 2%;
+	  	     			ion-toggle{
+	  	     				display:block;
+	  	     				position:relative;
+	  	     			}
+	  	     			.toggle {
+	  	     				position: relative;
+	  	     				width: 100%;
+	  	     				height: 42px;
+	  	     				-webkit-box-sizing: content-box;
+	  	     				box-sizing: border-box;
+	  	     				contain: strict;
+	  	     				//background-image: url("../assets/images/registration/togle-male-1.png");
+	  	     				//background-position: 0px 0px;
+	  	     				float:right;
+	  	     				background-repeat:no-repeat;
+
+	  	     				button.item-cover{
+	  	     					border:2px solid #e5e5e5;
+	  	     					border-radius:100px;
+	  	     					overflow:hidden;
+	  	     					font-size:100%;
+	  	     				}
+	  	     			}
+	  	     			.toggle .toggle-icon{ 
+	  	     				background-color:transparent;
+	  	     				z-index:2;
+	  	     			}
+	  	     			.toggle.toggle-checked {
+	  	     				//background-position: 0px 42px;
+	  	     				//background-image: url("../assets/images/registration/togle-female-1.png");
+	  	     				background-repeat:no-repeat;
+	  	     			}	
+	  	     			.toggle  .toggle-inner{ 
+	  	     				background:transparent; box-shadow:0px 0px 0px;
+	  	     			}
+	  	     			.toggle .toggle-icon::before{
+	  	     				display:none;
+	  	     			}
+	  	     		}
+	  	     		.infopara{
+	  	     			padding: 0;
+	  	     			color: #1d1d26;
+	  	     			font-size: 10px;
+	  	     			font-weight: 400;
+	  	     			display: block;
+	  	     			width: 100%;
+	  	     			margin:  18px 0 5px 0;
+	  	     		}
+
+	  	     		.promobox{
+	  	     			width:50%;
+	  	     			float:left;
+	  	     			input{
+	  	     				height: 40px;
+	  	     				border-radius: 5px;
+	  	     				background-color: #d8d8d8;
+	  	     				font-size: 14px;
+	  	     				font-weight: 400;
+	  	     				color: #f7f7f7;
+	  	     				width:100%;
+	  	     			}
+	  	     		}
+	  	     		.promobutton{
+	  	     			width:50%;
+	  	     			float:left;
+	  	     			button{
+	  	     				height: 40px;
+	  	     				color: #fff;
+	  	     				width:100%;
+	  	     				font-size:13px;
+	  	     				width:90%;
+	  	     				float:right;
+	  	     				box-shadow: 0 3px 0 #25479b;
+	  	     			}
+	  	     		}
+	  	     		.form-submit-box{
+	  	     			position:relative;
+	  	     			button{				
+
+	  	     				line-height: 30px;
+
+	  	     				span.button-inner{
+	  	     					font-size: 1.14em;
+	  	     					font-weight:700;
+	  	     				}
+	  	     			}
+	  	     			p{
+	  	     				font-size: 0.571em;
+	  	     				font-weight: 400;
+	  	     				color: #393939;
+	  	     				text-align:center;
+	  	     				margin-bottom:0;
+	  	     				a{
+	  	     					font-weight: 800;
+	  	     					color: #393939;
+	  	     					text-decoration:none;
+	  	     				}
+	  	     			}
+	  	     		}
+	  	     	} 	
+	  	     }
+	  	 }
+

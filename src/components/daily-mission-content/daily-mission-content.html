@@ -1,0 +1,28 @@
+<tr shrink>
+	<td text-right>
+		<timer [minimalWithDay]='true' [time]='3600'></timer>
+	</td>
+</tr>
+<tr shrink>
+	<td class='description-daily-mission' text-center>
+		<div text-center font-w-black font-5>
+			Complete daily missions to win amazing rewards!
+		</div>
+		<div font-w-black font-6>
+			BIG SPECIAL PRIZE if you complete all tasks for 5 days<br/>
+			in a row.						
+		</div>
+	</td>
+</tr>
+<tr shrink>
+	<td font-6 class='highlighted-text' text-center>
+		Click the missions you wish to opt in for.
+	</td>
+</tr>
+<tr grow>
+	<td class='abs-expand-container'>
+		<div class='abs-expand'>
+			<ng-content select='daily-mission-offer'></ng-content>
+		</div>
+	</td>
+</tr>

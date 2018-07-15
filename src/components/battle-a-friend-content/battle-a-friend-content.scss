@@ -1,0 +1,22 @@
+[battle-a-friend-content] {
+	tr[shrink]{
+		height: 1px;
+	}
+	tr[grow]{
+		height: 100%;
+	}
+
+	.wrapper-game-request-challanger{
+		height: 273px !important;
+		& > td{
+			position: relative !important;		
+		}
+	}
+
+	.wrapper-game-request-game-info{
+		& > td{
+			position: relative;
+		}
+	}
+
+}

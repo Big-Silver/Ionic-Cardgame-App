@@ -1,0 +1,39 @@
+page-squadup-modal {
+	ion-content{
+		background-image: url('../assets/images/squadup/background.jpg');
+		background-size: cover;
+		background-position: center;
+		.scroll-content{
+			background-color: rgba(6, 5, 53, 0.66);
+			overflow-y: hidden;
+		}
+	}
+	table{
+		height: 100%;
+		width: 100%;
+	}
+	.corner-image{
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		width: 55px;
+		height: 55px;
+		.background{
+			height: 100%;
+			width: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -1px;
+			left: 0;
+			bottom: -1px;
+		}
+		.gamemode-icon{
+			position: absolute;
+			width: 27px;
+			display: block;
+			bottom: 2px;
+			right: 2px;
+		}
+	}
+}

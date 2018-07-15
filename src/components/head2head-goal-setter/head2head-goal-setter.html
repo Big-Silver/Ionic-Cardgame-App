@@ -1,0 +1,117 @@
+<div>
+	<div class='score-header' [ngClass]='{"open":isOpen == true, "closed":isOpen == false}'>
+
+		<button class='fee-button'>
+			<div #screen1Element screen1Element>
+				<div font-6 font-w-bold>FEE</div>
+				<div font-w-heavy>
+					<img src='assets/images/arcade/token-red.png' /> {{feeChart[feeIndex].fee}}
+				</div>
+			</div>
+			<div #screen2Element screen2Element text-center font-h3 font-w-bold>
+				ARE YOU
+			</div>
+		</button>
+
+		<button #prizeButton class='prize-button'>
+			<div #screen1Element screen1Element>
+				<div font-6 font-w-bold>WIN</div>
+				<div font-w-heavy>
+					<ng-container *ngIf='feeIndex > 0'>
+						<ng-container *ngIf='feeChart[feeIndex].isToken'>
+							<img  src='assets/images/arcade/token-red.png' /> {{feeChart[feeIndex].prize}}
+						</ng-container>
+						<ng-container *ngIf='!feeChart[feeIndex].isToken'>
+							&pound;{{feeChart[feeIndex].prize}}
+						</ng-container>
+					</ng-container>
+					<ng-container *ngIf='feeIndex == 0'>
+						0				
+					</ng-container>
+				</div>
+			</div>
+			<div #screen2Element screen2Element text-center font-h3 font-w-bold>
+				READY
+			</div>
+		</button>
+		<div class='clear'></div>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col text-center #screen1Element screen1Element>
+					<div font-4 font-w-medium>
+						My maximum
+					</div>
+					<div font-8 font-w-medium>
+						(When done click play)
+					</div>
+				</ion-col>
+				<ion-col text-center #screen2Element screen2Element>
+					<span faded-countdown [from]='10' (aboutToOver)='aboutToOver()' (counterOver)='counterOver()' >
+					</span>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div class='score-controller'>
+		<div class='control-wrapper'>
+			<div #screen1Element screen1Element>
+				<button class='decrement-button' (click)='decrementFeeIndex()'>
+					<div>-</div>
+				</button>
+				<img src='assets/images/game-mode-icons/head2head.png' />
+				<button class='increment-button' (click)='incrementFeeIndex()'>
+					<div>+</div>
+				</button>
+			</div>
+			<div class='grid-container' #screen2Element screen2Element>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col font-6 font-w-medium text-center>
+							If we cant find you an opponent now, we 
+							will find you one shortly and alert you with 
+							results.
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</div>
+	</div>
+	<div class='score-footer'>
+		<div class='score-footer-container'>
+			<div class='grid-container'  #screen1Element screen1Element>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col text-center font-8 font-w-bold>
+							we will find someone that either matches 
+							your offer or is the nearest below it.
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+			<div class='grid-container' #screen2Element screen2Element>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col>
+							<span font-7 font-w-heavy>Prize:</span> <span font-7 font-w-medium>&pound;1</span>
+						</ion-col>
+						<ion-col text-right>
+							<span font-7 font-w-heavy>Date:</span> <span font-7 font-w-medium>02/04/2014</span>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<span font-7 font-w-heavy>Entry Fees:</span> <span font-7 font-w-medium>3 Tokens</span>
+						</ion-col>
+						<ion-col text-right>
+							<span font-7 font-w-heavy>Match ID:</span> <span font-7 font-w-medium>11347902</span>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</div>
+	</div>
+	<button #screen2Element screen2Element class='battle-button fadeInRight' font-6 font-w-bold (click)='battleAFriend.emit()'>
+		Battle <br/>
+		A Friend
+	</button>
+</div>

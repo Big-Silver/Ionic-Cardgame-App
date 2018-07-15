@@ -1,0 +1,39 @@
+head2head-score-information-won-slide {
+
+	color: white;
+	
+	& > .main-title{
+		letter-spacing: 2.25px;
+	}
+
+	ion-slides{
+		max-width: 100vw !important;
+	}
+
+	.swiper-pagination{
+		top: -4px !important;
+		height: 10px;
+	}
+
+	.swiper-pagination-bullet{
+		margin: 0px 2px !important;
+	}
+
+	.swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
+		background-color: #d8d8d8 !important;
+		opacity: 0.91;
+	}
+
+	.swiper-pagination-bullet-active{
+		background-color: #ebbf24 !important;
+	}
+
+	head2head-score-information-awaiting{
+		margin-top: 10px;	
+	}
+
+	head2head-score-information{
+		margin-top: 6px;
+	}
+
+}

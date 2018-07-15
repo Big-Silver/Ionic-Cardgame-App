@@ -1,0 +1,32 @@
+<ion-grid no-padding>
+
+	<ion-row class='player-coin-amount'>
+		<ion-col align-self-center>
+			<div font-5 text-center class='text-label'>
+				Coins you have:
+			</div>
+			<div text-center font-w-medium class='text-value'>
+				<img src='assets/images/dashboard/coin.png' /> {{totalAvailableCoins | number:0}}
+			</div>
+		</ion-col>
+	</ion-row>
+
+	<ion-row class='convert-rate'>
+		<ion-col col-auto text-center>
+			Convert Rate:
+		</ion-col>
+		<ion-col col-auto align-self-center>
+			<img src='assets/images/arcade/token-red.png' />
+		</ion-col>
+		<ion-col col-auto>&nbsp;x1 - 1000&nbsp;&nbsp;</ion-col>
+		<ion-col col-auto align-self-center>
+			<img src='assets/images/arcade/token-blue.png' />
+		</ion-col>
+		<ion-col col-auto>&nbsp;x1 - 50&nbsp;&nbsp;</ion-col>
+		<ion-col col-auto align-self-center>
+			<img src='assets/images/store/helper.png' />
+		</ion-col>
+		<ion-col col-auto>&nbsp;x1 - 500&nbsp;&nbsp;</ion-col>
+	</ion-row>
+
+</ion-grid>

@@ -1,0 +1,9 @@
+<ion-header (goBack)='goBack()' game-request-header [mode]='mode' title='Squad Up'>
+</ion-header>
+<ion-content padding [ngClass]='{"page-loaded" : isPageLoaded == true}' >
+	<table squadup-request-content>
+		<game-request-challanger [mode]='mode'></game-request-challanger>
+		<game-request-game-info [mode]='mode'></game-request-game-info>
+		<game-request-footer [mode]='mode'></game-request-footer>
+	</table>
+</ion-content>

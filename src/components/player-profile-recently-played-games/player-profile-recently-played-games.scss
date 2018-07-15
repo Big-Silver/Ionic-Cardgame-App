@@ -1,0 +1,36 @@
+player-profile-recently-played-games {
+	display: block;
+	
+	.header{
+		color: #0384dc;
+		line-height: 14px;
+		padding-bottom: 1px;
+	}
+
+	ion-grid{
+		max-width: 100vw !important; 
+	}
+
+	.game-row{
+		justify-content: space-around;
+	}
+
+	.content-wrapper{
+		background-image: linear-gradient(to top, #00072f 0%, #090050 11%, #090050 93%, #00072f 100%);
+		padding-top: 9px;
+		padding-bottom: 9px;
+	}
+
+	.header-content-wrapper{
+		color: white;
+		background-color: rgba(7, 6, 79, 0.63);
+		line-height: 28px;
+		font-size: 17px !important;
+		span{
+			font-size: 17px !important;
+			color : #fbd500;
+		}
+	}
+
+
+}

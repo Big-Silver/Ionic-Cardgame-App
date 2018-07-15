@@ -1,0 +1,21 @@
+[squadup-request-content] {
+	tr[shrink]{
+		height: 1px;
+	}
+	tr[grow]{
+		height: 100%;
+	}
+
+	.wrapper-game-request-challanger{
+		height: 255px !important;
+		& > td{
+			position: relative !important;		
+		}
+	}
+
+	.wrapper-game-request-game-info{
+		& > td{
+			position: relative;
+		}
+	}
+}

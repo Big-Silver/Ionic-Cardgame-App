@@ -1,0 +1,81 @@
+<table>
+		<tr>
+			<td grow>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col class='own-avatar-wrapper' col-auto>
+							<player-avatar-icon (click)='openPlayerProfile.emit()' [playerInformation]='ownInformation'></player-avatar-icon>
+						</ion-col>
+						<ion-col align-self-center>
+							<player-game-rank-table b-blue level='EXPERT' stars='2' badges='4'></player-game-rank-table>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</td>
+			<td shrink class='dot-container'>
+				&bull;<br/>
+				&bull;<br/>
+				&bull;
+			</td>
+			<td grow>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col align-self-center>
+							<player-game-rank-table b-blue level='EXPERT' stars='2' badges='4' [unknown]='opponentInformation.unknown'></player-game-rank-table>
+						</ion-col>
+						<ion-col class='opponent-avatar-wrapper' col-auto>
+							<player-avatar-icon (click)='opponentInformation.unknown == true ? "" : openPlayerProfile.emit()' [invertFlag]='true' [unknown]='opponentInformation.unknown' [playerInformation]='opponentInformation'></player-avatar-icon>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</td>
+		</tr>
+		<tr *ngIf='opponentInformation.unknown == false'>
+			<td [ngStyle]="{'color': playerColor}" text-left font-w-heavy font-4 class='score-heading'>
+				YOUR SCORE
+			</td>
+			<td></td>
+			<td [ngStyle]="{'color': opponentColor}" text-right font-4 font-w-heavy class='score-heading'>
+				THEIR SCORE
+			</td>
+		</tr>
+		<tr *ngIf='opponentInformation.unknown == true'>
+			<td text-left font-w-heavy font-4 class='score-heading'>
+				YOUR SCORE
+			</td>
+			<td></td>
+			<td text-right font-4 font-w-heavy class='score-heading'>
+				THEIR SCORE
+			</td>
+		</tr>
+		<tr class='score-border'>
+			<td colspan="3"><div></div></td>
+		</tr>
+		<tr class='score-table-container-row'>
+			<td>
+				<table class='score-table own-score-table' [ngClass]='{"fadeIn animated" : fadingContent == true}'>
+					<tr *ngFor='let row of ownScore'>
+						<td font-9 font-w-bold text-left>{{row.label}}:</td>
+						<td font-9 [ngStyle]="{'color': playerColor}" text-right font-w-bold #playerWordShuffler>{{row.value}}</td>
+					</tr>
+				</table>
+			</td>
+			<td shrink class='dot-container'>
+				&bull;<br/>
+				&bull;<br/>
+				&bull;
+			</td>
+			<td class='p-relative'>
+				<table class='score-table opponent-score-table' [ngClass]='{"fadeIn animated" : fadingContent == true}'>
+					<tr *ngFor='let row of opponentScore'>
+						<td font-9 font-w-bold text-left>{{row.label}}:</td>
+						<td font-9 *ngIf='opponentInformation.unknown == true' [ngStyle]="{'color': opponentColor}" text-right font-w-bold #opponentWordShuffler>?</td>
+						<td font-9 *ngIf='opponentInformation.unknown == false' [ngStyle]="{'color': opponentColor}" text-right font-w-bold #opponentWordShuffler>{{row.value}}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr class='score-border'>
+			<td colspan="3"><div></div></td>
+		</tr>
+	</table>

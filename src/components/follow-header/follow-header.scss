@@ -1,0 +1,107 @@
+[follow-header] {
+
+	ion-toolbar{
+		padding: 0px !important;
+	}
+
+	.toolbar-background{
+		border: 0px !important;
+	}
+
+	.tapicon-back{
+		font-size: 1.6em !important;
+	}
+
+	.header-toolbar,
+	.tab-toolbar{
+		.toolbar-background{
+			background-color: #000921 !important;
+			background-image: none !important;
+ 		}
+	}
+
+	.header-toolbar{
+		min-height: 52px !important;
+		.toolbar-title{
+			font-size: 22px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		img{
+			height: 28px;
+			border: 1px solid white;
+			vertical-align: bottom;
+			border-radius: 100%;
+		}
+	}
+
+	.tab-toolbar{
+
+		.toolbar-content{
+			pointer-events: all !important;
+		}
+
+		ion-grid{
+			border-bottom: 3px solid #89e2fe;
+		}
+
+		ion-col{
+			padding: 7px 0px !important;
+			height: 27px !important;
+			font-family: "Helvetica Neue" !important;
+			font-size: 12px;
+			font-weight: 700;
+			background-image: linear-gradient(to top, #7adffe 0%, #ffffff 100%);
+			border-radius: 14px 14px 0px 0px !important;
+		}
+
+		ion-col:nth-child(2){
+			margin: 0px 1px !important;
+		}
+
+		ion-col.activatedTab{
+			color: #00287D;
+		}
+
+		ion-col:not(.activatedTab){
+			opacity: 0.7 !important;
+			color: #00133B;
+		}
+
+	}
+
+	.search-toolbar{
+
+		.toolbar-content{
+			pointer-events: all !important;
+		}
+
+		.toolbar-background{
+			background-color:  #00133b !important;
+			background-image: none !important;
+		}
+
+		.searchbar-search-icon{
+			top: 7px !important;
+			left: 23px;
+		}
+
+		ion-searchbar.searchbar-has-focus{
+			.searchbar-search-icon{
+				left: 9px !important;
+			}
+		}
+
+		ion-searchbar{
+			height: 50px !important;
+			padding: 0px 5px !important;
+		}
+
+		.searchbar-input{
+			height: 2.6rem !important;
+			background-color: white !important;
+		}
+
+	}
+
+}

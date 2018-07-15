@@ -1,0 +1,202 @@
+page-battle-a-friend {
+	
+	ion-content{
+		.scroll-content{
+			padding: 0px !important;
+			overflow: hidden !important;
+			background-image: url('../assets/images/battle/background.png');
+			background-size: cover;
+			background-position: center;
+		}
+	}
+
+	table{
+		height: 100%;
+		width: 100vw;
+	}
+
+	timer{
+		line-height: 31px !important;
+		img,small{
+			font-size: 12px !important;
+			font-weight: 500 !important;
+		}
+		img{
+			vertical-align: sub !important;
+		}
+		small{
+			vertical-align: bottom;
+		}
+		span{
+			font-size: 18px !important;
+			font-weight: 700 !important;
+		}
+		span:nth-last-child(1){
+			color: #ff0000;
+		}
+	}
+
+	.wrapper-head2head-icon{
+		z-index: 100%;
+	}
+
+	player-avatar-icon{
+		z-index: 10;
+	}
+
+	
+	.wrapper-head2head-icon,
+	player-avatar-icon,
+	game-request-game-info,
+	game-request-footer,
+	game-request-game-info .img-game-icon,
+	game-request-game-info .title-game-name,
+	game-request-game-info .description-game,
+	game-request-game-info .description-reward,
+	game-request-game-info .table-reward,
+	.wrapper-player-name{
+		opacity: 0;
+		animation-fill-mode: forwards !important;
+	}
+
+	ion-content.page-loaded{
+
+		.wrapper-head2head-icon{
+			animation: 0.4s main-entrance-battle-a-friend ease-in;
+		}
+
+		player-avatar-icon.left-player{
+			animation-delay: 0.38s !important;
+			animation: 0.6s player-right-entrance-battle-a-friend ease;
+		}
+
+		player-avatar-icon.right-player{
+			animation-delay: 0.38s !important;
+			animation: 0.6s player-left-entrance-battle-a-friend ease;
+		}
+
+		.wrapper-player-name,
+		game-request-game-info{
+			animation-delay: 0.38s !important;
+			animation: 0.6s basic-fade-in-battle-a-friend linear;
+		}
+
+		game-request-game-info .img-game-icon{
+			animation-delay: 0.98s !important;
+			animation: 0.3s staggered-fade-from-left-battle-a-friend linear;
+		}
+
+		game-request-game-info .title-game-name,
+		game-request-game-info .description-game{
+			animation-delay: 0.98s !important;
+			animation: 0.3s staggered-fade-from-right-battle-a-friend linear;
+		}
+
+		game-request-game-info .description-reward{
+			animation-delay: 1.30s !important;
+			animation: 0.3s staggered-fade-from-left-battle-a-friend linear;
+		}
+		
+		game-request-game-info .table-reward.from-left{
+			animation-delay: 1.40s !important;
+			animation: 0.3s staggered-fade-from-left-squadup-request linear;
+		}
+
+		game-request-game-info .table-reward.from-right{
+			animation-delay: 1.40s !important;
+			animation: 0.3s staggered-fade-from-right-squadup-request linear;
+		}
+
+		game-request-footer{
+			animation-delay: 1.60s !important;
+			animation: 0.5s basic-fade-in-battle-a-friend linear;
+		}
+
+	}
+
+}
+
+
+@keyframes main-entrance-battle-a-friend{
+	0%{
+		opacity: 0;
+		transform: scale(7);
+	}
+	80%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes player-right-entrance-battle-a-friend{
+	0%{
+		opacity: 0;
+		transform: translate(100px,0px);
+	}
+	40%{
+		opacity: 0.9;
+	}
+	90%{
+		transform: translate(-10px,0px);
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0px,0px);
+	}
+}
+
+@keyframes player-left-entrance-battle-a-friend{
+	0%{
+		opacity: 0;
+		transform: translate(-100px,0px);
+	}
+	40%{
+		opacity: 0.9;
+	}
+	90%{
+		transform: translate(10px,0px);
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0px,0px);
+	}
+}
+
+@keyframes basic-fade-in-battle-a-friend{
+	0%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 1;
+	}
+	100%{
+		opacity : 1;
+	}
+}
+
+@keyframes staggered-fade-from-left-battle-a-friend{
+	0%{
+		opacity: 0;
+		transform: translate(-100%,0px);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0px,0px);
+	}
+}
+
+@keyframes staggered-fade-from-right-battle-a-friend{
+	0%{
+		opacity: 0;
+		transform: translate(100%,0px);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0px,0px);
+	}
+}

@@ -1,0 +1,36 @@
+<div class='image-holder' (tap)='imageTapped.emit()'>
+	<img class='player-image' [src]='playerDetail.image' />
+	<div class='selected-status' *ngIf='playerDetail.selected == true'>
+		<img src='assets/images/squadup/checkmark.png' />
+	</div>
+	<div class='online-status' *ngIf='playerDetail.online == true'>
+	</div>
+</div>
+
+<div font-6 font-w-medium  text-left class='player-name'>
+  {{playerDetail.name}}
+</div>
+<div text-left class='player-amount'>
+	<label font-w-bold font-6 *ngIf='isFamous == false' ><img src='assets/images/squadup/lightening.png' />&nbsp;{{playerDetail.amount}}</label>
+	<label font-w-bold font-6 *ngIf='isFamous == true' ><img class='img-fame' src='assets/images/player-profile/fame.png' />&nbsp;{{playerDetail.amount}}</label>
+</div>
+<div *ngIf='withFollowButton == true'>
+	<button ion-button round class='follow-button' [ngClass]='{"following" : playerDetail.isFollowing}' (tap)='changeFollowingState()'>
+		<img *ngIf='!playerDetail.isFollowing' class='img-plus' src='assets/images/squadup/plus.png' />
+		<img *ngIf='playerDetail.isFollowing' class='img-tick' src='assets/images/squadup/tick.png' />
+		&nbsp;&nbsp;
+		<img class='img-user' src='assets/images/squadup/user.png' />
+	</button>
+</div>
+<div *ngIf='withProfileViewButton == true'>
+	<button ion-button round class='profile-view-button' (tap)='profileViewTapped.emit()'>
+		View
+	</button>
+</div>
+<div *ngIf='withNewLabel' class='label-wrapper'>
+	<div class='label-background'>
+		New
+	</div>
+	<div class='upper-skew'></div>
+	<div class='down-skew'></div>
+</div>

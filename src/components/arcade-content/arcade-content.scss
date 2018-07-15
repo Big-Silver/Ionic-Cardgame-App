@@ -1,0 +1,62 @@
+[arcade-content] {
+    padding: 0px !important;
+	min-height: 100%;
+	width: 100%;
+	max-width: 100%;
+
+    [flex-grow]{
+        flex-grow: 1;
+    }
+
+    .highlighted-border{
+        height: 1px;
+        background-image: linear-gradient(180deg, #fae54d 0%, #febb0a 100%);
+    }
+
+    .highlighted-border.inverse{
+        background-image: linear-gradient(180deg, #fbe044 0%, #e1aa10 100%);
+	}
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	tr[expand]{
+		height: 100%;
+	}
+
+	& > tr, & > tr > td{
+		background-color: transparent;
+	}
+
+	.td-arcade-content-score-background{
+		background: url('../assets/images/arcade/blue-background.png');
+		background-size: cover;
+	}
+
+	.td-arcade-content-score-background > arcade-content-score-information,
+	.td-arcade-content-score-background > arcade-content-score-information-won,
+	.td-arcade-content-score-background > arcade-content-score-information-lose{
+		margin-bottom: 51px;
+	}
+
+	[gamemode-balance],
+	[gamemode-game-details],
+	[arcade-content-game-details-won],
+	[arcade-content-game-details-lose],
+	[gamemode-game-information],
+	[arcade-content-score-information],
+	[arcade-content-score-information-won],
+	[arcade-content-score-information-lose],
+	gamemode-balance,
+	gamemode-game-details,
+	arcade-content-game-details-won,
+	arcade-content-game-details-lose,
+	gamemode-game-information,
+	arcade-content-score-information,
+	arcade-content-score-information-lose,
+	arcade-content-score-information-won{
+		display: block;
+	}
+
+}

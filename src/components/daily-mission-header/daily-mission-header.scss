@@ -1,0 +1,79 @@
+daily-mission-header,
+[daily-mission-header] {
+
+	ion-toolbar{
+		height: 54px !important;
+		padding: 0px !important;
+	}
+
+	.toolbar-background{
+		background-image: radial-gradient(circle 116px at 50% 0%, #1a3365 0%, #2867d3 0%, #162440 100%);
+		
+	}
+
+	.toolbar-title{
+		border-bottom: 1px solid #febb0a;
+		padding: inherit !important;
+		background-image: url('../assets/images/dashboard/golden-coins-one.png'), url('../assets/images/dashboard/golden-coins-two.png');
+		background-repeat: no-repeat !important;
+		background-size: 52px, 51px;
+		background-position-y: -2px,9px;
+		background-position-x: 32px, 252px;
+	}
+
+	.toolbar-title,
+	svg{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;	
+	}
+
+	ion-buttons{
+		margin: 0px 6px !important;
+	}
+
+	button{
+		ion-icon{
+			color: white;
+			font-size: 2.6em !important;
+		}
+	}
+
+	svg{
+		width: 100%;
+		height: 100%;
+		text{
+			text-transform: none !important;
+		}
+	}
+
+	// .daily-mission-button{
+		
+	// 	border: 1px solid rgb(25,75,152);
+	// 	position: relative;
+	// 	overflow: hidden;
+
+	// 	.coin-one,
+	// 	.coin-two{
+	// 		position: absolute;
+	// 	}
+
+	// 	.coin-one{
+	// 		height: 79px;
+	// 		left: -19px;
+	// 		bottom: -9px;
+	// 	}
+
+	// 	.coin-two{
+	// 		height: 53px !important;
+	// 		top : 3px;
+	// 		bottom : 0px;
+	// 		right: -18px;
+		
+	// 	}
+	// }
+
+
+}

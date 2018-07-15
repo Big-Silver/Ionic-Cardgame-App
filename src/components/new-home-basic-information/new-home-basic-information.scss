@@ -1,0 +1,129 @@
+new-home-basic-information {
+
+	display: block;
+	color: white;
+
+	.back-button{
+		display: unset !important;
+		height: unset !important;
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
+		margin: 0px 0px 0px 0px !important;
+		ion-icon{
+			font-size: 2.4em !important;
+			color: white !important;
+			padding-left: 10px !important;
+		}
+	}
+
+	.lbl-age-warning{
+		padding-top: 2px;
+		color: #f6434a;
+		opacity: 0;
+	}
+
+	.fading{
+		animation-name : 'label-fading';
+		animation-duration : 2s;
+	}
+
+	@keyframes label-fading{
+
+		0%{
+			opacity: 0;
+		}
+		10%,90%{
+			opacity: 1;
+		}
+		100%{
+			opacity: 0;
+		}
+
+
+	}
+
+	.wrapper-inputs{
+		margin-top: 4px !important;
+		ion-col:nth-child(1){
+			ion-item{
+				width: 132px;
+				margin-left: auto;
+			}
+		}
+		ion-col:nth-child(2){
+			ion-item{
+				width: 98px;
+				margin: auto;
+			}
+		}
+	}
+
+	.image-wrapper{
+		position: relative;
+		height: 61px !important;
+		width: 61px !important;
+		border-radius: 100%;
+
+		&.right{
+			margin-left: auto;
+		}
+
+		&.left{
+			margin-right: auto;
+		}
+
+		&.female.active{
+			background-color: rgb(235,52,133) !important;
+		}
+
+		&.male.active{
+			background-color: #008cff !important;
+		}
+
+		&:not(.active){
+			border: 2px solid white;
+		}
+
+		img{
+			position: absolute;
+			height: 45px;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			width: auto;
+			display: block;
+			margin: auto;
+		}
+
+	}
+
+	.wrapper-gender-selection{
+		margin-top: 13px !important;
+		ion-icon{
+			line-height: 16px !important;
+			height: 16px !important;
+			font-size: 24px;
+			opacity: 0;
+			&.male{
+				color: #008cff;
+			}
+			&.female{
+				color: rgb(235,52,133);
+			}
+			
+			&:before{
+				line-height: inherit;
+				height: inherit;
+			}
+			&.active{
+				opacity : 1 !important;
+			}
+		}
+	}
+
+	.wrapper-gender-arrow{
+		height: 16px !important;
+		padding: 0px 15px !important;
+	}
+}

@@ -1,0 +1,411 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../assets/fonts/opensans-regular.ttf') format('truetype'), url('../assets/fonts/opensans-regular.woff') format('woff');
+  }
+  
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: semi-bold;
+	font-weight: 600;
+	src: url('../assets/fonts/opensans-semibold.ttf') format('truetype'), url('../assets/fonts/opensans-semibold.woff') format('woff');
+  }
+  
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: bold;
+	font-weight: 700;
+	src: url('../assets/fonts/opensans-bold.ttf') format('truetype'), url('../assets/fonts/opensans-bold.woff') format('woff');
+  }
+  
+  @font-face {
+	font-family: 'Open Sans';
+	font-style: extra-bold;
+	font-weight: 900;
+	src: url('../assets/fonts/opensans-extrabold.ttf') format('truetype'), url('../assets/fonts/opensans-extrabold.woff') format('woff');
+  }
+
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 100;
+	src: url('../assets/fonts/Lato-HairlineItalic.ttf') format('truetype'), url('../assets/fonts/Lato-HairlineItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 300;
+	src: url('../assets/fonts/Lato-LightItalic.ttf') format('truetype'), url('../assets/fonts/Lato-LightItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../assets/fonts/Lato-Italic.ttf') format('truetype'), url('../assets/fonts/Lato-Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 700;
+	src: url('../assets/fonts/Lato-BoldItalic.ttf') format('truetype'), url('../assets/fonts/Lato-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 900;
+	src: url('../assets/fonts/Lato-BlackItalic.ttf') format('truetype'), url('../assets/fonts/Lato-BlackItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../assets/fonts/Lato-Hairline.ttf') format('truetype'), url('../assets/fonts/Lato-Hairline.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../assets/fonts/Lato-Light.ttf') format('truetype'), url('../assets/fonts/Lato-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../assets/fonts/Lato-Regular.ttf') format('truetype'), url('../assets/fonts/Lato-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../assets/fonts/Lato-Bold.ttf') format('truetype'), url('../assets/fonts/Lato-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 900;
+	src: url('../assets/fonts/Lato-Black.ttf') format('truetype'), url('../assets/fonts/Lato-Black.woff') format('woff');
+}
+
+
+body, h1,h2,h3,h4,h5,p,label,span,div,input,textarea{
+    font-family: Lato!important;
+    font-size:14px;
+}
+
+
+//Successfull mark tick screen
+.success-match{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px;
+    height: 210px;
+    top: 50%;
+    margin-top: -105px;
+    .tick{
+        text-align:center;
+        img{
+            width: 155px;
+            height: 131px;
+        }
+    }
+    .content{
+        text-align:center;
+        p {
+            color: #ffffff;
+            font-family: Lato;
+            font-size: 22px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin:20px 0 0 0;
+            padding:0;
+            text-align:center;
+        }
+    }
+}
+
+
+//Header css
+ion-header{
+    .toolbar{
+        overflow:visible;
+        contain:initial;
+    }
+    ion-navbar{
+        .back-button{
+            visibility:hidden;
+        }
+        .toolbar-content{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 100%;
+            top:0;
+        }
+        ion-title , toolbar-title{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 100%;
+        }
+    }
+    .toolbar-background{
+        background-image: url("../assets/images/registration/header-background.png");
+    }
+
+    /*ion-navbar.toolbar::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-image: linear-gradient(180deg, #ffb500 0%, #f9e852 100%);
+        bottom: 0;
+        left: 0;
+        z-index:9;
+    }*/
+
+    .header-bottom-line{
+        width: 100%;
+        height: 4px;
+        background-image: linear-gradient(180deg, #ffb500 0%, #f9e852 100%);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .header-logo {
+        position: absolute;
+        z-index: 1;
+        left: 0.7em;
+        bottom: -1.6428571428571428em;
+    }
+
+    .toolbar-title{
+        overflow:inherit;
+    }
+
+    ion-title{
+        //top: 8px!important;
+        //left: 20px!important;
+        .toolbar-title{
+            text-transform: map-get($vars,sloganTextTransform);
+            font-size: 100%;
+            font-weight: map-get($vars,sloganFontWeight);
+            color: map-get($colors,white);
+            .slogan{                
+                letter-spacing: 0.053em;
+                text-align: center;
+                position: absolute;
+                left: 120px;
+                bottom: 0.761905em;
+                font-size: 0.857em;
+            }
+            span.play{
+                color: map-get($colors,playcolor);
+                font-size: 0.957em;
+                font-weight: 700;
+
+            }
+            span.win{
+                color: map-get($colors,wincolor);
+                font-size: 0.957em;
+                font-weight: 700;
+            }
+            span.other{
+                font-size: 0.957em;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+ion-alert.select-alert{
+    .alert-wrapper{
+        min-width:150px;
+    }
+    .alert-radio-label{
+        text-align:center;
+    }
+    .alert-radio-icon{
+        min-width: 0;
+    }
+    .alert-radio-group{
+        overflow-x:hidden;
+    }
+    .alert-button-group button:first-child{
+        display:none;
+    }
+}
+
+.zero-margin{
+    margin:0;
+}
+
+.zero-padding{
+    margin:0;
+}
+
+@media screen and (max-width: 470px) and (min-width: 365px) {
+    ion-header ion-title .toolbar-title .slogan {  letter-spacing: 0.122158em;}
+    ion-header ion-title .toolbar-title span.play, ion-header ion-title .toolbar-title span.other, ion-header ion-title .toolbar-title span.win{font-size: 1.3em;}
+}
+
+@media screen and (max-width: 380px) and (min-width: 365px) {
+    ion-header ion-title .toolbar-title .slogan {  letter-spacing: 0.078158em;}
+    ion-header ion-title .toolbar-title span.play, ion-header ion-title .toolbar-title span.other, ion-header ion-title .toolbar-title span.win{font-size: 1.2em;}
+}
+
+@media screen and (max-width: 330px) and (min-width: 320px) {
+    ion-header ion-title .toolbar-title .slogan {  letter-spacing: 0.068158em;}
+    ion-header ion-title .toolbar-title span.play, ion-header ion-title .toolbar-title span.other, ion-header ion-title .toolbar-title span.win{font-size: 0.923em;} 
+}
+
+/**
+* Common Icons used on the app 
+**/
+.custom-back {
+    background: url(../assets/icon/back-icon.svg) no-repeat top left;
+    background-size: contain;
+    width: 28px;
+    height: 22px;
+    margin: 25px auto 0 auto;
+    position: relative;
+}
+.custom-arcade-active {
+    background: url(../assets/icon/arcade-active-icon.png) no-repeat top left;
+    background-size: 80%;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    top: 0em;
+}
+.custom-arcade {
+    background: url(../assets/icon/arcade-icon.png) no-repeat top left;
+    background-size: 80%;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    top: 0em;
+}
+.custom-refresh-active {
+    background: url(../assets/icon/refresh-active-icon.png) no-repeat top left;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    top: 0em;
+}
+.custom-refresh {
+    background: url(../assets/icon/refresh-icon.png) no-repeat top left;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    top: 0em;
+}
+.custom-headtohead-active {
+    background: url(../assets/icon/headtohead-active-icon.png) no-repeat top left;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 0em;
+}
+
+.custom-headtohead {
+    background: url(../assets/icon/headtohead-icon.png) no-repeat top left;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 0em;
+}
+
+.custom-contest-active {
+    background: url(../assets/icon/contest-active-icon.png) no-repeat top left;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 0em;
+}
+.custom-contest {
+    background: url(../assets/icon/contest-icon.png) no-repeat top left;
+    background-size: cover;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 0em;
+}
+.custom-share {
+    background: url(../assets/icon/share-icon.svg) no-repeat top left;
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    // top: 0.14em;
+}
+.custom-share-active {
+    background: url(../assets/icon/share-active-icon.svg) no-repeat top left;
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 0.14em;
+}
+
+@media (min-width : 375px) { 
+    .custom-arcade, .custom-arcade-active,
+    .custom-refresh, .custom-refresh-active,
+    .custom-headtohead, .custom-headtohead-active,
+    .custom-contest, .custom-contest-active{
+        width: 27px;
+        height: 27px;
+        top: 0px;
+    }
+}

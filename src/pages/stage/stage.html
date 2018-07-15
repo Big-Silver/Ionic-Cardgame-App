@@ -1,0 +1,22 @@
+<ion-header home-navigation-header></ion-header>
+<ion-content (touchstart)='progressShouldNotAnimate()' (touchend)='progressShouldAnimate($event)'>
+	<div class='stage-container'>
+
+		<div #playerPin class='player-pin'>
+			<img src="assets/images/profile/avatar2.svg"/>
+			<div class='arrow'></div>
+		</div>
+
+		<img class='stage-image' src='assets/images/home/full_map.png' />
+		<stage-block [stageIndex]='stages.length - i' [data]='stage' *ngFor='let stage of stages; let i = index;' (goToIndex)='goToPosition($event, stage)'></stage-block>
+	</div>
+	<ion-fab class='fixed-content-holder'>
+		<div class="bottom-progressbar">
+			<div class='inner-progress' [ngClass]='{"animated": shouldProgressAnimate == true}'></div>
+		</div>
+		<div class='corner-image'>
+			<img src='assets/images/home/blue_corner.png' />
+			<img class='game-mode-icon' src='assets/images/game-mode-icons/arcade.png' />
+		</div>
+	</ion-fab>
+</ion-content>

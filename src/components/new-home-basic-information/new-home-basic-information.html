@@ -1,0 +1,49 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col text-left>
+			<button class='back-button' clear small ion-button icon-only (tap)='goBack.emit()'>
+				<ion-icon name='ios-arrow-back'></ion-icon>
+			</button>
+		</ion-col>
+		<ion-col col-auto font-6 text-center align-self-center>
+			Create your profile
+		</ion-col>
+		<ion-col></ion-col>
+	</ion-row>
+	<ion-row class='wrapper-inputs'>
+		<ion-col align-self-start>
+			<ion-item no-lines round-input>
+				<ion-input [(ngModel)]='nickName' (keyup)='checkForAgeAndName()' placeholder="Nickname"></ion-input>
+			</ion-item>
+		</ion-col>
+		<ion-col>
+			<ion-item no-lines round-input>
+				<ion-input type="number" [readonly]="true" (ionFocus)='ageFocused()'  [(ngModel)]='age' placeholder="Age"></ion-input>
+			</ion-item>
+			<div class='lbl-age-warning' [ngClass]='{"fading" : isFading == true}' font-w-bold font-7>
+				You must be over 18 to win prizes
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row class='wrapper-gender-selection'>
+		<ion-col align-self-center text-right>
+			<div class='image-wrapper right female' [ngClass]='{"active" : selectedGender == "FEMALE"}' (tap)='selectedGender = "FEMALE"'>
+				<img src='assets/images/signup/female.png' />
+			</div>
+		</ion-col>
+		<ion-col class='wrapper-gender-arrow' align-self-center col-auto text-center>
+			<ion-icon name='ios-arrow-back' class='female' [ngClass]='{"active" : selectedGender == "FEMALE"}'></ion-icon>
+		</ion-col>
+		<ion-col font-h3 font-w-normal align-self-center col-auto>
+			Gender
+		</ion-col>
+		<ion-col class='wrapper-gender-arrow' align-self-center text-center col-auto>
+			<ion-icon name='ios-arrow-forward' class='male' [ngClass]='{"active" : selectedGender == "MALE"}'></ion-icon>
+		</ion-col>
+		<ion-col align-self-center text-left>
+			<div class='image-wrapper left male' [ngClass]='{"active" : selectedGender == "MALE"}' (tap)='selectedGender = "MALE"'>
+				<img src='assets/images/signup/male.png' />
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

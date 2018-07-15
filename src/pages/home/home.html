@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <div class="header-logo">
+                <img src="assets/images/logo.png" width="102" height="50"/>
+            </div>
+            <div class="header-bottom-line"></div> 
+            <div class="slogan">
+                <span class="play">Play</span>
+                <span class="other">For Free,</span>
+                <span class="win">Win</span>
+                <span class="other">For Real</span>
+            </div>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+    <ion-slides #homeSlider (ionSlideWillChange) = "slideWillChange()">
+        <ion-slide>
+            <ion-grid class='slide-div'>
+                <ion-row class="slider-row">
+                    <div class="app-slider-video-main-wrap">
+                        <video #video controls="false" id="vid_slide_1" class="vid_slide_1" webkit-playsinline="true" playsinline="true" autoplay="autoplay" loop="true">
+                            <source src="assets/videos/Video_1.MOV" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                </ion-row>
+                <ion-row class="slider-row-text">
+                    <ion-col col-12>
+                        <label class="text-heading-1">Quick And Simple Sign Up</label>
+                        <label class="text-heading-2">So that you can enjoy gaming<br/>within second</label>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+            <div class="app-login-footer">
+                <ion-grid>
+                    <ion-row class="auth-container">
+                        <ion-col col-6>
+                            <button ion-button color="secondary-dark" class="app-auth-btn btn-signup" (click)="slideChanged('register',true)">SIGN UP</button>
+                        </ion-col>
+                        <ion-col col-6>
+
+                            <!-- <button ion-button color="fbcolor" class="app-auth-btn btn-login" (click)="slideChanged('login',true)">LOG IN</button> -->
+
+                            <!-- <button ion-button color="fbcolor" class="app-auth-btn btn-login" (click)='goToArcadePage()' >LOG IN</button> -->
+
+                            <button ion-button color="fbcolor" class="app-auth-btn btn-login" (click)="slideChanged('login',true)">LOG IN</button>
+
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <!-- <a (click)='goToArcadeSettingPage()' style="color: #fff; margin-right: 10px;">SettingPage</a> | 
+                <a (click)='goToArcadeWinPage()' style="color: #fff;">Win List Page</a> -->
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <page-signup></page-signup>
+        </ion-slide>
+        
+        <ion-slide>
+            <page-login></page-login>
+        </ion-slide>
+
+        <ion-slide>
+            <page-reset-password></page-reset-password>
+        </ion-slide>
+
+    </ion-slides>
+</ion-content>

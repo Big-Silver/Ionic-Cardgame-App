@@ -1,0 +1,33 @@
+<tr shrink>
+	<td>
+		<ng-content select='gamemode-game-information'>
+		</ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td class='highlighted-border'>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<ng-content select=' > gamemode-game-details'>
+		</ng-content>
+		<ng-content select=' > arcade-content-game-details-won'>
+		</ng-content>
+		<ng-content select=' > arcade-content-game-details-lose'>
+		</ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td class='highlighted-border inverse'></td>
+</tr>
+<tr expand>
+	<td class='td-arcade-content-score-background'>	
+		<ng-content select=' > arcade-content-score-information'>
+		</ng-content>
+		<ng-content select=' > arcade-content-score-information-won'>
+		</ng-content>
+		<ng-content select=' > arcade-content-score-information-lose'>
+		</ng-content>
+	</td>
+</tr>

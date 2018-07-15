@@ -1,0 +1,28 @@
+<ion-content>
+	<div class='video-wrapper'>
+		<video #video *ngIf='showVideo == true' id="vid_slide_1" class="vid_slide_1" webkit-playsinline="false" playsinline="false" autoplay="false" loop="false">
+			<source src="assets/videos/Video_1.MOV" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+	</div>
+	<ion-grid class='home-grid' no-padding>
+		<ion-row>
+			<ion-col align-self-end>
+				<ion-grid>
+					<ion-row>
+						<ion-col (tap)='goToSignupScreen()'>
+							<button ion-button round block class='green-button'>
+								Get Started
+							</button>
+						</ion-col>
+						<ion-col (tap)='goToLoginScreen()' col-auto>
+							<button ion-button round block class='blue-button'>
+								Log in
+							</button>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

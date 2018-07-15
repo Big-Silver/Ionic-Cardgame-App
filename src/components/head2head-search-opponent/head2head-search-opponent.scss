@@ -1,0 +1,165 @@
+head2head-search-opponent {
+
+	position: relative;
+
+	ion-grid{
+		height:24.47183098591549vh;
+		background-image: url('../assets/images/head2head/map.svg');
+	}
+	ion-row[shrink]{
+		flex-shrink: 1;
+		flex-grow: 0;
+	}
+	ion-row[grow]{
+		flex: 1;
+	}
+
+	.oval-background{
+		position: absolute;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		top: 0px;
+		justify-content: center;
+		transform: translate3d(0px, 0px, 0px);
+		z-index: -1;
+		background-color: black;
+
+		ion-row{
+			flex-grow: 1;
+			overflow: hidden;
+		}
+
+		ion-col{
+			position: relative;
+			&:after{
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+				width: 7px;
+				right: 0px;
+				left: 0px;
+				margin: auto;
+				background-color: white;
+				content:  '';
+			}
+		}
+
+		ion-row:nth-child(1) ion-col{
+			animation: come-in-up-c;
+		}
+
+		ion-row:nth-last-child(1) ion-col{
+			animation: come-in-down-c;
+		}
+
+		ion-col{
+			animation-duration: 1.4s !important;
+			animation-timing-function: ease-in-out !important;
+			animation-direction: forwards !important;
+		}
+
+	}
+
+	.playerProfile{
+		background-color: white;
+		height: 65px;
+		width: 65px;
+		display: block;
+		margin: auto;
+		border-radius: 100%;
+		border: 3px solid white;
+	}
+
+	.head2headLogo{
+		width: 47px;
+		display: block;
+		margin: auto;
+	}
+
+	ion-row[grow]{
+		ion-col{
+			font-size: 7px;
+			font-weight: 700;
+			letter-spacing: 0.66px;
+			padding: 4px !important;
+			color: white;
+		}
+	}
+
+	.oval{
+		width: 88px;
+		height: 88px;
+		border: 7px solid #ffffff;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		z-index: 0;
+		border-radius: 100%;
+		margin: auto;
+		z-index: -1;
+		background-color: black;
+	}
+
+	.oval-pulse{
+		animation: oval-pulse 1.4s ease-in-out infinite;
+		animation-delay: 0s;
+	}
+
+	@keyframes oval-pulse {
+
+		0%{
+			transform: scale(1);
+		}
+
+		50%{
+			transform: scale(1.2);
+		}
+
+		100%{
+			transform: scale(1);
+		}
+
+	}
+
+	@keyframes  come-in-up-c {
+		0%,50%{
+			transform: translateY(110%);
+		}
+		100%{
+			transform: translateY(0%);
+		}
+	}
+
+	@keyframes  come-in-down-c {
+		0%,50%{
+			transform: translateY(-110%);
+		}
+		100%{
+			transform: translateY(0%);
+		}
+	}
+
+	.close-button-wrapper{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 43px;
+		height: 49px;
+		border-right: 21px solid #d12424;
+		border-top: 24px solid #d12424;
+		border-left: 21px solid transparent;
+		border-bottom: 24px solid transparent;
+	}
+
+	ion-icon{
+		position: absolute;
+		top: 0px;
+		right: 1px;
+		font-size: 29px;
+		color: white;
+	}
+
+}

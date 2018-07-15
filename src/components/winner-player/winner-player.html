@@ -1,0 +1,51 @@
+<ion-grid class='background-container' no-padding [ngClass]="{'light' : color == 'light', 'dark' : color == 'dark'}">
+	<ion-row>
+		<ion-col align-self-center col-auto>
+		</ion-col>
+		<ion-col align-self-center>
+		</ion-col>
+		<ion-col col-auto>
+		</ion-col>
+		<ion-col text-center col-auto align-self-center>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+<ion-grid class="absolute-container" no-padding>
+	<ion-row>
+		<ion-col (tap)='playerProfileTapped.emit()' align-self-center col-auto>
+			<div class='wrapper-avatar-image'>
+				<img [src]='playerData.profile' class='image-avatar' />
+				<img [src]='playerData.flag' class='image-flag' />
+			</div>
+		</ion-col>
+		<ion-col align-self-center>
+			<div font-w-medium>
+				{{playerData.name}}
+			</div>
+			<div font-6 font-w-normal>
+				{{playerData.time}}
+			</div>
+		</ion-col>
+		<ion-col col-auto>
+
+		</ion-col>
+		<ion-col text-center col-auto align-self-center>
+			<div class='gradient-text-wrapper'>
+				<div class='gradient-text'>
+					&pound;{{playerData.price}}
+					<svg xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<linearGradient id="background-gradient-winner-player" x1="0%" x2="0%" y1="0%" y2="100%">
+								<stop stop-color="#fbc000" offset="0%"/>
+								<stop stop-color="#d8d8d8" offset="100%"/>
+							</linearGradient>
+						</defs>
+						<g>
+							<text y='18' font-size="18" stroke-width="1" fill="url(#background-gradient-winner-player)">&pound;{{playerData.price}}</text>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

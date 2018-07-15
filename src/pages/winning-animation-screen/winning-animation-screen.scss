@@ -1,0 +1,47 @@
+page-winning-animation-screen {
+
+	.scroll-content{
+		overflow: hidden;
+		padding: 0px !important;
+	}
+
+	.main-wrapper{
+		height: 200%;
+		transition: transform 0.8s;
+	}
+
+	.screen-one,
+	.screen-two{
+		height: 50%;
+		position: relative;
+	}
+
+	.screen-two{
+
+		.p-relative{
+			position: relative;
+		}
+
+		ion-grid[expand]{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+		}
+
+	}
+
+	curtain{
+		z-index: 9;
+	}
+
+	ion-header{
+		position: relative !important;
+		ion-toolbar:nth-child(1){
+			background-image: url("../assets/images/home/header_background.png") !important;
+			background-size: cover !important;
+		}
+	}
+
+}

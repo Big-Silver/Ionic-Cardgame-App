@@ -1,0 +1,27 @@
+<ion-grid no-padding>
+	<ion-row class='content' *ngIf='mode == "SQUADUP"'>
+		<ion-col col-auto align-self-center class='content-image'>
+			<img src='assets/images/replay/squadup.png' />
+		</ion-col>
+		<ion-col font-5 align-self-center class='content-text'>
+			You can pick upto <label font-w-bold class='text-highlight'>{{maxSelection}}</label> members<br/>
+			for you team. You can select from <br/>
+			your following or share to others<br/>
+			on your social platforms.
+		</ion-col>
+	</ion-row>
+	<ion-row class='content' *ngIf='mode == "CHALLANGE"'>
+		<ion-col col-auto align-self-center class='content-image'>
+			<img src='assets/images/squadup/battle-a-friend.png' class='battle-a-friend' />
+			<div class='image-text' text-center font-6 font-w-bold>
+				Battle a <br/> friend&nbsp;&nbsp;
+			</div>
+		</ion-col>
+		<ion-col font-5 align-self-center class='content-text'>
+			You can select to request to <br/>
+			battle someone your following <br/>
+			or you can share a battle request
+			to other social platforms. 
+		</ion-col>
+	</ion-row>
+</ion-grid>

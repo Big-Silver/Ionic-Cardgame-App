@@ -1,0 +1,9 @@
+<ion-header (goBack)='goBack()' game-request-header [mode]='mode' title='Battle A Friend'>
+</ion-header>
+<ion-content [ngClass]='{"page-loaded" : isPageLoaded == true}' padding>
+	<table battle-a-friend-content>
+		<game-request-challanger [mode]='mode'></game-request-challanger>
+		<game-request-game-info [mode]='mode'></game-request-game-info>
+		<game-request-footer [mode]='mode'></game-request-footer>
+	</table>
+</ion-content>

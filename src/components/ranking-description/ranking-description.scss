@@ -1,0 +1,89 @@
+ranking-description {
+
+	display: block;
+	color: white;
+
+	.trending-description{
+		.title{
+			letter-spacing: -0.34px;
+			padding: 0px 56px;
+		}
+		.sub-title{
+			letter-spacing: -0.22px;
+			padding-top: 12px;
+		}
+		.yellow-highlight{
+			color: #febc0c;
+		}
+		.green-highlight{
+			color: #6ece1a;
+		}
+	}
+
+	.squadup-description{
+		.title{
+			letter-spacing: -0.34px;
+			padding: 0px 40px;
+		}
+	}
+
+	.ranking-description{
+		.title{
+			padding-bottom: 20px;
+			letter-spacing: -0.34px;
+			label{
+				letter-spacing: inherit;
+				font-weight: inherit;
+			}
+		}
+		.green-highlight{
+			color: #6ece1a;
+		}
+	}
+
+	.prizes-description{
+
+		table{
+			margin: auto;
+		}
+
+		.image-cell{
+			vertical-align: bottom;
+			.up-arrow{
+				height: 30px;
+				margin-right: 3px;
+				position: relative;
+				bottom: 1px;
+			}
+			.currency-img{
+				width: 53px;
+				vertical-align: bottom;
+			}
+		}
+
+		.prize-cell{
+			position: relative;
+			svg{
+				height: 39px !important;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				left: 0px;
+				bottom: 0px;
+			}
+			div{
+				line-height: 38px;
+				padding-left: 5px; 
+				font-size: 48px !important;
+				color: transparent !important;
+			}
+		}
+
+		.sub-title{
+			letter-spacing: -0.22px;
+			padding: 3px 3px 20px 3px;
+		}
+
+	}
+
+}

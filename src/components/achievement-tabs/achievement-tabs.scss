@@ -1,0 +1,75 @@
+achievement-tabs {
+	display: block;
+	background-color: #020c30;
+	border-bottom: 1px solid #0c4295;
+
+	& > ion-grid{
+		height: 56px;
+		padding-bottom: 10px !important;
+		justify-content: flex-end !important;
+
+		ion-row{
+			align-self: center;
+		}
+
+		img{
+			height: 23px;
+			display: block;
+			margin: auto;
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+		}
+
+		ion-col{
+			width: 43px !important;
+			height: 36px !important;
+			margin: 0px 7px 0px 0px !important;
+			background-image: linear-gradient(180deg, #1e79c9 0%, #012c6f 100%);
+		}
+
+		ion-col:nth-child(1){
+			margin-left: 7px !important;
+		}
+
+		ion-col.active{
+			background-color: white;
+			background-image: none !important;
+		}
+
+
+	}
+
+	.header-bar-grid{
+
+		margin: 0px 9px;
+		height: 20px;
+		width: unset !important;
+		justify-content: flex-end;
+		
+		padding-bottom: 2px;
+
+		ion-col:nth-child(1){
+		}
+
+		ion-col:nth-child(3),
+		ion-col:nth-child(5)
+		{
+			width: 2.8846% !important;
+		}
+
+		ion-col:nth-child(4){
+			width: 15.705128% !important;
+		}
+
+		ion-col:nth-child(6){
+			width: 26.923076% !important;
+		}
+
+	}
+
+	
+
+}

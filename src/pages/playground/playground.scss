@@ -1,0 +1,37 @@
+page-playground {
+
+
+	& > ion-content > .scroll-content{
+		overflow: hidden !important;
+		& > table{
+			height: 100%;
+			width: 100%;
+		}
+	
+	}
+
+	daily-mission-offer{
+		margin-bottom: 12px;
+	}
+
+	tr[grow]{
+		height: 100%;
+	}
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	.leaderboard-wrapper{
+		position: relative;
+	}
+
+	.footer-wrapper{
+		height: 90px !important;
+		& > td{
+			position: relative;
+		}
+	}
+
+	
+}

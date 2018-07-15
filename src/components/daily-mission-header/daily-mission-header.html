@@ -1,0 +1,33 @@
+<ion-toolbar>
+	<ion-buttons start>
+		<button (tap)='goBack.emit()' ion-button icon-only>
+			<ion-icon name='ios-arrow-back'></ion-icon>
+		</button>
+	</ion-buttons>
+	<ion-title>
+		<svg height="100%" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="background-gradient-daily-mission" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#f8f0d6" offset="0"/>
+					<stop stop-color="#ffc500" offset="1"/>
+				</linearGradient>
+				<linearGradient id="border-gradient-daily-mission" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#FF7c00" offset="0"/>
+					<stop stop-color="#FFFFFF" offset="1"/>
+				</linearGradient>
+				<linearGradient id="background-gradient-two-daily-mission" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#ffffff" offset="0"/>
+					<stop stop-color="#929292" offset="1"/>
+				</linearGradient>
+				<linearGradient id="border-gradient-two-daily-mission" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#7ee2fa" offset="0"/>
+					<stop stop-color="#dcdcdc" offset="1"/>
+				</linearGradient>
+			</defs>
+			<g>
+				<text y="22" x='50%' text-anchor='middle' font-size="22" stroke-width="0.5" stroke="url(#border-gradient-daily-mission)" fill="url(#background-gradient-daily-mission)">Daily</text>
+				<text y="47" x='50%' text-anchor='middle' font-size="22" stroke-width="0.5" stroke="url(#border-gradient-two-daily-mission)" fill="url(#background-gradient-two-daily-mission)">Missions</text>
+			</g>
+		</svg>
+	</ion-title>
+</ion-toolbar>

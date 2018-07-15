@@ -1,0 +1,395 @@
+sidemenu, [sidemenu] {
+
+	display: block;
+	padding-bottom: 40px !important;
+
+	* {
+		color: white;
+	}
+
+	.border-line{
+		// border-top: 1px solid #1c1c1c;
+	}
+
+	.profile{
+		padding: 14px 4px 10px 4px !important;
+	}
+
+	.avatar-container{
+		height: 52px;
+		width: 52px;
+		margin: auto;
+		position: relative;
+		margin-bottom: 3px;
+		.avatar{
+			border-radius: 100%;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+		}
+		.country{
+			position: absolute;
+			height: 17px;
+			width: 17px;
+			bottom: 0px;
+			right: 2px;
+			border-radius: 100%;
+		}
+	}
+
+	.code-form{
+		padding : 4px 4px 7px 4px !important;
+		ion-icon{
+			font-size: 1.6em !important;
+		}
+	}
+
+	.store{
+		position: relative;
+		padding: 4px !important;
+
+		.coins{
+			margin: 0px 12px 0px 16px !important;
+			padding-left: 3px;
+			position: absolute;
+			bottom: 12px;
+			height: 26px;
+			left: 0px;
+			right: 0px;
+			.span{
+				line-height: 26px;
+			}
+			img{
+				max-height: 24px;
+				padding: 2px;
+				vertical-align: top;
+				margin: 1px;
+			}
+		}
+	}
+
+	.player-name{
+		background-color: transparent;
+		border: 1px solid #979797;
+		border-radius: 9px;
+		color: white !important;
+		letter-spacing: 0.4px;
+		line-height: 18px !important;
+	}
+
+	.code-label{
+		// background-color: #1b1b1b;
+		color: #084fdf;
+		margin-bottom: 2px;
+		margin-top: 15px;
+		line-height: 14px;
+	}
+
+	.code-value{
+		background-color: #00032e;
+		line-height: 30px !important;
+		position: relative;
+
+		ion-col:nth-child(1){
+			border: 1px solid #003069 !important;
+			border-right: 0px !important;
+			box-sizing: border-box !important;
+		}
+
+		ion-col:nth-child(2){
+			width: 38px;
+			button{
+				position: absolute;
+				display: block;
+				top: 0;
+				bottom: 0;
+				right : 0;
+				margin: 0px;
+				padding: 0px;
+				width: 100% !important;
+				max-height: 100% !important;
+				border-radius: 0px !important;
+				background-color: #43c600 !important;
+				border-bottom: 3px solid #3e702b;
+				ion-icon{
+					font-size: 20px !important;
+				}
+			}
+		}
+	}
+
+	.code-form{
+
+		::-webkit-input-placeholder, ::placeholder, input{
+			color: #979797;
+			font-size: 16px;
+			letter-spacing: 0.29px;
+			font-weight: 400;
+		}
+
+		::-webkit-input-placeholder, ::placeholder{
+			line-height: 20px;
+		}
+
+		input{
+			line-height: 16px;
+			color: white;
+		}
+
+		ion-input{
+			background-color: #00032e;
+			box-shadow: 0px 3px 0px 0px #003069;
+			border-left: 1px solid #003069 !important;
+			border-top: 1px solid #003069 !important;
+		}
+
+		input{
+			padding-left: 15px;
+		}
+
+		ion-input,button{
+			height: 42px !important;
+		}
+
+		button{
+			width: 40px !important;
+			margin: 0px !important;
+			background-image: linear-gradient(180deg, #7ed321 0%, #62a815 100%);
+			border-top-left-radius: 0px !important;
+			border-bottom-left-radius: 0px !important;
+			box-shadow: 0px 3px 0px 0px #396a0b;
+		}
+
+		ion-col:nth-child(2), button{
+			max-width: 40px !important;
+		}
+
+	}
+
+	.button-wrapper{
+		button{
+			height: 55px !important;
+		}
+	}
+
+	.button-wrapper-small{
+		button{
+			height: 34px !important;
+		}
+	}
+
+	.button-wrapper,
+	.button-wrapper-small{
+		padding: 5px 4px !important;
+		button{
+			width: 100%;
+			letter-spacing: 1.75px;
+			text-transform: uppercase !important;
+			font-size: 14px;
+			font-weight: 800;
+			margin: 0px !important;
+			border-radius: 28px !important;
+			text{
+				text-transform: none !important;
+			}
+		}
+	}
+
+	.follow-button{
+		border: 1px solid white;
+		background-image: url('../assets/images/dashboard/follow_background.png');
+		background-size: cover !important;
+		position: relative;
+	}
+
+	.daily-mission-button{
+		background-image: radial-gradient(#1a3365 0%, #2867d3 0%, #162440 100%);
+		border: 1px solid rgb(25,75,152);
+		position: relative;
+		overflow: hidden;
+
+		.coin-one,
+		.coin-two{
+			position: absolute;
+		}
+
+		.coin-one{
+			height: 79px;
+			left: -19px;
+			bottom: -9px;
+		}
+
+		.coin-two{
+			height: 53px !important;
+			top : 3px;
+			bottom : 0px;
+			right: -18px;
+		
+		}
+	}
+
+	.leaderboard-button{
+		background-image: linear-gradient(180deg, #e743f5 0%, #6e006d 100%);
+	}
+
+	.winner-button{
+		background-image: linear-gradient(180deg, #a9ef00 0%, #2f8200 100%);
+	}
+
+	.inbox-button{
+		background-color: white !important;
+		position: relative;
+		overflow: hidden;
+		img{
+			display: block;
+			position: absolute;
+			max-width: 45px;
+			&.small{
+				max-width: 35px !important;
+			}
+		}
+		img.right-top{
+			top: -3px;
+			right: 8px;
+			transform: rotate(-30deg);
+		}
+		img.left-top{
+			left: -6px;
+			top: -4px;
+			transform: rotate(30deg);
+		}
+		img.right-bottom{
+			right: -3px;
+			bottom: -4px;
+			transform: rotate(10deg);
+		}
+		img.left-bottom{
+			left: -4px;
+			bottom: -3px;
+			transform: rotate(-10deg);
+		}
+
+		.button-inner{
+			color : black !important;
+		}
+	}
+
+	.achievement-button{
+		background-image: linear-gradient(180deg, #2293c3 0%, #13326a 100%);
+	}
+
+	.setting-button{
+		background-image: linear-gradient(180deg, #f54343 0%, #bb0909 100%);
+	}
+
+	.started-button{
+		background-image: linear-gradient(180deg, #ffee00 0%, #fbaa35 100%);
+	}
+
+	.help-button{
+		background-image: linear-gradient(180deg, #d01515 0%, #610606 100%);
+	}
+
+	.terms-label, .privacy-label{
+		line-height: 14px !important;
+		label{
+			line-height: 13px !important;
+			letter-spacing: 1.13px !important;
+		}
+	}
+
+	.terms-label{
+		padding: 8px 9px 10px 9px !important;
+	}
+
+	.privacy-label{
+		padding: 10px 11px 12px 11px !important;
+	}
+
+	.social-media{
+		ion-row{
+			ion-col:nth-child(2){
+				// border-left: 1px solid #1c1c1c;
+				height: 82px !important;
+			}
+		}
+
+		ion-col{
+			position: relative;
+		}
+
+		img{
+			position: absolute;
+			margin: auto;
+			display: block;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+		}
+
+	}
+
+	.facebook-img{
+		height: 41px !important;
+	}
+
+	.twitter-img{
+		width: 47px;
+	}
+
+	.snapchat-img, .instagram-img{
+		width: 41px !important;
+	}
+
+	[debossed]:active{
+		filter: brightness(0.4);
+	}
+
+	.section-player-fame-and-fighter{
+
+		table{
+			width: 100%;
+			tr{
+				height: 29px;
+			}
+			td{
+				line-height: 26px !important;
+				vertical-align: middle;
+			}
+		}
+
+		img{
+			max-width: unset !important;
+			max-height: unset !important;
+			display: block;
+			margin: auto;
+		}
+
+		.player-fame{
+			img{
+				width: 27px !important;
+				height: 19px !important;
+			}
+		}
+
+		.player-fighter{
+			img{
+				position: relative;
+				top: 2px;
+				width: 24px !important;
+				height: 21px !important;
+			}
+		}	
+
+	}
+
+	.gradient-text{
+		transform: translate3d(0px, 0px, 0px) !important;
+		background-image: linear-gradient(180deg, #fbc000 0%, #d8d8d8 100%);
+		transform: translate3d(0px, 0px, 0px);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+}

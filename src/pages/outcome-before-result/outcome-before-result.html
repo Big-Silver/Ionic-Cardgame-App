@@ -1,0 +1,50 @@
+<ion-content [ngClass]='{"hide-until-page-loads" : shouldStartAnimation == false, "should-animate" : shouldStartAnimation == true}'>
+	<ion-grid no-padding>
+
+		<ng-container *ngIf='outcome == "STAR" '>
+			<ion-row [ngClass]='{"enter-from-top" : animationDirection == "TOP_BOTTOM", "enter-from-bottom" : animationDirection == "BOTTOM_TOP" }'>
+				<ion-col>
+					<div>
+						<img class='img-star' src='./assets/images/result-outcome/star.png' />
+					</div>
+					<div>
+						<img class='img-star-lines' src='./assets/images/result-outcome/star-lines.png' />
+					</div>
+				</ion-col>
+			</ion-row>
+		</ng-container>
+		<ng-container *ngIf='outcome == "RIBBON"'>
+			<ion-row [ngClass]='{"enter-from-top" : animationDirection == "TOP_BOTTOM", "enter-from-bottom" : animationDirection == "BOTTOM_TOP" }'>
+				<ion-col>
+					<div>
+						<img class='img-red-ribbon' src='./assets/images/result-outcome/red-ribbon.png' />
+					</div>
+					<div>
+						<img class='img-red-ribbon-lines' src='./assets/images/result-outcome/red-ribbon-lines.png' />
+					</div>
+				</ion-col>
+			</ion-row>
+		</ng-container>
+		<ion-row *ngIf='outcome == "STAR" || outcome == "RIBBON"' class='fades-in' >
+			<ion-col text-center>
+				<div class='result-score'>
+					<ng-container *ngIf='mode == "WON"'>+</ng-container><ng-container *ngIf='mode == "LOSE"'>-</ng-container>2
+				</div>
+				<div font-w-heavy>
+					{{outcome}}
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row *ngIf="outcome == 'RANK' " class='enter-from-right'>
+			<ion-col col-12 font-5 font-w-heavy class='rank-title' text-center >
+				RANK
+			</ion-col>
+			<ion-col col-12 class='ribbon-wrapper'>
+				<div font-h3 font-w-heavy>
+					{{rank.title}}
+				</div>
+				<img [src]='rank.src' />
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

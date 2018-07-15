@@ -1,0 +1,75 @@
+<div>
+	<player-position-slot *ngFor='let player of players' [player]='player'></player-position-slot>
+</div>
+<div class='header' text-center font-w-bold font-h3>
+	Prize % Claim
+</div>
+<div class='sub-title' font-8 font-w-medium text-center>
+	If your team win a prize it will be divided up in order of performance.
+</div>
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col align-self-center text-center>
+			<img src='assets/images/replay/squadup.png' />
+		</ion-col>
+		<ion-col align-self-center class='prize-description'>
+			<table>
+				<tr>
+					<td>
+						1st Place
+					</td>
+					<td>
+						&nbsp;&nbsp;=&nbsp;&nbsp;
+					</td>
+					<td class='green-highlight'>
+						50%
+					</td>
+				</tr>
+				<tr>
+					<td>
+						2nd Place
+					</td>
+					<td>
+						&nbsp;&nbsp;=&nbsp;&nbsp;
+					</td>
+					<td class='green-highlight'>
+						20%
+					</td>
+				</tr>
+				<tr>
+					<td>
+						3rd Place
+					</td>
+					<td>
+						&nbsp;&nbsp;=&nbsp;&nbsp;
+					</td>
+					<td class='green-highlight'>
+						15%
+					</td>
+				</tr>
+				<tr>
+					<td>
+						4th Place
+					</td>
+					<td>
+						&nbsp;&nbsp;=&nbsp;&nbsp;
+					</td>
+					<td class='green-highlight'>
+						10%
+					</td>
+				</tr>
+				<tr>
+					<td>
+						5th Place
+					</td>
+					<td>
+						&nbsp;&nbsp;=&nbsp;&nbsp;
+					</td>
+					<td class='green-highlight'>
+						5%
+					</td>
+				</tr>
+			</table>
+		</ion-col>
+	</ion-row>
+</ion-grid>

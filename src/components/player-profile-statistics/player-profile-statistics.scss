@@ -1,0 +1,384 @@
+player-profile-statistics {
+	display: block;
+	color: white;
+	position: relative;
+
+	ion-slides{
+		max-width: 100vw;
+		position: relative;
+	}
+
+	.header{
+		height: 24px;
+	}
+	.content{
+		height: 82px;
+		position: relative;
+		z-index: 10;
+	}
+	.pagination-space{
+		height: 20px;
+	}
+
+	.navigator{
+		height: 20px;
+		position: absolute;
+		top : 106px;
+		z-index: 100;
+		button{
+			height: 20px;
+			margin: 0px !important;
+			width: 19px !important;
+			ion-icon{
+				font-size: 18px !important;
+				color: rgb(7, 13, 197) !important;
+			}
+		}
+		ion-col{
+			line-height: 0px;
+		}
+	}
+
+
+	ion-slides:after{
+		content: '';
+		height: 82px;
+		top: 24px;
+		background-image: radial-gradient(circle at center, rgba(35, 29, 190,0.7) 0%, rgba(13, 11, 111,0.7) 70%);
+		border-top:  1px solid #2721cf;
+		border-bottom:  1px solid #2721cf;
+		width: 100vw;
+		position: absolute;
+		display: block;
+		z-index: 0;
+		box-sizing: border-box;
+	}
+	ion-slides:before{
+		content: '';
+		height: 126px;
+		top: 0px;
+		background-color : rgba(7, 6, 79, 0.74);
+		width: 100vw;
+		position: absolute;
+		display: block;
+		z-index: 0;
+		border-bottom: 1px solid #0b0a8d;
+	}
+
+	.gradient-text{
+		background-image: linear-gradient(180deg, #fb8d25 0%, #f9f047 100%);
+		transform: translate3d(0px, 0px, 0px);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.gradient-text-inverted{
+		background-image: linear-gradient(180deg, #fdec00 0%, #fb9b00 100%);
+		transform: translate3d(0px, 0px, 0px);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.gradient-text-light{
+		background-image: linear-gradient(180deg, #fbc000 0%, #d8d8d8 100%);
+		transform: translate3d(0px, 0px, 0px);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.game-icon{
+		height: 55px;
+		width: 54px;
+		border-radius: 10px !important;
+	}
+
+	.swiper-container{
+		overflow-y: visible !important;
+	}
+
+	.swiper-pagination-bullets{
+		top: 107px !important;
+		bottom: 0px !important;
+	}
+
+	.swiper-pagination-bullet{
+		height: 9px;
+		width: 9px;
+		margin: 0px 3px !important;
+		&:not(.swiper-pagination-bullet-active){
+			background-color: white !important;
+			opacity: 1 !important;
+		}
+		&.swiper-pagination-bullet-active{
+			background-color: #0807cc !important;
+		}
+	}
+
+	.highest-position-slide{
+		.header{
+			padding-left: 12px;
+			line-height: 24px;
+			img{
+				width: 19px;
+				vertical-align:sub;
+			}
+		}
+		.content{
+			ion-grid{
+				width: 100vw;
+				height: 100%;
+				ion-row{
+					height: 100%;
+				}
+			}
+
+			
+
+			ion-col:nth-child(2){
+				width: 24px;
+				background-color: rgba(47, 41, 239, 0.24);
+			}
+		}
+		.gradient-text-inverted{
+			font-size: 36px;
+			line-height: 37px;
+		}
+		[font-6]{
+			line-height: 8px;
+		}
+		.footer{
+			height: 88px;
+			ion-grid{
+				height: 88px !important;
+				justify-content: center;
+				position: relative;
+				max-width: 100vw;
+				overflow: hidden;
+			}
+			[col-auto]{
+				width: 39px;
+			}
+			.image-glove,
+			.image-squadup{
+				position: absolute;
+				max-height: unset !important;
+				max-width: unset !important;
+				margin: auto;
+				top: 0px;
+				bottom: 0px;
+				display: block;
+			}
+			.image-glove{
+				transform: rotate(135deg);
+				height: 60px !important;
+				left: -10px;
+			}
+			.image-squadup{
+				transform: rotate(28deg);
+				width: 66px;
+				height: 64px;
+				top: 19px !important;
+				left: 0px;
+			}
+			ion-col:nth-child(3){
+				width: 15px !important;
+			}
+			.description{
+				&:nth-child(2){
+					line-height: 25px;
+					img{
+						width: 22px !important;
+						vertical-align: middle;
+					}
+				}
+				&:nth-child(4){
+					line-height: 25px;
+					img{
+						width: 19px !important;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+
+	.popularity-slide{
+		.header{
+			padding-left: 12px;
+			line-height: 24px;
+		}
+		.banner1{
+			[font-5] img{
+				vertical-align: unset !important;
+			}
+		}
+		.content{
+			& > ion-grid{
+				width: 100vw;
+				height: 100%;
+				& > ion-row{
+					height: 100%;
+				}
+			}
+
+			& > ion-grid > ion-row > ion-col{
+				&:nth-child(1){
+					padding: 6px !important;
+				}
+				&:nth-last-child(1){
+					width: 34.375% !important;
+				}
+			}
+			ion-col:nth-child(2){
+				width: 24px;
+				background-color: rgba(47, 41, 239, 0.24);
+			}
+			.content-holder-grid{
+				justify-content: space-between;
+				height: 100%;
+			}
+			& > ion-grid  ion-grid{
+				ion-row:nth-child(1){
+					padding: 2px !important;
+				}
+				ion-row:nth-last-child(1){
+					padding: 2px !important;
+				}
+			}
+		}
+		.fame-image{
+			width: 39px;
+			height: 28px;
+			display: block;
+			margin: auto;
+		}
+		.fighter-image{
+			width: 37px;
+			height: 34px;
+			display: block;
+			margin: auto;
+			margin-bottom: -3px;
+		}
+		.footer{
+			height: 88px !important;
+			position: relative;
+
+			[font-5]{
+				margin-top: 10px;
+				img{
+					width: 14px;
+					vertical-align: middle;
+				}
+			}
+
+			table{
+				height: 88px;
+				td{
+					position: relative;
+					overflow-y: hidden;
+				}
+				td:nth-child(2){
+					width: 225px;
+				}
+			}
+			.image-prize,
+			.image-mystry-box,
+			.image-calendar{
+				position: absolute;
+				max-height: unset !important;
+				max-width: unset !important;
+				display: inline;
+				top: 0px;
+				bottom: 0px;
+				clear: both;
+				margin: auto;
+			}
+			.image-prize{
+				height: 79px;
+				left: -27px;
+				transform: rotate(7deg);
+			}
+			.image-mystry-box{
+				height: 67px !important;
+				top: -21px !important;
+				right: -17px;
+			}
+			.image-calendar{
+				transform: rotate(19deg);
+				height: 47px;
+				top: 25px;
+				right: -7px;
+			}
+		}
+	}
+
+	.most-played-slide{
+		.header{
+			padding-left: 12px;
+			line-height: 24px;
+			img{
+				width: 19px;
+				vertical-align:sub;
+				position: relative;
+				top: 1px;
+			}
+		}
+		.content{
+			ion-grid{
+				width: 100vw;
+				height: 100%;
+				ion-row{
+					height: 100%;
+				}
+			}
+		}
+		.footer{
+			height: 88px;
+			position: relative;
+			overflow: hidden;
+
+			ion-grid{
+				height: 88px;
+				justify-content: center;
+			}
+
+			ion-col:nth-child(2){
+				width: 280px;
+				img{
+					width: 16px;
+					vertical-align: middle;
+				}
+				div:nth-child(2){
+					margin-top: 10px;
+				}
+			}
+
+			.image-ticket,
+			.image-ticket-stack,
+			.image-ticket-stack-two{
+				position: absolute;
+				margin: auto;
+
+			}
+			.image-ticket{
+				top: 0px;
+				bottom: 0px;
+				width: 71px;
+				left: -32px;
+				transform: rotate(90deg);
+			}
+			.image-ticket-stack,
+			.image-ticket-stack-two{
+				height: 43px;
+				right: -10px;
+			}
+			.image-ticket-stack{
+				top: 10px;
+			}
+			.image-ticket-stack-two{
+				top: 40px;
+			}
+		}
+	}
+
+}

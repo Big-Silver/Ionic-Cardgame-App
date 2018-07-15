@@ -1,0 +1,65 @@
+<ion-content no-padding>
+	<ion-grid no-padding class='grid-main-signup'>
+		<ion-row grow>
+			<ion-col>
+				<ion-slides #signupSlider pager="true" [class.signup-slider]='!isPhoneVerify' [class.signup-phone-slider]="isPhoneVerify">
+					<ion-slide class='slide-new-home-basic-information'>
+						<new-home-basic-information 
+							(goBack)='goBack()' 
+							(ageOrNameIsValid)='makeButtonActive()' 
+							(ageOrNameIsInvalid)='makeButtonInactive()'
+						></new-home-basic-information>
+					</ion-slide>
+					<ion-slide class='slide-new-home-signup-information'>
+						<new-home-signup-information 
+							(avatarSelected)='makeButtonActive()' 
+							(onMobileChange)='onMobileChange($event)'
+							(onPasswordChange)='passwordChange($event)'
+							(signUpWithFacebook)='signUpWithFacebook()'
+							(numberOrPasswordIsInvalid)='makeButtonInactive()'
+							(numberOrPasswordIsValid)='makeButtonActive()'
+							(openDefaultAvatarListPage)='openDefaultAvatarListPage()'>
+						</new-home-signup-information>
+						<div id="recaptcha-container" [hidden]="!isPhoneVerify"></div>
+					</ion-slide>
+					<ion-slide class='slide-new-home-verification'>
+						<new-home-verification 
+							[mobileNumber]='mobileNumber' 
+							(verificationCodeChanged)='verifyCode($event)'
+							(registrationConfirmed)='goToReferralSlide()' >
+						</new-home-verification>						
+					</ion-slide>
+					<ion-slide class='slide-new-home-referral-code'>
+						<new-home-referral-code ></new-home-referral-code>
+					</ion-slide>
+				</ion-slides>				
+				<div text-center class='button-wrapper'>
+					<button 
+						class='button-action' 
+						[disabled]='disableButton' 
+						(click)='buttonClickEventHandler()' 
+						[ngClass]="{'outlineOnly' : buttonText == 'Skip'}" 
+						ion-button block round
+					>
+						{{buttonText}}
+					</button>
+				</div>
+				<div text-center class='pagination-container'>
+					<div>
+						<div class='bullet' [ngClass]='{"active" : currentSlide >= 1}'></div><div class='bullet' [ngClass]='{"active" : currentSlide >= 2}'></div><div class='bullet' [ngClass]='{"active" : currentSlide >= 3}'></div><div class='bullet' [ngClass]='{"active" : currentSlide >= 4}'></div>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col class='label-footer-terms-conditions'>
+				<div font-7 text-center>By signing up you agree to our </div>
+				<div font-7 text-center font-w-heavy>
+					Terms and Conditions of Use, Privacy Policy and Rules
+				</div>
+			</ion-col>
+		</ion-row>
+
+	</ion-grid>
+</ion-content>

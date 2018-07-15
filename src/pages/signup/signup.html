@@ -1,0 +1,83 @@
+
+	<!--<button ion-button icon-start block round color="fbcolor" clear class="back-button-icon" (click)="backToHome()">
+        <ion-icon name="arrow-back"></ion-icon>
+    </button>-->
+
+<div class="mobile-banner-head"></div>
+<div class="registration-wrapper" (swiperight)="swipeRightEvent($event)">
+	<div class="formWrap">
+		<ion-grid class="app-fb-container">
+			<ion-row>
+			    <ion-col col-12>
+			        <button ion-button icon-start block color="fbcolor" round>
+			            <ion-icon name="logo-facebook"></ion-icon>
+			            Sign up with Facebook 
+			        </button>
+			        <p class="instructions">or with email</p>
+			    </ion-col>
+			</ion-row>
+		</ion-grid>
+
+		<form [formGroup]="signupform">
+			<ion-row>
+			    <ion-col col-12>
+			        <ion-input type="text" placeholder="Username" formControlName="username"></ion-input>
+			        <p class="invaild app-error" *ngIf="(!signupform.controls.username.valid)  && (signupform.controls.username.dirty || !isSubmit) ">
+			        	Username is required
+			        </p>
+			    </ion-col>
+
+			    <ion-col col-12>
+			        <ion-input type="password" placeholder="Choose Password" formControlName="password"></ion-input>
+			        <p class="invaild app-error" *ngIf="(!signupform.controls.password.valid)  && (signupform.controls.password.dirty || !isSubmit)">
+			        	Password is required and minimum length is 8 chars.
+			        </p>
+			    </ion-col>
+
+			    <ion-col col-12>
+			        <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+			        <p class="invaild app-error" *ngIf="(!signupform.controls.email.valid)  && (signupform.controls.email.dirty || !isSubmit)">
+			        	Email is not vaild
+			        </p>
+			    </ion-col>
+
+			    <ion-col col-12> 
+			    	<div class="agebox">
+			    		<!--<ion-input type="text" placeholder="Age" formControlName="age"></ion-input>-->
+			    		<ion-select formControlName="age" [selectOptions]="selectOptionsAge" placeholder="Age" class="agedropdown">
+			    			<ion-option *ngFor="let i of ageStore">{{i}}</ion-option>
+					  	</ion-select>
+			    	</div>
+			    	<div class="togglebox">
+			    		<ion-toggle></ion-toggle>
+			    	</div>
+			    	<p class="invaild app-error invaild-age" *ngIf="(!signupform.controls.age.valid)  && (signupform.controls.age.dirty || !isSubmit)">
+			        	You must be over 18 to win prizes
+			        </p>
+			    </ion-col>
+
+			    <ion-col col-12> 
+			    	<div class="infopara">If you have a promotional code type below or click button</div>
+			    	<div class="promobox">
+			    		<ion-input type="text" placeholder="Type CODE here" formControlName="promo"></ion-input>
+			    	</div>
+			    	<div class="promobutton">
+			    		<button ion-button round color="codebutton">Need a CODE</button>
+			    	</div>
+			    </ion-col>
+
+			    <ion-col col-12 class="form-submit-box"> 
+			    	<button ion-button block color="signupcolor" round class="" type="submit" (click)="doRegister()">Sign up</button>
+			        <p>
+			        	By signing up, you agree to Tap Tap Win’s <a href="#">Terms and conditions</a><br/>
+						of Use and <a href="#">Privacy Policy</a>
+			        </p>
+			    </ion-col>
+			</ion-row>
+		</form>
+	</div>
+</div>
+
+<div class="success-screen" *ngIf="signupSuccess">
+	<page-signup-sucess></page-signup-sucess>
+</div>

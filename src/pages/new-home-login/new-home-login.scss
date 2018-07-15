@@ -1,0 +1,104 @@
+page-new-home-login {
+
+
+	ion-content{
+		background-image: url('../assets/images/signup-background.png');
+		background-size: 101% 100%;
+	}
+
+	.scroll-content{
+		padding: 0px !important;
+		overflow-y: hidden !important;
+	}
+	.loginSlider{
+		max-width: 100vw;
+		height: unset !important;
+	}
+
+	.login-form-wrapper{
+		height: 182px !important;
+		border-bottom: 1px solid #bcbcbc;
+		ion-item{
+			margin: 0px 25px;
+			margin-top: 4px !important;
+			width: unset !important;
+			&:nth-child(1){
+				margin-top: 8px !important;
+				margin-bottom: 21px !important; 
+			}
+			&:nth-child(2){
+				// margin-top: 
+			}
+		}
+		.lbl-forgot-password{
+			color: #f6434a;
+			line-height: 24px;
+		}
+	}
+
+	.login-form-buttons{
+		margin-top: 10px !important;
+		button{
+			height: 48px;
+			width: 150px !important;
+			margin: auto !important;
+		}
+		ion-col:nth-child(1) button{
+			background-color: #43c600 !important;
+			.button-inner{
+				font-size: 16px !important;
+				font-weight: 700 !important;
+			}
+			&.activated{
+				background-color: #43c600 !important;
+			}
+		}
+
+		ion-col:nth-child(2) button{
+			background-color: #25479b !important;
+			&.activated{
+				background-color: #25479b !important;
+			}
+		}
+	}
+
+	.login-form-footer{
+		padding-top: 10px !important;
+		ion-col{
+			letter-spacing: 1.2px;
+		}
+		ion-col:nth-child(1){
+			padding-left: 30px;
+			opacity: 0.5 !important;
+			color: white !important;
+		}
+		ion-col:nth-child(2){
+			color: #3abf04 !important;
+		}
+	}
+
+	.back-button{
+		display: unset !important;
+		height: unset !important;
+		padding-top: 8px !important;
+		margin: 0px 0px 0px 0px !important;
+		ion-icon{
+			font-size: 2.4em !important;
+			color: white !important;
+			padding-left: 10px !important;
+		}
+	}
+
+	.icon-facebook{
+		width: 16px;
+		height: 30px;
+	}
+
+}
+
+
+.splash-modal{
+	.modal-wrapper{
+		transform: translate3d(0px,0px,0px) !important;
+	}
+}

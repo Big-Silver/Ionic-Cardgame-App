@@ -1,0 +1,63 @@
+[contest-content] {
+	
+		padding: 0px !important;
+		min-height: 100%;
+		width: 100%;
+		max-width: 100%;
+	
+		tr[shrink]{
+			height: 1px;
+		}
+	
+		tr[expand]{
+			height: 100%;
+		}
+	
+		[flex-grow]{
+			flex-grow: 1;
+		}
+	
+		.highlighted-border{
+			height: 1px;
+			background-image: linear-gradient(180deg, #fae54d 0%, #febb0a 100%);
+		}
+	
+		.highlighted-border.inverse{
+			background-image: linear-gradient(180deg, #fbe044 0%, #e1aa10 100%);
+		}
+	
+		.td-gamemode-score-background{
+			background: url('../assets/images/arcade/blue-background.png');
+			background-size: cover;
+		}
+
+		td.vertical-align-top{
+			vertical-align: top !important;
+		}
+	
+		timer{
+			margin-top: 2px;
+			margin-bottom: 49px;
+			background-image: radial-gradient(circle at center, #1249b0, #02113f);
+			small{
+				color: rgb(49, 193, 241);
+			}
+		}
+	
+		[gamemode-balance],
+		[gamemode-game-details],
+		[gamemode-game-details-won],
+		[gamemode-game-information],
+		[gamemode-score-information],
+		[gamemode-score-information-won],
+		gamemode-balance,
+		gamemode-game-details,
+		gamemode-game-details-won,
+		gamemode-game-information,
+		gamemode-score-information,
+		gamemode-score-information-won{
+			display: block;
+		}
+	
+	}
+	

@@ -1,0 +1,27 @@
+<ion-header inbox-header (goBack)='dismissView()'>
+	<inbox-tab (activeTabChanged)='activeTabChanged($event)' (activeGameModeChanged)='doFilter($event)'></inbox-tab>
+</ion-header>
+<ion-content 
+	[ngClass]='{
+		"requestsMode" : activeMode == "REQUESTS", 
+		"promotionsMode" : activeMode == "PROMOTIONS", 
+		"resultsMode" : activeMode == "RESULTS" 
+	}'>
+	<div *ngIf="activeMode == 'RESULTS'">
+		<inbox-results-slot class='fadeInUp fast-animated' [ngStyle]='{"animation-delay" : (i*100)+"ms"}'  (playerProfileClicked)='openPlayerProfile()' [data]='slot' *ngFor='let slot of filteredInboxResultsSlot; let i = index;'>
+		</inbox-results-slot>
+	</div>
+	<div *ngIf="activeMode == 'PROMOTIONS'">
+		<div class='wrapper-inbox-promotions-slot fadeInUp fast-animated' [ngStyle]='{"animation-delay" : (i*100)+"ms"}'  *ngFor='let slot of inboxPromotionsSlot; let i = index;'>
+			<inbox-promotions-slot [data]='slot'>
+			</inbox-promotions-slot>
+		</div>
+	</div>
+	<div *ngIf="activeMode == 'REQUESTS'">
+		<div class='wrapper-inbox-requests-slot fadeInUp fast-animated' [ngStyle]='{"animation-delay" : (i*100)+"ms"}' *ngFor='let slot of inboxRequestSlot;let i = index;'>
+			<inbox-requests-slot (playerProfileClicked)='openPlayerProfile()' (buttonClicked)='handleGameRequest(slot);' [data]='slot'>
+			</inbox-requests-slot>
+		</div>
+	</div>
+
+</ion-content>

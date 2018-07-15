@@ -1,0 +1,80 @@
+winning-animation-second-screen-list {
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	background-image: url('../assets/images/player-profile/background.png');
+	background-size: cover;
+	color: white;
+
+	& > table{
+		height: 100%;
+		width: 100%;
+	}
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	tr[grow]{
+		height: 100%;
+	}
+
+	player-result-winning{
+		margin: 3px 4px !important;
+	}
+
+	.player-positions-holder{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		overflow-y: scroll;
+	}
+
+	.section-divider{
+		height: 3px;
+		margin: 4px 40px !important;
+		border-radius: 3px !important;
+		background-color: rgba(216, 216, 216, 0.38) !important;
+	}
+
+
+	.header-wrapper{
+
+		padding: 2px 4px;
+		border-top: 1px solid rgb(236,189,38);
+		border-bottom: 1px solid rgb(236,189,38);
+
+		ion-row{
+
+			ion-col:nth-child(8){
+				width: 22.11538461% !important
+			}
+	
+			ion-col:nth-child(6){
+				width: 16.774193% !important;
+			}
+	
+			ion-col:nth-child(3){
+				width: 18.064516129% !important;
+			}
+
+			ion-col:nth-child(2),
+			ion-col:nth-child(5),
+			ion-col:nth-child(7){
+				width: 4px !important;
+				
+			}
+
+			ion-col:nth-child(1){
+				width: 18.064516129% !important;
+				
+			}
+		}
+	}
+}

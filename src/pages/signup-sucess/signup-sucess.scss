@@ -1,0 +1,183 @@
+.success-screen {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #69c839;
+    z-index: 999;
+}
+page-signup-sucess {
+	.checkmark-circle {
+	  width: 215px;
+	  height: 131px;
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: top;
+	  /*.background {
+	    width: 150px;
+	    height: 150px;
+	    border-radius: 50%;
+	    background: #2EB150;
+	    position: absolute;
+	  }*/
+	  .checkmark {
+	    border-radius: 5px;
+	    &.draw:after {
+	      -webkit-animation-delay: 100ms;
+	      -moz-animation-delay: 100ms;
+	      animation-delay: 100ms;
+	      -webkit-animation-duration: 2.4s;
+	      -moz-animation-duration: 2.4s;
+	      animation-duration: 2.4s;
+	      -webkit-animation-timing-function: ease;
+	      -moz-animation-timing-function: ease;
+	      animation-timing-function: ease;
+	      -webkit-animation-name: checkmark;
+	      -moz-animation-name: checkmark;
+	      animation-name: checkmark;
+	      -webkit-transform: scaleX(-1) rotate(135deg);
+	      -moz-transform: scaleX(-1) rotate(135deg);
+	      -ms-transform: scaleX(-1) rotate(135deg);
+	      -o-transform: scaleX(-1) rotate(135deg);
+	      transform: scaleX(-1) rotate(135deg);
+	      -webkit-animation-fill-mode: forwards;
+	      -moz-animation-fill-mode: forwards;
+	      animation-fill-mode: forwards;
+	    }
+	    &:after {
+	      opacity: 1;
+	      height: 100px;
+	      width: 37.5px;
+	      -webkit-transform-origin: left top;
+	      -moz-transform-origin: left top;
+	      -ms-transform-origin: left top;
+	      -o-transform-origin: left top;
+	      transform-origin: left top;
+	      border-right: 25px solid white;
+	      border-top: 25px solid white;
+	      border-radius: 4px !important;
+	      content: '';
+	      left: 25px;
+	      top: 75px;
+	      position: absolute;
+	    }
+	  }
+	}
+
+	@-webkit-keyframes checkmark {
+	  0% {
+	    height: 0;
+	    width: 0;
+	    opacity: 1;
+	  }
+
+	  20% {
+	    height: 0;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  40% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  60% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  80% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  100% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+	}
+
+
+	@-moz-keyframes checkmark {
+	  0% {
+	    height: 0;
+	    width: 0;
+	    opacity: 1;
+	  }
+
+	  20% {
+	    height: 0;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  40% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  60% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  80% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  100% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+	}
+
+
+	@keyframes checkmark {
+	  0% {
+	    height: 0;
+	    width: 0;
+	    opacity: 1;
+	  }
+
+	  20% {
+	    height: 0;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  40% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  60% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  80% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+
+	  100% {
+	    height: 135px;
+	    width: 55.5px;
+	    opacity: 1;
+	  }
+	}
+}

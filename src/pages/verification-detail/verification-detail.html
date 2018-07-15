@@ -1,0 +1,113 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Verification Details</ion-title>
+	</ion-toolbar>
+	<ion-toolbar wrap-only>
+		<div class='gradient-border'>
+
+		</div>
+	</ion-toolbar>
+	<div class='red-background' (tap)='closeModal()'>
+	</div>
+	<ion-icon name='ios-close-circle-outline' (tap)='closeModal()'></ion-icon>
+</ion-header>
+<ion-content padding>
+	<ion-grid no-padding class='grid-content'>
+		<ion-row>
+			<ion-col font-w-normal font-5 class='description' text-center>
+				You must verify all of the below before you can cash out. This is because we must know who we are paying out to.
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<div class='input-content'>
+					<ion-grid no-padding>
+						<ion-row>
+							<ion-col>
+								<custom-input label='Mobile' type='tel' [placeHolder]="model.mobile.placeholder" (keyup)='checkMobileNumber(model.mobile)' [model]='model.mobile'></custom-input>
+							</ion-col>
+							<ion-col col-auto align-self-center>
+								<button ion-button class='send-button' [disabled]='codeSent == false && model.mobile.isValid == false' [ngClass]='{"code-sent" : codeSent == true}' (tap)='sendCode()'>
+									<ng-container *ngIf='codeSent == false'>
+										Send Text
+									</ng-container>
+									<ng-container *ngIf='codeSent == true'>
+										Text Sent
+									</ng-container>
+								</button>
+							</ion-col>
+						</ion-row>
+						<ion-row>
+							<ion-col (tap)='openDateTimePicker($event)'>
+								<custom-input class='date-input' label='Date of Birth' type='text' [placeHolder]="model.birth.placeholder" [model]='model.birth'></custom-input>
+							</ion-col>
+							<ion-col col-auto aling-self-center>
+								<ion-grid no-padding>
+									<ion-row class='gender-selection-wrapper'>
+										<ion-col text-center>
+											<label class='gender-lbl' font-5 font-w-bold>Gender</label>
+											<div>
+												<button *ngIf='isMale == true' class='genderButton male'>
+													<img src='assets/images/player-profile/male.png' />
+												</button>
+												<button *ngIf='isMale == false' class='genderButton female'>
+													<img src='assets/images/player-profile/female.png' />
+												</button>
+											</div>
+										</ion-col>
+										<ion-col align-self-end>
+											<img class='checkmark-won' src='assets/images/inbox/won.png' />
+										</ion-col>
+									</ion-row>
+								</ion-grid>
+							</ion-col>
+						</ion-row>
+						<ion-row>
+							<ion-col>
+								<custom-input label='Full Name' type='text' (focus)='openKeyboard($event)' (change)='checkFullName(model.name)' (blur)='checkFullName(model.name);closeKeyboard()' (keyup)='checkFullName(model.name)' [placeHolder]="model.name.placeholder" [model]='model.name'></custom-input>
+							</ion-col>
+						</ion-row>
+						<ion-row>
+							<ion-col>
+								<custom-input label='Email' type='email' (focus)='openKeyboard($event)' (change)='checkEmail(model.email)' (blur)='checkEmail(model.email);closeKeyboard()' (keyup)='checkEmail(model.email)' [placeHolder]="model.email.placeholder" [model]='model.email'></custom-input>
+							</ion-col>
+						</ion-row>
+						<ion-row>
+							<ion-col>
+								<custom-input label='Address' type='text' (focus)='openKeyboard($event)' (change)='checkAddress(model.address)' (blur)='checkAddress(model.address);closeKeyboard()' (keyup)='checkAddress(model.address)' [placeHolder]="model.address.placeholder" [model]='model.address'></custom-input>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+				</div>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col></ion-col>
+			<ion-col col-auto>
+				<button (tap)='closeModal()' ion-button class='footer-button not-now'>
+					Not Now
+				</button>
+			</ion-col>
+			<ion-col></ion-col>
+			<ion-col col-auto>
+				<button (tap)='closeModal(true)' ion-button class='footer-button complete'
+					[disabled]="
+						!(model.mobile.isValid == true
+						&& model.address.isValid == true
+						&& model.name.isValid == true
+						&& model.email.isValid == true
+						&& model.birth.isValid == true)
+					">
+
+					Complete
+				</button>
+			</ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-datetime #dateTime>
+
+	</ion-datetime>
+
+</ion-content>

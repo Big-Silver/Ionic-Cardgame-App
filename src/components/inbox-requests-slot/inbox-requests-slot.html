@@ -1,0 +1,39 @@
+<div class='wrapper'>
+	<ion-grid class='content-wrapper' no-padding>
+		<ion-row h-100 class='main-row'>
+			<ion-col align-self-center col-auto>
+				<div text-center font-6 font-w-bold>
+					{{data.playerName}}
+				</div>
+				<div class='image-wrapper' (tap)='playerProfileClicked.emit()' >
+					<img  class='image-player' [src]='data.profile' />
+					<img  class='image-game-icon' [src]='data.gameIcon' />
+				</div>
+			</ion-col>
+			<ion-col col-auto class='border-column'>
+			</ion-col>
+			<ion-col col-auto align-self-center>
+				<img class='image-squadup' *ngIf='data.mode == "SQUADUP"' src='assets/images/replay/squadup.png' />
+				<img class='image-head2head' *ngIf='data.mode == "HEAD2HEAD"' src='assets/images/game-mode-icons/head2head.png' />
+			</ion-col>
+			<ion-col>
+				<div font-6 font-w-normal text-center>
+					<ng-container *ngIf='data.type == "INVITE"'>
+						Squad Up invite
+					</ng-container>
+					<ng-container *ngIf='data.type == "REQUEST"'>
+						Battle Request
+					</ng-container>
+				</div>
+				<div>
+					<button ion-button round small (tap)='buttonClicked.emit()'>
+						View
+					</button>
+				</div>
+				<div text-center text-nowrap>
+					<span font-8 font-w-normal>Expires in less than: </span><span font-8 font-w-normal class='highlighted-text'>{{data.hoursLeft}}hrs</span>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</div>

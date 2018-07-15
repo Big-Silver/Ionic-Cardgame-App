@@ -1,0 +1,31 @@
+<tr shrink>
+	<td>
+		<ng-content select=' > ion-header'></ng-content>
+	</td>
+</tr>
+<tr grow>
+	<td>
+		<ng-content select=' > winning-animation-stage'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<ng-content select=' > winning-animation-footer'></ng-content>
+	</td>
+</tr>
+
+
+<div #nameWrapper class='name-wrapper'>
+	<ion-grid #nameWrapperGrid no-padding>
+		<ion-row text-center>
+			<ion-col class='player-name'>
+				{{playerRandomName}}
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col text-center class='prize'>
+				&pound;{{playerRandomPrize}}
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</div>

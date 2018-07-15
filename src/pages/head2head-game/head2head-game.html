@@ -1,0 +1,77 @@
+<ion-header [disableButtons]='disableBackButton' gamemode-header gamemode='head2head' (openStoreScreen)='openStoreScreen()'>
+    <button gamemode-header-button clear ion-button icon-only menuToggle>
+        <label class='tapicon-menu'></label>
+    </button>
+    <img gamemode-header-title-icon src='./assets/images/game-mode-icons/head2head.png' />
+    <div gamemode-header-title font-h3 font-w-black>
+        head 2 head
+    </div>
+	<img gamemode-header-store-icon end src='./assets/images/arcade/store-icon.png' />
+	<gamemode-balance [balance1]='balance.balance1' [balance2]='balance.balance2' [balance3]='balance.balance3'>
+    </gamemode-balance>
+</ion-header>
+<ion-content no-bounce>
+    <table head2head-content>    
+		<gamemode-game-information
+			gameMode='head2head'
+			[game]='game.information' 
+			[playerRank]='game.playerRank'
+			[disablePlayButton]='disablePlayButton'
+			[disableBackButton]='disableBackButton'
+			(onPlayGame)='startPlayingGame()'
+			(onGoToBackScreen)='goToGameHomePage()'
+			(onResetGame)='restartGame()'
+            >
+		</gamemode-game-information>
+
+        <gamemode-game-details [game]='gameRewardDetails' gameMode='head2head' (onHowToPlay)='openHowToPlay()'  *ngIf='state == "NORMAL"'>
+		</gamemode-game-details>
+		<head2head-search-opponent *ngIf="state == 'WAIT_BEFORE_GAME' " (showExitModal)='showExitModal()'>
+		</head2head-search-opponent>
+		<head2head-awaiting-slide *ngIf='state == "WAIT_AFTER_GAME"' (restartGame)='restartGame()' (transitionOver)='changePlayButtonToNew();disableBackButton=false'>
+		</head2head-awaiting-slide>
+		<head2head-winning-slide *ngIf="state == 'WON'" (restartGame)='restartGame()' (transitionOver)='changePlayButtonToCollect();disableBackButton=false'>
+		</head2head-winning-slide>
+		<head2head-lose-slide *ngIf="state == 'LOSE'" (restartGame)='restartGame()' (transitionOver)='changePlayButtonToNew();disableBackButton=false'>
+		</head2head-lose-slide>
+
+		
+		<head2head-goal-setter 
+			(togglePlayState)='togglePlayState($event)' 
+			(startPlayingGame)='goToGameWebView()'
+			(countDownAboutToOver)='countDownAboutToOver()'
+			(battleAFriend)='showSquadupModal()'
+			*ngIf='state == "NORMAL" || state == "WAIT_BEFORE_GAME" '>
+		</head2head-goal-setter>
+
+		<head2head-score-information-won-slide
+			*ngIf='state == "WON"'
+			[ownInformation]='ownInformation'
+			[opponentInformation]='opponentInformation'
+			[ownScore]='ownScore'
+			[opponentScore]='opponentScore'
+			(openPlayerProfile)='openPlayerProfile()'
+		>
+		</head2head-score-information-won-slide>
+		<head2head-score-information-awaiting-slide
+			*ngIf='state == "WAIT_AFTER_GAME"'
+			[ownInformation]='ownInformation'
+			[opponentInformation]='opponentInformation'
+			[ownScore]='ownScore'
+			[opponentScore]='opponentScore'
+			(openPlayerProfile)='openPlayerProfile()'
+		>
+		</head2head-score-information-awaiting-slide>
+		<head2head-score-information-lose-slide
+			*ngIf='state == "LOSE"'
+			[ownInformation]='ownInformation'
+			[opponentInformation]='opponentInformation'
+			[ownScore]='ownScore'
+			[opponentScore]='opponentScore'
+			(openPlayerProfile)='openPlayerProfile()'
+		>
+		</head2head-score-information-lose-slide>
+
+
+    </table>
+</ion-content>

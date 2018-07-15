@@ -1,0 +1,197 @@
+<div class='profile'>
+	<div class='section-player-fame-and-fighter'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col text-center>
+					<player-avatar-icon (tap)='openPlayerProfile.emit()' [playerInformation]='playerInfo'></player-avatar-icon>
+				</ion-col>
+				<ion-col align-self-center>
+					<table>
+						<tr class='player-fame'>
+							<td>
+								<img src='assets/images/player-profile/fame.png' />     
+							</td>
+							<td>
+								<div font-h1 font-w-bold class='gradient-text'>
+									100
+								</div>
+							</td>
+						</tr>
+						<tr class='player-fighter'>
+							<td>
+								<img src='assets/images/player-profile/fighter.png' />  
+							</td>
+							<td>
+								<div font-h1 font-w-bold class='gradient-text'>
+									100
+								</div>
+							</td>
+						</tr>
+					</table>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div font-5 font-w-medium text-center class='code-label'>
+		My invite code
+	</div>
+	<div text-center  class='code-value'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col font-10 font-w-medium>
+					amari112	
+				</ion-col>
+				<ion-col col-auto>
+					<button debossed icon-only>
+						<ion-icon name='md-share'></ion-icon>
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div font-w-bold font-6 text-center>
+		Share your code for cool gifts.
+	</div>
+</div>
+<div class='code-form'>
+	<ion-grid no-padding>
+		<ion-row>
+			<ion-col>
+				<ion-input [(ngModel)]='inputCode' placeholder='Enter Code' type="text"></ion-input>
+			</ion-col>
+			<ion-col>
+				<button debossed ion-button>
+					<ion-icon class='tapicon-forward'></ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</div>
+<div (tap)='openStoreScreen()' class='store'>
+	<img debossed src='assets/images/dashboard/store.png' />
+	<div class='coins'>
+		<img src='assets/images/dashboard/coin.png' />
+		<span font-w-medium font-10>
+			4,765
+		</span>
+	</div>
+</div>
+<div class='button-wrapper'>
+	<button debossed class='follow-button' ion-button  (tap)='goToFollowerPage()' >
+		<svg height="36" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="background-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#f8f0d6" offset="0"/>
+					<stop stop-color="#ffc500" offset="1"/>
+				</linearGradient>
+				<linearGradient id="border-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#FF7c00" offset="0"/>
+					<stop stop-color="#FFFFFF" offset="1"/>
+				</linearGradient>
+			</defs>
+			<g>
+				<text y="26" dx='42' font-size="22" stroke-width="0.5" stroke="url(#border-gradient)" fill="url(#background-gradient)">Follow</text>
+			</g>
+		</svg>
+	</button>
+</div>
+<div class='button-wrapper'>
+	<button debossed class='daily-mission-button' ion-button (tap)='goToDailyMissionPage()'>
+		<svg height="100%" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="background-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#f8f0d6" offset="0"/>
+					<stop stop-color="#ffc500" offset="1"/>
+				</linearGradient>
+				<linearGradient id="border-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#FF7c00" offset="0"/>
+					<stop stop-color="#FFFFFF" offset="1"/>
+				</linearGradient>
+				<linearGradient id="background-gradient-two" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#ffffff" offset="0"/>
+					<stop stop-color="#929292" offset="1"/>
+				</linearGradient>
+				<linearGradient id="border-gradient-two" x1="0%" x2="0%" y1="0%" y2="100%">
+					<stop stop-color="#7ee2fa" offset="0"/>
+					<stop stop-color="#dcdcdc" offset="1"/>
+				</linearGradient>
+			</defs>
+			<g>
+				<text y="22" dx='50' font-size="22" stroke-width="0.5" stroke="url(#border-gradient)" fill="url(#background-gradient)">Daily</text>
+				<text y="47" dx='30' font-size="22" stroke-width="0.5" stroke="url(#border-gradient-two)" fill="url(#background-gradient-two)">Missions</text>
+			</g>
+		</svg>
+		<img class='coin-one' src='assets/images/dashboard/golden-coins-one.png' />
+		<img class='coin-two' src='assets/images/dashboard/golden-coins-two.png' />
+	</button>
+</div>
+<div class='button-wrapper'>
+	<button debossed class='inbox-button' ion-button (click)='goToInboxPage()'>
+		INBOX
+		<img src='assets/images/dashboard/mail.png' class='right-top small' />
+		<img src='assets/images/dashboard/mail.png' class='left-top small' />
+		<img src='assets/images/dashboard/mail.png' class='right-bottom' />
+		<img src='assets/images/dashboard/mail.png' class='left-bottom' />
+	</button>
+</div>
+<div padding-top></div>
+<div class='button-wrapper-small'>
+	<button debossed class='setting-button' ion-button (click)='goToArcadeSettingPage()'>ACCOUNT<br/>SETTINGS</button>
+</div>
+<div class='button-wrapper-small'>
+	<button debossed class='leaderboard-button' ion-button (click)='goToLeaderBoardPage()'>LEADERBOARD</button>
+</div>
+<div class='button-wrapper-small'>
+	<button debossed class='achievement-button' (tap)='goToAchievementsPage()' ion-button>ACHIEVEMENTS</button>
+</div>
+<div class='button-wrapper-small'>
+	<button debossed class='winner-button' ion-button (click)='goToWinnersPage()'>WINNERS</button>
+</div>
+<div class='button-wrapper-small'>
+	<button debossed class='started-button' ion-button>GETTING<br/>STARTED</button>
+</div>
+<div class='button-wrapper-small'>
+	<button debossed class='help-button' ion-button>HELP</button>
+</div>
+<div text-center class='terms-label'>
+	<label font-5 font-w-heavy>
+		Terms &
+	</label>
+	<div></div>
+	<label font-5 font-w-heavy>
+		Conditions
+	</label>
+</div>
+
+<div text-center class='privacy-label'>
+	<label font-5 font-w-heavy>
+		Privacy
+	</label>
+</div>
+
+<div class='social-media'>
+	<ion-grid no-padding>
+		<ion-row>
+			<ion-col col-6>
+				<img debossed class='facebook-img' src='assets/images/dashboard/facebook.png' />
+			</ion-col>
+			<ion-col col-6>
+				<img debossed class='twitter-img' src='assets/images/dashboard/twitter.png' />
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col class='border-line'></ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-6>
+				<img debossed class='instagram-img' src='assets/images/dashboard/instagram.png' />
+			</ion-col>
+			<ion-col col-6>
+				<img debossed class='snapchat-img' src='assets/images/dashboard/snapchat.png' />
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col class='border-line'></ion-col>
+		</ion-row>
+	</ion-grid>
+</div>

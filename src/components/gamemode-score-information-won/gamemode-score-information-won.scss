@@ -1,0 +1,31 @@
+gamemode-score-information-won {
+
+	display: block;
+	ion-slides{
+		max-width: 100vw !important;
+	}
+
+	.firstSlide{
+		align-self: flex-end !important;
+	}
+
+	.swiper-pagination{
+		top: -4px !important;
+		height: 10px;
+	}
+
+	.swiper-pagination-bullet{
+		margin: 0px 2px !important;
+	}
+
+	.swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
+		background-color: #d8d8d8 !important;
+		opacity: 0.91;
+	}
+
+	.swiper-pagination-bullet-active{
+		background-color: #ebbf24 !important;
+	}
+	
+
+}

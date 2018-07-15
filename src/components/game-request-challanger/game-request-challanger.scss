@@ -1,0 +1,125 @@
+game-request-challanger {
+	display: block;
+	color: white;
+
+	ion-grid{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		justify-content: space-between;
+
+		& > ion-row{
+			&:nth-child(1){
+				margin-top: 4px;
+			}
+			&:nth-last-child(1){
+				margin-bottom: 11px;
+				& > ion-col:nth-child(1){
+					padding-left: 10px !important;
+					z-index: 10 !important;
+				}
+				& > ion-col:nth-child(2){
+					z-index: 100 !important;
+				}
+				& > ion-col:nth-last-child(1){
+					padding-right: 10px !important;
+					z-index: 10 !important;
+				}
+			}
+		}
+
+		&.squadup-mode > ion-row{
+			&:nth-child(1){
+				margin-top: 6px;
+				line-height: 0px;
+			}
+			&:nth-last-child(1){
+				margin-bottom: 8px !important;
+				margin-top: 2px !important;
+			}
+		}
+
+	}
+
+	.wrapper-img-battle-a-friend{
+		display: inline-block;
+		position: relative;
+	}
+
+	.img-battle-a-friend{
+		width: 122px;
+		display: block;
+	}
+
+	.img-squadup{
+		width: 119px;
+		display: block;
+	}
+
+	.top-label,.bottom-label{
+		height: 19px;
+		line-height: 19px !important;
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+	}
+	.bottom-label{
+		width: 81px;
+		bottom: 3px;
+		left: 17px;
+	}
+	.top-label{
+		bottom: 27px;
+		width: 94px;
+		left: 10px;
+	}
+
+	player-avatar-icon{
+		width: 92px !important;
+		height: 94px !important;
+		display: block;
+		margin: auto;
+		.avatar{
+			height: 86px;
+			width: 86px;
+		}
+		.avatar-name{
+			border-radius: 20px;
+			bottom: 2px;
+			height: 19px;
+			line-height: 17px;
+			font-size: 14px !important;
+			font-weight: 500;
+			letter-spacing: 0.54px;
+		}
+		.avatar-country{
+			height: 30px;
+			width: 30px;
+			bottom: 20px;
+		}
+	}
+
+	.wrapper-head2head-icon{
+		height: 50px;
+		width: 50px;
+		box-sizing: border-box;
+		border: 2px solid white;
+		border-radius: 100%;
+		background-color: rgba(0, 0, 0, 0.44);
+		position: relative;
+		img{
+			position: absolute;
+			width: 26px;
+			display: block;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			margin: auto;
+		}
+	}
+
+
+}

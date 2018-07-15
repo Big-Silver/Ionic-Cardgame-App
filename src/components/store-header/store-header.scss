@@ -1,0 +1,232 @@
+store-header,
+[store-header] {
+
+	.toolbar-background{
+		border-width: 0 !important;
+	}
+
+	ion-toolbar:nth-child(1){
+
+		.toolbar-background{
+			background-image: url('../assets/images/store/store_roof_trimmed.png'), linear-gradient(135deg, rgb(111,83,254) 0%, rgb(74,179,254) 25%, rgb(85,141,254) 50%, rgb(74,179,254) 75%, rgb(111,83,254) 100%) !important;
+			background-size : 100%;
+			background-position-y: -21px, 0px;
+			background-repeat: no-repeat !important;
+		}
+
+		height: 54px;
+		padding: 0px;
+		ion-title{
+			padding: 0px 82px !important;
+			height: 54px;
+		}
+
+		.fake-svg-wrapper{
+			font-size: 48px;
+			font-weight: 900;
+			color: transparent;
+			position: relative;
+		}
+
+		ion-buttons[start]{
+			align-self: stretch !important;
+			width: 35px;
+			position: relative;
+			margin: 0px !important;
+			button{
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(209, 36, 36, 0.85) !important;
+				border-radius: 0px !important;
+				color: white;
+				ion-icon{
+					font-size: 2.6em !important;
+				}
+			}
+		}
+
+		svg{
+			// height: 24px !important;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+			height: 100%;
+			text{
+				margin: auto;
+				letter-spacing: 0.58px;
+				font-size: 48px;
+				font-weight: 900;
+			}
+		}
+		
+	}
+
+	ion-toolbar:nth-child(2){
+		padding: 0px;
+		height: 56px !important;
+		color: white;
+
+		.toolbar-content{
+			pointer-events: all !important;
+		}
+
+		.toolbar-background{
+			background-image: none !important;
+			background-color: black;
+		}
+
+		.player-coin-amount{	
+			.text-value{
+				letter-spacing: 1.46px;
+			}
+
+			[font-h1]{
+				font-size: 38px !important;
+				line-height: 36px !important;
+			}
+		
+			.text-label{
+				letter-spacing: 1.02px;
+				white-space: nowrap;
+				height: 12px;
+				line-height: 12px;
+				img{
+					width: 10px !important;
+					height: 11px !important;
+					vertical-align: top;
+				}
+			}		
+		}
+
+		.border-col{
+			border-right: 1px solid rgba(151,151,151,0.51);
+			height: 56px;
+		}
+	
+
+		[font-6]{
+			letter-spacing: 0.91px;
+		}
+
+		button{
+			width: 95px;
+			height: 36px;
+			margin: 1px 10px 3px 10px !important;
+			box-shadow: 0 3px 0 #0e7403;
+			background-color: #5cc129;
+			border-radius: 11px;
+			color: white;
+			ion-icon{
+				margin-top: 2px !important;
+				font-size: 30px !important;
+			}
+			&:active{
+				transform: translate(2px, 2px);
+				filter: brightness(0.4);
+			}
+		}
+	}
+
+	// color: white;
+	// display: block;
+	// background-image: url('../assets/images/store/store_roof.png');
+	// background-size: 100%;
+	// background-repeat: no-repeat;
+
+	// .store-label{
+	// 	display: inline-block;
+	// 	min-width: 120px;
+	// 	height: 29px;
+	// 	line-height: 28px;
+	// 	margin: auto;
+	// 	margin-top: 5px;
+	// 	margin-bottom: 20px;
+	// 	background: url('../assets/images/store/store_label.png');
+	// 	background-size: cover;
+	// }
+
+	
+
+	// .convert-coins{
+		
+	// 	background-image: linear-gradient(183deg, #ffe804 0%, #da8b0c 100%);
+	// 	border-top: 1px solid #ffe704;
+	// 	border-bottom: 1px solid #ffe704;
+	// 	position: relative;
+	// 	overflow : hidden;
+
+	// 	ion-col{
+	// 		z-index: 10;
+	// 	}
+
+	// 	ion-col:nth-child(1){
+	// 		line-height: 14px;
+	// 		padding: 1px 6px !important;
+	// 		letter-spacing: 1.75px;
+	// 	}
+
+	// 	ion-col:nth-child(2){
+	// 		line-height: 10px;
+	// 		letter-spacing: 0.82px;
+	// 		padding-left: 40px !important;
+	// 		color: #000000; 
+	// 	}
+
+	// 	&:before{
+	// 		content : '';
+	// 		position: absolute;
+	// 		display: block;
+	// 		width: 50%;
+	// 		top : 0px;
+	// 		bottom : 0px;
+	// 		left: 0px;
+	// 		background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+	// 		opacity: 0.57;
+	// 		z-index: 0;
+	// 	}
+
+	// 	.convert-coin-1,
+	// 	.convert-coin-2{
+	// 		position: absolute;
+	// 		z-index: 0;
+	// 		opacity: 0.47;
+	// 		width: 47px;
+	// 	}
+
+	// 	.convert-coin-1{
+	// 		right: 48px;
+	// 		top: 8px;
+	// 	}
+
+	// 	.convert-coin-2{
+	// 		right: -16px;
+	// 		bottom: -3px;
+	// 	}
+
+	// }
+
+	// .red-background{
+	// 	position: absolute;
+	// 	top: 0px;
+	// 	right: 0px;
+	// 	width: 43px;
+	// 	height: 49px;
+	// 	border-right: 21px solid #d12424;
+	// 	border-top: 24px solid #d12424;
+	// 	border-left: 21px solid transparent;
+	// 	border-bottom: 24px solid transparent;
+	// }
+
+	// .red-icon{
+	// 	position: absolute;
+	// 	top: 0px;
+	// 	right: 1px;
+	// 	font-size: 29px;
+	// 	color: white;
+	// }
+
+}

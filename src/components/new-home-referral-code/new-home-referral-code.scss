@@ -1,0 +1,66 @@
+new-home-referral-code {
+	display: block;
+	color: white;
+
+	.wrapper-input{
+		padding: 0px 23px !important;
+		ion-item{
+			border: 2px solid #c8c8c8;
+			background-color: transparent !important;
+		}
+
+		input{
+			color: white !important;
+			font-family: Lato;
+			font-size: 16px;
+			font-weight: 700;
+		}
+
+		::placeholder{
+			color: #d5d5d5 !important;
+			font-family: Lato;
+			font-size: 16px;
+			font-weight: 700;
+		}
+		::-webkit-input-placeholder{
+			color: #d5d5d5 !important;
+			font-family: Lato;
+			font-size: 16px;
+			font-weight: 700;;
+		}	
+		::-moz-placeholder{
+			color: #d5d5d5 !important;
+			font-family: Lato;
+			font-size: 16px;
+			font-weight: 700;
+		}
+		:-ms-input-placeholder{
+			color: #d5d5d5 !important;
+			font-family: Lato;
+			font-size: 16px;
+			font-weight: 700;
+		}
+		:-moz-placeholder {
+			color: #d5d5d5 !important;
+			font-family: Lato;
+			font-size: 16px;
+			font-weight: 700;
+		}
+
+		
+	}
+
+	[font-6]{
+		margin-top: 17px;
+		margin-bottom: 19px;
+	}
+
+	[font-5]{
+		color: #4db9ff;
+		text-decoration: underline;
+		font-weight: 700 !important;
+		margin-top: 26px;
+		margin-bottom: 26px;
+	}
+	
+}

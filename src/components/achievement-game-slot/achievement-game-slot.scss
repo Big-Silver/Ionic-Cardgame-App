@@ -1,0 +1,70 @@
+achievement-game-slot {
+	display: block;
+	height: 57px;
+	border-radius: 6px !important;
+	background-color: #186ec1;
+	position: relative;
+
+	& > ion-grid{
+		position: absolute;
+		top: 1px;
+		right: 6px;
+		bottom: 1px;
+		left: 1px;
+		background-color: #000921;
+		border-radius: inherit;
+		width: unset !important;
+		overflow: hidden;
+
+		ion-row{
+			flex-grow: 1;
+		}
+
+		ion-col:nth-child(1){
+			padding: 0px 4px !important;
+			img{
+				display: block;
+			}
+		}
+
+		ion-col:nth-child(2){
+			width: 32.0512820% !important;
+			border-right: 1px solid transparent !important;
+			background-color: rgba(255,255,255,0.04);
+		}
+
+		ion-col:nth-child(3),
+		ion-col:nth-child(5)
+		{
+			width: 2.8846% !important;
+			background-color: rgba(255,255,255,0.08);
+		}
+
+		ion-col:nth-child(4){
+			width: 15.705128% !important;
+		}
+
+		ion-col:nth-child(6){
+			width: 26.923076% !important;
+		}
+
+		ion-col:nth-child(2){
+			position: relative;
+			ion-grid{
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				left: 0px;
+				bottom: 0px;
+				ion-row{
+					flex-grow: 1;
+				}
+			}
+			ion-row:nth-child(2){
+				background-color: rgba(255,255,255,0.04);
+			}
+		}
+
+	}
+
+}

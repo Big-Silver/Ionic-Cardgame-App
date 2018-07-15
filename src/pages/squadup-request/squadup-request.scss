@@ -1,0 +1,146 @@
+page-squadup-request {
+
+	ion-content{
+		.scroll-content{
+			padding: 0px !important;
+			overflow: hidden !important;
+			background-image: url('../assets/images/battle/background_squadup.png');
+			background-size: cover;
+			background-position: center;
+		}
+	}
+
+	table{
+		height: 100%;
+		width: 100vw;
+	}
+
+	timer{
+		line-height: 31px !important;
+		img,small{
+			font-size: 12px !important;
+			font-weight: 500 !important;
+		}
+		img{
+			vertical-align: sub !important;
+		}
+		small{
+			vertical-align: bottom;
+		}
+		span{
+			font-size: 18px !important;
+			font-weight: 700 !important;
+		}
+		span:nth-last-child(1){
+			color: #ff0000;
+		}
+	}
+
+	.wrapper-head2head-icon,
+	player-avatar-icon,
+	game-request-game-info,
+	game-request-footer,
+	game-request-game-info .img-game-icon,
+	game-request-game-info .title-game-name,
+	game-request-game-info .description-game,
+	game-request-game-info .description-reward,
+	game-request-game-info .table-reward,
+	.wrapper-player-name{
+		opacity: 0;
+		animation-fill-mode: forwards !important;
+	}
+
+	ion-content.page-loaded{
+
+		player-avatar-icon{
+			animation: 0.4s main-entrance-squadup-request ease-in;
+		}
+
+		.wrapper-player-name,
+		game-request-game-info{
+			animation-delay: 0.48s !important;
+			animation: 0.6s basic-fade-in-squadup-request linear;
+		}
+
+		game-request-game-info .img-game-icon{
+			animation-delay: 1.08s !important;
+			animation: 0.3s staggered-fade-from-left-squadup-request linear;
+		}
+
+		game-request-game-info .title-game-name,
+		game-request-game-info .description-game{
+			animation-delay: 1.08s !important;
+			animation: 0.3s staggered-fade-from-right-squadup-request linear;
+		}
+
+		game-request-game-info .description-reward{
+			animation-delay: 1.40s !important;
+			animation: 0.3s staggered-fade-from-left-squadup-request linear;
+		}
+		game-request-game-info .table-reward.from-left{
+			animation-delay: 1.40s !important;
+			animation: 0.3s staggered-fade-from-left-squadup-request linear;
+		}
+
+		game-request-game-info .table-reward.from-right{
+			animation-delay: 1.40s !important;
+			animation: 0.3s staggered-fade-from-right-squadup-request linear;
+		}
+
+		game-request-footer{
+			animation-delay: 1.70s !important;
+			animation: 0.5s basic-fade-in-squadup-request linear;
+		}
+
+	}
+
+}
+
+
+@keyframes main-entrance-squadup-request{
+	0%{
+		opacity: 0;
+		transform: scale(7);
+	}
+	80%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes basic-fade-in-squadup-request{
+	0%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 1;
+	}
+	100%{
+		opacity : 1;
+	}
+}
+
+@keyframes staggered-fade-from-left-squadup-request{
+	0%{
+		opacity: 0;
+		transform: translate(-100%,0px);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0px,0px);
+	}
+}
+
+@keyframes staggered-fade-from-right-squadup-request{
+	0%{
+		opacity: 0;
+		transform: translate(100%,0px);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0px,0px);
+	}
+}

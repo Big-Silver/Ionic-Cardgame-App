@@ -1,0 +1,63 @@
+[winner-header] {
+
+
+
+	ion-toolbar:nth-child(1){
+		padding: 0px !important;
+		min-height: 51px !important;
+		.toolbar-background{
+			border: none !important;
+			background-image: linear-gradient(180deg, #78e500 0%, #2a7c00 100%) !important;
+		}
+	}
+
+	.toolbar-title{
+		font-size: 22px;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	ion-buttons[start]{
+		margin: 0px !important;
+	}
+
+	[winner-back-button]{
+		margin: 0px !important;
+
+		.button-inner{
+			color: white;
+		}
+
+		ion-icon{
+			padding: 0px 6px !important;
+			font-size: 2.3em !important;
+		}
+	}
+
+	[winner-store-image]{
+		width: 42px !important;
+		height: 41px !important;
+		margin-right: 6px !important; 
+		&:active{
+			transform: translate3d(2px, 2px, 0px);
+			filter: brightness(0.4);
+		}
+	}
+
+	ion-toolbar:nth-child(2){
+		height: 1px !important;
+		min-height: unset !important;
+		padding: 0px !important;
+		.toolbar-background{
+			border: 0 !important;
+			background-image: linear-gradient(90deg,  #173a00 20.6%, #7fe832 50.4%,  #173a00 80%);
+			
+ 		}
+	}
+
+	.store-button{
+		height: unset !important;
+	}
+
+
+}

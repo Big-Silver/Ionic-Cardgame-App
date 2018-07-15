@@ -1,0 +1,38 @@
+<ion-grid ion-col>
+
+	<ion-row class='wrapper-big-circle'>
+		<ion-col>
+			<img class='animated' [ngClass]='{"pulse" : shouldPulsateOnce}' #imgBigCircle src='./assets/images/winning-animation/big_circle.png' />
+			<div #imgFlag class='flag-wrapper'>
+
+			</div>
+		</ion-col>
+	</ion-row>
+
+	<ion-row class='wrapper-prize-box'>
+		<ion-col>
+			<img #imgPrizeBox src='./assets/images/winning-animation/prize_box.png' />
+		</ion-col>
+	</ion-row>
+
+	<ion-row class='wrapper-trophy'>
+		<ion-col>
+			<img #imgTrophy src='./assets/images/winning-animation/trophy.png' />
+		</ion-col>
+	</ion-row>
+
+
+
+
+</ion-grid>
+
+<div text-center class='note'>
+	Tap anywhere to skip
+</div>
+
+<img class='only-money-image' src='./assets/images/winning-animation/money-only.png' />
+
+<div class='corner-image'>
+	<img class='background' src='assets/images/squadup/corner.png' />
+	<img class='gamemode-icon' src='assets/images/game-mode-icons/contest.png' />
+</div>

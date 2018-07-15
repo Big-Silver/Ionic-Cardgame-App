@@ -1,0 +1,69 @@
+[head2head-content] {
+    padding: 0px !important;
+	min-height: 100%;
+	width: 100%;
+	max-width: 100%;
+
+    [flex-grow]{
+        flex-grow: 1;
+    }
+
+    .highlighted-border{
+        height: 1px;
+        background-image: linear-gradient(180deg, #fae54d 0%, #febb0a 100%);
+    }
+
+    .highlighted-border.inverse{
+        background-image: linear-gradient(180deg, #fbe044 0%, #e1aa10 100%);
+	}
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	tr[expand]{
+		height: 100%;
+	}
+
+	& > tr, & > tr > td{
+		background-color: transparent;
+	}
+
+	.td-head2head-content-score-background{
+		background: url('../assets/images/arcade/blue-background.png');
+		background-size: cover;
+	}
+
+	.td-head2head-content-score-background > head2head-goal-setter,
+	.td-head2head-content-score-background > head2head-score-information-awaiting-slide,
+	.td-head2head-content-score-background > head2head-score-information-won-slide,
+	.td-head2head-content-score-background > head2head-score-information-lose-slide{
+		margin-bottom: 50px;
+	}
+
+	[gamemode-balance],
+	[gamemode-game-details],
+	[gamemode-game-information],
+	[head2head-goal-setter],
+	[head2head-search-opponent],
+	[head2head-awaiting-slide],
+	[head2head-winning-slide],
+	[head2head-lose-slide],
+	[head2head-score-information-awaiting-slide],
+	[head2head-score-information-won-slide],
+	[head2head-score-information-lose-slide],
+	gamemode-balance,
+	gamemode-game-details,
+	gamemode-game-information,
+	head2head-goal-setter,
+	head2head-search-opponent,
+	head2head-awaiting-slide,
+	head2head-winning-slide,
+	head2head-score-information-awaiting-slide,
+	head2head-score-information-won-slide,
+	head2head-score-information-lose-slide,
+	head2head-lose-slide{
+		display: block;
+	}
+
+}

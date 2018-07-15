@@ -1,0 +1,57 @@
+<div class='trending-description' *ngIf='descriptionType == "TRENDING"'>
+	<div text-center class='title' font-w-medium>
+		Above shows where you position 
+		against others when they was on
+		the same attempt <label font-w-heavy class='yellow-highlight'>12</label>.
+	</div>
+	<div text-center font-w-medium font-7 class='sub-title'>	
+		Top <label font-7 class='green-highlight' font-w-medium>20%</label> finalist secure a prize.
+	</div>
+</div>
+<div class='ranking-description' *ngIf='descriptionType == "RANKING"'>
+	<div text-center class='title' font-w-heavy>
+		Keep within the <label font-w-heavy class='green-highlight'>GREEN</label>
+	</div>
+</div>
+<div class='prizes-description' *ngIf='descriptionType == "PRIZES"'>
+	<table>
+		<tr>	
+			<td class='image-cell'>
+				<img src='assets/images/replay/up.png' class='up-arrow' />
+			</td>
+			<td class='image-cell'>
+				<img src='assets/images/home/icons/money.png' class='currency-img' />
+			</td>
+			<td class='prize-cell'>
+				<svg height="36" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="prize-background-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+							<stop stop-color="#ffe700" offset="0"/>
+							<stop stop-color="#ff9b00" offset="1"/>
+						</linearGradient>
+						<linearGradient id="prize-border-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+							<stop stop-color="#FF7100" offset="0"/>
+							<stop stop-color="#FFFFFF" offset="1"/>
+						</linearGradient>
+					</defs>
+					<g>
+						<text y="37" font-size="48" stroke-width="1" stroke="url(#prize-border-gradient)" fill="url(#prize-background-gradient)">&nbsp;&pound;200</text>
+					</g>
+				</svg>
+				<div>
+					&nbsp;&pound;200
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div font-w-medium font-7 text-center class='sub-title'>
+		The more players that join the bigger the prize pool.
+	</div>
+</div>
+<div class='squadup-description' *ngIf='descriptionType == "SQUADUP"'>
+	<div text-center class='title' font-w-heavy>
+		Still do your best in your squad up team<br/>
+		so you can claim a bigger portion<br/>
+		of the prize.
+	</div>
+</div>

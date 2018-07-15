@@ -1,0 +1,43 @@
+store-content,
+[store-content]{
+
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	tr[expand]{
+		height: 100%;
+	}
+
+	store-earn-buy{
+		height: 128px;
+	}
+	
+	.border-div{
+		height: 1px;
+		background-image: linear-gradient(180deg, #fae54d 0%, #febb0a 100%);
+	}
+
+	.p-relative{
+		position: relative;
+	}
+
+	store-offers{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.header-wrapper{
+		background-color: #040404;
+	}
+
+	.earn-buy-wrapper{
+		background-color : rgba(26, 26, 26,0.5);
+	}
+	
+
+}

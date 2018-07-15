@@ -1,0 +1,36 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col>
+			<div *ngIf='!unknown' class='player-level' [ngClass]='{"EXPERT":level == "EXPERT", "AMATEUR" : level == "AMATEUR", "PRO" : level == "PRO"}' text-center font-7 font-w-medium>
+				{{level}}
+			</div>
+			<div *ngIf='unknown' class='player-level' text-center font-7 font-w-medium>
+				?
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-auto align-self-center>
+			<img class='img-ribbon' src='./assets/images/arcade/ribbon.png' />
+		</ion-col>
+		<ion-col text-center class='lbls'>
+			<ng-container *ngIf='unknown'>
+				?
+			</ng-container>
+			<ng-container *ngIf='!unknown'>
+				{{badges}}
+			</ng-container>
+		</ion-col>
+		<ion-col col-auto align-self-center>
+			<img class='img-star' src='./assets/images/arcade/star.png' />
+		</ion-col>
+		<ion-col text-center class='lbls'>
+			<ng-container *ngIf='unknown'>
+				?
+			</ng-container>
+			<ng-container *ngIf='!unknown'>
+				{{stars}}
+			</ng-container>
+		</ion-col>
+	</ion-row>
+</ion-grid>

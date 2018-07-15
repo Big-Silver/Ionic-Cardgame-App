@@ -1,0 +1,70 @@
+<ion-slides pager="true" #slides>
+	<ion-slide class='slide1' *ngIf='showFirstSlide == true'>
+		<div secondScreen #secondScreen>
+			<div class='share-button'>
+			</div>
+		</div>
+		<div class='header-container'>
+			<table class='header-table'>
+				<thead class='target-header'>
+					<tr firstScreen #firstScreen>
+						<td colspan="4">
+							<h5 no-margin text-center font-w-bold>
+								You got it
+							</h5>
+						</td>
+					</tr>
+					<tr secondScreen #secondScreen>
+						<td class='heading-text'>
+							<h5 no-margin text-center font-h3 font-w-black>
+								<label font-h3 font-w-black>YOUR</label>
+								SCORE
+							</h5>
+							<div text-center font-4 font-w-heavy>
+								LEVEL <span class='highlight' font-4 font-w-heavy>9</span>
+							</div>
+						</td>
+					</tr>
+					<tr secondScreen #secondScreen>
+						<td class='subtitle' text-center font-6 font-w-medium colspan="4">
+							Goal below to pass this level.
+						</td>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		<table class='main-table'> 
+			<tbody>
+				<tr class='score-border'>
+					<td colspan="4"></td>
+				</tr>
+				<tr class='score-table-container-row' >
+					<td colspan="4" firstScreen #firstScreen>
+						<div class='title-level'>NEXT</div>
+						<h1>TIME</h1>
+					</td>
+					<td colspan="4" secondScreen #secondScreen>
+						<table class='score-table' [ngClass]='{"fadeIn animated" : fadingContent == true}'>
+							<tr *ngFor='let row of rows'>
+								<td font-9 font-w-bold text-left>{{row.label}}:</td>
+								<td class="highlight" #wordShufflers>
+									<div class='text' text-right font-w-bold font-9>{{row.value}}</div>
+									<div class='label-wrapper'>
+										<ion-icon class='label-icon-achieved' name='ios-checkmark'></ion-icon>
+										<ion-icon class='label-icon-not-achieved' name='ios-close'></ion-icon>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr class='score-border'>
+					<td colspan="4"></td>
+				</tr>
+			</tbody>
+		</table>
+	</ion-slide>
+	<ion-slide class='slide2'>
+		<arcade-content-score-information #targetScore></arcade-content-score-information>
+	</ion-slide>
+</ion-slides>

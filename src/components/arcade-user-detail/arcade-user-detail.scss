@@ -1,0 +1,364 @@
+arcade-user-detail {
+	display: block;
+	color: white;
+
+	& > ion-grid{
+		height: 178px;
+		background-color: rgba(0,0,0,0.5) !important;
+		justify-content: space-between;
+		padding: 2px 2px 6px 2px !important;
+
+		& > ion-row{
+
+			&:nth-child(1){
+				ion-col:nth-child(2){
+					padding-right: 0px !important;
+				}
+			}
+
+			& > ion-col:nth-child(1){
+				padding-left: 8px !important;
+			}
+
+			& > ion-col:nth-last-child(1){
+				padding-right: 8px !important;
+			}
+
+			&:nth-child(2){
+				align-self : center;
+			}
+
+		}
+
+	}
+
+	.avatarChoose {
+		border-radius: 100%;
+		padding: 1px;
+		width: 62px;
+		height: 62px;
+		display: block;
+		margin-right: 16px;
+		background-color: #fff;
+	}
+	span.choose-image{
+		width: 25px;
+		height: 25px;
+		background: #fff;
+		border-radius: 25px;
+		padding: 4px 0;
+		top : 0px;
+		right: 16px;
+		left: 0px;
+		bottom: 0px;
+		margin: auto;
+		opacity: 0.7;
+		position: absolute;
+		background-color: #fff;
+		text-align: center;
+		border: 1px solid black;
+		box-shadow: 0px 0px 0px 1px white;
+		ion-icon{
+			font-size:1.1em;
+			color: black;
+			position: relative;
+			top: -1px;
+		}
+	}
+
+	.input-button-wrap{
+		margin : auto;
+		width: 148px;
+		position: relative;
+		ion-input{
+			color: #fff;
+			border: 1px solid white;
+			height: 25px;
+			border-radius: 5px;
+			input{
+				height: 23px;
+				margin: 0!important;
+				padding: 0 8px!important;
+			}
+		}
+
+		button{
+			position: absolute;
+			right: 1px;
+			top: 1px;
+			height: 20px;
+			border-radius: 0 5px 5px 0;
+			width: 33px;
+			color: #fff;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#7ed321), to(#62a816));
+			background-image: linear-gradient(180deg, #7ed321 0%, #62a816 100%);
+			-webkit-box-shadow: 0 3px 0 #417505;
+			box-shadow: 0 3px 0 #417505;
+			span{
+				img{
+					width: 10px;
+					height: 11px;
+				}
+			}
+			
+			&:active{
+				filter: brightness(0.4);
+				box-shadow: 0 3px 0 #62a816 !important;
+			}
+		}
+	}
+
+	.genderButton{
+		height: 30px;
+		width: 30px;
+		border-radius: 100%;
+		margin: 6px;
+
+		&.male{
+			background-color: #008cff;
+		}
+
+		&.female{
+			background-color: rgb(235,62,133);
+		}
+
+		img{
+			height: 22px;
+			display: block;
+			margin: auto;
+			filter: brightness(0) invert(1);
+		}
+	}
+
+	.countryflag{
+		margin-top: 6px;
+		margin-right: 6px;
+		border-radius: 100%;
+		height: 30px;
+		width: 30px;
+		display: block;
+	}
+
+	.verified-status-wrapper,
+	.button-edit{
+		margin-left: 12px !important;
+	}
+
+	.verified-status-wrapper{
+		height: 30px;
+		width: 30px;
+		border-radius : 5px;
+		border: 1px solid white;
+		img{
+			padding: 6px;
+		}
+	}
+
+	.button-edit{
+		margin-top: 0px !important;
+		margin-right: 7px !important;
+		margin-bottom: 0px !important;
+		width: 43px;
+		height: 30px;
+		border-radius: 6px;
+		background-image: linear-gradient(180deg, #7ed321 0%, #62a816 100%);
+		.button-inner{
+			font-family: "Avenir Next";
+			font-size: 14px;
+			font-weight: 500;
+		}
+		&:active{
+			transform: translate3d(1px,1px,0px) !important;
+			filter: brightness(0.4) !important;
+		}
+	}
+
+	.description{
+		letter-spacing: 1.15px;
+		padding-bottom: 4px;
+	}
+
+	.status-verified-label{
+		position: absolute;
+		bottom: 100%;
+		width: 100%;
+		padding-bottom: 2px;
+		padding-right: 6px;
+		letter-spacing: 0.42px;
+	}
+
+
+
+
+
+	// ion-grid {
+	// 	span.join-date {
+	// 		color: #fff;
+	// 		position: absolute;
+	// 		right: 5px;
+	// 		font-size: 0.714em;
+	// 		top: 0px;
+	// 	}
+	// 	.avatarChoose {
+	// 		border-radius: 100%;
+	// 		padding: 1px;
+	// 		width: 62px;
+	// 		height: 62px;
+	// 		display: block;
+	// 		background-color: #fff;
+	// 	}
+	// 	span.choose-image{
+	// 		width: 25px;
+	// 		height: 25px;
+	// 		background: #fff;
+	// 		border-radius: 25px;
+	// 		padding: 4px 0;
+	// 		top : 0px;
+	// 		right: 0px;
+	// 		left: 0px;
+	// 		bottom: 0px;
+	// 		margin: auto;
+	// 		opacity: 0.7;
+	// 		position: absolute;
+	// 		background-color: #fff;
+	// 		text-align: center;
+	// 		border: 1px solid black;
+	// 		box-shadow: 0px 0px 0px 1px white;
+	// 		ion-icon{
+	// 			font-size:1.1em;
+	// 			position: relative;
+	// 			top: -1px;
+	// 		}
+	// 	}
+	// 	.contrywrap{
+	// 		ion-avatar{
+	// 			.countryflag{
+	// 				border-radius: 100%;
+	// 				height: 30px;
+	// 				width: 30px;
+	// 				margin: auto;
+	// 				margin: 0 auto;
+	// 			}
+	// 		}
+			
+	// 	}
+	// 	.input-wrap{
+	// 		padding-top: 7px !important;
+	// 		.input-button-wrap{
+	// 			margin : auto;
+	// 			width: 140px;
+	// 			position: relative;
+	// 			ion-input{
+	// 				width: 130px;
+	// 				color: #fff;
+	// 				border: 1px solid white;
+	// 				height: 22px;
+	// 				border-radius: 5px;
+	// 				input{
+	// 					margin: 0!important;
+	// 					padding: 0 8px!important;
+	// 				}
+	// 			}
+
+	// 			button{
+	// 				position: absolute;
+	// 				right: 0;
+	// 				top: 0;
+	// 				height: 19px;
+	// 				border-radius: 0 5px 5px 0;
+	// 				width: 33px;
+	// 				color: #fff;
+	// 				background-image: -webkit-gradient(linear, left top, left bottom, from(#7ed321), to(#62a816));
+	// 				background-image: linear-gradient(180deg, #7ed321 0%, #62a816 100%);
+	// 				-webkit-box-shadow: 0 3px 0 #417505;
+	// 				box-shadow: 0 3px 0 #417505;
+	// 				span{
+	// 					img{
+	// 						width: 10px;
+	// 						height: 11px;
+	// 					}
+	// 				}
+					
+	// 				&:active{
+	// 					filter: brightness(0.4);
+	// 					box-shadow: 0 3px 0 #62a816 !important;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+		
+	// 	.genderButton{
+	// 		height: 30px;
+	// 		width: 30px;
+	// 		border-radius: 100%;
+
+	// 		&.male{
+	// 			background-color: #008cff;
+	// 		}
+
+	// 		&.female{
+	// 			background-color: rgb(235,62,133);
+	// 		}
+
+	// 		img{
+	// 			height: 22px;
+	// 			display: block;
+	// 			margin: auto;
+	// 			filter: brightness(0) invert(1);
+	// 		}
+	// 	}
+
+	// }
+	
+	
+	// .user-verification{
+	// 	padding: 0px 10px;
+
+	// 	ion-grid{
+	// 		margin-top: 19px !important;
+	// 		margin-bottom: 7px !important;
+	// 	}
+
+	// 	.button-edit{
+	// 		width: 57px;
+	// 		height: 26px;
+	// 		border-radius: 6px;
+	// 		background-image: linear-gradient(180deg, #7ed321 0%, #62a816 100%);
+	// 		.button-inner{
+	// 			font-family: "Avenir Next";
+	// 			font-size: 14px;
+	// 			font-weight: 700;
+	// 		}
+	// 		&:active{
+	// 			transform: translate3d(1px,1px,0px) !important;
+	// 			filter: brightness(0.4) !important;
+	// 		}
+	// 	}
+
+	// 	.lbl-verified{
+	// 		letter-spacing: 0.42px;
+	// 		color: white;
+	// 	}
+
+	// 	.button-edit,
+	// 	.lbl-verified{
+	// 		margin-right: 8px;
+	// 	}
+
+	// 	.verified-status-wrapper{
+	// 		height: 35px;
+	// 		width: 35px;
+	// 		border-radius : 5px;
+	// 		border: 1px solid white;
+	// 		img{
+	// 			padding: 6px;
+	// 		}
+	// 	}
+
+	// 	.module-title{
+	// 		letter-spacing: 1.31px;
+	// 	}
+
+	// }
+
+}

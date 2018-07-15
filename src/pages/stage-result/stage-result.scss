@@ -1,0 +1,14 @@
+page-stage-result {
+	
+	& > ion-content > .scroll-content{
+		overflow: hidden !important;
+		& > table{
+			height: 100%;
+			width: 100%;
+		}
+	}
+	curtain{
+		z-index: 10;
+	}
+
+}

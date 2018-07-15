@@ -1,0 +1,51 @@
+<ion-grid class='background-container' no-padding [ngClass]="{'active' : ownSlot == true, 'dark' : color == 'dark', 'light' : color == 'light'}">
+	<ion-row>
+		<ion-col  align-self-center col-auto>
+		</ion-col>
+		<ion-col col-auto>
+		</ion-col>
+		<ion-col  align-self-center col-auto>
+		</ion-col>
+		<ion-col align-self-center >
+		</ion-col>
+		<ion-col col-auto>
+		</ion-col>
+		<ion-col col-auto align-self-center>
+		</ion-col>
+		<ion-col col-auto></ion-col>
+		<ion-col col-auto align-self-center>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+<ion-grid class='absolute-container' no-padding [ngClass]="{'active' : ownSlot == true}">
+	<ion-row>
+		<ion-col text-center font-5 font-w-medium align-self-center col-auto>
+			{{data.index}}
+		</ion-col>
+		<ion-col col-auto>
+		</ion-col>
+		<ion-col (tap)='playerProfileTapped.emit()' text-center align-self-center col-auto>
+			<img [src]='data.profile' class='image-avatar' />
+			<img [src]='data.flag' class='image-flag' />
+		</ion-col>
+		<ion-col align-self-center font-6 font-w-medium>
+			{{data.name}}
+		</ion-col>
+		<ion-col col-auto>
+		</ion-col>
+		<ion-col col-auto align-self-center>
+			<div text-center font-5 font-w-bold>
+				{{data.score}}
+			</div>
+		</ion-col>
+		<ion-col col-auto></ion-col>
+		<ion-col col-auto align-self-center>
+			<div text-center font-5 font-w-bold>
+				<ng-container *ngIf='data.currencyType == "SILVER_TOKEN"'>
+					<img class='token-img silver' src='./assets/images/dashboard/coin.png' />
+				</ng-container>
+				<ng-container *ngIf='data.currencyType == "POUND"'>&pound;</ng-container>{{data.prize}}
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

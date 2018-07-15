@@ -1,0 +1,32 @@
+[stage-result-content]{
+
+	
+	daily-mission-offer{
+		margin-bottom: 12px;
+	}
+
+	tr[grow]{
+		height: 100%;
+	}
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	.leaderboard-wrapper{
+		position: relative;
+	}
+
+	.footer-wrapper{
+		height: 90px !important;
+		& > td{
+			position: relative;
+		}
+	}
+
+	stage-result-leaderboard{
+		border-top: 1px solid #fbe044;
+		border-bottom: 1px solid #fbe044;
+	}
+
+}

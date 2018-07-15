@@ -1,0 +1,49 @@
+ranking-squadup {
+	color: white;
+	display: block;
+	background-color: #000921 !important;
+	ion-scroll{
+		height: 100%;
+	}
+
+	player-position-slot{
+		margin: 5px;
+		color: white;
+	}
+
+	& > div{
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+
+	.header{
+		margin-top: -4px;
+	}
+
+	ion-grid{
+		padding: 0px 20px !important;
+		img{
+			height: 98px;
+			margin-top: 6px;
+			margin-bottom: 6px;
+		}
+	}
+
+	.prize-description{
+		padding-left: 20px;
+		table{
+			margin: auto;
+		}
+		td{
+			font-weight: 400;
+			letter-spacing: -0.34px;
+		}
+		.green-highlight{
+			font-size: inherit;
+			font-weight: 800;
+			letter-spacing: inherit;
+			color: #6cd100 !important;
+		}
+	}
+
+}

@@ -1,0 +1,176 @@
+page-game-home {
+
+	ion-content > .scroll-content{
+		background-image: url('../assets/images/home/background.png');
+		background-size: cover;
+		transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+		will-change: transform !important;
+	}
+
+	ion-slides img:active{
+		position: relative;
+		top: 2px;
+		left: 2px;
+		filter: brightness(0.4);
+	}
+
+	ion-slides{
+		height: 108px;
+
+		.slide-zoom{
+			height: calc(100% - 27px);
+			margin-bottom: 18px;
+			width: calc(100% - 14px);
+		}
+
+		.swiper-pagination{
+			bottom: 6px !important;
+		}
+
+		.swiper-pagination-bullet{
+			margin: 0px 2px !important;
+			background-color: #606060;
+			opacity: 1 !important;
+		}
+
+		.swiper-pagination-bullet-active{
+			background-color: white !important;
+		}
+
+	}
+
+	ion-slides{
+		position: relative;
+	}
+
+	ion-slides::after{
+		content: "";
+		position: absolute;
+		display: block;
+		height: 27px;
+		bottom: 5px;
+		right: 32px;
+		left: 32px;
+		background-image: linear-gradient(to top, #b1e417 0%, #5a7d06 100%);
+		border-radius: 100%;
+	}
+
+	.swiper-container{
+		perspective: unset !important;
+	}
+
+	.swiper-wrapper{
+		perspective: unset !important;
+	}
+
+	.swiper-slide{
+		perspective: 50px !important;
+	}
+
+	.horizontal-content-holder{
+		white-space: nowrap;
+		clear: both;
+		padding: 6px;
+	}
+
+	.small-horizontal-scroll{
+		height: 117px !important;
+	}
+
+	.big-horizontal-scroll{
+		height: 125px !important;
+	}
+
+	.small-horizontal-scroll,
+	.big-horizontal-scroll{
+		.scroll-content{
+			transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+		will-change: transform !important;
+		}
+	}
+
+	home-screen-game-icon-red-big,
+	home-screen-game-icon-small {
+		padding-right: 7px;
+		pointer-events: auto !important;
+	}
+
+	ion-content.disable-debossed{
+		home-screen-game-icon-red-big,
+		home-screen-game-icon-small{
+			.slot:active{
+				transform: none !important;
+				filter: none !important;
+			}
+		}
+	}
+
+	ion-col.slot-container{
+
+		home-screen-game-icon-small{
+			padding: 8px !important;
+			padding-bottom: 2px !important;
+		}
+
+		&:nth-child(3n+1){
+			home-screen-game-icon-small{
+				float: left;
+			}	
+		}
+
+		&:nth-child(3n+2){
+			text-align: center;
+			*{
+				text-align: left;
+			}
+			home-screen-game-icon-small{
+				display: inline-block;
+			}
+		}
+
+		&:nth-child(3n+3){
+			home-screen-game-icon-small{
+				float: right;
+			}
+		}
+
+	}
+}
+
+.alert-game-locked{
+	ion-backdrop{
+		background-color: transparent !important;
+	}
+	.alert-wrapper{
+		max-width: 244px !important;
+		min-width: 244px !important;
+		border-radius: 15px;
+		border: 0.5px solid #2b83ca;
+		box-sizing: border-box;
+		background-color: rgba(0, 0, 0, 0.81) !important;
+	}
+
+	.alert-title{
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 0.22px;
+		color: white;
+		margin: 0px !important;
+	}
+
+	.alert-head{
+		padding: 23px 20px !important;
+	}
+
+	.alert-message{
+		padding: 0px !important;
+	}
+
+	.highlight{
+		color: #f8e71c;
+		letter-spacing: 0.22px;
+	}
+
+}

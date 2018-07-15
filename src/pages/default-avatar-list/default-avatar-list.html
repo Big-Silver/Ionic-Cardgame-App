@@ -1,0 +1,27 @@
+<ion-content>
+
+	<div class='wrapper-content'>
+		<div class='slide-container'>
+			<ion-slides #imageSlider>
+				<ion-slide *ngFor='let image of images'>
+					<img [src]='image' />
+				</ion-slide>
+			</ion-slides>
+			<div class='green-circle'></div>
+		</div>
+	
+		<div text-center>
+			<div (tap)='goBackWithoutImage()' text-center class='label-own-avatar'>
+				Want to upload my own Avatar
+			</div>
+		</div>
+	</div>
+
+	
+
+	<div  padding>
+		<button (tap)='goToBack()' ion-button block round>
+			Done
+		</button>
+	</div>
+</ion-content>

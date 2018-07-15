@@ -1,0 +1,303 @@
+player-result-winning {
+	height: 30px !important;
+	display: block;
+	position: relative;
+	border-radius: 6px !important;
+	color: white;
+	
+	.token-img{
+		width: 10px !important;
+		height: 11px !important;
+		vertical-align: middle;
+		position: relative;
+		bottom: 1px;
+	}
+
+	.background-container{
+		background-image : linear-gradient(90deg, #989898, #FFFFFF) !important;
+		opacity: 0.7;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+
+		&:after{
+			content : "";
+			position: absolute;
+			top: 1px;
+			right: 1px;
+			bottom: 1px;
+			left: 1px;
+			display: block;
+			border-radius: inherit !important;
+		}
+
+		&.dark:after{
+			background-color: #000921 !important;
+		}
+
+		&.light:after{
+			background-color: #071949 !important;
+		}
+	}
+
+	.absolute-container{
+		z-index: 2;
+		top: 1px;
+		right: 1px;
+		left: 1px;
+		bottom: 1px;
+	}
+
+	ion-grid{
+		position: absolute;
+		width: unset !important;
+		border-radius: inherit !important;
+		& > ion-row{
+			height: 100%;
+		}
+
+	}
+
+	ion-grid.background-container{
+
+		& > ion-row > ion-col:nth-child(8){
+			width: 22.11538461% !important
+		}
+
+		& > ion-row > ion-col:nth-child(6){
+			width: 16.774193% !important;
+		}
+
+		& > ion-row > ion-col:nth-child(3){
+			width: 18.064516129% !important;
+		}
+
+		& > ion-row > ion-col:nth-child(2),
+		& > ion-row > ion-col:nth-child(5),
+		& > ion-row > ion-col:nth-child(7){
+			width: 4px !important;
+			
+		}
+
+		ion-col:nth-child(1){
+			width: 18.064516129% !important;
+			
+		}
+
+
+
+	}
+
+	ion-grid.absolute-container{
+
+		& > ion-row > ion-col:nth-child(8){
+			width: 22.11538461% !important;
+		}
+		
+
+		& > ion-row > ion-col:nth-child(6){
+			width: 16.774193% !important;
+			padding-left: 3px !important;
+			div{
+				transform: translate3d(0px, 0px, 0px) !important;
+			}
+		}
+
+		& > ion-row > ion-col:nth-child(8){
+			div{
+				background-image: linear-gradient(180deg, #fbc000 0%, #d8d8d8 100%);
+				transform: translate3d(0px, 0px, 0px);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				transform: translate3d(0px, 0px, 0px) !important;
+			}
+		}
+
+		& > ion-row > ion-col:nth-child(6){
+			div{
+				background-image: linear-gradient(180deg, #989898 0%, #ffffff 100%);
+				transform: translate3d(0px, 0px, 0px);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+
+
+		& > ion-row > ion-col:nth-child(3){
+			width: 18.064516129% !important;
+
+
+			.image-avatar,
+			.image-flag{
+				border: 1px solid white;
+				box-shadow: inset 0px 0px 0px 1px black;
+				padding: 1px;
+				background-color:  white !important;
+				border-radius: 100%;
+				vertical-align: middle !important;
+				display: inline-block !important;
+				box-sizing: border-box;
+			}
+
+			.image-avatar{
+				width: 26px !important;
+				height: 26px !important;
+			}
+			.image-flag{
+				height: 16px !important;
+				width: 16px !important
+			}
+
+		}
+
+		& > ion-row > ion-col:nth-child(2),
+		& > ion-row > ion-col:nth-child(5),
+		& > ion-row > ion-col:nth-child(7){
+			width: 4px !important;
+			background-color: rgba(255,255,255,0.08);
+		}
+
+		ion-col:nth-child(1){
+			width: 18.064516129% !important;
+		}
+
+	}
+
+	ion-grid.active{
+
+		color: #e44049;
+
+		.image-avatar,
+		.image-flag{
+			border-color: #ec585b !important;
+		}
+
+		& > ion-row > ion-col:nth-child(1),
+		& > ion-row > ion-col:nth-child(4){
+			font-size: 12px !important;
+			font-weight: 500 !important;
+			*{
+				font-size: 12px !important;
+				font-weight: 500 !important;
+			}
+		}
+
+		& > ion-row > ion-col:nth-child(6),
+		& > ion-row > ion-col:nth-child(8){
+			*{
+				font-size: 14px !important;
+				font-weight: 700 !important;
+			}
+		}
+
+
+	}
+}		
+
+
+player-result-winning.ranked{
+
+
+	height: 36px !important;
+
+
+	ion-grid.absolute-container{
+
+		& > ion-row > ion-col:nth-child(3){
+
+			position: relative;
+
+			.image-avatar{
+				width: 32px !important;
+				height: 32px !important;
+				margin-right: 6px;
+			}
+			.image-flag{
+				height: 15px !important;
+				width: 15px !important;
+				position: absolute;
+				bottom: 1px;
+				right: 12px;
+			}
+
+		}
+
+		ion-col:nth-child(1){
+			width: 18.064516129% !important;
+		}
+
+	}
+
+	ion-grid.active{
+
+		color: #e44049;
+
+		.image-avatar,
+		.image-flag{
+			border-color: #ec585b !important;
+		}
+
+		& > ion-row > ion-col:nth-child(4){
+			font-size: 12px !important;
+		}
+	}
+
+
+
+}
+
+player-result-winning.bronze{
+	
+	ion-grid{
+		color: #ffa62a;
+		.image-avatar,
+		.image-flag{
+			border-color: #ffa62a !important;
+		}
+
+		& > ion-row > ion-col:nth-child(1){
+			font-size: 14px !important;
+		}
+	
+	}
+
+	
+}
+
+player-result-winning.gold{
+	
+	ion-grid{
+		color: #fbd500;
+		.image-avatar,
+		.image-flag{
+			border-color: #fbd500 !important;
+		}
+
+		& > ion-row > ion-col:nth-child(1){
+			font-size: 14px !important;
+		}
+	}
+
+	
+
+}
+
+player-result-winning.silver{
+	
+	ion-grid{
+		color: #d3dae1;
+		.image-avatar,
+		.image-flag{
+			border-color: #d3dae1 !important;
+		}
+
+		& > ion-row > ion-col:nth-child(1){
+			font-size: 14px !important;
+		}
+
+	}
+
+	
+
+}

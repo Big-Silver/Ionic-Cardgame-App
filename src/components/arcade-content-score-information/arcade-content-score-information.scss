@@ -1,0 +1,152 @@
+arcade-content-score-information{
+
+    color: white;
+	width: 100%;
+	padding: 5px 0px 15px 0px;
+	
+    & > ion-grid{
+        height: 100%;
+        padding: 0px !important;
+    }
+
+    ion-row{
+        height: 100%;
+    }
+
+    ion-col{
+        padding-top: 0px;
+        padding-bottom: 0px; 
+    }
+
+    .highlight{
+        color: #fff30a !important;
+	}
+	
+	.highlight-green{
+		color: #1dc60d !important;
+	}
+
+    .main-table{
+        width: 100%;
+    }
+
+    .target-header > tr:nth-child(1){
+        td:nth-child(1){
+            padding-left: 8px !important;
+            text-align: left;
+        }
+        td:nth-last-child(1){
+            text-align: right;
+            padding-right: 8px !important;
+        }
+    }
+
+    .heading-text{
+        vertical-align: top;
+    }
+
+    table td{
+        padding: 0px !important;
+    }
+
+    .subtitle{
+        padding-bottom: 6px !important;
+    }
+
+    ion-avatar{
+        position: relative;
+		display: inline-block;
+		height: 55px;
+		width: 55px;
+        .badge{
+            min-height: 20px;
+            min-width: 20px;
+            text-align: center;
+            position: absolute;
+            top: -2px;
+            right: 0px;
+            padding: 4px 3px;
+            font-weight: bolder;
+            font-size: 13px;
+            background-color: #fa5c5c;
+            border-radius: 100%;
+            line-height: 1 !important;
+        }
+	}
+
+	ion-avatar:active{
+		filter: brightness(0.4);
+		transform-origin: (2,2);
+		*{
+			transform: translate(2px, 2px) !important;
+		}
+	}
+
+	.hidden{
+		opacity: 0 !important;
+		label{
+			opacity: 0 !important;
+		}
+	}
+	
+	.element-disabled{
+		opacity: 0.4;
+		pointer-events: none;
+		cursor: default;
+	}
+
+    .score-table{
+        width: 63.75vw;
+        margin: 1px auto 3px auto;
+    }
+
+    .score-table td{
+        color: white;
+        text-transform: uppercase;
+        line-height: 14px;
+        letter-spacing: 0.5px !important;
+    }
+
+    .score-table > tr:nth-last-child(1) > td{
+        padding-bottom: 3px !important;
+    }
+
+    .score-table > tr:nth-first-child(2) > td{
+        padding-top: 1px !important;
+    }
+
+
+	.score-table-container-row{
+		background-color: rgba(66, 134, 244, 0.25);
+	}
+
+	.score-border td{
+		height: 2px;
+		background-color: #1247ac;
+		// background-image: linear-gradient(90deg, #005585 0%, #2ad1f5 50%, #005585);
+	}
+
+	.op-hidden{
+		filter: opacity(0) !important;
+	}
+
+}
+
+arcade-content-score-information.fade-out-content{
+
+	.target-header{
+		opacity: 0 !important;
+		*{
+			opacity: 0 !important;
+		}
+	}
+
+	.score-table-container-row td{
+		opacity: 0 !important;
+	}
+
+	.animated{
+		animation: none !important;
+	}
+
+}

@@ -1,0 +1,24 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col></ion-col>
+		<ion-col col-auto>
+			<img class='img-present' src='assets/images/player-profile/present-box.png' />
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-auto *ngFor='let day of _dayArray;let i = index;' >
+			<div class='marker-wrapper'>
+				<div class='tick-wrapper' [ngClass]='{"active" : (i) < completedDays}'>
+					<ion-icon name='ios-checkmark'>
+
+					</ion-icon>
+				</div>
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col font-6 font-w-bold col-auto *ngFor='let day of _dayArray;let i = index;'>
+			day {{i+1}}
+		</ion-col>
+	</ion-row>
+</ion-grid>

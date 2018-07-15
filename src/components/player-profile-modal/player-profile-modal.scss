@@ -1,0 +1,120 @@
+player-profile-modal,
+[player-profile-modal] {
+
+	animation-name: background-fade-in;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+
+	&.background-fade-out{
+		animation-name: background-fade-out !important;
+	}
+
+	tr[expand]{ height: 100%; }
+	tr[shrink]{ height: 1px; }
+	td[align-content-top]{
+		vertical-align: top;
+	}
+	
+
+	.red-background{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 43px;
+		height: 49px;
+		border-right: 21px solid #d12424;
+		border-top: 24px solid #d12424;
+		border-left: 21px solid transparent;
+		border-bottom: 24px solid transparent;
+	}
+
+	.red-icon{
+		position: absolute;
+		top: 0px;
+		right: 1px;
+		font-size: 29px;
+		color: white;
+	}
+
+	tbody{
+		background-image : url('../assets/images/player-profile/background.png');
+		background-size: cover;
+	}
+	
+	player-profile-header{
+		background-color : rgba(6, 5, 53, 0.53);	
+	}
+
+
+	// ion-col{
+	// 	padding: 
+	// }
+
+	.btn-action, 
+	.btn-close{
+		height: 36px !important;
+		width: calc(100% - 10px);
+		margin: auto;
+		margin-bottom: 8px !important;
+		border-radius: 8px;
+		display: block;
+		&:active{
+			transform: translate(2px, 2px);
+			filter: brightness(0.4);
+		}
+		.button-inner{
+			color: white;
+			font-size: 18px !important;
+			font-weight: 500;
+			ion-icon{
+				font-size: 22px !important;
+				font-weight: 900;
+			}
+		}
+	}
+
+	.btn-close{
+		background-color: #d12424;
+	}
+
+	.btn-action.follow{
+		background-color: #969696;
+		.button-inner{
+			font-size: 14px !important;
+			font-weight: 500;
+		}
+	}	
+	.btn-action.unfollow{
+		background-color: #7ccf20;
+	}
+
+	& > .animated{
+		animation-timing-function: linear;
+		animation-duration: 0.5s !important;
+	}
+
+	& > thead,
+	& > tbody{
+		transition: transform 0.5s !important;
+	}
+
+
+}
+
+@keyframes background-fade-in{
+	0%{
+		background-color: transparent;
+	}
+	100%{
+		background-color: rgba(0,0,0,0.5);
+	}
+}
+
+@keyframes background-fade-out{
+	0%{
+		background-color: rgba(0,0,0,0.7);
+	}
+	100%{
+		background-color: transparent;
+	}
+}

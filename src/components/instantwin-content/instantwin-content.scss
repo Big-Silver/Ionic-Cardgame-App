@@ -1,0 +1,55 @@
+[instantwin-content] {
+	
+		padding: 0px !important;
+		min-height: 100%;
+		width: 100%;
+		max-width: 100%;
+	
+		tr[shrink]{
+			height: 1px;
+		}
+	
+		tr[expand]{
+			height: 100%;
+		}
+	
+		[flex-grow]{
+			flex-grow: 1;
+		}
+	
+		.highlighted-border{
+			height: 1px;
+			background-image: linear-gradient(180deg, #fbe044 0%, #e1aa10 100%);
+		}
+	
+		.highlighted-border.inverse{
+			background-image: linear-gradient(180deg, #fbe044 0%, #e1aa10 100%);
+		}
+	
+		.td-instantwin-content-score-background{
+			background: url('../assets/images/arcade/blue-background.png');
+			background-size: cover;
+		}
+	
+		.td-instantwin-content-score-background > instantwin-content-score-information{
+			margin-bottom: 51px;
+		}
+
+		gamemode-game-details{
+			// overflow: hidden !important;
+		}
+	
+		[gamemode-balance],
+		[gamemode-game-details],
+		[gamemode-game-information],
+		[gamemode-score-information],
+		gamemode-balance,
+		gamemode-game-details,
+		gamemode-game-information,
+		gamemode-score-information,
+		{
+			display: block;
+		}
+	
+	}
+	

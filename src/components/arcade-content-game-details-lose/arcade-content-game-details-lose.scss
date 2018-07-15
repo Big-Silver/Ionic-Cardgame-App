@@ -1,0 +1,115 @@
+arcade-content-game-details-lose {
+
+	$shadow: #533d4a;
+	$red: #e55643 ;
+	$green: #2b9f5e;
+	$yellow: #f1c83c;
+	background-color: black;
+	color: white;
+
+	ion-slides{
+		max-width: 100vw;
+	}
+
+	.image-lose{
+		max-width: calc(40vw + 8px);
+	}
+	
+	.image-lose img{
+		width: 40vw;
+		padding-top: 4px;
+	}
+
+	.title-lose{
+		text-align: center;
+		font-size: 32px;
+		margin : 0px;
+		color : white;
+	}
+
+	[highlight]{
+		color : #fbe10a !important;
+	}
+
+
+	.title-lose{
+
+		&:nth-child(1){
+			color: $red !important;
+		}
+
+		&:nth-child(2){
+			color: $green !important;
+		}
+
+		&:nth-child(3){
+			color: $yellow !important;
+		}
+
+		transform: rotate(-10deg);
+		display: block;
+		position: relative;
+
+		span {
+			transform: skew(-10deg);
+			display: inline-block;
+			text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px;
+			min-width: 10px;
+			min-height: 10px;
+			font-size: 24px !important;
+			position: relative;
+			font-weight: 700;
+			font-family: "Fjalla" !important;
+		}
+	}
+
+	.clear{
+		clear: both;
+	}
+
+	.screen1, .screen2{
+		height: 139px; 
+	}
+
+	.screen2{
+	
+		.tell-frnd-label{
+			padding-top: 10px;
+		}
+
+		[font-5]{
+			letter-spacing: 0.75px !important;
+		}
+
+		[font-h1]{
+			letter-spacing: 1.5px !important;
+		}
+
+		.shareLabel{
+			padding-top: 4px;
+		}
+
+		button{
+			color: white;
+			background-color: #43c600;
+			box-shadow: 0px 3px 0px 0px #3e702b;
+			height: 36px !important;
+			width: 78px !important;
+			border-radius: 60px;
+			margin: 12px 0px 16px 0px;
+		}
+
+		button:active{
+			filter: brightness(0.4);
+			transform: translate(2px, 2px) !important;
+		}
+
+		button label{
+			font-size: 22px;
+			line-height: 22px;
+		}
+
+	}
+
+
+}

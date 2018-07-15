@@ -1,0 +1,334 @@
+page-cashout {
+
+	color: white;
+
+	ion-toolbar:nth-child(1){
+		height: 50px;
+	}
+
+	ion-toolbar{
+		
+		.toolbar-background{
+			background-image: url('../assets/images/home/header_background.png');
+			background-size: cover;
+			border: none !important;
+		}
+		ion-title{
+			padding: 0px !important;
+		}
+		.toolbar-title{
+			font-family: Lato;
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 0.74px;
+			text-align: center;
+			text-transform: unset !important;
+		}
+
+		.gradient-border{	
+			height: 2px;
+			background-image: linear-gradient(180deg, #ffb500 0%, #f9e852 100%) !important;
+		}
+
+		.bar-buttons{
+			margin: 0px;
+			 button{
+				 color: #fff;
+				 border-radius: 0px;
+				 ion-icon{
+					 font-size: 1.4em !important;
+				 }
+			 }
+		 }
+
+	}
+
+	.scroll-content{
+		padding: 0px !important;
+		overflow: hidden;
+		background-image: linear-gradient(38deg, #30084e 0%, #16108f 100%, #151090 100%);
+	}
+
+	table{
+		height: 100%;
+		width: 100%;
+	}
+
+	tr[shrink]{
+		height: 1px;
+	}
+
+	tr[grow]{
+		height: 100%;
+	}
+
+	.description{
+		color: #00d8ff !important;
+		letter-spacing: 0.96px !important;
+	}
+
+	.balance-header{
+		color: white;
+		ion-row:nth-child(1){
+			margin: 4px 2px;
+			border-radius: 5px;
+			height: 26px;
+			background-color: rgba(0,0,0,0.35);
+			padding-bottom: 2px;
+		}
+		ion-row:nth-child(2){
+			padding-top: 5px !important;
+			padding-bottom: 16px !important;
+		}
+
+	}
+
+	.withdrawable-header{
+		color: white;
+		border-top: 1px solid #0641ec;
+		border-bottom: 1px solid #0641ec;
+		background-color: rgba(0,0,0,0.5) !important;
+		ion-row:nth-child(1){
+			margin: 6px 2px 0px 2px;
+			border-radius: 5px;
+			height: 26px;
+			background-color: rgba(0,0,0,0.35);
+			padding-bottom: 2px;
+			ion-col:nth-child(2){
+				color: #7ed321;
+				font-family: "Avenir Next";
+				font-size: 24px;
+				font-weight: 700;
+				padding-bottom: 2px;
+			}
+		}
+
+		ion-row:nth-child(2){
+			ion-col:nth-child(1){
+				padding-left: 10px !important;
+			}
+		}
+
+		.withdraw-button{
+			width: 103px;
+			height: 39px;
+			border-radius: 20px;
+			background-color: #009eff;
+			margin: 18px 9px !important;
+			.button-inner{
+				font-size: 12px;
+				font-weight: 700;
+				letter-spacing: 1.13px;
+			}
+			&:active{
+				filter: brightness(0.4);
+			}
+		}
+
+	}
+
+	.footer-wrapper{
+		position: relative;
+		& > ion-grid{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			height: 100%;
+			width: 100%;
+			justify-content: space-between;
+			padding: 22px 0px 10px 0px !important;
+		}
+
+		.gradient-text{
+			letter-spacing: 2px;
+			transform: translate3d(0px, 0px, 0px) !important;
+			background-image: linear-gradient(0deg, #ffffff 0%, #f8e71c 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin-bottom: 16px;
+		}
+
+		.description-small{
+			line-height: 13px;
+			color: #00e9ff !important; 
+			letter-spacing: 1.28px;
+		}
+
+	}
+
+	.range-container{
+
+		padding-bottom: 20px;
+		margin-bottom: 10px;
+		transform: translate3d(0px, 0px, 0px) !important;
+ 
+		ion-range{
+			padding: 0px 16px 12px 16px !important;
+		}
+
+		.range-slider{
+			height: 37px;
+		}
+
+		.range-knob{
+			width: 23px;
+			height: 33px;
+			left: 8px !important;
+			top: 8px !important;
+			background-image: linear-gradient(180deg, #ffe501 0%, #ff7200 100%);
+			border: none !important;
+
+			&:after{
+				position: absolute;
+				top: 3px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				margin: auto;
+				width: 15px;
+				height: 15px;
+				border-top: 15px solid #dd6703 !important;
+				border-right: 7px solid transparent !important;
+				border-left: 7px solid transparent !important;
+				box-sizing: border-box;
+				content: "";
+			}
+
+		}
+
+		.range-knob-handle{
+			top: 26px;
+			z-index: 2;
+		}
+
+		.range-bar{
+			height: 24px;
+			border-radius: 12px !important;
+			border: 1px solid #4e16c7;
+			top: 17px !important;
+			background-color: rgba(35, 13, 112, 0.59);
+		}
+
+		.range-bar-active{
+			height: 20px !important;
+			top: 19px !important;
+			left: 2px !important;
+			z-index: 1;
+			background-color: #009eff;
+			border-radius: 12px 0 0 12px !important;
+		}
+
+		.range-pin{
+			transform: translate3d(0px, 0px, 0px) scale(1) !important;
+			padding: 8px 3px 16px 11px !important;
+			color: white !important;
+			font-size: 14px;
+			font-weight: 700;
+			min-width: auto !important;
+
+			&:after{
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				bottom: 13px;
+				margin: auto;
+				height: 12px;
+				width: 12px;
+				background-size:cover;
+				content: '£';
+			}
+
+		}
+
+	}
+
+	.percentage-grid{
+
+		padding: 0px 16px 10px calc(10%  + 16px) !important;
+		position: absolute;
+		bottom: -2px;
+		z-index: 1;
+		pointer-events: none !important;
+
+		ion-row{
+			justify-content: space-between;
+		}
+
+		ion-row:nth-child(1){
+			border-radius: 0px 12px 12px 0px !important;
+			overflow-y: hidden;
+		}
+
+		ion-col{
+			width: 3px;
+		}
+
+		.tick-mark{
+			height: 18px;
+			margin-bottom: 2px;
+			width: 3px;
+			background-color: rgba(0, 158, 255,0.36);
+			border-radius: 6px !important;
+		}
+
+		[font-6]{
+			position: absolute;
+			white-space: nowrap;
+			transform: translate3d(-50%,2px, 0px);
+			color: white;
+			letter-spacing: 0.94px;
+		}
+
+	}
+
+	.wrapper-convert-button{
+		padding: 0px 30px !important;
+		button{
+			margin: 0px !important;
+			height: 48px !important;
+			border-radius: 48px !important;
+			background-color: #7ed321 !important;
+			[font-h3]{
+				letter-spacing: 2.54px !important;
+			}
+
+			ion-col:nth-child(1){
+				padding-bottom: 3px !important;
+			}
+
+		}
+
+		ion-row{
+			justify-content: center;
+		}
+	}
+
+	.img-silver-token{
+		height: 20px;
+		width: 20px;
+		display: block;
+	}
+
+	.convert-lbl{
+		color: white;
+		margin-top: 5px;
+	}
+	
+}
+
+
+@keyframes borderPulse {
+	0% {
+		box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255,.4), 0px 0px 0px 0px rgba(255,255,255,1);
+	}
+	100% {
+		box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255,.2), 0px 0px 0px 10px rgba(255,255,255,0);
+	}
+}
+
+.border-pulse{
+	animation: borderPulse 1000ms infinite ease-out;
+}

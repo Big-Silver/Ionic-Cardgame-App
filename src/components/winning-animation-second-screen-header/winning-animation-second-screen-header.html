@@ -1,0 +1,50 @@
+<ion-grid expand no-padding>
+	<ion-row>
+		<ion-col class='p-relative'>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col col-auto>
+						<home-screen-game-icon-small class='medium' color='red' [data]='game'>
+						</home-screen-game-icon-small>
+					</ion-col>
+					<ion-col align-self-center>
+						<div font-w-medium font-11>
+							Amari2366
+						</div>
+						<div font-5 font-w-normal>
+							You are not part of the winners
+						</div>
+						<div font-w-medium>
+							(<label font-w-medium class='highlight'>50</label>)
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col>
+						<ion-grid class='winner-list-date-header' no-padding>
+							<ion-row>
+								<ion-col class='title' font-6 font-w-medium col-auto text-center>
+									Winner<br/>
+									List
+								</ion-col>
+								<ion-col font-6 font-w-medium align-self-center>
+									10/10/2018
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+		<ion-col align-self-end col-auto>
+			<img class='img-share' src='./assets/images/home/share.png' />
+		</ion-col>
+
+	</ion-row>
+
+
+</ion-grid>
+
+<div *ngIf='showCloseButton == true' class='red-background' (click)='closeModal.emit()'>
+</div>
+<ion-icon *ngIf='showCloseButton == true' class='red-icon' name='ios-close-circle-outline' (click)='closeModal.emit()'></ion-icon>

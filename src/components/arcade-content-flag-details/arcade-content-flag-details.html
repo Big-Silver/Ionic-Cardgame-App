@@ -1,0 +1,8 @@
+<ion-list>
+  <ion-item *ngFor="let item of popoverItemList" (click)="setSelectedTitle(item.name)">
+    <ion-avatar item-start>
+    	<img src="{{item.src}}">
+    </ion-avatar>
+    <ion-label>{{item.fullname}}</ion-label>
+  </ion-item>
+</ion-list>

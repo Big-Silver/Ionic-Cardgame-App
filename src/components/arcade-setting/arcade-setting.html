@@ -1,0 +1,35 @@
+<!-- Generated template for the ArcadeSettingComponent component -->
+<div class="account-settings">
+	<ion-list>
+		<ion-item class="language-list">
+			<ion-label>Language</ion-label>
+			<div  item-content>
+				<a class="select-language" (click)="presentPopover($event)">
+				<img class="flag" src="{{assetBaseUrl}}/{{selectedFlag}}"/>
+				<ion-icon name="md-arrow-dropdown"></ion-icon></a>
+			</div>
+		</ion-item>
+		<ion-item class="currency">
+			<ion-label>Currency</ion-label>
+			<div item-content class="price-show">
+				£
+		    </div>
+		</ion-item>
+		<ion-item  class="music">
+			<ion-label>Music</ion-label>
+			<ion-toggle class="toggle-light" checked="true" ></ion-toggle>
+		</ion-item>
+		<ion-item  class="sound">
+			<ion-label>Sound</ion-label>
+			<ion-toggle class="toggle-light" checked="true"></ion-toggle>
+		</ion-item>
+		<ion-item  class="post-notification">
+			<ion-label>Post notification</ion-label>
+			<ion-toggle class="toggle-light" checked="true"></ion-toggle>
+		</ion-item>
+		<ion-item  class="news-offer">
+			<ion-label>Offers and news</ion-label>
+			<ion-toggle class="toggle-light" checked="true"></ion-toggle>
+		</ion-item>
+	</ion-list>
+</div>

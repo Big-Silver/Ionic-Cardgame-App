@@ -1,0 +1,68 @@
+squadup-selection-header {
+	display: block;
+	color: white;
+
+	ion-grid{
+		min-height: inherit !important;
+		height: inherit !important;
+		justify-content: center;
+
+		ion-row:nth-child(1),
+		ion-row:nth-last-child(1){
+			padding: 4px;
+		}
+
+	}
+
+	.text-highlight{
+		color: #f9ce09;
+	}
+
+	.content{
+		flex-wrap: nowrap !important;
+
+		ion-col:nth-child(1){
+			flex-shrink: 1;
+			flex-grow: 0;
+		}
+		ion-col:nth-child(2){
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+
+	}
+
+	.content{
+		img{
+			max-width: unset !important;
+			width: 80px !important;
+			height: 70px;
+			vertical-align: middle;
+			margin: 10px;
+		}
+	}
+
+	.battle-a-friend{
+		height: 77px !important;
+		margin : 5px 10px !important; 
+	}
+
+	.content-text{
+		letter-spacing: 0.06px !important;
+		padding-right: 10px !important;
+	}
+
+	.content-image{
+		position: relative;
+		.image-text{
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			margin: auto;
+			line-height: 15px;
+			bottom: 6px;
+		}
+	}
+
+}	

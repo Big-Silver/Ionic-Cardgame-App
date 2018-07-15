@@ -1,0 +1,25 @@
+<ion-content no-padding>
+	<table squadup-selection (closeModal)='dismissView()'>
+		<squadup-selection-header 
+			[maxSelection]='maxSelection' 
+			[mode]='mode' 
+			[alreadySelected]='alreadySelected'
+		>
+		</squadup-selection-header>
+
+		<squadup-selection-players 
+			[maxSelection]='maxSelection' 
+			[players]='players' 
+			[mode]='mode'
+			(profileViewTapped)='openPlayerProfile()'
+			(selectionChanged)='selectedPlayerChanged($event)' >
+		</squadup-selection-players>
+
+		<squadup-selection-footer>
+		</squadup-selection-footer>
+	</table>
+	<div *ngIf='mode == "CHALLANGE"' class='corner-image'>
+		<img class='background' src='assets/images/squadup/corner.png' />
+		<img class='gamemode-icon' src='assets/images/game-mode-icons/head2head.png' />
+	</div>
+</ion-content>

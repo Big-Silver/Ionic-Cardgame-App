@@ -1,0 +1,17 @@
+page-game-webview{
+	ion-grid{
+		height: 100%;
+		justify-content: space-around;
+	}
+	.scroll-content,
+	.fixed-content{
+		padding: 0px !important;
+		margin: 0px !important;
+	}
+	.scroll-content{
+		overflow-y: hidden;
+	}
+	iframe{
+		border: none !important;
+	}
+}

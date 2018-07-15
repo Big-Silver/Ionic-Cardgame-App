@@ -1,0 +1,21 @@
+timer {
+	color: white;
+	display: block;
+	text-align: center;
+	background-color: black;
+	height: 31px;
+	line-height: 31px;
+	font-size: 19px;
+	font-family: "Avenir Next";
+	font-weight: 500;
+	small{
+		font-size: 13px;
+		// text-transform: uppercase;
+	}
+	img{
+		height: 17px;
+		width: 17px;
+		vertical-align: middle;
+		margin-bottom: 2px;
+	}
+}

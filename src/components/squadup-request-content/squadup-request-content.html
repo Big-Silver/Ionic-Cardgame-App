@@ -1,0 +1,20 @@
+<tr shrink class='wrapper-game-request-challanger'>
+	<td>
+		<ng-content select=' > game-request-challanger'></ng-content>
+	</td>
+</tr>
+<tr grow class='wrapper-game-request-game-info'>
+	<td>
+		<ng-content select=' > game-request-game-info'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<ng-content select=' > game-request-footer'></ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<timer [slottedWithIcon]='true' time='3600'></timer>
+	</td>
+</tr>

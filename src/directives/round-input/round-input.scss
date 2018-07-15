@@ -1,0 +1,43 @@
+[round-input]{
+	height: 46px;
+	border-radius: 70px;
+	border: 1px solid white !important;
+	background-color: white !important;
+
+	::placeholder{
+		color: #bcbcbc !important;
+		font-family: Lato;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	::-webkit-input-placeholder{
+		color: #bcbcbc !important;
+		font-family: Lato;
+		font-size: 14px;
+		font-weight: 400;
+	}	
+	::-moz-placeholder{
+		color: #bcbcbc !important;
+		font-family: Lato;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	:-ms-input-placeholder{
+		color: #bcbcbc !important;
+		font-family: Lato;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	:-moz-placeholder {
+		color: #bcbcbc !important;
+		font-family: Lato;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	
+}
+
+[round-input][with-focus-border].input-has-focus{
+	border: 1px solid #60cb27 !important;
+}

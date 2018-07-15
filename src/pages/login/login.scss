@@ -1,0 +1,86 @@
+page-login {
+	/*display: table;*/
+	display:block;
+	height: 100%;
+	background-image: url(../assets/images/registration/bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 372px;
+	background-position: 0 -48px;
+
+	.bgshadow{
+		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 50%);
+		height: 100%
+	}
+
+	.login-wrapper{
+		padding: 1em;
+		display: table-cell;
+		vertical-align: middle;
+		position:absolute;
+		bottom:0px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		form ion-input .text-input{
+			background: #dcdcdc;
+			height: 40px;
+			border-radius: 100px;
+			text-align: center;
+			font-size: 1.4rem;
+			margin: 5px 0 5px 0;
+			width: 100%;
+			letter-spacing: 1.4px;
+		}
+
+		.forgot-password-option{
+			color: #a30909;
+			font-size: 1em;
+			font-weight: 400;
+			line-height: 26px;
+			padding:0;
+			margin:0;
+		}
+
+		.slogan-txt .dont-have-account-text{
+			opacity: 0.5;
+			color: #1d1d26;
+			font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 0.08571428571428572em;
+			line-height: 1.4285714285714286em;
+			text-transform: uppercase;
+			margin-right:0;
+		}
+		.slogan-txt .signup{
+			color: #a30909;
+			font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 0.08571428571428572em;
+			line-height: 1.4285714285714286em;
+			text-transform: uppercase;
+		}
+
+		p.invaild.app-error{
+			margin: 0;
+			padding: 0 5px;
+			font-size: 0.7142857142857143em;
+			font-weight: 200;
+			color: #ff0000;
+			text-align:left;
+			position:absolute;
+			bottom:-5px;
+		}
+
+		button.app-auth-btn {
+	        color: map-get($colors,white);
+	        font-weight:400;
+	        .button-inner{
+	           font-size:0.90em; 
+	        }
+        }
+
+	}
+}
+
+
+

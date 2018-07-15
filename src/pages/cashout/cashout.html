@@ -1,0 +1,158 @@
+
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons left>
+			<button ion-button icon-only (click)="goBack()">
+				<ion-icon class='tapicon-back'></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title>
+			Cashout
+		</ion-title>
+	</ion-toolbar>
+	<ion-toolbar wrap-only>
+		<div class='gradient-border'>
+
+		</div>
+	</ion-toolbar>
+	<div class='red-background' (click)='closeModal()'>
+	</div>
+</ion-header>
+
+
+<ion-content padding>
+
+	<table>
+
+		<tr shrink>
+			<td>
+				<ion-grid no-padding class='balance-header'>
+					<ion-row>
+						<ion-col align-self-center col-auto>
+							&nbsp;
+							Your Balance: 
+							&nbsp;
+						</ion-col>
+						<ion-col font-w-medium font-10 align-self-center>
+							&pound;{{remainingBalance}}
+						</ion-col>
+					</ion-row>
+					<ion-row text-center>
+						<ion-col font-5 class='description'>
+							We take upto afew days to verify cash winnings balance but once verified it will become withdrawable.
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</td>
+		</tr>
+
+		<tr shrink>
+			<td>
+				<ion-grid no-padding class='withdrawable-header'>
+					<ion-row>
+						<ion-col align-self-center col-auto>
+							&nbsp;
+							Withdrawable:
+							&nbsp;
+						</ion-col>
+						<ion-col align-self-center>
+							&pound;{{withDrawable}}
+						</ion-col>
+					</ion-row>
+					<ion-row text-center>
+						<ion-col text-left align-self-center font-5 class='description'>
+							Withdrawable is the amount 
+							that has been verified for cashout.
+						</ion-col>
+						<ion-col col-auto align-self-center>
+							<button class='withdraw-button' ion-button>
+								WITHDRAW
+							</button>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</td>
+		</tr>
+
+		<tr grow>
+			<td class='footer-wrapper'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col col-12 font-11 font-w-bold text-center class='gradient-text'>
+							GET UPTO 20% FREE COINS
+						</ion-col>
+						<ion-col text-center col-12 font-6 class='description-small'>
+							Get more for your money convert your cash back into coins here and be gifted with extra coins.
+						</ion-col>
+					</ion-row>
+
+					<ion-row>
+						<ion-col class='range-container'>
+							<ion-grid no-padding class='percentage-grid'>
+								<ion-row>
+									<ion-col col-auto>
+										<div class='tick-mark'></div>
+									</ion-col>
+									<ion-col col-auto>
+										<div class='tick-mark'></div>
+									</ion-col>
+									<ion-col col-auto>
+										<div class='tick-mark'></div>
+									</ion-col>
+									<ion-col col-auto>
+										<div class='tick-mark'></div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-auto>
+										<label font-6>
+											+5%
+										</label>
+									</ion-col>
+									<ion-col col-auto>
+										<label font-6>
+											+10%
+										</label>
+									</ion-col>
+									<ion-col col-auto>
+										<label font-6>
+											+15%
+										</label>
+									</ion-col>
+									<ion-col col-auto>
+										<label font-6>
+											+20%
+										</label>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+							<ion-range #range [(ngModel)]="sliderModel" (ionChange)='sliderChanged(sliderModel)' pin='true' min="0" [max]='withDrawable' step="1">
+							</ion-range>
+						</ion-col>
+					</ion-row>
+
+					<ion-row>
+						<ion-col class='wrapper-convert-button'>
+							<button ion-button block class='convert-button' [ngClass]="{'border-pulse' : sliderModel > 0}">
+								<ion-grid no-padding>
+									<ion-row>
+										<ion-col col-auto align-self-center>
+											<img class='img-silver-token' src='./assets/images/dashboard/coin.png' />
+										</ion-col>
+										<ion-col font-h3 font-w-bold align-self-center col-auto>
+											&nbsp;{{resultCoins}}&nbsp;
+										</ion-col>
+									</ion-row>
+								</ion-grid>
+							</button>
+							<div class='convert-lbl' font-h3 font-w-bold text-center>
+								Convert
+							</div>
+						</ion-col>
+					</ion-row>
+
+				</ion-grid>
+			</td>
+		</tr>
+	</table>
+</ion-content>

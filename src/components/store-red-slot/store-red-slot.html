@@ -1,0 +1,64 @@
+
+<ion-grid no-padding class='content-wrapper'>
+	<ion-row>
+		<ion-col align-self-center col-auto>
+			<img *ngIf='mode == "sm"' class='coin-small' src='assets/images/store/coins-small.png' />
+			<img *ngIf='mode == "md"' class='coin-medium' src='assets/images/store/coins-medium.png' />
+			<img *ngIf='mode == "lg"' class='coin-large' src='assets/images/store/coins-large.png' />
+			<img *ngIf='mode == "xl"' class='coin-extra-large' src='assets/images/store/coins-extra-large.png' />
+		</ion-col>
+		<ion-col align-self-top>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col ></ion-col>
+					<ion-col col-auto text-left font-7 font-w-medium class='svg-wrapper'>
+						<div text-nowrap class='fake-svg-wrapper'>
+							{{data.amount}}
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<defs>
+								<linearGradient id="background-gradient-store-red-slot" x1="0%" x2="0%" y1="0%" y2="100%">
+									<stop stop-color="#ffffff" offset="0%"/>
+									<stop stop-color="#f9e150" offset="100%"/>
+								</linearGradient>
+								<linearGradient id="border-gradient-store-red-slot" x1="0%" x2="0%" y1="0%" y2="100%">
+									<stop stop-color="#ffffff" offset="0%"/>
+									<stop stop-color="#ffb400" offset="100%"/>
+								</linearGradient>
+							</defs>
+							<text dy='23' font-size="28" stroke-width="1" stroke="url(#border-gradient-store-red-slot)" fill="url(#background-gradient-store-red-slot)">{{data.amount}}</text>
+						</svg>
+					</ion-col>
+					<ion-col align-self-center class='wrapper-button-amount' text-center col-auto>
+						<button class='button-amount' ion-button>
+							&pound;{{data.buttonAmount}}
+						</button>
+					</ion-col>	
+				</ion-row>
+				<ion-row>
+					<ng-container *ngIf='data.includeFree'>
+						<ion-col font-7 font-w-heavy align-self-center class='wrapper-label-include' col-auto>
+							EXTRA FREE
+						</ion-col>
+						<ion-col align-self-center class='wrapper-img-include' col-auto>
+							<img src='assets/images/arcade/token-yellow.png' />
+						</ion-col>
+						<ion-col font-w-normal align-self-center class='wrapper-amount-include' col-auto>
+							{{data.freeAmount}}
+						</ion-col>
+						<ion-col align-self-center col-auto class='wrapper-img-token'>
+							<img src='assets/images/dashboard/coin.png' />
+						</ion-col>
+						<ion-col font-w-normal align-self-center class='wrapper-amount-include' col-auto>
+							{{data.freeAmount}}
+						</ion-col>
+					</ng-container>
+					
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+		<ion-col col-auto>
+			<ion-icon name='ios-arrow-forward-outline'></ion-icon>
+		</ion-col>
+	</ion-row>
+</ion-grid>

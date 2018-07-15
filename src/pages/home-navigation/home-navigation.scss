@@ -1,0 +1,6 @@
+page-home-navigation {
+	
+	& > ion-content > .scroll-content{
+		overflow-y: hidden !important;
+	}
+}

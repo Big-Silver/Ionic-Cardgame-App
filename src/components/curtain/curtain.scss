@@ -1,0 +1,192 @@
+curtain {
+	display: block;
+	position: absolute;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	top: 0px;
+
+	$accent: hsl(360,80%,50%);
+
+	ion-grid{
+		height: 100%;
+		ion-row{
+			flex-grow: 1;
+		}
+	}
+
+	.ion-col {
+		background: darken($accent,12%);
+		overflow: hidden;
+		position:relative;   
+	}
+
+	.curtain-holder {
+		width: 100%;
+		position: absolute;
+		top:0; right: 0;  bottom: 0; left: 0;
+		margin: auto;
+		transform-style: preserve-3d;
+		transition: transform 2s ease;
+		transform-origin: -120% top;
+		
+	}
+
+	.curtain {
+		width: 10vw;
+		height: 100vh;
+		background: 
+			repeating-linear-gradient(
+				to left,
+				$accent 4vw, 
+				darken($accent,20%) 8vw,
+				lighten($accent,20%) 10vw );
+		background-size:  100% 100%; 
+		display:inline-block;   
+		transform-origin: 0% 0%;
+		position: absolute;
+	}
+
+	.curtain-holder.left{
+		.curtain{
+			transform: rotate(3deg);	
+			animation: curtain-left 2s ease infinite;
+		}
+		.curtain:nth-child(1){
+			animation-delay: 0s;
+			right: -30%;
+		}
+		.curtain:nth-child(2){
+			animation-delay: -0.1s;
+			left: -10%;
+		}
+		.curtain:nth-child(3){
+			animation-delay: -0.2s;
+			left: 0%;
+		}
+		.curtain:nth-child(4){
+			animation-delay: -0.3s;
+			left: 10%;
+		}
+		.curtain:nth-child(5){
+			animation-delay: -0.4s;
+			left: 20%;
+		}
+		.curtain:nth-child(6){
+			animation-delay: -0.5s;
+			left: 30%;
+		}
+		.curtain:nth-child(7){
+			animation-delay: -0.6s;
+			left: 40%;
+		}
+		.curtain:nth-child(8){
+			animation-delay: -.7s;
+			left: 50%;
+		}
+		.curtain:nth-child(9){
+			animation-delay: -.8s;
+			left: 60%;
+		}
+		.curtain:nth-child(10){
+			animation-delay: -.9s;
+			left: 70%;
+		}
+		.curtain:nth-child(11){
+			animation-delay: -1s;
+			left: 80%;
+		}
+		.curtain:nth-child(12){
+			animation-delay: -1.1s;
+			left: 90%;
+		}
+		.curtain:nth-child(13){
+			animation-delay: -1.2s;
+			left: 100%;
+		}
+		.curtain:nth-child(14){
+			animation-delay: -1.3s;
+			left: 110%;
+		}	
+		.curtain:nth-child(15){
+			animation-delay: -1.4s;
+			left: 120%;
+		}	
+	}
+
+	.curtain-holder.right{
+		.curtain{
+			transform: rotate(-3deg);	
+			animation: curtain-right 2s ease infinite;
+		}
+		.curtain:nth-child(1){
+			animation-delay: 0s;
+			right: -20%;
+		}
+		.curtain:nth-child(2){
+			animation-delay: -0.1s;
+			right: -10%;
+		}
+		.curtain:nth-child(3){
+			animation-delay: -0.2s;
+			right: 0%;
+		}
+		.curtain:nth-child(4){
+			animation-delay: -0.3s;
+			right: 10%;
+		}
+		.curtain:nth-child(5){
+			animation-delay: -0.4s;
+			right: 20%;
+		}
+		.curtain:nth-child(6){
+			animation-delay: -0.5s;
+			right: 30%;
+		}
+		.curtain:nth-child(7){
+			animation-delay: -0.6s;
+			right: 40%;
+		}
+		.curtain:nth-child(8){
+			animation-delay: -.7s;
+			right: 50%;
+		}
+		.curtain:nth-child(9){
+			animation-delay: -.8s;
+			right: 60%;
+		}
+		.curtain:nth-child(10){
+			animation-delay: -.9s;
+			right: 70%;
+		}
+		.curtain:nth-child(11){
+			animation-delay: -1s;
+			right: 80%;
+		}
+	}
+
+	// ion-row:hover{
+	// 	ion-col:nth-child(1) .curtain-holder{
+	// 		transform-origin: -120% top;
+	// 		transform: scaleX(0);
+	// 	}
+	// 	ion-col:nth-child(2) .curtain-holder{
+	// 		transform-origin: 120% top;
+	// 		transform: scaleX(0);
+	// 	}
+	// }
+
+	@keyframes curtain-left {
+		50% {
+			transform: rotate(-3deg) ;
+		}
+	}
+
+	@keyframes curtain-right {
+		50% {
+			transform: rotate(3deg) ;
+		}
+	}
+
+	
+}

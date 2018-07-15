@@ -1,0 +1,114 @@
+winning-animation-stage {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+
+	background-image: url('../assets/images/winning-animation/stage.png');
+	background-size: 100% auto;
+	background-position: bottom;
+	
+
+	ion-grid{
+		height: 100%;
+		width: 100%;
+		justify-content: flex-end;
+	}
+
+	.wrapper-big-circle{
+		align-self: center;
+		ion-col{
+			position: relative;
+		}
+		img{
+			width: 165px;
+			height: 165px;
+		}
+	}
+	.wrapper-prize-box{
+		img{
+			width: 206px;
+			height: 106px;
+		}
+	}
+	.wrapper-trophy{
+		img{
+			width: 84px;
+			height: 97px;
+		}
+	}
+
+	.wrapper-big-circle,
+	.wrapper-prize-box,
+	.wrapper-trophy{
+		img{
+			display: block;
+			margin: auto;
+			max-width: unset !important;
+			max-height: unset !important;
+		}
+	}
+
+	.flag-wrapper{
+		width: 48px;
+		height: 48px;
+		border: 3px solid #f9dd68;
+		background-color: #49463a;
+		position: absolute;
+		bottom: 5px;
+		right: 9px;
+		z-index: 1;
+		border-radius: 100%;
+	}
+
+	.corner-image{
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		width: 55px;
+		height: 55px;
+		.background{
+			height: 100%;
+			width: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -1px;
+			left: 0;
+			bottom: -1px;
+		}
+		.gamemode-icon{
+			position: absolute;
+			width: 25px;
+			display: block;
+			bottom: 3px;
+			right: 3px;
+		}
+	}
+
+	.only-money-image{
+		position: absolute;
+		top : 0px;
+		width: 275px;
+		margin: auto;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		z-index: 3 !important;
+	}
+
+	.note{
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		font-size: 16px !important;
+		font-weight: 500;
+		color: white;
+		bottom: 4px;
+	}
+
+
+}

@@ -1,0 +1,76 @@
+head2head-awaiting-slide {
+
+	ion-slides{
+		max-width: 100vw;
+	}
+
+	.slide1{	
+	
+		ion-grid{
+			height: 139px;
+			justify-content: center;
+			background-color: black;
+		}
+	
+		.waiting-image{
+			flex-shrink: 1;
+			padding-left: 8px !important; 
+			flex-grow: 0;
+			min-width: 127px !important;
+			img{
+				height: 122px !important;
+				display: block;
+				max-width: unset !important;
+				max-height: unset !important;
+				animation-delay: 0.5s !important;
+			}
+		}
+	
+		.waiting-text div{
+			flex-grow: 1;
+			font-family: "Avenir Next" !important;
+			text-transform: uppercase;
+			padding: 10px;
+			color: white;
+			animation-delay: 0.5s !important;
+		}
+
+	}
+
+	.slide2{
+
+		color: white;
+
+		ion-grid{
+			height: 139px;
+			justify-content: space-around;
+			background-color: black  !important;
+		}
+
+		.header{
+			letter-spacing: 1.88px;
+			padding: 0px 30px !important;
+			padding-bottom: 24px !important;
+		}
+
+		.button-restart{
+			width: 84px;
+			height: 33px;
+			box-shadow: 0 3px 0 #1249b0;
+			border-radius: 60px;
+			background-color: #009eff;
+			color: white;
+			font-family: "Avenir Next" !important; 
+			margin-bottom: 6px;
+		}
+
+		.button-restart:active{
+			transform: translate(2px, 2px);
+			filter: brightness(0.4);
+		}
+
+
+	}
+
+	
+}

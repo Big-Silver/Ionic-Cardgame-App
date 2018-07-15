@@ -1,0 +1,46 @@
+gamemode-game-icon {
+	
+		.frame-border-color{
+			background-image: linear-gradient(#ff0000 0%,#ff6666 25%,#ff3333 50%,#ff6666 75%,#cc0000 100%);
+			background: -webkit-linear-gradient(#ff0000 0%,#ff6666 25%,#ff3333 50%,#ff6666 75%,#cc0000 100%);
+			display: inline-block;
+			width: 57px;
+			height: 57px;
+			border-radius: 13px;
+			position: relative;
+	
+			.frame-background{
+				position: absolute;
+				top: 2px;
+				right: 2px;
+				left: 2px;
+				bottom: 2px;
+				border-radius: 12px;
+				background-size: cover;
+				box-shadow: inset 0px 1px 1px 0px #82180d;
+			}
+	
+			.frame-corner{
+				position: absolute;
+				height: 11px;
+				width: 15px;
+				bottom: 0;
+				z-index: 10;
+				background-image: linear-gradient(#ff6666 0%,#cc0000 70%);
+				background: -webkit-linear-gradient(#ff6666 0%,#cc0000 70%);
+				border-bottom-left-radius: 7px;
+				border-top-right-radius: 7px;
+			}
+	
+			img{
+				display: block;
+				width: 10px;
+				height: 8px;
+				margin-left: 2px;
+				margin-top: 2px;
+			}
+	
+		}
+	
+	
+	}

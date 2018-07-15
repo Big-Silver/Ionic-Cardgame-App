@@ -1,0 +1,88 @@
+[leaderboard-header] {
+
+	ion-toolbar{
+		padding: 0px !important;
+		min-height: 35px !important;
+		.toolbar-background{
+			border: none !important;
+			background-image: linear-gradient(180deg, #e743f5 0%, #49044d 100%) !important;
+		}
+	}
+
+	.toolbar-title{
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: none !important;
+		font-family: "Helvetica Neue";
+
+		ion-icon{
+			font-size: 1.1em !important;
+			vertical-align: sub;
+		}
+
+	}
+
+	ion-buttons[start]{
+		margin: 0px !important;
+		margin-bottom: 1px !important;
+		margin-left: 3px !important;
+	}
+
+	ion-buttons[end]{
+		margin: 0px !important;
+		margin-bottom: 1px !important;
+		margin-right: 6px !important;
+	}
+
+	[leaderboard-back-button]{
+		margin: 0px !important;
+
+		.button-inner{
+			color: white;
+		}
+
+		ion-icon{
+			padding: 0px 6px !important;
+			font-size: 2.5em !important;
+		}
+	}
+
+	[leaderboard-share-button]{
+		height: 30px !important;
+		width: 30px !important;
+		border-radius: 100% !important;
+		background-color: #43c600 !important;
+		.button-inner{
+			ion-icon{
+				color : white !important;
+				font-size: 1.4em;
+				position: relative;
+				right: 1px;
+			}
+		}
+	}
+
+	// [winner-store-image]{
+	// 	width: 42px !important;
+	// 	height: 41px !important;
+	// 	margin-right: 6px !important; 
+	// 	&:active{
+	// 		transform: translate3d(2px, 2px, 0px);
+	// 		filter: brightness(0.4);
+	// 	}
+	// }
+
+	// ion-toolbar{
+	// 	height: 1px !important;
+	// 	min-height: unset !important;
+	// 	padding: 0px !important;
+	// 	.toolbar-background{
+	// 		background-color: red !important;
+	// 		border: 0 !important;
+	// 		background-image: linear-gradient(90deg,  #173a00 20.6%, #7fe832 50.4%,  #173a00 80%);
+			
+ 	// 	}
+	// }
+
+
+}

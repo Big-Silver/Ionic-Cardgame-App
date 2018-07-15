@@ -1,0 +1,110 @@
+<ion-row [ngClass]='
+	{"replayMode":gameMode=="replay", 
+	"arcadeMode":gameMode=="arcade", 
+	"contestMode":gameMode=="contest",
+	"head2headMode":gameMode=="head2head", 
+	"instantwinMode":gameMode=="instantwin"}'
+	>
+    <div class='background-cover' [ngStyle]='{"background-image": _game.backgroundImage}'></div>
+    <ion-col col-12 no-padding>
+        <table class='v-middle w-full table-main'>
+            <tr>
+				<td rowspan="2" class='return-button shrink disabled' [ngClass]='{"disabled" : _disableBackButton == true }' tappable (tap)='_goToHome()'>
+					<ion-grid no-padding>
+						<ion-row>
+							<ion-col text-center>
+								<ion-icon class='tapicon-return'></ion-icon>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+				</td>
+                <td class='game-name' colspan="3" text-right font-4 font-w-black>{{_game.name}}</td>
+            </tr>
+            <tr class='information-row'>
+				<td rowspan="2" class='player-rank' *ngIf='gameMode=="arcade" || gameMode=="contest" || gameMode == "head2head"'>
+					<div text-center>
+						<div class='player-rank-wrapper'>
+							<div class='title' font-7 font-w-regular text-center>
+								<ion-grid no-padding>
+									<ion-row>
+									</ion-row>
+									<ion-row>
+									</ion-row>
+								</ion-grid>
+								Rank
+							</div>
+							<player-game-rank-table b-black level='EXPERT' stars='2' badges='4'></player-game-rank-table>
+						</div>
+					</div>
+				</td>
+				<td class='player-rank shrink' *ngIf='gameMode=="replay"'>
+					<div>
+						<div class='replay-image-holder'>
+							<img src='assets/images/replay/up.png' class='up-arrow'/>
+							<img src='assets/images/home/icons/money.png' class='money' />
+						</div>
+						<div text-center font-w-medium font-h3 class='amount'>
+							&pound;1000
+						</div>
+						<div text-center font-w-medium font-6 class='prize-pool-label'>
+							Prize Pool
+						</div>
+						<button ion-button font-w-black (click)='openRankPopup.emit()' class='info-button'>
+							i
+						</button>
+					</div>
+				</td>
+                <td [ngClass]='{"shrink" : gameMode != "replay" && gameMode != "instantwin"}' text-center>
+                    <table *ngIf='gameMode != "head2head"' class='entry-fee' cellspacing="0" cellpadding="0" [ngStyle]='{"background-image": _game.gameIcon}'>
+                        <thead><tr><td font-7 font-w-bold>Entry</td></tr></thead>
+                        <tbody>
+                            <tr>
+								<td>
+									<div *ngIf='gameMode=="arcade"'>
+										<img  src='./assets/images/arcade/token-blue.png' /><span>&nbsp;{{_game.entryFee}}</span>
+									</div>
+									<div *ngIf='gameMode=="replay" || gameMode == "contest" '>
+										<img  src='./assets/images/arcade/token-red.png' /><span>&nbsp;{{_game.entryFee}}</span>
+									</div>
+									<div *ngIf='gameMode=="instantwin"'>
+										<img  src='./assets/images/arcade/token-yellow.png' /><span>&nbsp;{{_game.entryFee}}</span>
+									</div>
+								</td>
+							</tr>
+                        </tbody>
+					</table>
+					<div *ngIf='gameMode == "head2head"' text-right>
+						<gamemode-game-icon [gameMode]='gameMode' [icon]="_game.gameIcon"></gamemode-game-icon>
+					</div>
+                    <div class='clear'></div>
+                </td>
+                <td text-center class='button-playgame shrink' [ngClass]='{"blue":isNewButton == true || isCollectButton == true}'>
+					<div class='wrapper-div' tappable (click)='_playGame();' [ngClass]='{"disable-deboss" : _disablePlayButton}'>
+						<button font-w-bold font-9 [disabled]='_disablePlayButton' [ngClass]='{"infinite big-pulse animated" : _disablePlayButton == false}'>
+							<ng-container *ngIf='isNewButton == true'>
+								New	
+							</ng-container>
+							<ng-container *ngIf='isNewButton == false && isCollectButton == false'>
+								Play
+							</ng-container>
+							<ng-container *ngIf='isCollectButton == true'>
+								Collect
+							</ng-container>
+						</button>
+						<div class='overlay-text' font-w-bold font-9>
+							<ng-container *ngIf='isNewButton == true'>
+								New	
+							</ng-container>
+							<ng-container *ngIf='isNewButton == false && isCollectButton == false'>
+								Play
+							</ng-container>
+							<ng-container *ngIf='isCollectButton == true'>
+								Collect
+							</ng-container>
+						</div>
+					</div>
+                </td>
+            </tr>
+        </table>
+    </ion-col>
+</ion-row>

@@ -1,0 +1,12 @@
+<div text-center font-6 font-w-normal>
+	If you have a referral code type below or click get code.
+</div>
+<div class='wrapper-input'>
+	<ion-item no-lines round-input>
+		<ion-input [(ngModel)]='randomNumber' placeholder='referral code (optional)'></ion-input>
+	</ion-item>
+</div>
+<div font-5 class='label-generate-referral-code' (tap)='generateRandomNumber()'>
+	If you dont have a code <br/>
+	you can get a code here
+</div>

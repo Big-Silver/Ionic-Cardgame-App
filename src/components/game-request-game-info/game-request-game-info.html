@@ -1,0 +1,61 @@
+<ion-grid no-padding [ngClass]='{"battle-a-friend-mode" : mode == "BATTLE_A_FRIEND", "squadup-mode" : mode == "SQUADUP"}'>
+	<ion-row>
+		<ion-col>
+			<div class='label-info' font-5 font-w-black>
+				INFO:
+			</div>
+			<div>
+				<ion-grid no-padding>
+					<ion-row class='description-game-info'>
+						<ion-col col-auto>
+							<img class='img-game-icon' #gameIcon />
+						</ion-col>
+						<ion-col>
+							<div font-5 font-w-bold class='title-game-name'>{{data.gameName}}</div>
+							<div font-5 font-w-normal class='description-game'>
+								Challenger has set the match value but you are able to adjust this if you accept. 
+								<span font-5 font-w-normal >
+									Read more..
+								</span>
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-12 font-6 font-w-normal align-self-center text-center>
+			You will get the following for accepting this challenge:
+
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col>
+						<table class='table-reward from-left'>
+							<tr>
+								<td class='img-wrapper'>
+									<img src='assets/images/arcade/token-yellow.png' />
+								</td>
+								<td font-4 font-w-bold>
+									10
+								</td>
+							</tr>
+						</table>
+					</ion-col>
+					<ion-col>
+						<table class='table-reward from-right'>
+							<tr>
+								<td font-4 font-w-bold>
+									20
+								</td>
+								<td class='img-wrapper'>
+									<img src='assets/images/player-profile/fame.png' />
+								</td>
+							</tr>
+						</table>	
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+	</ion-row>
+</ion-grid>

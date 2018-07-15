@@ -1,0 +1,71 @@
+convert-user-coins {
+
+	color: white;
+	display: block;
+	background-color: rgba(0,0,0,0.65);
+
+	& > ion-grid{
+		height: 104px;
+		padding: 12px 0px !important;
+		justify-content: space-between
+	}
+
+	.player-coin-amount{
+
+		.text-label{
+			letter-spacing: 1.02px;
+			white-space: nowrap;
+			height: 12px;
+			line-height: 12px;
+		}
+
+		.text-value{
+			letter-spacing: 1.46px;
+			font-size: 28px !important;
+			img{
+				width: 20px !important;
+				height: 20px !important;
+			}
+		}
+	
+		button{
+			width: 52px;
+			height: 42px;
+			margin: 4px 6px 7px 0px !important;
+			box-shadow: 0 3px 0 #0e7403;
+			background-color: #5cc129;
+			border-radius: 11px;
+			color: white;
+			ion-icon{
+				margin-top: 4px !important;
+				font-size: 30px !important;
+			}
+			&:active{
+				transform: translate(2px, 2px);
+				filter: brightness(0.4);
+			}
+		}
+	}
+
+	.convert-rate{
+		align-self: center;
+		margin: 0px auto;
+		border-radius: 9px;
+		border: 1px solid rgba(0,216,255,0.5);
+		ion-col{
+			color: #b9b9b9;
+			font-size: 11px !important;
+			font-family:  "Avenir Next" !important;
+		}
+		ion-col:nth-child(1){
+			padding: 0px 8px !important;
+		}
+		img{
+			width: 13px;
+			height: 13px;
+			display: block;
+		}
+		font-size: 11px;
+	}
+
+}

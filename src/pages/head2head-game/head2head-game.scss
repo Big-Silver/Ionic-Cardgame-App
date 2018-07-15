@@ -1,0 +1,6 @@
+page-arcade-game {
+    ion-footer{
+		height: 51px; // add 17px extra to replace top status bar height.
+		background-image : url('../assets/images/arcade/ad.png');
+    }
+}

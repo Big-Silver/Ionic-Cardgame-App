@@ -1,0 +1,41 @@
+<ion-slides #slides>
+	<ion-slide class='slide1'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col class='waiting-image'>
+					<img class='fadeInLeft animated' src='assets/images/head2head/kawaii_awaiting.png' />
+				</ion-col>
+				<ion-col class='waiting-text' align-self-center>
+					<div text-center font-h3 font-w-heavy class='fadeInRight animated'>
+						AWAITING ON 
+						OPPONENTS 
+						RESULT
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-slide>
+	<ion-slide class='slide2'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col font-w-bold text-center>
+					<div [textProperty]='shiningTextProperty' shining-text text='GO AGAIN'>
+					</div>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col class='header' font-w-bold font-6 text-center>
+					While you wait for results why not set your amount and battle again.
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<button class='button-restart' font-w-medium font-9 (click)='restartGame.emit()'>
+						NEW
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-slide>
+</ion-slides>
+

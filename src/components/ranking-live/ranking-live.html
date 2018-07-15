@@ -1,0 +1,23 @@
+<ion-scroll scrollX='false' scrollY='true'>
+	<div>
+		<player-position-slot *ngFor='let player of highRankedPlayers' [player]='player'></player-position-slot>
+	</div>
+	<div class='prize-zone-bar'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col text-center col-3>
+					<ion-icon  font-8 name='ios-play'></ion-icon>
+				</ion-col>
+				<ion-col font-8 font-w-medium text-center col-6>
+					Prize Zone
+				</ion-col>
+				<ion-col col-3 text-center>
+					<ion-icon  font-8 name='ios-play'></ion-icon>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div>
+		<player-position-slot *ngFor='let player of lowRankedPlayers' [player]='player'></player-position-slot>
+	</div>
+</ion-scroll>

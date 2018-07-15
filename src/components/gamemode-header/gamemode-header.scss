@@ -1,0 +1,140 @@
+[gamemode-header]{
+
+	.toolbar-background{
+		border : none !important;
+	}
+
+	ion-title{
+		padding-right: 0px !important;
+		padding-left: 0px !important;
+		.toolbar-title{
+			align-self: flex-end;
+		}
+	}
+
+	ion-buttons{
+		margin: 0px !important;
+		align-self: flex-end;
+	}
+	ion-buttons[end]{
+		height: 41px;
+		width: 42px !important;
+		img{
+			width: 42px !important;
+			height: 41px !important;
+		}
+	}
+
+	[gamemode-header-button]{
+		*{
+			color: white !important;
+		}
+	}
+
+	
+
+	[gamemode-header-title]{
+		color: white;
+		text-transform: uppercase !important;
+		line-height: 14px !important;
+		margin-bottom: 3px;
+	}
+
+	[gamemode-header-button]{
+		margin: 0px 2px 2px 0px !important;
+		height: auto !important;
+		label{
+			font-size: 32px !important;	
+			line-height: 20px !important;
+		}
+	}
+
+	.btn-menu{
+		padding-bottom: 2px;
+	}
+
+
+	ion-toolbar:nth-child(1){
+		padding: 4px 7px !important;
+	}
+
+	[gamemode-header-title-icon]{
+		vertical-align: bottom;
+		// height: 26px;
+		width: 28px;
+		display: block;
+		margin: auto !important;
+	}
+
+	&.arcadeMode{
+		[gamemode-header-title-icon]{
+			width: 24px;
+			height: 24px;
+			margin-top: 2px !important;
+			margin-bottom: 2px !important;
+		}
+	}
+
+	&.replayMode{
+		[gamemode-header-title-icon]{
+			width: 25px;
+			margin-top: 2px !important;
+			margin-bottom: 2px !important;
+		}
+	}
+
+
+
+	ion-toolbar:nth-child(1).replayMode > .toolbar-background,
+	ion-toolbar:nth-child(1).head2headMode > .toolbar-background,
+	ion-toolbar:nth-child(1).contestMode > .toolbar-background{
+		background-image: linear-gradient(180deg, #e71e1a 0%, #6f0000 100%) !important;
+	}
+
+	ion-toolbar:nth-child(2).replayMode > .toolbar-background,
+	ion-toolbar:nth-child(2).head2headMode > .toolbar-background,
+	ion-toolbar:nth-child(2).contestMode > .toolbar-background{
+		background-color: #6f0000 !important;
+		background-image: none !important;
+	}
+
+	ion-toolbar:nth-child(1).arcadeMode > .toolbar-background{
+		background-image: linear-gradient(180deg, #239BCB 0%, #122D65 100%) !important;
+	}
+
+	ion-toolbar:nth-child(2).arcadeMode > .toolbar-background{
+		background-color: #122D65 !important;
+		background-image: none !important;
+	}
+
+	ion-toolbar:nth-child(1).instantwinMode > .toolbar-background,{
+		background-image: linear-gradient(180deg, #fbda3b 0%, #ffa200 100%) !important;
+	}
+
+	ion-toolbar:nth-child(2).instantwinMode > .toolbar-background{
+		background-color: #ffa200 !important;
+		background-image: none !important;
+	}
+
+	.instantwinMode [gamemode-header-title-icon]{
+		width: 32px !important;
+		padding-bottom: 2px !important;
+	}
+
+	.btn-store{
+		pointer-events: all !important;
+		&:active{
+			transform: translate3d(2px, 2px, 0px);
+			filter: brightness(0.4);
+		}
+	}
+
+	.btn-menu.disabled,
+	.btn-store.disabled{
+		pointer-events: none !important;
+		button{
+			pointer-events: none !important;
+		}
+	}
+
+}

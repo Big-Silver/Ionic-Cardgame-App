@@ -1,0 +1,178 @@
+page-verification-detail {
+
+	color: white;
+
+	ion-toolbar:nth-child(1){
+		height: 50px;
+	}
+
+	ion-toolbar{
+		
+		.toolbar-background{
+			background-image: url('../assets/images/home/header_background.png');
+			background-size: cover;
+			border: none !important;
+		}
+		ion-title{
+			padding: 0px !important;
+		}
+		.toolbar-title{
+			font-family: Lato;
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 0.74px;
+			text-align: center;
+			text-transform: unset !important;
+		}
+
+		.gradient-border{	
+			height: 2px;
+			background-image: linear-gradient(180deg, #ffb500 0%, #f9e852 100%) !important;
+		}
+	}
+
+	.red-background{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 43px;
+		height: 49px;
+		border-right: 21px solid #d12424;
+		border-top: 24px solid #d12424;
+		border-left: 21px solid transparent;
+		border-bottom: 24px solid transparent;
+		z-index: 11;
+	}
+
+	ion-icon{
+		position: absolute;
+		top: 0px;
+		right: 1px;
+		font-size: 29px;
+		color: white;
+		z-index: 12;
+	}
+
+	.scroll-content{
+		padding: 0px !important;
+		overflow: hidden;
+		background-image: url('../assets/images/signup-background.png');
+		background-size: 102% auto;
+	}
+
+	.grid-content{
+		height: 100%;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.description{
+		letter-spacing: 0.96px;
+		padding: 8px 10px !important;
+		color: white;
+	}
+
+	.send-button{
+		width: 93px;
+		height: 31px;
+		border-radius: 70px;
+		background-color: #43c600 !important;
+		margin: 10px 0px 0px 7px !important;
+		&:active{
+			filter: brightness(0.4);
+		}
+		.button-inner{
+			font-weight: 900 !important;
+		}
+		&[disabled]{
+			background-color: #acacac !important;
+			opacity: 1 !important;			
+		}
+	}
+
+	.send-button.code-sent{
+		background-color: transparent !important;
+	}
+
+	.genderButton{
+		height: 35px;
+		width: 35px;
+		border-radius: 100%;
+		display: block;
+		margin: auto;
+
+		// &:active{
+		// 	filter: brightness(0.4);
+		// }
+
+		img{
+			filter: brightness(0) invert(1);
+			height: 26px;
+		}
+		&.male{
+			background-color: #008cff;
+		}
+
+		&.female{
+			background-color: rgb(235,62,133);
+		}
+	}
+
+	.date-input{
+		pointer-events: none !important;
+	}
+
+	.gender-lbl{
+		color: white;
+	}
+
+	.checkmark-won{
+		width: 24px;
+		height: 22px;
+		display: block;
+		margin-bottom: 6px;
+		margin-left: 5px;
+	}
+
+	.gender-selection-wrapper{
+		margin-left: 31px;
+	}
+
+	.footer-button{
+		width: 136px;
+		height: 48px;
+		border-radius: 80px;
+		display: block;
+		margin: 20px auto;
+		.button-inner{
+			font-family: Lato;
+			font-size: 16px;
+			font-weight: 700;
+		}
+		&.not-now{
+			background-color: rgba(255,0,0,0.64);
+		}
+		&.complete{
+			background-color: #43c600 !important;
+			&:disabled{
+				background-color: #acacac !important;
+				opacity: 1 !important;
+			}
+		}
+	}
+
+	.input-content{
+		padding: 0px 10px !important;
+	}
+
+	custom-input{
+		transform: translate3d(0px, 0px, 0px) !important;
+		margin-bottom: 10px;
+	}
+
+	ion-datetime{
+		display: none;
+	}
+
+
+}

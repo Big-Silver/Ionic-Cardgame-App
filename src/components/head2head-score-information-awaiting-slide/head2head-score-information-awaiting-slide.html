@@ -1,0 +1,23 @@
+<div text-center class='main-title' font-5 results font-w-black>
+	RESULTS
+</div>
+<ion-slides #slides [pager]='true'>
+	<ion-slide class='firstSlide'>
+		<head2head-score-information-awaiting 
+			outcome="WAITING"
+			[playerInformation]='ownInformation'
+			[opponentInformation]='opponentInformation'
+		>
+		</head2head-score-information-awaiting>
+	</ion-slide>
+	<ion-slide class='secondSlide'>
+		<head2head-score-information
+			[ownInformation]='ownInformation'
+			[opponentInformation]='opponentInformation'
+			[ownScore]='ownScore'
+			[opponentScore]='opponentScore'
+			(openPlayerProfile)='openPlayerProfile.emit()'
+			>
+		</head2head-score-information>
+	</ion-slide>
+</ion-slides>

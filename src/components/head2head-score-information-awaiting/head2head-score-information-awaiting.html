@@ -1,0 +1,83 @@
+<div text-center class='title' font-w-medium font-6>
+	<ng-container *ngIf='outcome == "WAITING"'>
+		We are holding your maximum token set by you and best match with an oponent. 
+	</ng-container>
+	<ng-container *ngIf='outcome == "LOSE" || outcome == "WON"'>
+		We deducted the following amount based on yours and oponents maximum set. 
+	</ng-container>
+</div>
+<div text-center font-w-medium font-w-regular class='sub-title'>
+	<ng-container *ngIf='outcome == "WAITING"'>
+		We return non used tokens.
+	</ng-container>
+	<ng-container *ngIf='outcome == "WON" || outcome == "LOSE"'>
+		We returned nonused tokens.
+	</ng-container>
+</div>
+<div class='amount'>
+	<span font-w-medium font-6 class='amount-status'>
+		<ng-container *ngIf='outcome == "WAITING"'>
+			Holding:
+		</ng-container>
+		<ng-container *ngIf='outcome == "WON" || outcome == "LOSE"'>
+			Deducted:
+		</ng-container>
+	</span>
+	<img src='assets/images/arcade/token-red.png' />
+	<span font-w-bold font-h3>
+		{{amount}}
+	</span>
+</div>
+<ion-grid no-padding class='player-name'>
+	<ion-row>
+		<ion-col text-left font-w-bold>
+			{{playerInformation.name}}
+		</ion-col>
+		<ion-col font-w-bold text-right *ngIf='opponentInformation.unknown == true'>
+			?
+		</ion-col>
+		<ion-col font-w-bold text-right *ngIf='opponentInformation.unknown == false'>
+			{{opponentInformation.name}}
+		</ion-col>
+	</ion-row>
+</ion-grid>
+<div class='table-border'></div>
+<div>
+	<ion-grid no-padding>
+		<ion-row class='amount-labels' [ngClass]='{"colored-win":outcome == "WON", "colored-lose": outcome == "LOSE"}'>
+			<ion-col font-w-bold text-center>
+				You Won
+			</ion-col>
+			<ion-col text-center font-w-bold>
+				They Won
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid no-padding>
+		<ion-row class='amount-information'>
+			<ion-col font-w-bold text-center [ngClass]="{'active' : outcome == 'WON'}">
+				<label font-h1 *ngIf='outcome == "WAITING"'>
+					?
+				</label>
+				<label font-h1 *ngIf="outcome == 'LOSE'">
+					0
+				</label>
+				<label font-h1 *ngIf="outcome == 'WON'">
+					<img src='assets/images/arcade/token-red.png' /> {{amount}}
+				</label>
+			</ion-col>
+			<ion-col font-h1 text-center font-w-bold [ngClass]="{'active' : outcome == 'LOSE'}">
+				<label font-h1 *ngIf='outcome == "WAITING"'>
+					?
+				</label>
+				<label font-h1 *ngIf="outcome == 'WON'">
+					0
+				</label>
+				<label font-h1 *ngIf="outcome == 'LOSE'">
+					<img src='assets/images/arcade/token-red.png' /> {{amount}}
+				</label>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</div>
+<div class='table-border'></div>

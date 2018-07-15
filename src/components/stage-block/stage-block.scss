@@ -1,0 +1,175 @@
+stage-block {
+	display: block;
+	position: relative;
+
+	.button-holder{
+		width: 64px;
+		height: 57px;
+		border-radius: 100%;
+		position: absolute;
+		.img-button{
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+		}
+
+		.avatar-holder{
+			bottom: 95%;
+			width: calc(100% + 10px);
+			height: 80px;
+			position: absolute;
+			border: 1px solid transparent;
+			right: -5px;
+			z-index: 10;
+
+			img{
+				height: 72px;
+				width: 72px;
+				border: 3px solid white;
+				background-color: white !important;
+				margin: auto;
+				display: block;
+				border-radius: 100%;
+				position: absolute;
+				z-index: 10;
+
+			}
+
+			.arrow{
+				bottom: -4px;
+				height: 0px;
+				width: 34px;
+				position: absolute;
+				right: 0px;
+				left: 0px;
+				margin: auto;
+				border-top: 19px solid white;
+				border-right: 17px solid transparent;
+				border-left: 17px solid transparent;
+			}
+
+			
+
+		}
+
+		.gift{
+			position: absolute;
+			bottom: 90% !important;
+			right: 0px;
+			left: 0px;
+			z-index: 7;
+			margin: auto;
+			animation : hover 2s infinite ease;
+		}
+
+		.gift.yellow{
+			width: 58px !important;
+			animation-delay: 0.4s;
+		}
+
+		.gift.red{
+			width: 54px !important;
+			animation-delay: 0.3s;
+		}
+
+		.gift.blue{
+			width: 61px !important;
+			animation-delay: 0.1s;
+		}
+
+		.gift.quest{
+			animation-delay: 0.5s;
+			width: 64px !important;
+		}
+	}
+
+	.button-holder:nth-child(5){
+		bottom: 6.923076% !important;
+		right: 25.625% !important;
+	}
+
+	.button-holder:nth-child(4){
+		bottom: 17.6923076% !important;
+		right: 67.4375% !important;
+	}
+
+	.button-holder:nth-child(3){
+		bottom: 51.538461% !important;
+		right: 70.1875% !important;
+	}
+
+	.button-holder:nth-child(2){
+		bottom: 61.192307% !important;
+		right: 15.375% !important;
+	}
+
+	.button-holder:nth-child(1){
+		bottom: 77.115384% !important;
+		right: 50.650% !important;
+	}
+
+
+	.stage-counter{
+		z-index: 5;
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center;
+		height: 100%;
+		font-weight: 900;
+		svg{
+			height: 100%;
+			width: 100%;
+			text{
+				font-family: "Vogue" !important;
+			}
+		}
+	}
+
+	.stage-index{
+		font-size: 28px !important;
+		font-family: "Vogue" !important;
+		position: absolute;
+		z-index: 1;
+		top: 0px;
+		height: 36px;
+		line-height: 36px;
+		text-align: center;
+		bottom: 8%;
+		margin: auto;
+		right: 0px;
+		left: 0px;
+		color: white;
+	}
+
+	.small-stage-index{
+		position: absolute;
+		z-index: 1;
+		text-align: center;
+		bottom: 13px;
+		padding-left: 3px;
+		color: white;
+	}
+
+}
+
+
+@keyframes hover{
+
+	0%{
+		transform: translate3d(0,0,0);
+	}
+
+	50%{
+		transform: translate3d(0,10px,0);
+	}
+
+	100%{
+		transform: translate3d(0,0,0);
+	}
+
+}

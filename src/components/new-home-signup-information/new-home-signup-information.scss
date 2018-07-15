@@ -1,0 +1,68 @@
+new-home-signup-information {
+	display: block;
+	color: white;
+	ion-slides{
+		max-width: 100vw;
+	}
+
+	.grid-facebook-signup{
+		padding: 0px !important;
+	}
+
+	.button-fb-signup{
+		background-color: #25479b !important;
+		height: 48px;
+		border-radius: 70px !important;
+		margin-top: 10px;
+		margin-bottom: 6px;
+	}
+	.wrapper-button-fb-signup{
+		padding: 0px 25px !important;
+	}
+
+	.label-facebook-description{
+		margin-top: 9px;
+	}
+
+	.form-mobile-and-password{
+		height: 184px;
+		align-items: flex-end;
+		ion-col{
+			padding: 0px 25px 21px 25px !important;
+			position: relative;
+		}
+	}
+
+	.slide-custom-avatar{
+		height: 184px;
+		background-color: rgba(11, 128, 219, 0.47);
+		.slide-zoom{
+			height: 100%;
+		}
+		new-home-avatar-options{
+			height: 100%;
+		}
+	}
+
+	.logo-fb{
+		width: 16px;
+		height: 30px;
+		margin-left: 8px;
+	}
+
+	.lbl-password-warning,
+	.lbl-mobile-warning{
+		padding-top: 2px;
+		color: #f6434a;
+		opacity: 0;
+		position: absolute;
+		right: 0px;
+		left: 0px;
+	}
+
+	.fading{
+		animation-name : 'label-fading';
+		animation-duration : 2s;
+	}
+
+}	

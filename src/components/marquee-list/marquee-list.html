@@ -1,0 +1,38 @@
+<table no-padding>
+	<tr>
+		<td class='label-col-wrapper'>
+			<label class='label-col'>
+				{{_label}}:
+			</label>
+		</td>
+		<td class='marquee-col'>
+			<div>
+				<div #list>
+					<ng-container *ngFor='let winner of _list'>
+						<span class='asterisk'>&bull;</span>
+						<span class='winner-name'>{{winner.name}}</span>
+						<span class='winner-amount'>&nbsp;&pound;{{winner.amount}}</span>
+						<span class='asterisk'>&bull;</span>
+						<span class='winner-max-title'>Max</span>
+						<span class='winner-max-amount'>{{winner.maxAmount}}p</span>
+					</ng-container>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</div>
+				<div #clonedList>
+					<ng-container *ngFor='let winner of _list'>
+						<span class='asterisk'>&bull;</span>
+						<span class='winner-name'>{{winner.name}}</span>
+						<span class='winner-amount'>&nbsp;&pound;{{winner.amount}}</span>
+						<span class='asterisk'>&bull;</span>
+						<span class='winner-max-title'>Max</span>
+						<span class='winner-max-amount'>{{winner.maxAmount}}p</span>
+					</ng-container>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+

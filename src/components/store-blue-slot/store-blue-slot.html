@@ -1,0 +1,87 @@
+
+<ion-grid no-padding class='content-wrapper'>
+	<ion-row>
+		<ion-col align-self-center col-auto>
+			<ion-grid no-padding>
+
+				<ion-row *ngIf='_mode == "AD"'>
+					<ion-col font-w-medium col-12 font-7 text-center text-wrap>
+						30 secs
+					</ion-col>
+					<ion-col text-center col-12>
+						<img class='icon-running-fast'  src='assets/images/store/running-fast.png' />
+					</ion-col>
+				</ion-row>
+
+				<ion-row *ngIf='_mode == "SURVEY"'>
+					<ion-col font-w-medium col-12 font-7 text-center text-wrap>
+						1+ mins
+					</ion-col>
+					<ion-col text-center col-12>
+						<img class='icon-express'  src='assets/images/store/express.png' />
+					</ion-col>
+				</ion-row>
+
+				<ion-row *ngIf='_mode == "OFFERWALL"'>
+					<ion-col font-w-medium col-12 font-7 text-center text-wrap>
+						3+ mins
+					</ion-col>
+					<ion-col text-center col-12>
+						<img class='icon-timer'  src='assets/images/store/timer.png' />
+					</ion-col>
+				</ion-row>
+				
+			</ion-grid>
+		</ion-col>
+
+		<ion-col align-self-center>
+			<ion-grid no-padding>
+				<ion-row *ngIf='_mode == "AD"'>
+					<ion-col  text-center font-7 font-w-medium col-12>
+						Watching
+					</ion-col>
+					<ion-col text-center font-w-bold font-h3 col-12>
+						ADs
+					</ion-col>
+					<ion-col text-center font-7 font-w-medium col-12>
+						Earns&nbsp;<img class='token-blue' src='assets/images/arcade/token-blue.png' />&nbsp;3
+					</ion-col>
+				</ion-row>
+
+				<ion-row *ngIf='_mode == "SURVEY"'>
+					<ion-col  text-center font-7 font-w-medium col-12>
+						Completing 
+					</ion-col>
+					<ion-col text-center font-w-bold font-h3 col-12>
+						SURVEYS
+					</ion-col>
+					<ion-col text-center font-7 font-w-medium col-12>
+						Earns between (<img class='token-coin' src='assets/images/dashboard/coin.png' /> 1k-8k)
+					</ion-col>
+				</ion-row>
+
+				<ion-row *ngIf='_mode == "OFFERWALL"'>
+					<ion-col  text-center font-7 font-w-medium col-12>
+						Completing 
+					</ion-col>
+					<ion-col text-center font-w-bold font-h3 col-12>
+						OFFERWALLS
+					</ion-col>
+					<ion-col text-center font-7 font-w-medium col-12>
+						Earns between (<img class='token-coin' src='assets/images/dashboard/coin.png' /> 2k-100k)
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+
+		<ion-col col-auto>
+		</ion-col>
+
+		<ion-col col-auto>
+			<ion-icon name='ios-arrow-forward-outline'></ion-icon>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+<div class='image-holder' [ngClass]="{'image-ad' : _mode == 'AD','image-survey' : _mode == 'SURVEY','image-offerwall' : _mode == 'OFFERWALL'  }">
+</div>
+<div class='gradient-holder'></div>

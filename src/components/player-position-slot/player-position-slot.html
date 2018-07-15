@@ -1,0 +1,46 @@
+<div [ngClass]='{
+	"own-slot" : _player.isOwn == true,
+	"text-yellow-slot" : _player.rankColor == "yellow",
+	"text-blue-slot" : _player.rankColor == "blue",
+	"text-green-slot" : _player.rankColor == "green",
+	"text-purple-slot" : _player.rankColor == "purple",
+	"text-red-slot" : _player.rankColor == "red",
+	"silver-slot" : _player.isSilver == true,
+	"blue-slot" : _player.isBlue == true}'
+	>
+	<table>
+		<tr>
+			<td>
+				<img [src]='_player.profile' />
+			</td>
+			<td font-6 font-w-bold text-wrap>
+				{{_player.name}}
+			</td>
+			<td class='cell-border'>
+			</td>
+			<td font-w-bold *ngIf='!_player.slotType'>
+				{{_player.attempt}}
+			</td>
+			<td font-w-bold *ngIf='_player.slotType == "RANK"'>
+				{{_player.rank}}
+			</td>
+			<td class='cell-border'>
+			</td>
+			<td font-w-bold>
+				{{_player.top}}%
+			</td>
+			<td class='cell-border'>
+			</td>
+			<td font-w-bold>
+				{{_player.score}}
+			</td>
+			<td class='cell-border'>
+			</td>
+			<td font-w-bold>
+				<ion-icon class='up-arrow' *ngIf='_player.progressType == "UPARROW"' name='ios-play'></ion-icon>
+				<ion-icon class='up-arrow inverted' *ngIf='_player.progressType == "DOWNARROW"' name='ios-play'></ion-icon>
+				<ion-icon *ngIf='_player.progressType == "NONE"' name='md-remove' font-7 font-w-black></ion-icon>
+			</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,28 @@
+<ion-header gamemode-header gamemode='instantwin' (openStoreScreen)='openStoreScreen()'>
+    <button gamemode-header-button clear ion-button icon-only menuToggle>
+        <label class='tapicon-menu'></label>
+    </button>
+    <img gamemode-header-title-icon src='./assets/images/game-mode-icons/instant_win.png' />
+    <div gamemode-header-title font-h3 font-w-black>
+        instant win
+    </div>
+	<img gamemode-header-store-icon end src='./assets/images/arcade/store-icon.png' />
+	<gamemode-balance [balance1]='balance.balance1' [balance2]='balance.balance2' [balance3]='balance.balance3'>
+    </gamemode-balance>
+</ion-header>
+<ion-content no-bounce has-bouncing="false">
+    <table instantwin-content>
+        
+		<gamemode-game-information 
+			gameMode='instantwin'
+			[game]='game.information'
+			[playerRank]='game.playerRank'
+			(onGoToBackScreen)='goToGameHomePage()'
+            >
+		</gamemode-game-information>
+        <gamemode-game-details gameMode='instantwin' [game]='gameRewardDetails' (onHowToPlay)='openHowToPlay()' *ngIf='state == "NORMAL" '>
+		</gamemode-game-details>
+		<instantwin-content-score-information>
+		</instantwin-content-score-information>
+	</table>
+</ion-content>

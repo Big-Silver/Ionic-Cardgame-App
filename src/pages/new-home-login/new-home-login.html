@@ -1,0 +1,63 @@
+<ion-content no-padding>
+	<ion-slides class='loginSlider' #mainSlider>
+		<ion-slide>
+			<div class='login-form-wrapper'>
+				<div text-left>
+					<button clear small ion-button icon-only (tap)='goBack()' class='back-button'>
+						<ion-icon name='ios-arrow-back'></ion-icon>
+					</button>
+				</div>
+				<div>
+					<ion-item no-lines round-input>
+						<ion-input [(ngModel)]='mobileNumber' type='tel' placeholder="Mobile"></ion-input>
+					</ion-item>
+					<ion-item no-lines round-input>
+						<ion-input [(ngModel)]='password' type='password' placeholder='Password'></ion-input>
+					</ion-item>
+					<div text-center>
+						<label font-w-bold font-4  class='lbl-forgot-password' (tap)='goToScreenTwo()'>
+							Forgot Password
+						</label>
+					</div>
+				</div>
+			</div>
+			<ion-grid no-padding class='login-form-buttons'>
+				<ion-row>
+					<ion-col text-center col-6>
+						<button ion-button round block (tap)='goToGameDashboard()'>
+							Log in
+						</button>
+					</ion-col>
+					<ion-col text-center col-6>
+						<button ion-button no-padding round block>
+							<ion-grid no-padding>
+								<ion-row>
+									<ion-col col-auto margin-left>
+										<img class='icon-facebook' src='assets/images/signup/facebook.png' />
+									</ion-col>
+									<ion-col>
+										<div font-w-bold font-11>Log in with</div>
+										<div font-w-normal>facebook</div>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+			<ion-grid class='login-form-footer'>
+				<ion-row>
+					<ion-col font-5 font-w-normal col-auto>
+						DON’T HAVE AN ACCOUNT?
+					</ion-col>
+					<ion-col text-left font-5 font-w-bold (tap)='goToSignupPage()'>
+						SIGN UP
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-slide>
+		<ion-slide>	
+			<new-home-login-forgot-password (goBack)='goToScreenOne()'></new-home-login-forgot-password>
+		</ion-slide>
+	</ion-slides>
+</ion-content>

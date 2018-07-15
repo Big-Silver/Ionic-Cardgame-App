@@ -1,0 +1,79 @@
+<ion-slides #slides>
+	<ion-slide class='firstSlide'>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col class='image-win' align-self-center>
+					<img class='fadeInLeft animated'  src='./assets/images/arcade/kawaii_win/{{randomImage}}' />
+				</ion-col>
+				<ion-col align-self-center>
+					<h1 class='title-win'>You Win</h1>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-slide>
+	<ion-slide class='secondSlide'>
+		<ion-grid no-padding *ngIf='changeContentOfSecondSlide == false' class='firstScreen'>
+			<ion-row>
+				<ion-col font-w-heavy class='question'>
+					What would you like to do?
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col text-right class='p-right'>
+					<button class='button-topup-option' [ngClass]='{"optionSelected" : inCashPrize == false}' (click)='inCashPrize = false'>
+						<div class='t-top' font-w-medium font-6>CHOOSE</div>
+						<div class='t-middle' font-9 font-w-heavy highlight>&pound;1.20</div>
+						<div class='t-bottom' font-w-medium font-6>IN COINS</div>
+						<div class='selection-mark left'>
+							<div class='selection-fill'></div>
+						</div>
+						<div>
+							<img src='assets/images/store/coins-small.png' />
+						</div>
+					</button>
+				</ion-col>
+				<ion-col text-left class='p-left'>
+					<button class='button-topup-option' [ngClass]='{"optionSelected" : inCashPrize == true}' (click)='inCashPrize = true'>
+						<div class='t-top' font-w-medium font-6>CHOOSE</div>
+						<div class='t-middle' font-9 font-w-heavy>&pound;1.00</div>
+						<div class='t-bottom' font-w-medium font-6>CASH</div>
+						<div class='selection-mark right'>
+							<div class='selection-fill'></div>
+						</div>
+					</button>
+				</ion-col>
+			</ion-row>
+			<!-- <ion-row>
+				<ion-col>
+					<button class='button-collect' font-w-medium font-9 (click)='restartGame.emit()'>
+						COLLECT
+					</button>
+				</ion-col>
+			</ion-row> -->
+		</ion-grid>
+		<ion-grid no-padding *ngIf='changeContentOfSecondSlide == true' class='secondScreen'>
+			<ion-row>
+				<ion-col font-w-heavy class='question'>
+					Collect your winning tokens
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<!-- <button class='collect-coin'>
+						<div class='t-top' font-w-medium font-6>WIN</div> -->
+						<div font-h1 font-w-heavy>
+							<img src='assets/images/arcade/token-red.png' /> 2
+						</div>
+					<!-- </button> -->
+				</ion-col>
+			</ion-row>
+			<!-- <ion-row>
+				<ion-col>
+					<button class='button-collect-small' font-w-medium font-9 (click)='restartGame.emit()'>
+						COLLECT
+					</button>
+				</ion-col>
+			</ion-row> -->
+		</ion-grid>
+	</ion-slide>
+</ion-slides>

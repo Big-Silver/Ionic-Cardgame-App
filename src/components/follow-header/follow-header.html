@@ -1,0 +1,29 @@
+<ion-toolbar class='header-toolbar'>
+	<ion-buttons start>
+		<button ion-button icon-only (tap)='goBack.emit()'>
+			<ion-icon color='light' class='tapicon-back' ></ion-icon>
+		</button>
+	</ion-buttons>
+	<ion-title font-22 font-w-bold>
+		<img src='assets/images/home/follow.png' />
+		FOLLOW
+	</ion-title>
+</ion-toolbar>
+<ion-toolbar wrap-only class='tab-toolbar'>
+	<ion-grid no-padding>
+		<ion-row>
+			<ion-col text-center [ngClass]='{"activatedTab" : activeTab == "follow" }' (tap)='changeTab("follow")'>
+				FOLLOW
+			</ion-col>
+			<ion-col text-center [ngClass]='{"activatedTab" : activeTab == "following" }' (tap)='changeTab("following")'>
+				FOLLOWING
+			</ion-col>
+			<ion-col text-center [ngClass]='{"activatedTab" : activeTab == "followers" }' (tap)='changeTab("followers")'>
+				FOLLOWERS
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-toolbar>
+<ion-toolbar class='search-toolbar' wrap-only>
+	<ion-searchbar [animated]='true' [placeholder]='""'></ion-searchbar>
+</ion-toolbar>

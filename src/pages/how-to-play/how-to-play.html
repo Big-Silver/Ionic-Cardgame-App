@@ -1,0 +1,27 @@
+<ion-header [class]="params.class">
+  <ion-navbar>
+    <ion-title>
+      How To Play
+      <h3>{{params.title}}</h3>
+    </ion-title>
+    <ion-buttons class="no-margin">
+      <div class='red-background' (click)='viewCtrl.dismiss()'>
+      </div>
+      <ion-icon class='red-icon' name='ios-close-circle-outline' (click)='viewCtrl.dismiss()'></ion-icon>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div class="how-to-play-content" [innerHtml]="params.description"></div>
+
+    <ion-item *ngFor="let d of diseases; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+      <h3>
+        <ion-icon color="success" item-start [name]="isGroupShown(i) ? 'play' : 'play'" [ngClass]="{'rotate': isGroupShown(i)}"></ion-icon>
+        {{d.title}}
+      </h3>
+      <p *ngIf="isGroupShown(i)">{{d.description}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

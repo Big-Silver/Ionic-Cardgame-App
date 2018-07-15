@@ -1,0 +1,26 @@
+<ion-grid no-padding h-100>
+	<ion-row h-100>
+		<ion-col [ngStyle]='{"background-image" : _data.background}'>
+		</ion-col>
+		<ion-col col-auto>
+			<div class='first-row'>
+				<div>
+					<div><img src='assets/images/dashboard/coin.png' /></div>
+					<div font-w-bold text-center>
+						{{_data.amount}}
+					</div>
+				</div>
+			</div>
+			<div class='second-row'>
+				<div>
+					<div font-8 font-w-medium>
+						Expires:
+					</div>
+					<div>
+						<timer [time]='_data.time' [slotted]='true' ></timer>
+					</div>
+				</div>
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

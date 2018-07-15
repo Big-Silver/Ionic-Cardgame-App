@@ -1,0 +1,76 @@
+[stage-result-header] {
+
+	background-image: url(../assets/images/registration/header-background.png) !important;
+	background-size: cover;
+
+	&:before{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		content: '';
+	}
+
+	&:before{
+		background-image: url('../assets/images/home/header_background.png') !important;
+		opacity: 0.8;
+		background-size: cover;
+	}
+
+	color: white;
+	ion-toolbar{
+
+		&:nth-child(1){
+			padding: 0px 5px !important;
+			height: 50px !important;
+		}
+
+
+		img{
+			display: block;
+			padding: 2px !important;
+		}
+		.gradient-text{
+			line-height: 20px !important;
+			transform: translate3d(0px, 0px, 0px) !important;
+			background-image: linear-gradient(180deg, #ffffff 0%, #ff9800 100%);
+			transform: translate3d(0px, 0px, 0px);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		.toolbar-background{
+			background-image: none !important;
+			background-color: transparent !important;
+		}
+	}
+	
+
+	.red-background{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 43px;
+		height: 49px;
+		border-right: 21px solid #d12424;
+		border-top: 24px solid #d12424;
+		border-left: 21px solid transparent;
+		border-bottom: 24px solid transparent;
+		// z-index: 13;
+	}
+
+	.red-icon{
+		position: absolute;
+		top: 0px;
+		right: 1px;
+		font-size: 29px;
+		color: white;
+		z-index: 11;
+	}
+
+	.separator{
+		height: 2px;
+		background-image: linear-gradient(180deg, #ffb500 0%, #f9e852 100%);
+	}
+
+}

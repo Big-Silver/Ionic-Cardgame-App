@@ -1,0 +1,103 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col class='segmented-control'>
+			<ion-grid no-padding (tap)='changeActiveSegment()'>
+				<ion-row>
+					<ion-col font-h3 font-w-bold text-center [ngClass]="{'active' : activeSegment == 'EARN' }">
+						<div text-nowrap class='fake-svg-wrapper'>
+							EARN COINS
+							<svg xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<linearGradient id="earn-background-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+										<stop stop-color="#f9e150" offset="0%"/>
+										<stop stop-color="#ffffff" offset="100%"/>
+									</linearGradient>
+									<linearGradient id="earn-border-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+										<stop stop-color="#ffffff" offset="0%"/>
+										<stop stop-color="#ffb400" offset="100%"/>
+									</linearGradient>
+								</defs>
+								<text dy='17' font-size="18" [attr.stroke-width]="activeSegment == 'EARN' ? 1 : 0" stroke="url(#earn-border-gradient)" [attr.fill]="activeSegment == 'EARN' ? 'url(#earn-background-gradient)' : 'white'">EARN COINS</text>
+							</svg>
+						</div>
+					</ion-col>
+					<ion-col font-h3 font-w-bold text-center [ngClass]="{'active' : activeSegment == 'BUY' }">
+						<div text-nowrap class='fake-svg-wrapper'>
+							BUY COINS
+							<svg xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<linearGradient id="buy-background-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+										<stop stop-color="#f9e150" offset="0%"/>
+										<stop stop-color="#ffffff" offset="100%"/>
+									</linearGradient>
+									<linearGradient id="buy-border-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+										<stop stop-color="#ffffff" offset="0%"/>
+										<stop stop-color="#ffb400" offset="100%"/>
+									</linearGradient>
+								</defs>
+								<text dy='17' font-size="18" [attr.stroke-width]="activeSegment == 'BUY' ? 1 : 0" stroke="url(#buy-border-gradient)" [attr.fill]="activeSegment == 'BUY' ? 'url(#buy-background-gradient)' : 'white'">BUY COINS</text>
+							</svg>
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+	</ion-row>
+	<ion-row class='main-label-container'>
+		<ion-col >
+			<ion-slides #slide>
+				<ion-slide>
+					<div text-center class='text-description' font-w-medium font-7>
+						Below you can earn coins and above convert <br/>
+						your coins into red/blue tokens & helper bots.	
+					</div>
+				</ion-slide>
+				<ion-slide>
+					<div text-center class='text-description' font-w-medium font-7>
+						Buy coins below and above convert <br/>
+						your coins into red/blue tokens & helper bots.
+					</div>
+				</ion-slide>
+			</ion-slides>
+		</ion-col>
+	</ion-row>
+	<ion-row class='hint-container'>
+		<ion-col text-right align-self-center>
+			<div class='hint-button'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col align-self-center col-auto>
+							<img class='silver-coin' src='assets/images/dashboard/coin.png' />
+						</ion-col>
+						<ion-col *ngIf='activeSegment == "EARN"' align-self-center text-left font-7>
+							Earn<br/>
+							Coins
+						</ion-col>
+						<ion-col *ngIf='activeSegment == "BUY"' align-self-center text-left font-7>
+							Buy<br/>
+							Coins
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</ion-col>
+		<ion-col align-self-center col-auto>
+			<ion-icon name='ios-arrow-forward-outline'></ion-icon>
+		</ion-col>
+		<ion-col text-left align-self-center>
+			<div class='hint-button'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col align-self-center col-auto>
+							<img class='multiple-coins' src='assets/images/store/multiple_coins.png' />
+						</ion-col>
+						<ion-col align-self-center text-left font-7>
+							Convert<br/>
+							& Go
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

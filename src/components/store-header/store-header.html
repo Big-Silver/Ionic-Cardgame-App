@@ -1,0 +1,98 @@
+<ion-toolbar >
+	<ion-buttons start>
+		<button (tap)='closeModal.emit()' ion-button icon-only>
+			<ion-icon name='ios-arrow-back'></ion-icon>
+		</button>
+	</ion-buttons>
+	<ion-title>
+		<div class='fake-svg-wrapper'>
+			STORE
+			<svg xmlns="http://www.w3.org/2000/svg">
+				<defs>
+					<linearGradient id="store-title-background-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+						<stop stop-color="#ffffff" offset="0%"/>
+						<stop stop-color="#ffe500" offset="50%"/>
+						<stop stop-color="#ff7800" offset="100%"/>
+					</linearGradient>
+					<linearGradient id="store-title-border-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+						<stop stop-color="#ffe928" offset="0%"/>
+						<stop stop-color="#ff9000" offset="100%"/>
+					</linearGradient>
+				</defs>
+				<text dy='49' dx='3' stroke-width="1" stroke='#7a2209' fill="#7A2209">STORE</text>
+				<text dy='46' stroke-width="1" stroke="url(#store-title-border-gradient)" fill="url(#store-title-background-gradient)">STORE</text>
+			</svg>
+		</div>
+	</ion-title>
+</ion-toolbar>
+<ion-toolbar>
+	<ion-grid h-100 no-padding>
+		<ion-row>
+			<ion-col class='player-coin-amount' align-self-center>
+				<div font-5 text-center class='text-label'>
+					<img src='assets/images/dashboard/coin.png' />&nbsp;Coins you have:
+				</div>
+				<div text-center font-h1 font-w-bold class='text-value'>
+					56,407
+				</div>
+			</ion-col>
+			<ion-col col-auto class='border-col'>
+					
+			</ion-col>
+			<ion-col col-auto align-self-center>
+				<div font-6 font-w-heavy text-center>
+					CONVERT HERE
+				</div>
+				<button (click)='convertCoins.emit()'>
+					<ion-icon class='tapicon-exchange'></ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-toolbar>
+
+<!-- <div>
+	<div text-center>
+		<div font-h1 font-w-bold text-center class='store-label'>
+			STORE
+		</div>
+	</div>
+	<div>
+		<ion-grid class='player-coin-amount' no-padding>
+			<ion-row>
+				<ion-col></ion-col>
+				<ion-col align-self-center>
+					<div font-5 text-center class='text-label'>
+						<img src='assets/images/dashboard/coin.png' />&nbsp;Coins you have:
+					</div>
+					<div text-center font-h1 font-w-bold class='text-value'>
+						56,407
+					</div>
+				</ion-col>
+				<ion-col text-right>
+					<button (click)='convertCoins.emit()'>
+						<ion-icon class='tapicon-exchange'></ion-icon>
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div class='convert-coins'>
+		<ion-grid  no-padding>
+			<ion-row>
+				<ion-col col-auto font-w-bold align-self-center>
+					CONVERT<br/>COINS
+				</ion-col>
+				<ion-col font-w-bold align-self-center font-7>
+					You can covert into tokens and<br/>
+					helper bots.
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<img class='convert-coin-1' src='assets/images/store/coin_convert.png' />
+		<img class='convert-coin-2' src='assets/images/store/coin_convert.png' />
+	</div>
+</div>
+<div class='red-background' (click)='closeModal.emit()'>
+</div>
+<ion-icon class='red-icon' name='ios-close-circle-outline' (click)='closeModal.emit()'></ion-icon> -->

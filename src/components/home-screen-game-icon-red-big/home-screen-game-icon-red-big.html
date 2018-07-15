@@ -1,0 +1,74 @@
+<div class='slot big red' game-icon>
+	<table>
+		<tr #background class='frame-background' [ngClass]="{'disabled':_game.disabled}">
+			<td text-center colspan="2" class='t-l-big-r t-r-big-r b-r-small-r b-l-small-r border-inset-red' [ngClass]='{"background-overlay" : ( _game.disabled == true )}'>
+				<img class='pad-lock big' src="assets/images/home/lock.png" *ngIf='_game.disabled == true' />
+			</td>
+		</tr>
+		<tr class='p-t-2'>
+			<td shrink>
+				<img class='game-mode-icon' src='./assets/images/game-mode-icons/replay.png' *ngIf='_game.mode == "REPLAY"'/>
+				<img class='game-mode-icon' src='./assets/images/game-mode-icons/head2head.png' *ngIf='_game.mode == "HEAD2HEAD"'/>
+				<img class='game-mode-icon' src='./assets/images/game-mode-icons/contest.png' *ngIf='_game.mode == "CONTEST"'/>
+			</td>
+			<td>
+				<div class='text-holder medium' *ngIf='_game.subbar == "DIFFICULTY_INFO" '>
+					<span font-6 font-w-medium>{{_game.difficulty}}</span>
+					<span class='f-right line-height-12'>&nbsp;{{_game.redToken}}</span>
+					<img class='f-right' src='./assets/images/arcade/token-red.png' />
+				</div>
+				<div class='text-holder medium' *ngIf='_game.subbar == "GAMEPROGRESS_INFO" '>
+					<span class='f-left' font-w-medium font-8>
+						Stage
+					</span>
+					<span class='highlight f-left' font-7 font-w-bold>
+						&nbsp;{{_game.stage}}
+					</span>
+					<span class='highlight f-right' font-7 font-w-bold>
+						&nbsp;{{_game.attempts}}
+					</span>
+					<span font-w-medium font-8 class='f-right'>
+						Attempts:
+					</span>
+					<div class='clear'></div>
+				</div>
+			</td>
+		</tr>
+		<tr class='p-t-2'>
+			<td colspan="2">
+				<div class='text-holder big'>
+					<div #animationContainer>
+						<div>
+							<img src='assets/images/home/icons/money.png' />&nbsp;
+							<span font-5 font-w-medium>
+								Prize: 
+							</span>
+							<span font-w-black class='highlight f-right'>
+								&pound;{{_game.prize}}
+							</span>
+						</div>
+						<div *ngIf='_game.isCountDown == true'>
+							<img src='assets/images/home/icons/clock.png' />&nbsp;
+							<span font-5 font-w-medium>
+								Ends:
+							</span>
+							<span #timerWrapper font-w-black class='f-right'>
+								<!-- {{shadowTimer.hours}}:{{shadowTimer.minutes}}:{{shadowTimer.seconds}} -->
+							</span>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div *ngIf='_game.badge == true'>
+		<div class='badge lock' *ngIf='_game.badgeType == "LOCK"'>
+			<img class='pad-lock small' src='assets/images/home/lock.png' />
+		</div>
+		<div class='badge value' *ngIf='_game.badgeType == "VALUE"'>
+			<span>
+				{{_game.badgeValue}}
+			</span>
+		</div>
+	</div>
+</div>

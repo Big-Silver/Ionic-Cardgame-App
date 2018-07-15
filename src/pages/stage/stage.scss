@@ -1,0 +1,158 @@
+page-stage {
+
+	.scroll-content{
+		padding: 0px !important;
+		// overflow: hidden !important;
+	}
+
+	.stage-container{
+		position: relative;
+		height: 400%;
+		// transform: translate3d(0px, -75%, 0px);
+	}
+
+	stage-block{
+		height: 25% !important;
+		z-index: 10;
+	}
+
+	.view-wrapper{
+		position: relative;
+	}
+
+	.stage-image{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+	}
+
+	.player-pin.animated{
+		opacity: 1;
+		transition: transform 1.7s;
+	}
+
+	.player-pin{
+		opacity: 0;
+		width: 65px;
+		height: 70px;
+		position: absolute;
+		border: 1px solid transparent;
+		transform-origin: bottom center;
+		z-index: 100 !important;
+
+		img{
+			height: 61px;
+			width: 61px;
+			border: 3px solid white;
+			background-color: white !important;
+			margin: auto;
+			display: block;
+			border-radius: 100%;
+			position: absolute;
+			z-index: 10;
+			right: 0;
+			left: 0;
+
+		}
+
+		.arrow{
+			bottom: -4px;
+			height: 0px;
+			width: 34px;
+			position: absolute;
+			right: 0px;
+			left: 0px;
+			margin: auto;
+			border-top: 19px solid white;
+			border-right: 17px solid transparent;
+			border-left: 17px solid transparent;
+		}
+	}
+
+	
+
+	.fixed-content-holder{
+		pointer-events: none !important;
+		height: 100%;
+		width: 100%;
+
+		.scroll-content{
+			overflow-y: hidden !important;
+		}
+
+		.bottom-progressbar{
+			height: 9px;
+			border: 1px solid white;
+			border-radius: 25px;
+			background-image: linear-gradient(to right, #f91843 0%, #1fdd0a 100%);
+			margin: 3px;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			background-color: black;
+			width: 81%;
+			overflow: hidden;
+			.inner-progress{
+				width: calc(100% + 1px);
+				background-color: white;
+				height: calc(100% + 2px);
+				position: absolute;
+				top: -1px;
+				bottom: -1px;
+				left: -1px;
+				right: 0px;
+				&.animated{
+					animation: 5s progress-bar-animation linear;
+					animation-fill-mode: forwards;
+				}
+				&:not(.animated){
+					transform: translate3d(0px, 0px, 0px);
+				}
+				
+			}
+			
+		}
+
+		.corner-image{
+			position: absolute;
+			bottom: -1px;
+			width: 61px;
+			height: 61px;
+			right: -1px;
+			.corner-logo{
+				height: 25px;
+				width: 25px;
+				position: absolute;
+				bottom: 4px;
+				right: 5px;
+			}
+		}
+
+		.game-mode-icon{
+			position: absolute;
+			height: 25px;
+			width: 25px;
+			bottom: 5px;
+			right: 5px;
+		}
+
+	}
+
+}
+
+@keyframes progress-bar-animation{
+
+	0%{
+		transform: translate3d(100%, 0px, 0px);
+	}
+	100%{
+		transform: translate3d(0%, 0px, 0px);
+	}
+
+}
+

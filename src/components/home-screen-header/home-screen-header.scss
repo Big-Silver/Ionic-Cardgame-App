@@ -1,0 +1,165 @@
+home-screen-header, [home-screen-header]{
+
+	background-image: url('../assets/images/home/background.png') !important;
+	background-size: cover;
+	
+
+	&:before{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		content: '';
+	}
+
+	&:before{
+		background-image: url('../assets/images/home/header_background.png') !important;
+		opacity: 0.8;
+		background-size: cover;
+	}
+
+	ion-buttons{
+		margin: 0px !important;
+		align-self: center;
+	}
+
+	ion-buttons button{
+		margin: 0px !important;
+	}
+	
+	[title-icon]{
+		vertical-align: bottom;
+		height: 56px;
+	}
+
+	[header-menu-button] *, [header-msg-button] *{ 
+		color: white !important;
+	}
+
+	[header-menu-button]{
+		height: 56px !important;
+		label{
+			font-size: 32px !important;	
+			line-height: 20px !important;
+		}
+	}
+
+	[header-msg-button] ion-icon{
+		font-size: 2.25em !important;
+	}
+
+	ion-navbar{
+		padding: 0px 0px 0px 0px !important;
+		min-height: 56px;
+	}
+
+	ion-navbar,
+	ion-toolbar{
+		.toolbar-background{
+			background-color: transparent !important;
+			background-image: none !important;
+		}
+	}
+
+	[store-icon]{
+		animation-delay: 8s !important;
+	}
+
+	ion-buttons[end].store-button-wrapper{
+		width: 62px !important;
+		padding-right: 8px !important;
+	}
+
+	.btn-store{
+		height: 41px;
+		width: 42px !important;
+		padding: 0px !important;
+		background-color: none !important;
+		img{
+			width: 42px !important;
+			height: 41px !important;
+		}
+	}
+
+	ion-buttons[start]{
+		align-self: stretch;
+		button{
+			padding: 0px 12px !important;
+			background-color: #070037;
+			height: 100%;
+		}
+	}
+
+	ion-buttons[end]{
+
+		width: 100% !important;
+		display: flex !important;
+		align-items: flex-end !important;
+		padding: 0px 0px 0px 0px !important;
+
+		button{
+			vertical-align: bottom !important;
+			color: white;
+		}
+
+		.button-inner{
+			flex-flow: column !important;
+		}
+
+		[header-msg-button]{
+			padding: 0px !important;
+			overflow: visible !important;
+			ion-icon{
+				line-height: 22px !important;
+				margin: 4px 6px 0px 2px !important; 
+			}
+			[font-6]{
+				margin-right: 4px !important;
+				width: 100%;
+				text-align: center;
+			}
+			&:before{
+				content:  "";
+				position: absolute;
+				height: 11px;
+				width: 11px;
+				background-color: #fa5c5c;
+				border-radius: 100%;
+				right: 2px;
+				top: 1px;
+				animation: 1s big-pulse infinite;
+			}
+		}
+
+		[header-msg-button],
+		[header-follow-button],
+		[header-share-button],
+		[header-missions-button]{
+			height: unset !important;
+		}
+
+		[header-follow-button],
+		[header-share-button]{
+			img{
+				width: 28px;
+				height: 28px;
+				margin-bottom: 2px !important;
+			}
+		}
+
+		[header-missions-button]{
+			img{
+				width: 23px !important;
+				height: 25px !important;
+				margin-bottom: 3px !important;
+			}
+		}
+
+	}
+
+	ion-toobar[wrap-only]{
+		border: 0px !important;
+	}
+
+}

@@ -1,0 +1,76 @@
+gamemode-balance{
+
+	$red : #e71e1a;
+    $blue : #2cacf4;
+	$yellow : #ffc606;
+	display: block;
+	
+	background-color: rgba(0,0,0,0.50);
+	// background-color: black;
+
+	.highlight-border{
+		height: 1.5px;
+		background-image : linear-gradient(90deg,  #000000 0%,  #ffba37 50%,  #000000 100%);
+		&:after{
+			clear: both;
+		}
+	}
+
+	table{
+		width: 100%;
+		height: 20px;
+	}
+
+	& > table{
+		tr{
+			height: 100%;
+		}
+		table-layout: fixed;
+	}
+
+	& > table > tbody > tr > td:not(:nth-last-child(1)){
+		border-right: 3px solid transparent;
+	}
+
+	// .b-red{
+	// 	& > div{
+	// 		border-top: 2px solid $red;
+	// 		border-bottom: 2px solid $red;
+	// 	}
+	// }
+
+	// .b-blue{
+	// 	& > div{
+	// 		border-top: 2px solid $blue;
+	// 		border-bottom: 2px solid $blue;	
+	// 	}
+	// }
+
+	// .b-yellow{
+	// 	& > div{
+	// 		border-top: 2px solid $yellow;
+	// 		border-bottom: 2px solid $yellow;	
+	// 	}
+		
+	// }
+
+	td{
+		padding: 0px !important;
+		color : white;
+		text-align: center;
+		position: relative;
+		// background-color: black;
+	}
+
+	img{
+		height: 13px;
+		margin: auto;
+		position: absolute;
+		left: 6px;
+		top: 0;
+		bottom: 0;
+	}
+
+
+
+}

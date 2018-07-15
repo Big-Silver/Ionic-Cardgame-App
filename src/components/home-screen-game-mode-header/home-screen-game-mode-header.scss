@@ -1,0 +1,39 @@
+home-screen-game-mode-header {
+	table{
+		width: 100%;
+	}
+
+	img{
+		height: 26px;
+		max-width: none !important; 
+		display: block;
+		margin-left: 8px;
+		margin-right: 12px;
+	}
+
+	.title, .sub-title{
+		color: white;
+	}
+
+	.title{
+		width: 100%;
+		padding-left: 10px;
+		transform: translate3d(0px, 0px, 0px) !important;
+		background-image: linear-gradient(180deg, #ffffff 0%, #f8e71c 100%);
+		transform: translate3d(0px, 0px, 0px);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.sub-title div{
+		margin-bottom: 2px;
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		line-height: 12px;
+		font-weight: 600;
+		letter-spacing: -0.38px !important;
+		padding-left: 10px;
+	}
+
+
+}

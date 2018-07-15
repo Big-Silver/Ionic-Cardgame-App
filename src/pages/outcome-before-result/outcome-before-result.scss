@@ -1,0 +1,210 @@
+page-outcome-before-result {
+
+	*{
+		color: white;
+	}
+
+	$entryTime : 1s;
+	$exitTime : $entryTime - 0.5;
+	$bounceTime : 1.5s;
+
+	ion-content{
+		background-color: rgba(0,0,0,0.73) !important;
+	}
+
+	ion-grid{
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	img{
+		display: block;
+		margin: auto;
+	}
+
+	.img-star{
+		width: 65px !important;
+	}
+
+	.img-star-lines{
+		width: 16.5px;
+		margin-top: -2.5px;
+	}
+
+	.img-red-ribbon{
+		width: 41.5px !important;
+	}
+
+	.img-red-ribbon-lines{
+		width: 17.5px;
+		margin-top: -2px;
+	}
+
+
+	.hide-until-page-loads{
+		opacity: 0;
+	}
+
+	.should-animate{
+		.enter-from-bottom{
+			z-index: 10;
+			animation: result-outcome-enter-from-bottom, result-outcome-bounce-from-bottom-to-top, result-outcome-exit-to-top;
+			animation-duration: $entryTime, $bounceTime, $exitTime;
+			animation-delay: 0s, $entryTime, ($entryTime+$bounceTime);
+			animation-fill-mode: forwards, forwards, forwards;
+		}
+
+		.enter-from-top{
+			ion-col{
+				transform: rotate(180deg);
+			}
+			z-index: 10;
+			animation: result-outcome-enter-from-top, result-outcome-bounce-from-top-to-bottom, result-outcome-exit-to-bottom;
+			animation-duration: $entryTime, $bounceTime, $exitTime;
+			animation-delay: 0s, $entryTime, ($entryTime+$bounceTime);
+			animation-fill-mode: forwards, forwards, forwards;
+		}
+
+		.fades-in{
+			animation-name: fadeIn;
+			animation-duration: $entryTime+$bounceTime;
+		}
+
+		.enter-from-right{
+			animation: fadeInRight, fadeOutLeft;
+			animation-duration: $entryTime, $exitTime;
+			animation-delay: 0s, ($entryTime + $bounceTime);
+			animation-fill-mode: forwards, forwards;
+		}
+	}
+
+	.result-score{
+		font-size: 36px;
+		font-weight: 800;
+		letter-spacing: 3.38px;
+	}
+
+	.rank-title{
+		letter-spacing: 3.32px;
+	}
+
+	.ribbon-wrapper{
+		position: relative;
+		margin-top: 8px;
+		margin-bottom: 72px;
+		img {
+			height: 29px;
+			margin: auto;
+		}
+		div{
+			letter-spacing : -0.14px;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			text-align: center;
+		}
+	}
+
+
+}
+
+//////////////////////////////
+
+@keyframes result-outcome-enter-from-bottom{
+
+	0%{
+		transform: translate3d(0px, 80vh, 10px);
+	}
+
+	100%{
+		transform: translate3d(0px, -15%, 10px);
+	}
+
+
+}
+
+@keyframes result-outcome-enter-from-top{
+
+	0%{
+		transform: translate3d(0px, -80vh, 10px);
+	}
+
+	100%{
+		transform: translate3d(0px, 0px, 10px);
+	}
+
+}
+
+//////////////////////////////
+
+
+@keyframes result-outcome-exit-to-top{
+
+	100%{
+		transform: translate3d(0px, -80vh, 10px);
+	}
+
+}
+
+
+@keyframes result-outcome-exit-to-bottom{
+	100%{
+		transform: translate3d(0px, 80vh, 10px);
+	}
+}
+
+
+//////////////////////////////
+
+@keyframes result-outcome-bounce-from-bottom-to-top{
+
+	0%{
+		transform: translate3d(0px, -15%, 10px);
+	}
+
+	25%{
+		transform: translate3d(0px, 0%, 10px);
+	}
+
+	50%{
+		transform: translate3d(0px, -15%, 10px);
+	}
+
+	100%{
+		transform: translate3d(0px, 5%, 10px);
+	}
+
+}
+
+@keyframes result-outcome-bounce-from-top-to-bottom{
+
+	0%{
+		transform: translate3d(0px, 0px, 10px);
+	}
+
+	25%{
+		transform: translate3d(0px, -15%, 10px);
+	}
+
+	50%{
+		transform: translate3d(0px, 0px, 10px);
+	}
+
+	100%{
+		transform: translate3d(0px, -20%, 10px);
+	}
+
+}
+
+
+
+//////////////////////////////
+
+.outcome-before-result-modal{
+	.modal-wrapper{
+		transform: translate3d(0px, 0px, 10px) !important;
+	}
+}
+

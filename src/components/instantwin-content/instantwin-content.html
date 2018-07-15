@@ -1,0 +1,25 @@
+<tr shrink>
+	<td>
+		<ng-content select='gamemode-game-information'>
+		</ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td class='highlighted-border'>
+	</td>
+</tr>
+<tr shrink>
+	<td>
+		<ng-content select=' > gamemode-game-details'>
+		</ng-content>
+	</td>
+</tr>
+<tr shrink>
+	<td class='highlighted-border inverse'></td>
+</tr>
+<tr expand>
+	<td class='td-instantwin-content-score-background'>	
+		<ng-content select=' > instantwin-content-score-information'>
+		</ng-content>
+	</td>
+</tr>

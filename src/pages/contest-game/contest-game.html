@@ -1,0 +1,63 @@
+<ion-header [disableButtons]='disableBackButton' gamemode-header gamemode='contest' (openStoreScreen)='openStoreScreen()'>
+    <button gamemode-header-button clear ion-button icon-only menuToggle>
+        <label class='tapicon-menu'></label>
+    </button>
+    <img gamemode-header-title-icon src='./assets/images/game-mode-icons/contest.png' />
+    <div gamemode-header-title font-h3 font-w-black>
+        contest
+	</div>
+	<img gamemode-header-store-icon end src='./assets/images/arcade/store-icon.png' />
+	<gamemode-balance [balance1]='balance.balance1' [balance2]='balance.balance2' [balance3]='balance.balance3'>
+    </gamemode-balance>
+</ion-header>
+<ion-content no-bounce>
+    <table contest-content>
+		<gamemode-game-information 
+			gameMode='contest'
+			[game]='game.information'
+            [playerRank]='game.playerRank'
+			(onPlayGame)='startPlayingGame()'
+			(onGoToBackScreen)='goToGameHomePage()'
+			(openRankPopup)='openRankPopup()'
+			[disablePlayButton]='disablePlayButton'
+			[disableBackButton]='disableBackButton'
+            >
+		</gamemode-game-information>
+        <gamemode-game-details gameMode='contest' [game]='gameRewardDetails' (onHowToPlay)='openHowToPlay()' *ngIf='state == "NORMAL" '>
+		</gamemode-game-details>
+		<gamemode-game-details-won 
+			gameMode='contest'
+			(slideTransitionStarted)='doDisablePlayButton(true)' 
+			(slideTransitionFinished)='doDisablePlayButton(false)' 
+			(changeReplyCounter)='changeReplyCounter($event)'
+			(openRankPopup)='openRankPopup()'
+			(openSquadupModal)='openSquadupModal()'
+			(openPlayerProfile)='openPlayerProfile($event)'
+			[tempWinPosition]='tempWinPosition'
+			(animationOver)='disableBackButton = false'
+			*ngIf='state == "WON"'>
+		</gamemode-game-details-won>
+
+		<gamemode-score-information 
+			gameMode='contest' 
+			[scoreRows]='scoreRows' 
+			*ngIf='state == "NORMAL"' 
+			[playerInformation]='playerInformation'
+			[replayInformation]='replayInformation'
+			(openPlayerProfile)='openPlayerProfile($event)'
+			>
+		</gamemode-score-information>
+		<gamemode-score-information-won
+			*ngIf='state == "WON"'
+			gameMode='contest'
+			[playerInformation]='playerInformation' 
+			[scoreRows]='scoreRows' 
+			[replayInformation]='replayInformation'
+			[playerPosition]='tempWinPosition'
+			(openPlayerProfile)='openPlayerProfile($event)'
+			>
+		</gamemode-score-information-won>
+
+		<timer [time]='replayInformation.time'></timer>
+    </table>
+</ion-content>

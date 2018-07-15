@@ -1,0 +1,49 @@
+winning-animation-footer {
+	display: block;
+	height: 104px !important;
+	background-color: black;
+	position: relative;
+	border-top: 1px solid #fbe044 !important;
+	background-image: url('../assets/images/winning-animation/theatre.png');
+	background-size: 100% 100%;
+
+	& > ion-grid{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		justify-content: center;
+	}
+
+	home-screen-game-icon-small{
+		margin: 0px 10px;
+	}
+
+	.avatar-icon-wrapper{
+		position: relative;
+	}
+
+	.icon-text{
+		color: black;
+		position: absolute;
+		display: block;
+		height: 31px;
+		line-height: 31px;
+		top: 12px;
+		z-index: 1;
+		left: 0px;
+		right: 0px;
+	}
+
+	player-avatar-icon{
+		.avatar-holder,
+		img.country-holder,
+		.avatar-name{
+			animation-name: fadeIn !important;
+			animation-duration: 1s !important;
+		}
+	}
+	
+
+}

@@ -1,0 +1,32 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col col-auto>
+			<div font-h3 font-w-bold class='label-own-avatar'>
+				Upload your <br/>
+				own Avatar			
+			</div>
+			<div>
+				<div #customImage (tap)='selectImage()' class='wrapper-unknown-profile'>
+					<div  class='button-add-unknown-profile'>
+						<ion-icon name='md-add'></ion-icon>
+					</div>
+				</div>
+			</div>
+		</ion-col>
+		<ion-col class='wrapper-label-or' col-auto>
+			<div class='square-background'>
+				<div class='label-or'>
+					Or
+				</div>
+			</div>
+		</ion-col>
+		<ion-col text-center>
+			<div class='label-custom-avatar' font-5 padding>
+				Choose from list
+			</div>
+			<div class='button-add-custom-avatar' (tap)='openDefaultAvatarListPage.emit()'>
+				<img #defaultImage src='assets/images/signup/unknown-default.png' />
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>

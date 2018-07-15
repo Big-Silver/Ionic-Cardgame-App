@@ -1,0 +1,67 @@
+<table class='main-table'>
+	<thead class='target-header'>
+		<tr>
+			<td>
+				<ion-avatar class='hidden' 
+					[ngClass]='{ 
+						"fadeInLeft animated" : _animateButtons == true && isAnimating == true, 
+						"hidden" : _animateButtons == true && isAnimating == false,
+						"op-hidden" : hideButtons == true
+					}' >
+					<img src='./assets/images/arcade/ad-button.png'/>
+				</ion-avatar>
+			</td>
+			<td colspan="2" class='heading-text' [ngClass]='{"fadeIn animated" : fadingContent == true}'>
+				<h5 no-margin text-center font-h3 font-w-black>
+					<label *ngIf='_mode != "WON"' font-h3 font-w-black>YOUR</label>
+					<label *ngIf='_mode == "WON"' class='highlight-green' font-h3 font-w-black>NEW</label> 
+					<ng-container *ngIf='_mode != "LOSE"'>
+						TARGET
+					</ng-container>
+					<ng-container *ngIf='_mode == "LOSE"'>
+						SCORE
+					</ng-container>
+				</h5>
+				<div text-center font-4 font-w-heavy>
+					LEVEL <span class='highlight' font-4 font-w-heavy>9</span>
+				</div>
+			</td>
+			<td>
+				<ion-avatar class='hidden' 
+					[ngClass]='{ 
+						"fadeInRight animated" : _animateButtons == true && isAnimating == true, 
+						"hidden" : _animateButtons == true && isAnimating == false,
+						"op-hidden" : hideButtons == true
+					}'>
+					<img src='./assets/images/arcade/helper-bot.png' />
+					<label class='badge'>
+						26
+					</label>
+				</ion-avatar>
+			</td>
+		</tr>
+		<tr>
+			<td class='subtitle' text-center font-6 font-w-medium colspan="4" [ngClass]='{"fadeIn animated" : fadingContent == true}'>
+				Goal below to pass this level.
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class='score-border'>
+			<td colspan="4"></td>
+		</tr>
+		<tr class='score-table-container-row'>
+			<td colspan="4">
+				<table class='score-table' [ngClass]='{"fadeIn animated" : fadingContent == true}'>
+					<tr *ngFor='let row of rows'>
+						<td font-9 font-w-bold text-left>{{row.label}}:</td>
+						<td font-9 class="highlight" text-right font-w-bold #wordShufflers>{{row.value}}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr class='score-border'>
+			<td colspan="4"></td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,245 @@
+<ion-slides #slide [pager]='true'>
+	<ion-slide class='highest-position-slide'>
+		<div class='background-wrapper'>
+			<div class='header' text-left font-w-bold>
+				Highest&nbsp;&nbsp;<img src='assets/images/game-mode-icons/replay.png' /> / <img src='assets/images/game-mode-icons/contest.png' />&nbsp;&nbsp;Position
+			</div>
+			<div class='content'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col align-self-center>
+							<div text-center font-w-bold>
+								Top
+							</div>
+							<div text-center class='gradient-text-inverted' font-w-bold>
+								{{highestPosition.top}}%
+							</div>
+						</ion-col>
+						<ion-col col-auto>
+						</ion-col>
+						<ion-col align-self-center>
+							<img class='game-icon' [src]='highestPosition.gameIcon' />
+							<div font-6 text-center>
+								{{highestPosition.gameName}}
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+			<div class='pagination-space'></div>
+		</div>
+		<div class='footer'>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col col-auto>
+						<img class='image-glove' src='assets/images/player-profile/boxing-glove.png' />
+					</ion-col>
+					<ion-col class='description' font-w-bold align-self-center text-center>
+						Why Not battle
+						<div></div>
+						in a&nbsp;&nbsp;<img src='assets/images/game-mode-icons/head2head.png' />
+					</ion-col>
+					<ion-col font-w-bold col-auto align-self-center>or</ion-col>
+					<ion-col class='description' align-self-center font-w-bold  text-center>
+						Team up in a
+						<div></div>
+						<img src='assets/images/game-mode-icons/replay.png' /> / <img src='assets/images/game-mode-icons/contest.png' />
+					</ion-col>
+					<ion-col col-auto>
+						<img class='image-squadup' src='assets/images/replay/squadup.png' />
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</ion-slide>
+	<ion-slide class='popularity-slide' (tap)='onPopularitySlideTapped.emit()'>
+		<div class='background-wrapper'>
+			<div text-left font-w-bold class='header'>
+				Popularity
+			</div>
+			<div class='content'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col font-5 text-left align-self-center>
+							Fighter points are awarded when
+							player requests or accept battle
+							requests from other players.
+						</ion-col>
+						<ion-col col-auto>
+						</ion-col>
+						<ion-col col-auto>
+							<ion-grid no-padding class='content-holder-grid'>
+								<ion-row>
+									<ion-col>
+										<div text-center font-w-bold>
+											Fighter
+										</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col text-center>
+										<img class='fighter-image' src='assets/images/player-profile/fighter.png' />
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col>
+										<div text-center font-10 class='gradient-text-light' font-w-bold>
+											{{popularity.fighter}}
+										</div>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+			<div class='pagination-space'></div>
+		</div>
+		<div class='footer'>
+			<table>
+				<tr>
+					<td>
+						<img class='image-prize' src='assets/images/player-profile/present-box.png' />
+					</td>
+					<td >
+						<div>
+							<div class='gradient-text' font-h3 font-w-bold text-center>
+								Be the BEST Fighter!
+							</div>
+							<div text-center font-5 font-w-normal>
+								We give special gifts to Top Weekly <br/> <img src='assets/images/player-profile/fighter.png' />       
+								Earner.
+							</div>
+						</div>
+						
+					</td>
+					<td>
+						<img class='image-mystry-box' src='assets/images/player-profile/mystry-box.png' />
+						<img class='image-calendar' src='assets/images/player-profile/calendar.png' />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</ion-slide>
+	<ion-slide class='popularity-slide' (tap)='onPopularitySlideTapped.emit()'>
+		<div class='background-wrapper'>
+			<div text-left font-w-bold class='header'>
+				Popularity
+			</div>
+			<div class='content'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col font-5 text-left align-self-center>
+							Fame points are awarded when
+							player setups up or joins &nbsp; &nbsp;
+							squad up teams.
+						</ion-col>
+						<ion-col col-auto>
+						</ion-col>
+						<ion-col col-auto>
+							<ion-grid no-padding class='content-holder-grid'>
+								<ion-row>
+									<ion-col>
+										<div text-center font-w-bold>
+											Fame
+										</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col text-center>
+										<img class='fame-image' src='assets/images/player-profile/fame.png' />
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col>
+										<div text-center font-10 class='gradient-text-light' font-w-bold>
+											{{popularity.fame}}
+										</div>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+			<div class='pagination-space'></div>
+		</div>
+		<div class='footer'>
+			<table>
+				<tr>
+					<td>
+						<img class='image-prize' src='assets/images/player-profile/present-box.png' />
+					</td>
+					<td >
+						<div>
+							<div class='gradient-text' font-h3 font-w-bold text-center>
+								Are you the most Famous?
+							</div>
+							<div text-center font-5 font-w-normal>
+								We give special gifts to Top Weekly <br/> <img src='assets/images/player-profile/fame.png' />       
+								Earner.
+							</div>
+						</div>
+					</td>
+					<td>
+						<img class='image-mystry-box' src='assets/images/player-profile/mystry-box.png' />
+						<img class='image-calendar' src='assets/images/player-profile/calendar.png' />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</ion-slide>
+	<ion-slide class='most-played-slide'>
+		<div class='background-wrapper'>
+			<div text-left font-w-bold class='header'>
+				Most Played&nbsp;&nbsp;<img src='assets/images/game-mode-icons/head2head.png' />
+			</div>
+			<div class='content'>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col align-self-center>
+							<img class='game-icon' [src]='mostPlayed.gameIcon' />
+							<div font-6 text-center>
+								{{mostPlayed.gameName}}
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+			<div class='pagination-space'></div>
+		</div>
+		<div class='footer'>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col></ion-col>
+					<ion-col col-auto>
+						<div text-center class='gradient-text' font-w-bold>
+							Everytime you battle someone you follow and WIN, we will give you:
+						</div>
+						<div text-center font-5>
+							1 <img src='assets/images/arcade/token-yellow.png' />&nbsp;&nbsp;x&nbsp;&nbsp;the amount of players following you.
+						</div>
+					</ion-col>
+					<ion-col></ion-col>
+				</ion-row>
+			</ion-grid>
+			<img class='image-ticket' src='assets/images/player-profile/tickets.png' />
+			<img class='image-ticket-stack' src='assets/images/player-profile/tickets_stack.png' />
+			<img class='image-ticket-stack-two' src='assets/images/player-profile/tickets_stack.png' />
+		</div>
+	</ion-slide>
+</ion-slides>
+<ion-grid no-padding class='navigator'>
+	<ion-row >
+		<ion-col text-left>
+			<button (click)='goToPreviousSlide()' icon-only ion-button clear  mode='ios'>
+				<ion-icon name='ios-arrow-back'></ion-icon>
+			</button>
+		</ion-col>
+		<ion-col (click)='goToNextSlide()' text-right>
+			<button icon-only ion-button clear mode='ios'>
+				<ion-icon name='ios-arrow-forward'></ion-icon>
+			</button>
+		</ion-col>
+	</ion-row>
+</ion-grid>

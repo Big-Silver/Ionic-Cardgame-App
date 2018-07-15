@@ -1,0 +1,46 @@
+leaderboard-content,
+[leaderboard-content] {
+
+	tr[shrink]{
+		height: 1px;
+	}
+	tr[grow]{
+		height: 100% !important;
+	}
+
+	.gradient-border{
+		height: 1px !important;
+		background-image: linear-gradient(180deg, #fae54d 0%, #febb0a 100%);
+	}
+
+	.own-result-slot{
+		padding: 8px 4px !important;
+	}
+
+	.section-divider{
+		height: 3px;
+		margin: 0px 40px !important;
+		border-radius: 3px !important;
+		background-color: rgba(216, 216, 216, 0.38) !important;
+	}
+
+
+	.list-holder{
+		position: relative;
+		[player-result-group]{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			overflow-y: auto;
+			padding: 8px 4px;
+		}
+		player-result{
+			margin-bottom: 3px !important;
+		}
+	}
+
+	
+
+}

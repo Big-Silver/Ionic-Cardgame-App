@@ -1,0 +1,47 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col (tap)='changeGameMode("ARCADE")' [ngClass]='{"active" : activeGameMode == "ARCADE"}'>
+			<img *ngIf='activeGameMode != "ARCADE"' src='./assets/images/game-mode-icons/arcade.png' />
+			<img *ngIf='activeGameMode == "ARCADE"' src='./assets/images/game-mode-icons/arcade_light_blue.png' />
+		</ion-col>
+		<ion-col (tap)='changeGameMode("REPLAY")' [ngClass]='{"active" : activeGameMode == "REPLAY"}'>
+			<img *ngIf='activeGameMode != "REPLAY"' src='./assets/images/game-mode-icons/replay.png' />
+			<img *ngIf='activeGameMode == "REPLAY"' src='./assets/images/game-mode-icons/replay_light_blue.png' />
+		</ion-col>
+		<ion-col (tap)='changeGameMode("HEAD2HEAD")' [ngClass]='{"active" : activeGameMode == "HEAD2HEAD"}'>
+			<img *ngIf='activeGameMode != "HEAD2HEAD"' src='./assets/images/game-mode-icons/head2head.png' />
+			<img *ngIf='activeGameMode == "HEAD2HEAD"' src='./assets/images/game-mode-icons/head2head_light_blue.png' />
+		</ion-col>
+		<ion-col (tap)='changeGameMode("CONTEST")' [ngClass]='{"active" : activeGameMode == "CONTEST"}'>
+			<img *ngIf='activeGameMode != "CONTEST"' src='./assets/images/game-mode-icons/contest.png' />
+			<img *ngIf='activeGameMode == "CONTEST"' src='./assets/images/game-mode-icons/contest_light_blue.png' />
+		</ion-col>
+	</ion-row>
+</ion-grid>
+<div>
+	<ion-grid class='header-bar-grid' no-padding>
+		<ion-row>
+			<ion-col font-8 font-w-medium text-center align-self-center>
+				Game
+			</ion-col>
+			<ion-col col-auto>
+			</ion-col>
+			<ion-col col-auto></ion-col>
+			<ion-col font-8 font-w-medium col-auto align-self-center text-center>
+				<ng-container *ngIf='activeGameMode == "REPLAY" || activeGameMode == "CONTEST"'>
+					Top Position
+				</ng-container>
+				<ng-container *ngIf='activeGameMode == "ARCADE"'>
+					Level
+				</ng-container>
+				<ng-container *ngIf='activeGameMode == "HEAD2HEAD"'>
+					Wins
+				</ng-container>
+			</ion-col>
+			<ion-col col-auto></ion-col>
+			<ion-col font-8 font-w-medium align-self-center text-center col-auto>
+				Best Score
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</div>

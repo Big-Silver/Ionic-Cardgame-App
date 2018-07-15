@@ -1,0 +1,72 @@
+page-dashboard{
+
+	& > ion-menu ion-header{
+
+		ion-title{
+			padding: 0px !important;
+		}
+
+
+		[menuClose] ion-icon{
+			font-size: 1.6em !important;
+		}
+
+		.toolbar-background{
+			background-color: rgb(8,0,48) !important;
+			background-image: none !important;
+		}
+	
+		.toolbar-bottom{
+			ion-col{
+				height: 1px;
+			}
+	
+			ion-col:nth-child(1){
+				background-color: #e32115;
+			}
+	
+			ion-col:nth-child(2){
+				background-color: #0c69ac;
+			}
+	
+			ion-col:nth-child(3){
+				background-color: #ffba37;
+			}
+			.right-border{
+				position: relative;
+				&:after{
+					content: "";
+					right: 0px;
+					background-color: black;
+					width: 2px;
+					height: inherit !important;
+					display: block;
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	& > ion-menu ion-content{
+		background-color: black !important;
+	}
+
+	ion-menu{
+
+		.scroll-content{
+			transform: translateZ(0);
+			-webkit-transform: translateZ(0);
+			will-change: transform !important;
+		}
+
+		.fixed-content{
+			background-image: url('../assets/images/home/menu_background.png') !important; 
+			background-size: cover;
+		}
+
+		.menu-inner{
+			background-color: black !important;
+			width: 61.5625% !important;
+		}
+	}
+}

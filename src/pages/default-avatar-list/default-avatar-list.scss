@@ -1,0 +1,99 @@
+page-default-avatar-list {
+
+	ion-content{
+		background-image: url('../assets/images/signup-background.png');
+		background-size: 101% 100%;
+	}
+
+	.scroll-content{
+		padding: 0px !important;
+		overflow-y: hidden !important;
+	}
+
+	.swiper-container{
+		perspective: unset !important;
+	}
+
+	.swiper-wrapper{
+		perspective: unset !important;
+	}
+
+	.swiper-slide{
+		perspective: 50px !important;
+	}
+
+	ion-slide{
+		// width: 96px !important;
+	}
+
+	img{
+		height: 96px !important;
+		width: 96px !important;
+		max-width: 96px !important;
+		max-height: 96px !important;
+		min-width: 96px !important;
+		min-height: 96px !important;
+		background-color: white;
+		display: block;
+		border: 1px solid white;
+		position: relative;
+		margin: auto;
+		border-radius: 100%;
+		box-shadow : 1px 13px 11px -10px black;
+	}
+
+	.swiper-slide-active{
+		img{
+			padding: 3px;
+		}
+	}
+
+	.slide-container{
+		position: relative;
+		height: 148px !important;
+		.green-circle{
+			width: 96px;
+			height: 96px;
+			border: 4px solid #69c839;
+			box-sizing: border-box;
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			margin: auto;
+			z-index: 50;
+			border-radius: 100%;
+			pointer-events: none !important;
+		}
+	}
+
+	.wrapper-content{
+		height: 184px !important;
+		border-bottom: 1px solid #979797;
+	}
+
+	.label-own-avatar{
+		height: 27px;
+		padding: 0px 24px !important;
+		border-radius: 70px;
+		border: 2px solid #c8c8c8;
+		margin: 0px;
+		box-sizing: border-box;
+		color: white;
+		line-height: 21px;
+		display: inline-block;
+		letter-spacing: 1.13px;
+	}
+
+	button{
+		height: 48px;
+		background-color: #43c600 !important;
+		.button-inner{
+			font-size: 16px;
+			font-weight: 700;
+		}
+	}
+	
+
+}

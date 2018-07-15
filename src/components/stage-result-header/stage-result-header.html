@@ -1,0 +1,24 @@
+<ion-toolbar>
+	<ion-grid no-padding>
+		<ion-row>
+			<ion-col align-self-center>
+				<div font-w-bold>
+					{{subTitle}}
+				</div>
+				<div font-h1 font-w-bold class='gradient-text'>
+					{{title}}
+				</div>
+			</ion-col>
+			<ion-col>
+				<img class='img-logo' src='assets/images/logo.png' />
+			</ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-toolbar>
+<ion-toolbar wrap-only>
+	<div class='separator'></div>
+</ion-toolbar>
+<div *ngIf='hideCloseButton == false' class='red-background' (click)='closeModal.emit()'>
+</div>
+<ion-icon *ngIf='hideCloseButton == false' class='red-icon' name='ios-close-circle-outline' (click)='closeModal.emit()'></ion-icon>

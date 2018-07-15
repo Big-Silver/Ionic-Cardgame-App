@@ -1,0 +1,14 @@
+<ion-toolbar>
+	<ion-buttons start>
+		<button (tap)='goBack.emit()' ion-button icon-only clear back-button>
+			<ion-icon name='ios-arrow-back-outline'></ion-icon>
+		</button>
+	</ion-buttons>
+	<ion-title>
+		INBOX
+	</ion-title>
+</ion-toolbar>
+<ion-toolbar>
+	<ng-content select=' > inbox-tab'></ng-content>
+	<div class='border-div'></div>
+</ion-toolbar>

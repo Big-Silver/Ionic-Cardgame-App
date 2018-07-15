@@ -1,0 +1,105 @@
+page-follow-model {
+
+	.scroll-content{
+		background-color: #00133b;
+	}
+
+	.type-label{
+		display: block;
+		height: 17px;
+		line-height: 17px;
+		text-align: center;
+		border-radius:  0 100px 100px 0;
+		width: 79px;
+		color: white;
+	}
+
+	.type-label.pink{
+		background-image: linear-gradient(270deg, #e83491 0%, #71338b 100%);
+	}
+
+	.type-label.blue{
+		background-image: linear-gradient(270deg, #2c3fdb 0%, #34a4d6 100%);
+	}
+
+	.type-label.yellow{
+		background-image: linear-gradient(270deg, #f8e64b 0%, #e5b547 100%);
+	}
+
+	squadup-player-icon{
+		margin-top: 6px;
+		margin-bottom: 6px;
+		display: block;
+		margin: auto;
+		.player-name{
+			color: white;
+		}
+	}
+
+	.player-wrapper{
+		margin-bottom: 6px;
+		& > ion-grid > ion-row > ion-col{
+			flex: 0 0 20% !important;
+			max-width: 20% !important;
+			width: 20% !important;
+			padding-top: 6px !important;
+			padding-bottom: 6px !important;
+			&[small-v-padding]{
+				padding-top: 5px !important;
+				padding-bottom: 2px !important;
+			}
+		}
+	}
+
+	.new-badge{
+		width: 80px;
+		height: 20px;
+		background-color: blue;
+		border-right: none !important;
+		box-sizing: border-box;
+		border-top: 10px solid red !important;
+		border-bottom: 10px solid white !important;
+		border-right: 10px solid transparent !important;
+		box-shadow: inset 0px 0px 0px 1px white;
+		position: relative;
+		&:after{
+			content:  "";
+			position: absolute;
+			right: -10px;
+			top: -10px;
+			height: 20px;
+			width: 20px;
+			background-color: transparent;
+			z-index: 10;
+		}
+	}
+
+	.followers-table{
+
+		height: 100%;
+		tr[shrink]{
+			height: 1px;
+		}
+		tr[grow]{
+			height: 100%;
+		}
+
+		td.p-relative{
+			position: relative;
+			width: 100vw;
+		}
+
+		.cell-wrapper{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			overflow-y: auto;	
+		}
+
+	}
+
+	
+
+}

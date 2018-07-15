@@ -1,0 +1,74 @@
+<ion-grid no-padding>
+	<ion-row>
+		<ion-col font-h3 font-w-bold>
+			PROFILE
+		</ion-col>
+		<ion-col text-right font-6 font-w-normal align-self-top>
+			Joined: 21/01/2017
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col col-auto (tap)="presentActionSheet()">
+						<img class="avatarChoose" src="{{captureDataUrl}}">
+						<span  class="choose-image">
+							<ion-icon ios="ios-camera" md="md-camera"></ion-icon>
+						</span>
+					</ion-col>
+					<ion-col>
+						<div class="input-button-wrap">
+							<ion-input #input type="text" value="Amari66575">Amari66575</ion-input>
+							<button color="secondary-dark">
+								<span>
+									<img src="assets/images/Pencil-edit.png">
+								</span>
+							</button>
+						</div>
+						<ion-grid no-padding>
+							<ion-row>
+								<ion-col col-auto>
+									<img class="countryflag" src="assets/images/flag/PNG(retina)/united_kingdom_circle_96x96.png">
+								</ion-col>
+								<ion-col col-auto>
+									<button class='genderButton male' *ngIf='isMale == true'>
+										<img src='assets/images/player-profile/male.png' />
+									</button>
+									<button class='genderButton female' *ngIf='isMale == false'>
+										<img src='assets/images/player-profile/female.png' />
+									</button>
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col font-6 align-self-center class='description'>
+			Your details must be verified before you can cash out your winnings.
+		</ion-col>
+		<ion-col col-auto>
+			<div text-center font-5 font-w-bold class='status-verified-label'>
+				Verified Status
+			</div>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col col-auto>
+						<div class='verified-status-wrapper'>
+							<img src='assets/images/inbox/lost.png' *ngIf='isVerified == false' />
+							<img src='assets/images/inbox/won.png' *ngIf='isVerified == true' />
+						</div>
+					</ion-col>
+					<ion-col>
+						<button (tap)='goToVerificationPage()' ion-button class='button-edit'> 
+							Edit
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+	</ion-row>
+</ion-grid>

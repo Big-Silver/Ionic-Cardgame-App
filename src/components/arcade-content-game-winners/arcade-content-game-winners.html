@@ -1,0 +1,11 @@
+<ion-list>
+  <ion-item *ngFor="let winner of gamesWinnerList">
+    <ion-avatar item-start>
+      <img src="{{winner.src}}"><span>
+      <img class="countryflag" src="assets/images/flag/PNG(retina)/united_kingdom_circle_96x96.png"></span>
+    </ion-avatar>
+    <h2 class="playername">{{winner.name}}</h2>
+    <p class="date">{{winner.time}}</p>
+    <h1 class="earn">£{{winner.earn}}</h1>
+  </ion-item>
+</ion-list>

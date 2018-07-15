@@ -1,0 +1,108 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col (click)='changeScreen("TRENDING")'></ion-col>
+				<ion-col (click)='changeScreen("RANKING")'></ion-col>
+				<ion-col (click)='changeScreen("PRIZES")'></ion-col>
+				<ion-col (click)='changeScreen("SQUADUP")'></ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col  text-right (click)='changeScreen("TRENDING")' [ngClass]='{"active" : activatedScreen == "TRENDING"}'>
+					<label text-center>&bull;</label>&nbsp;
+				</ion-col>
+				<ion-col col-auto (click)='changeScreen("TRENDING")' [ngClass]='{"active" : activatedScreen == "TRENDING"}'>
+					Trending
+				</ion-col>
+				<ion-col text-right (click)='changeScreen("RANKING")' [ngClass]='{"active" : activatedScreen == "RANKING"}'>
+					<label text-center>&bull;</label>&nbsp;
+				</ion-col>
+				<ion-col col-auto (click)='changeScreen("RANKING")' [ngClass]='{"active" : activatedScreen == "RANKING"}'>
+					<label class='live-label'>
+						Ranking
+					</label>
+				</ion-col>
+				<ion-col text-right (click)='changeScreen("PRIZES")' [ngClass]='{"active" : activatedScreen == "PRIZES"}'>
+					<label text-center>&bull;</label>&nbsp;
+				</ion-col>
+				<ion-col col-auto (click)='changeScreen("PRIZES")' [ngClass]='{"active" : activatedScreen == "PRIZES"}'>
+					Prizes
+				</ion-col>
+				<ion-col text-right (click)='changeScreen("SQUADUP")' [ngClass]='{"active" : activatedScreen == "SQUADUP"}'>
+					<label text-center>&bull;</label>&nbsp;
+				</ion-col>
+				<ion-col col-auto (click)='changeScreen("SQUADUP")' [ngClass]='{"active" : activatedScreen == "SQUADUP"}'>
+					Squad<br/>Up
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col (click)='changeScreen("TRENDING")'></ion-col>
+				<ion-col (click)='changeScreen("RANKING")'></ion-col>
+				<ion-col (click)='changeScreen("PRIZES")'></ion-col>
+				<ion-col (click)='changeScreen("SQUADUP")'></ion-col>
+			</ion-row>
+		</ion-grid>
+		<div class='red-background' (click)='closeModal()'>
+		</div>
+		<ion-icon name='ios-close-circle-outline' (click)='closeModal()'></ion-icon>
+	</ion-toolbar>
+	<ion-toolbar>
+		<div class='border-div'></div>
+		<div class='player-list-header' *ngIf='activatedScreen == "TRENDING" || activatedScreen == "RANKING" || activatedScreen == "SQUADUP"'>
+			<table>
+				<tr>
+					<td *ngIf='activatedScreen != "SQUADUP"'>Player</td>
+					<td *ngIf='activatedScreen == "SQUADUP"'>Team</td>
+					<td font-6 font-w-bold text-wrap>&nbsp;</td>
+					<td class='cell-border'></td>
+					<td font-w-bold>
+						<ng-container *ngIf='activatedScreen == "RANKING"'>
+							Attempt
+						</ng-container>
+						<ng-container *ngIf='activatedScreen == "SQUADUP"'>
+							Rank
+						</ng-container>
+					</td>
+					<td class='cell-border'></td>
+					<td font-w-bold>Top</td>
+					<td class='cell-border'></td>
+					<td font-w-bold>Score</td>
+					<td class='cell-border'></td>
+					<td font-w-bold>&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+		<div class='empty-header' *ngIf='activatedScreen == "PRIZES"'>
+		</div>
+	</ion-toolbar>
+</ion-header>
+<ion-content #content>
+	<table ranking-content>
+		<ranking-trending 
+			*ngIf='activatedScreen == "TRENDING" '
+			[highRankedPlayers]='trendingPlayers.upperPlayers' 
+			[lowRankedPlayers]='trendingPlayers.lowerPlayers'>
+		</ranking-trending>
+		<ranking-live 
+			*ngIf='activatedScreen == "RANKING"'
+			[highRankedPlayers]='rankingPlayers.upperPlayers' 
+			[lowRankedPlayers]='rankingPlayers.lowerPlayers' >
+		</ranking-live>
+		<ranking-prize *ngIf='activatedScreen == "PRIZES"'> 
+		</ranking-prize>
+		<ranking-squadup 
+			*ngIf='activatedScreen == "SQUADUP"'
+			[players]='squadUpPlayers.players'
+			>
+		</ranking-squadup>
+		<ranking-description [descriptionType]='activatedScreen'></ranking-description>
+		
+	</table>
+</ion-content>
+<ion-footer text-center>
+	<div>
+		<button ion-button (click)='closeModal()'>
+			Close
+		</button>
+	</div>
+</ion-footer>

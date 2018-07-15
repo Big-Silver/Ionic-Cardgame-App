@@ -1,0 +1,67 @@
+player-game-rank-table {
+	display: inline-block;
+	height: 100% !important;
+	width: 100% !important;
+	color: white;
+	ion-grid{
+		height: 100%;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.player-level, .stars, .badges{
+		*{
+			font-family: "Avenir Next" !important;
+		}
+	}
+
+	.player-level{
+		line-height: 16px;
+		border-radius: 4px;
+		margin-bottom: 3px;
+	}
+
+	.player-level.EXPERT{
+		background-color: #d12424 !important;
+	}
+
+	.player-level.AMATEUR{
+		background-color: #e99300 !important;
+	}
+
+	.player-level.PRO{
+		background-color: #000b8b !important;
+	}
+
+	.img-ribbon,
+	.img-star{
+		height: 14px;
+		display: block;
+		margin: 2px 2px 3px 2px;
+
+	}
+
+	.lbls{
+		
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+}
+
+player-game-rank-table[b-black]{
+
+	.lbls,.player-level{
+		background-color: #212121;
+		border: 1px solid #1c1c1c;
+		border-bottom-color: #393939;
+	}
+		
+}
+
+
+player-game-rank-table[b-blue]{
+	.lbls,.player-level{
+		background-color: #060036;
+		border: 1px solid #0c006f;
+		border-bottom-color: #010b8a;
+	}
+}

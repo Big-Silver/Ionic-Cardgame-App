@@ -1,0 +1,17 @@
+<div class='header-content-wrapper' font-w-medium text-center>
+	Total Wins: <span font-w-bold>189</span>
+</div>
+<div class='content-wrapper'>
+	<div class='header' font-5 text-center>
+		Recently Played
+	</div>
+	<div>
+		<ion-grid no-padding>
+			<ion-row class='game-row'>
+				<ion-col col-auto text-center *ngFor='let game of games'>
+					<recently-played-game-icon [game]='game'></recently-played-game-icon>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+</div>

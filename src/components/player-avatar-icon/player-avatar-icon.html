@@ -1,0 +1,18 @@
+<div class='gradientBackground' [ngClass]="{'invert':invertFlag, 'unknown':unknown}">
+	<div>
+		<img class='avatar avatar-holder' *ngIf='unknown == false || !unknown' [src]='_playerInformation.avatarImage' />
+		<img class='avatar unknown-avatar avatar-holder' *ngIf='unknown == true' [src]='unknownImage' />
+		<img class='avatar-country country-holder' *ngIf='unknown == false || !unknown' [src]='_playerInformation.avatarCountryImage' />
+		<div class='unknown-country country-holder' font-6 font-w-bold *ngIf='unknown == true'>
+			?
+		</div>
+	</div>
+	<div font-w-medium font-6 text-center class='avatar-name'>
+		<ng-container *ngIf='unknown == true'>
+			{{unknownText}}
+		</ng-container>
+		<ng-container *ngIf='unknown == false'>
+			{{_playerInformation.name}}
+		</ng-container>
+	</div>
+</div>

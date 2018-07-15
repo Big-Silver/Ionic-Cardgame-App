@@ -1,0 +1,76 @@
+<ion-grid no-padding>
+	<ion-row  class='main-content-wrapper'>
+		<ion-col>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col col-12 align-self-center>
+						<div font-w-medium font-6 text-center>
+							Followers
+						</div>
+						<div class='gradient-text-light' font-w-bold font-10 text-center>
+							{{playerInformation.followers}}
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 align-self-center>
+						<div font-w-medium font-6 text-center>
+							Following
+						</div>
+						<div class='gradient-text-light' font-w-bold font-10 text-center>
+							{{playerInformation.following}}
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+		<ion-col align-self-center>
+			<div text-center class='player-icon'>
+				<div>
+					<img class='player-image' [src]='playerInformation.profile' />
+					<img class='player-country-image' [src]='playerInformation.country' />
+				</div>
+			</div>
+			<div>
+				<ion-grid no-padding>
+					<ion-row>
+						<ion-col align-self-center col-auto>
+							<img class='player-gender-image' *ngIf='playerInformation.gender == "MALE"' src='assets/images/player-profile/male.png' />
+							<img class='player-gender-image' *ngIf='playerInformation.gender == "FEMALE"' src='assets/images/player-profile/female.png' />
+						</ion-col>
+						<ion-col font-w-bold font-h3>
+							&nbsp;&nbsp;{{playerInformation.name}}
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+			<div text-center font-8 class='highlight-blue'>
+				Player ID: {{playerInformation.playerId}} 
+			</div>
+		</ion-col>
+		<ion-col>
+			<ion-grid no-padding>
+				<ion-row>
+					<ion-col col-12 align-self-center>
+						<div font-w-medium font-6 text-center>
+							<img class='img-fighter' src='./assets/images/player-profile/fame.png' />
+						</div>
+						<div class='gradient-text-light' font-w-bold font-10 text-center>
+							{{playerInformation.fame}}
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 align-self-center>
+						<div font-w-medium font-6 text-center>
+							<img class='img-fighter' src='./assets/images/player-profile/fighter.png' />
+						</div>
+						<div class='gradient-text-light' font-w-bold font-10 text-center>
+							{{playerInformation.fighters}}
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-col>
+	</ion-row>
+</ion-grid>
